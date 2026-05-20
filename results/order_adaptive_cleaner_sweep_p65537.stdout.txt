@@ -1,0 +1,343 @@
+{
+  "notes": {
+    "current_positive_ciphertext_claim": "only the order-4 A=256 cleaner/evaluator is implemented and benchmarked in HElib",
+    "scope": "offline planner evidence only; not a ciphertext implementation claim",
+    "sufficient_bound": "(2B+1) * sum_{j=0}^{d-1} |A|^j < p for the d=order/2 signed-circulant model"
+  },
+  "p": 65537,
+  "rows": [
+    {
+      "B": 1,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 4,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 3
+        },
+        "q_eval_mults": 2,
+        "residue_counts": {
+          "1": 3
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 7,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 4,
+      "nonzero_terms": 3,
+      "planner_recommendation": "order-16 feasible in the sufficient-bound model; use only as a tiny-local-support theory candidate",
+      "support_size": 9
+    },
+    {
+      "B": 3,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 10,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 0,
+          "3": 11
+        },
+        "q_eval_mults": 6,
+        "residue_counts": {
+          "1": 1,
+          "3": 12
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 47,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 14,
+      "nonzero_terms": 13,
+      "planner_recommendation": "order-8 becomes feasible; this is the first non-implemented higher-order target worth planner attention",
+      "support_size": 49
+    },
+    {
+      "B": 5,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 15,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 0,
+          "3": 29
+        },
+        "q_eval_mults": 11,
+        "residue_counts": {
+          "1": 1,
+          "3": 30
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 119,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 23,
+      "nonzero_terms": 31,
+      "planner_recommendation": "order-8 becomes feasible; this is the first non-implemented higher-order target worth planner attention",
+      "support_size": 121
+    },
+    {
+      "B": 7,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 19,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 0,
+          "3": 55
+        },
+        "q_eval_mults": 15,
+        "residue_counts": {
+          "1": 1,
+          "3": 56
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 223,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 31,
+      "nonzero_terms": 57,
+      "planner_recommendation": "order-8 becomes feasible; this is the first non-implemented higher-order target worth planner attention",
+      "support_size": 225
+    },
+    {
+      "B": 9,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 24,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 0,
+          "3": 89
+        },
+        "q_eval_mults": 20,
+        "residue_counts": {
+          "1": 1,
+          "3": 90
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 359,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 40,
+      "nonzero_terms": 91,
+      "planner_recommendation": "order-4 is the stable global choice; higher orders are not support-safe under the sufficient bound",
+      "support_size": 361
+    },
+    {
+      "B": 17,
+      "best_character_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 41,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 0,
+          "3": 305
+        },
+        "q_eval_mults": 37,
+        "residue_counts": {
+          "1": 1,
+          "3": 306
+        }
+      },
+      "chosen_order4_aux": 256,
+      "chosen_order4_aux_centered": 256,
+      "degree": 1223,
+      "dyadic_feasibility": [
+        {
+          "aux": 256,
+          "dimension": 2,
+          "feasible_by_bound": true,
+          "max_B_sufficient": 127,
+          "order": 4,
+          "sum_abs_powers": 257
+        },
+        {
+          "aux": 16,
+          "dimension": 4,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 7,
+          "order": 8,
+          "sum_abs_powers": 4369
+        },
+        {
+          "aux": 4,
+          "dimension": 8,
+          "feasible_by_bound": false,
+          "max_B_sufficient": 1,
+          "order": 16,
+          "sum_abs_powers": 21845
+        }
+      ],
+      "generic_ps_mults": 73,
+      "nonzero_terms": 307,
+      "planner_recommendation": "order-4 is the stable global choice; higher orders are not support-safe under the sufficient bound",
+      "support_size": 1225
+    }
+  ]
+}

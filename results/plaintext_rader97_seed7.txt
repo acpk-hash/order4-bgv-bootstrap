@@ -1,0 +1,5 @@
+ell=97 q=102433 gen_mod_ell=5 verified=True
+dense: adds=9216 muls=9216 total=18432
+rader+mixed-radix-NTT: adds=3840 muls=9120 total=12960
+operation_ratio=0.7031
+conv_length=96 conv_radices=[2, 2, 2, 2, 2, 3]

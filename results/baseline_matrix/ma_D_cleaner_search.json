@@ -1,0 +1,1455 @@
+{
+  "B": 17,
+  "best": [
+    {
+      "aux": 45,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": 45,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 306,
+            "3": 305
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 12,
+          "estimated_mults": 284,
+          "modulus": 13,
+          "num_residue_classes": 13,
+          "power_precompute_mults": 12,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "q_degrees": {
+            "0": 93,
+            "1": 94,
+            "10": 93,
+            "11": 92,
+            "12": 93,
+            "2": 93,
+            "3": 92,
+            "4": 93,
+            "5": 92,
+            "6": 93,
+            "7": 92,
+            "8": 93,
+            "9": 92
+          },
+          "q_eval_mults": 260,
+          "residue_counts": {
+            "0": 47,
+            "1": 48,
+            "10": 47,
+            "11": 47,
+            "12": 46,
+            "2": 47,
+            "3": 47,
+            "4": 47,
+            "5": 47,
+            "6": 47,
+            "7": 47,
+            "8": 47,
+            "9": 47
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 39,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        45
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 8009,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": -182,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 306,
+            "3": 305
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 12,
+          "estimated_mults": 284,
+          "modulus": 13,
+          "num_residue_classes": 13,
+          "power_precompute_mults": 12,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "q_degrees": {
+            "0": 93,
+            "1": 94,
+            "10": 93,
+            "11": 92,
+            "12": 93,
+            "2": 93,
+            "3": 92,
+            "4": 93,
+            "5": 92,
+            "6": 93,
+            "7": 92,
+            "8": 93,
+            "9": 92
+          },
+          "q_eval_mults": 260,
+          "residue_counts": {
+            "0": 47,
+            "1": 48,
+            "10": 47,
+            "11": 47,
+            "12": 46,
+            "2": 47,
+            "3": 47,
+            "4": 47,
+            "5": 47,
+            "6": 47,
+            "7": 47,
+            "8": 47,
+            "9": 47
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 39,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        182
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 6735,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": -1456,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 306,
+            "3": 305
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 12,
+          "estimated_mults": 284,
+          "modulus": 13,
+          "num_residue_classes": 13,
+          "power_precompute_mults": 12,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "q_degrees": {
+            "0": 93,
+            "1": 94,
+            "10": 93,
+            "11": 92,
+            "12": 93,
+            "2": 93,
+            "3": 92,
+            "4": 93,
+            "5": 92,
+            "6": 93,
+            "7": 92,
+            "8": 93,
+            "9": 92
+          },
+          "q_eval_mults": 260,
+          "residue_counts": {
+            "0": 47,
+            "1": 48,
+            "10": 47,
+            "11": 47,
+            "12": 46,
+            "2": 47,
+            "3": 47,
+            "4": 47,
+            "5": 47,
+            "6": 47,
+            "7": 47,
+            "8": 47,
+            "9": 47
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 39,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        1456
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 2663,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": 2663,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 305,
+            "3": 306
+          }
+        },
+        {
+          "component_mults": 3,
+          "estimated_mults": 97,
+          "modulus": 6,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 4,
+          "power_targets": [
+            3,
+            5,
+            6
+          ],
+          "q_degrees": {
+            "1": 203,
+            "3": 203,
+            "5": 203
+          },
+          "q_eval_mults": 90,
+          "residue_counts": {
+            "1": 204,
+            "3": 203,
+            "5": 204
+          }
+        },
+        {
+          "component_mults": 5,
+          "estimated_mults": 131,
+          "modulus": 10,
+          "num_residue_classes": 5,
+          "power_precompute_mults": 6,
+          "power_targets": [
+            3,
+            5,
+            7,
+            9,
+            10
+          ],
+          "q_degrees": {
+            "1": 122,
+            "3": 122,
+            "5": 121,
+            "7": 121,
+            "9": 121
+          },
+          "q_eval_mults": 120,
+          "residue_counts": {
+            "1": 122,
+            "3": 123,
+            "5": 122,
+            "7": 122,
+            "9": 122
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 30,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        2663
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 5528,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": -2663,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 305,
+            "3": 306
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 4,
+          "estimated_mults": 173,
+          "modulus": 5,
+          "num_residue_classes": 5,
+          "power_precompute_mults": 4,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "q_degrees": {
+            "0": 243,
+            "1": 244,
+            "2": 243,
+            "3": 244,
+            "4": 243
+          },
+          "q_eval_mults": 165,
+          "residue_counts": {
+            "0": 122,
+            "1": 122,
+            "2": 122,
+            "3": 123,
+            "4": 122
+          }
+        },
+        {
+          "component_mults": 14,
+          "estimated_mults": 303,
+          "modulus": 15,
+          "num_residue_classes": 15,
+          "power_precompute_mults": 14,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "q_degrees": {
+            "0": 81,
+            "1": 80,
+            "10": 79,
+            "11": 80,
+            "12": 79,
+            "13": 80,
+            "14": 79,
+            "2": 81,
+            "3": 80,
+            "4": 81,
+            "5": 80,
+            "6": 81,
+            "7": 80,
+            "8": 81,
+            "9": 80
+          },
+          "q_eval_mults": 275,
+          "residue_counts": {
+            "0": 41,
+            "1": 41,
+            "10": 40,
+            "11": 41,
+            "12": 40,
+            "13": 41,
+            "14": 40,
+            "2": 41,
+            "3": 41,
+            "4": 41,
+            "5": 41,
+            "6": 40,
+            "7": 41,
+            "8": 41,
+            "9": 41
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 15,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        2663
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 2879,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": 2879,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 305,
+            "3": 306
+          }
+        },
+        {
+          "component_mults": 3,
+          "estimated_mults": 97,
+          "modulus": 6,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 4,
+          "power_targets": [
+            3,
+            5,
+            6
+          ],
+          "q_degrees": {
+            "1": 203,
+            "3": 203,
+            "5": 203
+          },
+          "q_eval_mults": 90,
+          "residue_counts": {
+            "1": 204,
+            "3": 203,
+            "5": 204
+          }
+        },
+        {
+          "component_mults": 5,
+          "estimated_mults": 131,
+          "modulus": 10,
+          "num_residue_classes": 5,
+          "power_precompute_mults": 6,
+          "power_targets": [
+            3,
+            5,
+            7,
+            9,
+            10
+          ],
+          "q_degrees": {
+            "1": 122,
+            "3": 122,
+            "5": 121,
+            "7": 121,
+            "9": 121
+          },
+          "q_eval_mults": 120,
+          "residue_counts": {
+            "1": 122,
+            "3": 123,
+            "5": 122,
+            "7": 122,
+            "9": 122
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 30,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        2879
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 5312,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": -2879,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 305,
+            "3": 306
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 4,
+          "estimated_mults": 173,
+          "modulus": 5,
+          "num_residue_classes": 5,
+          "power_precompute_mults": 4,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "q_degrees": {
+            "0": 243,
+            "1": 244,
+            "2": 243,
+            "3": 244,
+            "4": 243
+          },
+          "q_eval_mults": 165,
+          "residue_counts": {
+            "0": 122,
+            "1": 122,
+            "2": 122,
+            "3": 123,
+            "4": 122
+          }
+        },
+        {
+          "component_mults": 14,
+          "estimated_mults": 303,
+          "modulus": 15,
+          "num_residue_classes": 15,
+          "power_precompute_mults": 14,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "q_degrees": {
+            "0": 81,
+            "1": 80,
+            "10": 79,
+            "11": 80,
+            "12": 79,
+            "13": 80,
+            "14": 79,
+            "2": 81,
+            "3": 80,
+            "4": 81,
+            "5": 80,
+            "6": 81,
+            "7": 80,
+            "8": 81,
+            "9": 80
+          },
+          "q_eval_mults": 275,
+          "residue_counts": {
+            "0": 41,
+            "1": 41,
+            "10": 40,
+            "11": 41,
+            "12": 40,
+            "13": 41,
+            "14": 40,
+            "2": 41,
+            "3": 41,
+            "4": 41,
+            "5": 41,
+            "6": 40,
+            "7": 41,
+            "8": 41,
+            "9": 41
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 15,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        2879
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    },
+    {
+      "aux": 5125,
+      "best_decomposition": {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      "centered_aux": -3066,
+      "decompositions": [
+        {
+          "component_mults": 1,
+          "estimated_mults": 55,
+          "modulus": 2,
+          "num_residue_classes": 1,
+          "power_precompute_mults": 1,
+          "power_targets": [
+            2
+          ],
+          "q_degrees": {
+            "1": 611
+          },
+          "q_eval_mults": 53,
+          "residue_counts": {
+            "1": 611
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 79,
+          "modulus": 4,
+          "num_residue_classes": 2,
+          "power_precompute_mults": 3,
+          "power_targets": [
+            3,
+            4
+          ],
+          "q_degrees": {
+            "1": 305,
+            "3": 305
+          },
+          "q_eval_mults": 74,
+          "residue_counts": {
+            "1": 306,
+            "3": 305
+          }
+        },
+        {
+          "component_mults": 2,
+          "estimated_mults": 133,
+          "modulus": 3,
+          "num_residue_classes": 3,
+          "power_precompute_mults": 2,
+          "power_targets": [
+            2,
+            3
+          ],
+          "q_degrees": {
+            "0": 407,
+            "1": 406,
+            "2": 407
+          },
+          "q_eval_mults": 129,
+          "residue_counts": {
+            "0": 203,
+            "1": 204,
+            "2": 204
+          }
+        },
+        {
+          "component_mults": 12,
+          "estimated_mults": 284,
+          "modulus": 13,
+          "num_residue_classes": 13,
+          "power_precompute_mults": 12,
+          "power_targets": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "q_degrees": {
+            "0": 93,
+            "1": 94,
+            "10": 93,
+            "11": 92,
+            "12": 93,
+            "2": 93,
+            "3": 92,
+            "4": 93,
+            "5": 92,
+            "6": 93,
+            "7": 92,
+            "8": 93,
+            "9": 92
+          },
+          "q_eval_mults": 260,
+          "residue_counts": {
+            "0": 47,
+            "1": 48,
+            "10": 47,
+            "11": 47,
+            "12": 46,
+            "2": 47,
+            "3": 47,
+            "4": 47,
+            "5": 47,
+            "6": 47,
+            "7": 47,
+            "8": 47,
+            "9": 47
+          }
+        }
+      ],
+      "degree": 1223,
+      "generic_ps": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "multiplicative_order": 39,
+      "nonzero_terms": 611,
+      "score": [
+        55,
+        611,
+        3066
+      ],
+      "sqrt_minus_one": false,
+      "support": 1225,
+      "valid": true
+    }
+  ],
+  "chosen_practical": {
+    "aux": 45,
+    "best_decomposition": {
+      "component_mults": 1,
+      "estimated_mults": 55,
+      "modulus": 2,
+      "num_residue_classes": 1,
+      "power_precompute_mults": 1,
+      "power_targets": [
+        2
+      ],
+      "q_degrees": {
+        "1": 611
+      },
+      "q_eval_mults": 53,
+      "residue_counts": {
+        "1": 611
+      }
+    },
+    "centered_aux": 45,
+    "decompositions": [
+      {
+        "component_mults": 1,
+        "estimated_mults": 55,
+        "modulus": 2,
+        "num_residue_classes": 1,
+        "power_precompute_mults": 1,
+        "power_targets": [
+          2
+        ],
+        "q_degrees": {
+          "1": 611
+        },
+        "q_eval_mults": 53,
+        "residue_counts": {
+          "1": 611
+        }
+      },
+      {
+        "component_mults": 2,
+        "estimated_mults": 79,
+        "modulus": 4,
+        "num_residue_classes": 2,
+        "power_precompute_mults": 3,
+        "power_targets": [
+          3,
+          4
+        ],
+        "q_degrees": {
+          "1": 305,
+          "3": 305
+        },
+        "q_eval_mults": 74,
+        "residue_counts": {
+          "1": 306,
+          "3": 305
+        }
+      },
+      {
+        "component_mults": 2,
+        "estimated_mults": 133,
+        "modulus": 3,
+        "num_residue_classes": 3,
+        "power_precompute_mults": 2,
+        "power_targets": [
+          2,
+          3
+        ],
+        "q_degrees": {
+          "0": 407,
+          "1": 406,
+          "2": 407
+        },
+        "q_eval_mults": 129,
+        "residue_counts": {
+          "0": 203,
+          "1": 204,
+          "2": 204
+        }
+      },
+      {
+        "component_mults": 12,
+        "estimated_mults": 284,
+        "modulus": 13,
+        "num_residue_classes": 13,
+        "power_precompute_mults": 12,
+        "power_targets": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "q_degrees": {
+          "0": 93,
+          "1": 94,
+          "10": 93,
+          "11": 92,
+          "12": 93,
+          "2": 93,
+          "3": 92,
+          "4": 93,
+          "5": 92,
+          "6": 93,
+          "7": 92,
+          "8": 93,
+          "9": 92
+        },
+        "q_eval_mults": 260,
+        "residue_counts": {
+          "0": 47,
+          "1": 48,
+          "10": 47,
+          "11": 47,
+          "12": 46,
+          "2": 47,
+          "3": 47,
+          "4": 47,
+          "5": 47,
+          "6": 47,
+          "7": 47,
+          "8": 47,
+          "9": 47
+        }
+      }
+    ],
+    "degree": 1223,
+    "generic_ps": {
+      "degree": 1223,
+      "k": 39,
+      "m": 5,
+      "mults": 73
+    },
+    "multiplicative_order": 39,
+    "nonzero_terms": 611,
+    "score": [
+      55,
+      611,
+      45
+    ],
+    "sqrt_minus_one": false,
+    "support": 1225,
+    "valid": true
+  },
+  "generic_aux": 35,
+  "generic_aux_result": {
+    "aux": 35,
+    "centered_aux": 35,
+    "degree": 1223,
+    "generic_ps": {
+      "degree": 1223,
+      "k": 39,
+      "m": 5,
+      "mults": 73
+    },
+    "multiplicative_order": 8190,
+    "nonzero_terms": 612,
+    "sqrt_minus_one": false,
+    "support": 1225,
+    "valid": true
+  },
+  "num_candidates": 211,
+  "num_invalid": 39,
+  "num_valid": 172,
+  "p": 8191,
+  "support_size": 1225,
+  "type_b_feasible": true
+}

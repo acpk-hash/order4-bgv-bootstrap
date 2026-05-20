@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}问题背景：自举里的 exact cleaner}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}一般参数定理：$p$ 能任取到什么程度}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}固定 support 下不能随便声称更低次数}{4}{section.2}%
+\contentsline {section}{\numberline {3}关键选择：令 $A^2=-1$}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}乘以 $A$ 是 support square 上的旋转}{5}{subsection.3.1}%
+\contentsline {section}{\numberline {4}核心恒等式}{6}{section.4}%
+\contentsline {section}{\numberline {5}从稀疏多项式到专用 evaluator}{7}{section.5}%
+\contentsline {section}{\numberline {6}同一参数下的实际多项式对比}{7}{section.6}%
+\contentsline {paragraph}{Ma 默认 cleaner 的实际形式。}{8}{paragraph*.2}%
+\contentsline {paragraph}{SAT/结构搜索得到的 cleaner。}{8}{paragraph*.3}%
+\contentsline {paragraph}{正确性。}{9}{paragraph*.4}%
+\contentsline {paragraph}{节省的 cost。}{9}{paragraph*.5}%
+\contentsline {section}{\numberline {7}实验数字如何对应理论}{9}{section.7}%
+\contentsline {section}{\numberline {8}一句话解释}{10}{section.8}%
+\contentsline {section}{\numberline {9}论文 claim 边界}{10}{section.9}%
+\contentsline {section}{\numberline {10}讲解提纲}{10}{section.10}%

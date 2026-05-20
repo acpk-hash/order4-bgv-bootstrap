@@ -1,0 +1,784 @@
+{
+  "B": 17,
+  "baselines": [
+    {
+      "aux": 35,
+      "centered_aux_abs": 35,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        35
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 256,
+      "centered_aux_abs": 256,
+      "degree": 1223,
+      "nonzero_terms": 307,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        307,
+        73,
+        1223,
+        256
+      ],
+      "support": 1225,
+      "tags": [
+        "sqrt_minus_one",
+        "order_4"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65281,
+      "centered_aux_abs": 256,
+      "degree": 1223,
+      "nonzero_terms": 307,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        307,
+        73,
+        1223,
+        256
+      ],
+      "support": 1225,
+      "tags": [
+        "sqrt_minus_one",
+        "order_4"
+      ],
+      "valid": true
+    }
+  ],
+  "best": [
+    {
+      "aux": 256,
+      "centered_aux_abs": 256,
+      "degree": 1223,
+      "nonzero_terms": 307,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        307,
+        73,
+        1223,
+        256
+      ],
+      "support": 1225,
+      "tags": [
+        "sqrt_minus_one",
+        "order_4"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65281,
+      "centered_aux_abs": 256,
+      "degree": 1223,
+      "nonzero_terms": 307,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        307,
+        73,
+        1223,
+        256
+      ],
+      "support": 1225,
+      "tags": [
+        "sqrt_minus_one",
+        "order_4"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 35,
+      "centered_aux_abs": 35,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        35
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65502,
+      "centered_aux_abs": 35,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        35
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 64,
+      "centered_aux_abs": 64,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        64
+      ],
+      "support": 1225,
+      "tags": [
+        "order_16"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65473,
+      "centered_aux_abs": 64,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        64
+      ],
+      "support": 1225,
+      "tags": [
+        "order_16"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 128,
+      "centered_aux_abs": 128,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        128
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65409,
+      "centered_aux_abs": 128,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        128
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 255,
+      "centered_aux_abs": 255,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        255
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65282,
+      "centered_aux_abs": 255,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        255
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 257,
+      "centered_aux_abs": 257,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        257
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65280,
+      "centered_aux_abs": 257,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        257
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 510,
+      "centered_aux_abs": 510,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        510
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65027,
+      "centered_aux_abs": 510,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        510
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 512,
+      "centered_aux_abs": 512,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        512
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65025,
+      "centered_aux_abs": 512,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        512
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 514,
+      "centered_aux_abs": 514,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        514
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 65023,
+      "centered_aux_abs": 514,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        514
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 1020,
+      "centered_aux_abs": 1020,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1020
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 64517,
+      "centered_aux_abs": 1020,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1020
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 1024,
+      "centered_aux_abs": 1024,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1024
+      ],
+      "support": 1225,
+      "tags": [
+        "order_16"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 64513,
+      "centered_aux_abs": 1024,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1024
+      ],
+      "support": 1225,
+      "tags": [
+        "order_16"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 1028,
+      "centered_aux_abs": 1028,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1028
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 64509,
+      "centered_aux_abs": 1028,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        1028
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 2040,
+      "centered_aux_abs": 2040,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        2040
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 63497,
+      "centered_aux_abs": 2040,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        2040
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 2056,
+      "centered_aux_abs": 2056,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        2056
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 63481,
+      "centered_aux_abs": 2056,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        2056
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 4080,
+      "centered_aux_abs": 4080,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        4080
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    },
+    {
+      "aux": 61457,
+      "centered_aux_abs": 4080,
+      "degree": 1223,
+      "nonzero_terms": 612,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "score": [
+        612,
+        73,
+        1223,
+        4080
+      ],
+      "support": 1225,
+      "tags": [
+        "generic"
+      ],
+      "valid": true
+    }
+  ],
+  "candidate_sources": {
+    "explicit_aux": [
+      35,
+      256,
+      65281,
+      65502
+    ],
+    "low_order_max": 64,
+    "small_window": null
+  },
+  "num_candidates": 65,
+  "num_invalid": 21,
+  "num_valid": 44,
+  "p": 65537
+}

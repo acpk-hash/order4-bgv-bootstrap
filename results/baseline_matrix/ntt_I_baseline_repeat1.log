@@ -1,0 +1,27 @@
+chosen idx = 0
+encapHwt = 26
+t for new bts is 0
+new bts ? 1
+new ks ? 1
+thick bts ?0
+s2cFirst ? 0
+toy ? 0
+repeat times = 1
+### partition is 0 6 12 16 
+*** GTestFatboot: p=65537, r=1, bits=980, t=0, c=3, m=65536 mvec=[65536], gens=[-1 5], ords=[2 16384]
+Computing key-independent tables...
+t = 1
+bound on I = 12.275681
+log2(aux) = 16.000022
+log2(beta) = 30.212291
+log2(qks) >= 48.212891, final log2(qks) = 48.212891
+log2(R) >= 23.340238, final log2(R) = 23.426265
+INFO: total bits = 1331.71, security level = 78.1288
+DUMMY Po2IFFT!!!
+Start constructing MatMul1DExec for DUMMY Po2IFFT
+Start upgrading in DUMMY transform
+DUMMY Po2IFFT!!!
+Start constructing MatMul1DExec for DUMMY Po2IFFT
+Start upgrading in DUMMY transform
+
+### TIMEOUT after 2400s ###

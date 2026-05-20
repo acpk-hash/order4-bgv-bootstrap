@@ -1,0 +1,1282 @@
+{
+  "experiment": "generalized_character_filter_theorem",
+  "p": 65537,
+  "B_list": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    17
+  ],
+  "orders": [
+    4,
+    8,
+    16
+  ],
+  "dyadic_candidates_verified": {
+    "4": {
+      "A": 256,
+      "r": 4,
+      "A^(r/2) mod p": 65536,
+      "A^(r/2) = -1": true,
+      "multiplicative_order": 4
+    },
+    "8": {
+      "A": 16,
+      "r": 8,
+      "A^(r/2) mod p": 65536,
+      "A^(r/2) = -1": true,
+      "multiplicative_order": 8
+    },
+    "16": {
+      "A": 4,
+      "r": 16,
+      "A^(r/2) mod p": 65536,
+      "A^(r/2) = -1": true,
+      "multiplicative_order": 16
+    },
+    "32": {
+      "A": 2,
+      "r": 32,
+      "A^(r/2) mod p": 65536,
+      "A^(r/2) = -1": true,
+      "multiplicative_order": 32
+    }
+  },
+  "results": [
+    {
+      "B": 1,
+      "support_size": 9,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 1,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 771,
+            "p": 65537,
+            "B": 1,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 7,
+            "nonzero_terms": 3,
+            "support_size": 9,
+            "generic_ps_mults": 4
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 9,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 2,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 2
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 1,
+            "q_terms": 2,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 0,
+            "final_mul": 1,
+            "total_structured_mults": 4,
+            "generic_ps_mults": 4,
+            "speedup_ratio": 1.0
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 1,
+          "r": 8,
+          "A": 16,
+          "injective": true,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 13107,
+            "p": 65537,
+            "B": 1,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 7
+          },
+          "interpolation": {
+            "degree": 7,
+            "nonzero_terms": 4,
+            "support_size": 9,
+            "generic_ps_mults": 4
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 9,
+            "identity_holds": false,
+            "mismatches": [
+              {
+                "x": 15,
+                "Ax": 240,
+                "P(Ax)": 54202,
+                "A*P(x)": 65521,
+                "lhs": 54186,
+                "rhs": 240
+              },
+              {
+                "x": 16,
+                "Ax": 256,
+                "P(Ax)": 4487,
+                "A*P(x)": 0,
+                "lhs": 4487,
+                "rhs": 256
+              },
+              {
+                "x": 17,
+                "Ax": 272,
+                "P(Ax)": 23987,
+                "A*P(x)": 16,
+                "lhs": 24003,
+                "rhs": 272
+              },
+              {
+                "x": 65520,
+                "Ax": 65265,
+                "P(Ax)": 41550,
+                "A*P(x)": 65521,
+                "lhs": 41534,
+                "rhs": 65265
+              },
+              {
+                "x": 65521,
+                "Ax": 65281,
+                "P(Ax)": 61050,
+                "A*P(x)": 0,
+                "lhs": 61050,
+                "rhs": 65281
+              }
+            ]
+          },
+          "character_filter": {
+            "order_r": 8,
+            "survival_class_mod_r": 5,
+            "theorem_prediction": "c_k = 0 unless k \u2261 5 (mod 8) or k=1",
+            "filter_holds": false,
+            "linear_term_coeff": 55975,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": false,
+            "surviving_terms": 1,
+            "violation_terms": 2,
+            "violations_sample": [
+              [
+                3,
+                33600,
+                3
+              ],
+              [
+                7,
+                49209,
+                7
+              ]
+            ],
+            "residue_distribution": {
+              "3": 1,
+              "5": 1,
+              "7": 1
+            },
+            "nonzero_residue_classes": [
+              3,
+              5,
+              7
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 8,
+            "survival_shift_s": 5,
+            "q_degree": 0,
+            "q_terms": 1,
+            "power_precompute_mults": 3,
+            "x_s_mults": 1,
+            "q_eval_mults": 0,
+            "final_mul": 1,
+            "total_structured_mults": 5,
+            "generic_ps_mults": 4,
+            "speedup_ratio": 0.8
+          }
+        },
+        "16": {
+          "p": 65537,
+          "B": 1,
+          "r": 16,
+          "A": 4,
+          "injective": true,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 65535,
+            "p": 65537,
+            "B": 1,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 1
+          },
+          "interpolation": {
+            "degree": 7,
+            "nonzero_terms": 4,
+            "support_size": 9,
+            "generic_ps_mults": 4
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 9,
+            "identity_holds": false,
+            "mismatches": [
+              {
+                "x": 3,
+                "Ax": 12,
+                "P(Ax)": 48961,
+                "A*P(x)": 65533,
+                "lhs": 48957,
+                "rhs": 12
+              },
+              {
+                "x": 4,
+                "Ax": 16,
+                "P(Ax)": 28536,
+                "A*P(x)": 0,
+                "lhs": 28536,
+                "rhs": 16
+              },
+              {
+                "x": 5,
+                "Ax": 20,
+                "P(Ax)": 59127,
+                "A*P(x)": 4,
+                "lhs": 59131,
+                "rhs": 20
+              },
+              {
+                "x": 65532,
+                "Ax": 65517,
+                "P(Ax)": 6410,
+                "A*P(x)": 65533,
+                "lhs": 6406,
+                "rhs": 65517
+              },
+              {
+                "x": 65533,
+                "Ax": 65521,
+                "P(Ax)": 37001,
+                "A*P(x)": 0,
+                "lhs": 37001,
+                "rhs": 65521
+              }
+            ]
+          },
+          "character_filter": {
+            "order_r": 16,
+            "survival_class_mod_r": 9,
+            "theorem_prediction": "c_k = 0 unless k \u2261 9 (mod 16) or k=1",
+            "filter_holds": false,
+            "linear_term_coeff": 29337,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": false,
+            "surviving_terms": 0,
+            "violation_terms": 3,
+            "violations_sample": [
+              [
+                3,
+                10619,
+                3
+              ],
+              [
+                5,
+                43570,
+                5
+              ],
+              [
+                7,
+                47549,
+                7
+              ]
+            ],
+            "residue_distribution": {
+              "3": 1,
+              "5": 1,
+              "7": 1
+            },
+            "nonzero_residue_classes": [
+              3,
+              5,
+              7
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 16,
+            "survival_shift_s": 9,
+            "q_degree": 0,
+            "q_terms": 0,
+            "power_precompute_mults": 4,
+            "x_s_mults": 1,
+            "q_eval_mults": 0,
+            "final_mul": 1,
+            "total_structured_mults": 6,
+            "generic_ps_mults": 4,
+            "speedup_ratio": 0.6666666666666666
+          }
+        }
+      }
+    },
+    {
+      "B": 3,
+      "support_size": 49,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 3,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 1799,
+            "p": 65537,
+            "B": 3,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 47,
+            "nonzero_terms": 13,
+            "support_size": 49,
+            "generic_ps_mults": 14
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 49,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 12,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 12
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 11,
+            "q_terms": 12,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 6,
+            "final_mul": 1,
+            "total_structured_mults": 10,
+            "generic_ps_mults": 14,
+            "speedup_ratio": 1.4
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 3,
+          "r": 8,
+          "A": 16,
+          "injective": true,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 30583,
+            "p": 65537,
+            "B": 3,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 7
+          },
+          "interpolation": {
+            "degree": 47,
+            "nonzero_terms": 24,
+            "support_size": 49,
+            "generic_ps_mults": 14
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 49,
+            "identity_holds": false,
+            "mismatches": [
+              {
+                "x": 13,
+                "Ax": 208,
+                "P(Ax)": 34606,
+                "A*P(x)": 65489,
+                "lhs": 34558,
+                "rhs": 208
+              },
+              {
+                "x": 14,
+                "Ax": 224,
+                "P(Ax)": 64547,
+                "A*P(x)": 65505,
+                "lhs": 64515,
+                "rhs": 224
+              },
+              {
+                "x": 15,
+                "Ax": 240,
+                "P(Ax)": 41604,
+                "A*P(x)": 65521,
+                "lhs": 41588,
+                "rhs": 240
+              },
+              {
+                "x": 16,
+                "Ax": 256,
+                "P(Ax)": 39333,
+                "A*P(x)": 0,
+                "lhs": 39333,
+                "rhs": 256
+              },
+              {
+                "x": 17,
+                "Ax": 272,
+                "P(Ax)": 23326,
+                "A*P(x)": 16,
+                "lhs": 23342,
+                "rhs": 272
+              }
+            ]
+          },
+          "character_filter": {
+            "order_r": 8,
+            "survival_class_mod_r": 5,
+            "theorem_prediction": "c_k = 0 unless k \u2261 5 (mod 8) or k=1",
+            "filter_holds": false,
+            "linear_term_coeff": 38048,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": false,
+            "surviving_terms": 6,
+            "violation_terms": 17,
+            "violations_sample": [
+              [
+                3,
+                45757,
+                3
+              ],
+              [
+                7,
+                41779,
+                7
+              ],
+              [
+                9,
+                57567,
+                1
+              ],
+              [
+                11,
+                18598,
+                3
+              ],
+              [
+                15,
+                10821,
+                7
+              ]
+            ],
+            "residue_distribution": {
+              "1": 5,
+              "3": 6,
+              "5": 6,
+              "7": 6
+            },
+            "nonzero_residue_classes": [
+              1,
+              3,
+              5,
+              7
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 8,
+            "survival_shift_s": 5,
+            "q_degree": 5,
+            "q_terms": 6,
+            "power_precompute_mults": 3,
+            "x_s_mults": 1,
+            "q_eval_mults": 3,
+            "final_mul": 1,
+            "total_structured_mults": 8,
+            "generic_ps_mults": 14,
+            "speedup_ratio": 1.75
+          }
+        },
+        "16": {
+          "p": 65537,
+          "B": 3,
+          "r": 16,
+          "A": 4,
+          "injective": false,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 152915,
+            "p": 65537,
+            "B": 3,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 1
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        }
+      }
+    },
+    {
+      "B": 5,
+      "support_size": 121,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 5,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 2827,
+            "p": 65537,
+            "B": 5,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 119,
+            "nonzero_terms": 31,
+            "support_size": 121,
+            "generic_ps_mults": 23
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 121,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 30,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 30
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 29,
+            "q_terms": 30,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 11,
+            "final_mul": 1,
+            "total_structured_mults": 15,
+            "generic_ps_mults": 23,
+            "speedup_ratio": 1.5333333333333334
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 5,
+          "r": 8,
+          "A": 16,
+          "injective": true,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 48059,
+            "p": 65537,
+            "B": 5,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 7
+          },
+          "interpolation": {
+            "degree": 119,
+            "nonzero_terms": 60,
+            "support_size": 121,
+            "generic_ps_mults": 23
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 121,
+            "identity_holds": false,
+            "mismatches": [
+              {
+                "x": 11,
+                "Ax": 176,
+                "P(Ax)": 64811,
+                "A*P(x)": 65457,
+                "lhs": 64731,
+                "rhs": 176
+              },
+              {
+                "x": 12,
+                "Ax": 192,
+                "P(Ax)": 62377,
+                "A*P(x)": 65473,
+                "lhs": 62313,
+                "rhs": 192
+              },
+              {
+                "x": 13,
+                "Ax": 208,
+                "P(Ax)": 38691,
+                "A*P(x)": 65489,
+                "lhs": 38643,
+                "rhs": 208
+              },
+              {
+                "x": 14,
+                "Ax": 224,
+                "P(Ax)": 45508,
+                "A*P(x)": 65505,
+                "lhs": 45476,
+                "rhs": 224
+              },
+              {
+                "x": 15,
+                "Ax": 240,
+                "P(Ax)": 22082,
+                "A*P(x)": 65521,
+                "lhs": 22066,
+                "rhs": 240
+              }
+            ]
+          },
+          "character_filter": {
+            "order_r": 8,
+            "survival_class_mod_r": 5,
+            "theorem_prediction": "c_k = 0 unless k \u2261 5 (mod 8) or k=1",
+            "filter_holds": false,
+            "linear_term_coeff": 42036,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": false,
+            "surviving_terms": 15,
+            "violation_terms": 44,
+            "violations_sample": [
+              [
+                3,
+                9575,
+                3
+              ],
+              [
+                7,
+                51963,
+                7
+              ],
+              [
+                9,
+                23130,
+                1
+              ],
+              [
+                11,
+                52811,
+                3
+              ],
+              [
+                15,
+                5297,
+                7
+              ]
+            ],
+            "residue_distribution": {
+              "1": 14,
+              "3": 15,
+              "5": 15,
+              "7": 15
+            },
+            "nonzero_residue_classes": [
+              1,
+              3,
+              5,
+              7
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 8,
+            "survival_shift_s": 5,
+            "q_degree": 14,
+            "q_terms": 15,
+            "power_precompute_mults": 3,
+            "x_s_mults": 1,
+            "q_eval_mults": 7,
+            "final_mul": 1,
+            "total_structured_mults": 12,
+            "generic_ps_mults": 23,
+            "speedup_ratio": 1.9166666666666667
+          }
+        },
+        "16": {
+          "p": 65537,
+          "B": 5,
+          "r": 16,
+          "A": 4,
+          "injective": false,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 240295,
+            "p": 65537,
+            "B": 5,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 1
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        }
+      }
+    },
+    {
+      "B": 7,
+      "support_size": 225,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 7,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 3855,
+            "p": 65537,
+            "B": 7,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 223,
+            "nonzero_terms": 57,
+            "support_size": 225,
+            "generic_ps_mults": 31
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 225,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 56,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 56
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 55,
+            "q_terms": 56,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 15,
+            "final_mul": 1,
+            "total_structured_mults": 19,
+            "generic_ps_mults": 31,
+            "speedup_ratio": 1.631578947368421
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 7,
+          "r": 8,
+          "A": 16,
+          "injective": true,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 65535,
+            "p": 65537,
+            "B": 7,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 7
+          },
+          "interpolation": {
+            "degree": 223,
+            "nonzero_terms": 112,
+            "support_size": 225,
+            "generic_ps_mults": 31
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 225,
+            "identity_holds": false,
+            "mismatches": [
+              {
+                "x": 9,
+                "Ax": 144,
+                "P(Ax)": 11319,
+                "A*P(x)": 65425,
+                "lhs": 11207,
+                "rhs": 144
+              },
+              {
+                "x": 10,
+                "Ax": 160,
+                "P(Ax)": 24517,
+                "A*P(x)": 65441,
+                "lhs": 24421,
+                "rhs": 160
+              },
+              {
+                "x": 11,
+                "Ax": 176,
+                "P(Ax)": 41688,
+                "A*P(x)": 65457,
+                "lhs": 41608,
+                "rhs": 176
+              },
+              {
+                "x": 12,
+                "Ax": 192,
+                "P(Ax)": 42752,
+                "A*P(x)": 65473,
+                "lhs": 42688,
+                "rhs": 192
+              },
+              {
+                "x": 13,
+                "Ax": 208,
+                "P(Ax)": 45820,
+                "A*P(x)": 65489,
+                "lhs": 45772,
+                "rhs": 208
+              }
+            ]
+          },
+          "character_filter": {
+            "order_r": 8,
+            "survival_class_mod_r": 5,
+            "theorem_prediction": "c_k = 0 unless k \u2261 5 (mod 8) or k=1",
+            "filter_holds": false,
+            "linear_term_coeff": 27431,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": false,
+            "surviving_terms": 28,
+            "violation_terms": 83,
+            "violations_sample": [
+              [
+                3,
+                64394,
+                3
+              ],
+              [
+                7,
+                32372,
+                7
+              ],
+              [
+                9,
+                55623,
+                1
+              ],
+              [
+                11,
+                10504,
+                3
+              ],
+              [
+                15,
+                35848,
+                7
+              ]
+            ],
+            "residue_distribution": {
+              "1": 27,
+              "3": 28,
+              "5": 28,
+              "7": 28
+            },
+            "nonzero_residue_classes": [
+              1,
+              3,
+              5,
+              7
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 8,
+            "survival_shift_s": 5,
+            "q_degree": 27,
+            "q_terms": 28,
+            "power_precompute_mults": 3,
+            "x_s_mults": 1,
+            "q_eval_mults": 10,
+            "final_mul": 1,
+            "total_structured_mults": 15,
+            "generic_ps_mults": 31,
+            "speedup_ratio": 2.066666666666667
+          }
+        },
+        "16": {
+          "p": 65537,
+          "B": 7,
+          "r": 16,
+          "A": 4,
+          "injective": false,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 327675,
+            "p": 65537,
+            "B": 7,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 1
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        }
+      }
+    },
+    {
+      "B": 9,
+      "support_size": 361,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 9,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 4883,
+            "p": 65537,
+            "B": 9,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 359,
+            "nonzero_terms": 91,
+            "support_size": 361,
+            "generic_ps_mults": 40
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 361,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 90,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 90
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 89,
+            "q_terms": 90,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 20,
+            "final_mul": 1,
+            "total_structured_mults": 24,
+            "generic_ps_mults": 40,
+            "speedup_ratio": 1.6666666666666667
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 9,
+          "r": 8,
+          "A": 16,
+          "injective": false,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 83011,
+            "p": 65537,
+            "B": 9,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 7
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        },
+        "16": {
+          "p": 65537,
+          "B": 9,
+          "r": 16,
+          "A": 4,
+          "injective": false,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 415055,
+            "p": 65537,
+            "B": 9,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 1
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        }
+      }
+    },
+    {
+      "B": 17,
+      "support_size": 1225,
+      "cases": {
+        "4": {
+          "p": 65537,
+          "B": 17,
+          "r": 4,
+          "A": 256,
+          "injective": true,
+          "bound": {
+            "order_r": 4,
+            "dimension_d": 2,
+            "A": 256,
+            "A_centered": 256,
+            "A_abs": 256,
+            "sum_abs_powers": 257,
+            "bound_value": 8995,
+            "p": 65537,
+            "B": 17,
+            "sufficient_feasible": true,
+            "max_B_sufficient": 127
+          },
+          "interpolation": {
+            "degree": 1223,
+            "nonzero_terms": 307,
+            "support_size": 1225,
+            "generic_ps_mults": 73
+          },
+          "identity_check": {
+            "identity": "P_A(A*X) + A*P_A(X) = A*X",
+            "support_points_checked": 1225,
+            "identity_holds": true,
+            "mismatches": []
+          },
+          "character_filter": {
+            "order_r": 4,
+            "survival_class_mod_r": 3,
+            "theorem_prediction": "c_k = 0 unless k \u2261 3 (mod 4) or k=1",
+            "filter_holds": true,
+            "linear_term_coeff": 32769,
+            "expected_linear_coeff": 32769,
+            "linear_term_correct": true,
+            "surviving_terms": 306,
+            "violation_terms": 0,
+            "violations_sample": [],
+            "residue_distribution": {
+              "3": 306
+            },
+            "nonzero_residue_classes": [
+              3
+            ]
+          },
+          "evaluator_cost": {
+            "order_r": 4,
+            "survival_shift_s": 3,
+            "q_degree": 305,
+            "q_terms": 306,
+            "power_precompute_mults": 2,
+            "x_s_mults": 1,
+            "q_eval_mults": 37,
+            "final_mul": 1,
+            "total_structured_mults": 41,
+            "generic_ps_mults": 73,
+            "speedup_ratio": 1.7804878048780488
+          }
+        },
+        "8": {
+          "p": 65537,
+          "B": 17,
+          "r": 8,
+          "A": 16,
+          "injective": false,
+          "bound": {
+            "order_r": 8,
+            "dimension_d": 4,
+            "A": 16,
+            "A_centered": 16,
+            "A_abs": 16,
+            "sum_abs_powers": 4369,
+            "bound_value": 152915,
+            "p": 65537,
+            "B": 17,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 7
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        },
+        "16": {
+          "p": 65537,
+          "B": 17,
+          "r": 16,
+          "A": 4,
+          "injective": false,
+          "bound": {
+            "order_r": 16,
+            "dimension_d": 8,
+            "A": 4,
+            "A_centered": 4,
+            "A_abs": 4,
+            "sum_abs_powers": 21845,
+            "bound_value": 764575,
+            "p": 65537,
+            "B": 17,
+            "sufficient_feasible": false,
+            "max_B_sufficient": 1
+          },
+          "interpolation": null,
+          "identity_check": null,
+          "character_filter": null,
+          "evaluator_cost": null
+        }
+      }
+    }
+  ]
+}

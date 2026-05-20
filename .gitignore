@@ -1,0 +1,13 @@
+build/
+*/build/
+local/
+cache/saved_ZZX/*.txt
+*.o
+*.a
+*.so
+__pycache__/
+*.pyc
+src/HElib_auxradix_opt/
+build/
+local/
+cache/saved_ZZX/*.txt

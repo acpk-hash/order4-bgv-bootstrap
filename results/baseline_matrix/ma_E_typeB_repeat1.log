@@ -1,0 +1,136 @@
+chosen idx = 4
+encapHwt = 12
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+repeat times = 1
+force bsgs = 0
+force hoist = 0
+*** GTestFatboot: p=65537, r=1, bits=1500, t=0, c=3, m=50731 mvec=[97 523], gens=[48117 5239], ords=[96 29]
+Computing key-independent tables...
+t = -1
+bound on I = 16.402088
+log2(aux) = 5.129283
+log2(beta) = 30.546816
+log2(qks) >= 38.373355, final log2(qks) = 38.373361
+log2(R) >= 28.191770, final log2(R) = 28.192822
+INFO: total bits = 2017.44, security level = 78.8964deg of poly for non-power-of-p aux is 1223
+security=78.8964
+# small primes = 6
+# ctxt primes = 26
+# bits in ctxt primes = 1505
+# special primes = 9
+# bits in special primes = 512
+scale=10
+ done in 264.994 seconds
+  e=0, e'=0, t=12
+  m = 50731, p = 65537, phi(m) = 50112
+  ord(p) = 18
+  normBnd = 1.62099
+  polyNormBnd = 5.6346
+  factors = [97 523]
+  generator 48117 has order (== Z_m^*) of 96
+  generator 5239 has order (== Z_m^*) of 29
+r = 1
+nslots = 2784
+hwt = 120
+ctxtPrimes = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+specialPrimes = [36,37,38,39,40,41,42,43,44]
+number of bits = 2018
+
+security level = 78.8964
+Generating keys, computing key-dependent tables...Sparse boot key hwt = 12
+ done in 41.6353 seconds
+WARNING: KS-noise-ratio = 1503.08 > 1
+time for linear1 = 4.475460, linear2 = 44.159740, extract = 156.519949, total = 207.442313
+bits for linear1 = 55.711455, linear2 = 64.860587, extract = 354.246930, min cap = 7.826545, after cap = 1038.430531, after prod = 1457.538048
+cap / time = 4.699584
+
+### summary over 1 test
+time for linear1 = 4.475460, linear2 = 44.159740, extract = 156.519949, total = 207.442313
+bits for linear1 = 55.711455, linear2 = 64.860587, extract = 354.246930, min cap = 7.826545, after cap = 1038.430531, after prod = 1457.538048
+cap / time = 4.699584
+
+
+### bts finished, everything ok ###
+
+  AAA_bootKeySwitch: 24.3328 / 1 = 24.3328   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:1929]
+  AAA_coeffToSlot: 21.6617 / 1 = 21.6617   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:2299]
+  AAA_embeddingLargest: 0.825062 / 304 = 0.00271402   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/norms.cpp:250]
+  AAA_embeddingLargest_x2: 0.606241 / 233 = 0.00260189   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/norms.cpp:423]
+  AAA_extractDigitsThin: 156.518 / 1 = 156.518   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:2339]
+  AAA_modDownEnbeddings: 0.713795 / 233 = 0.0030635   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:506]
+  AAA_slotToCoeff: 4.4754 / 1 = 4.4754   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:1915]
+  BasicAutomorphPrecon: 4.66143 / 8 = 0.582679   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/matmul.cpp:69]
+  BluesteinFFT: 89.5915 / 24853 = 0.00360486   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/bluestein.cpp:141]
+  Decrypt: 0.615435 / 1 = 0.615435   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/keys.cpp:1350]
+  DoubleCRT: 55.5777 / 521 = 0.106675   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:718]
+  FFT: 83.9494 / 17700 = 0.00474291   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:448]
+  FFT: 83.9583 / 770 = 0.109037   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:70]
+  FFT: 66.9609 / 17700 = 0.0037831   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:479]
+  FFT_aux: 66.9468 / 17700 = 0.00378231   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:360]
+  FFT_remainder: 16.9773 / 17700 = 0.000959172   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:455]
+  KS_loop: 18.2066 / 592 = 0.0307543   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:219]
+  KS_loop_1: 3.11491 / 592 = 0.00526167   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:227]
+  KS_loop_2: 2.10795 / 592 = 0.00356073   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:231]
+  KS_loop_3: 3.14761 / 592 = 0.0053169   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:236]
+  KS_loop_4: 1.13882 / 592 = 0.00192369   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:240]
+  NORM_VAL: 1.4481 / 248 = 0.0058391   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:541]
+  addCtxt: 20.8391 / 1663 = 0.012531   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:1458]
+  addPart: 4.43484 / 1469 = 0.00301895   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:905]
+  addPrimes: 44.5115 / 249 = 0.178761   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:625]
+  addPrimes_5: 46.5924 / 248 = 0.187873   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:518]
+  automorph: 15.2759 / 151 = 0.101165   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/matmul.cpp:117]
+  automorph: 0.120773 / 27 = 0.00447307   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:2489]
+  breakIntoDigits: 46.8837 / 90 = 0.520929   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:481]
+  decode: 16.1879 / 1 = 16.1879   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/EncryptedArray.cpp:375]
+  do_mul: 9.79253 / 2237 = 0.00437753   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:280]
+  extractDigitsThin: 156.518 / 1 = 156.518   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:1558]
+  iFFT: 40.8627 / 7153 = 0.00571267   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:488]
+  iFFT_division: 13.649 / 7153 = 0.00190814   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/CModulus.cpp:570]
+  keySwitchPart: 50.2352 / 83 = 0.605243   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:836]
+  modDownToSet: 102.675 / 265 = 0.387452   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:409]
+  mul_MatMul1DExec: 41.8964 / 6 = 6.98273   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/matmul.cpp:975]
+  multByConstant: 0.118954 / 1 = 0.118954   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:1910]
+  multByConstant: 2.4847 / 376 = 0.00660826   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:1884]
+  multLowLvl: 66.5589 / 75 = 0.887452   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:1733]
+  multiplyBy: 60.2251 / 32 = 1.88203   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:1809]
+  privateAssign: 4.77251 / 895 = 0.00533241   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:329]
+  randomize: 7.32996 / 592 = 0.0123817   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:1318]
+  randomize_stream: 4.09958 / 4345613 = 9.43384e-07   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:1348]
+  reLinearize: 79.1682 / 150 = 0.527788   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:736]
+  smartAutomorph: 13.9116 / 27 = 0.515246   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/Ctxt.cpp:2514]
+  thinReCrypt: 207.444 / 1 = 207.444   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/recryption.cpp:1833]
+  toPoly: 55.2291 / 769 = 0.0718194   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:985]
+  toPoly_CRT: 9.76959 / 769 = 0.0127043   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:1052]
+  toPoly_FFT: 44.7706 / 769 = 0.0582193   [/home/luck/xzy/0424project/worktrees/HElib_large_p/src/DoubleCRT.cpp:1030]
+  rusage.ru_maxrss=10551736
+||||| stats |||||
+KS-noise-ratio ave=18.1214 max=1503.08
+KS-noise-ratio-hoist ave=1.49079e+06 max=1.19263e+07
+break-into-digits-ratio ave=0.322344 max=0.417492
+excess-ctxtPrimes ave=5.43078 max=5.43078
+excess-specialPrimes ave=2.48795 max=2.48795
+mod-switch-added-noise ave=0.326658 max=0.408612
+ptxt_rat_sk ave=0.00180589 max=0.00180589
+ptxt_rat_sk ave=0.305668 max=0.305668
+raw-mod-switch-noise ave=0.326417 max=0.326417
+window1-nchoices ave=4.8 max=7
+window1-out ave=0 max=0
+window2-nchoices ave=4.5 max=8
+window2-out ave=0 max=0
+||||| stats |||||
+KS-noise-ratio ave=18.1214 max=1503.08
+KS-noise-ratio-hoist ave=1.49079e+06 max=1.19263e+07
+break-into-digits-ratio ave=0.322344 max=0.417492
+excess-ctxtPrimes ave=5.43078 max=5.43078
+excess-specialPrimes ave=2.48795 max=2.48795
+mod-switch-added-noise ave=0.326658 max=0.408612
+ptxt_rat_sk ave=0.00180589 max=0.00180589
+ptxt_rat_sk ave=0.305668 max=0.305668
+raw-mod-switch-noise ave=0.326417 max=0.326417
+window1-nchoices ave=4.8 max=7
+window1-out ave=0 max=0
+window2-nchoices ave=4.5 max=8
+window2-out ave=0 max=0

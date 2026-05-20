@@ -1,0 +1,756 @@
+[ 09:51:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 09:51:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 09:55:30 ] WARNING: KS-noise-ratio-hoist=12283623.878798
+[ 09:55:53 ] WARNING: KS-noise-ratio-hoist=32.256120
+[ 09:56:30 ] WARNING: KS-noise-ratio=1700.590771
+[ 09:59:16 ] WARNING: KS-noise-ratio=1.034671
+[ 09:59:18 ] WARNING: KS-noise-ratio-hoist=12662268.099472
+[ 09:59:41 ] WARNING: KS-noise-ratio-hoist=35.931437
+[ 10:00:17 ] WARNING: KS-noise-ratio=1817.535970
+[ 10:03:07 ] WARNING: KS-noise-ratio-hoist=13000860.069178
+[ 10:03:29 ] WARNING: KS-noise-ratio-hoist=35.123934
+[ 10:04:05 ] WARNING: KS-noise-ratio=1616.545262
+[ 10:50:50 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 10:55:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:06:40 ] WARNING: KS-noise-ratio=1.026239
+[ 11:09:28 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:12:03 ] WARNING: KS-noise-ratio=1.049447
+[ 11:12:05 ] WARNING: KS-noise-ratio-hoist=78.629652
+[ 11:18:47 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:21:09 ] WARNING: KS-noise-ratio=1.055231
+[ 11:21:11 ] WARNING: KS-noise-ratio-hoist=4579097.153444
+[ 11:21:30 ] WARNING: KS-noise-ratio-hoist=16.155136
+[ 11:21:50 ] WARNING: KS-noise-ratio=53.627188
+[ 11:21:53 ] WARNING: KS-noise-ratio=2.871457
+[ 11:21:55 ] WARNING: KS-noise-ratio=2.320142
+[ 11:21:58 ] WARNING: KS-noise-ratio=1.837357
+[ 11:22:00 ] WARNING: KS-noise-ratio=2.001457
+[ 11:22:03 ] WARNING: KS-noise-ratio=1.991005
+[ 11:22:04 ] WARNING: KS-noise-ratio=97.471641
+[ 11:22:11 ] WARNING: KS-noise-ratio=2.821659
+[ 11:22:13 ] WARNING: KS-noise-ratio=3.123445
+[ 11:22:15 ] WARNING: KS-noise-ratio=2.804000
+[ 11:22:17 ] WARNING: KS-noise-ratio=2.146413
+[ 11:22:18 ] WARNING: KS-noise-ratio=2.320864
+[ 11:22:20 ] WARNING: KS-noise-ratio=2.174557
+[ 11:25:19 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:27:42 ] WARNING: KS-noise-ratio=1.028444
+[ 11:27:44 ] WARNING: KS-noise-ratio-hoist=5512564.173699
+[ 11:28:02 ] WARNING: KS-noise-ratio-hoist=12.308435
+[ 11:28:22 ] WARNING: KS-noise-ratio=41.753648
+[ 11:28:26 ] WARNING: KS-noise-ratio=2.378221
+[ 11:28:27 ] WARNING: KS-noise-ratio=2.386850
+[ 11:28:30 ] WARNING: KS-noise-ratio=2.097693
+[ 11:28:33 ] WARNING: KS-noise-ratio=1.956273
+[ 11:28:35 ] WARNING: KS-noise-ratio=1.876929
+[ 11:28:37 ] WARNING: KS-noise-ratio=98.400271
+[ 11:28:43 ] WARNING: KS-noise-ratio=2.918471
+[ 11:28:45 ] WARNING: KS-noise-ratio=2.773001
+[ 11:28:47 ] WARNING: KS-noise-ratio=3.163322
+[ 11:28:49 ] WARNING: KS-noise-ratio=2.650558
+[ 11:28:50 ] WARNING: KS-noise-ratio=2.681416
+[ 11:28:52 ] WARNING: KS-noise-ratio=2.374083
+[ 11:32:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:32:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:41:59 ] WARNING: KS-noise-ratio-hoist=40.092262
+[ 11:46:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:46:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:50:02 ] WARNING: KS-noise-ratio-hoist=11926297.210407
+[ 11:50:24 ] WARNING: KS-noise-ratio-hoist=33.422212
+[ 11:51:00 ] WARNING: KS-noise-ratio=1503.076662
+[ 11:55:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:55:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 11:58:51 ] WARNING: KS-noise-ratio=1.001990
+[ 11:58:54 ] WARNING: KS-noise-ratio-hoist=11187086.545289
+[ 11:59:16 ] WARNING: KS-noise-ratio-hoist=4.192595
+[ 11:59:51 ] WARNING: KS-noise-ratio=1711.529472
+[ 12:04:02 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 12:04:02 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 12:07:33 ] WARNING: KS-noise-ratio=1.021773
+[ 12:07:35 ] WARNING: KS-noise-ratio-hoist=12124994.215357
+[ 12:07:57 ] WARNING: KS-noise-ratio-hoist=4.747916
+[ 12:08:34 ] WARNING: KS-noise-ratio=1557.375711
+[ 13:16:26 ] WARNING: KS-noise-ratio-hoist=85.087856
+[ 14:00:21 ] WARNING: KS-noise-ratio=80.365554
+[ 14:00:21 ] WARNING: KS-noise-ratio=1.063006
+[ 14:08:44 ] WARNING: KS-noise-ratio=82.967100
+[ 14:39:46 ] WARNING: KS-noise-ratio=1.020240
+[ 14:39:46 ] WARNING: KS-noise-ratio=79.471188
+[ 15:09:11 ] WARNING: KS-noise-ratio=84.835709
+[ 17:11:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:11:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:14:57 ] WARNING: KS-noise-ratio=1.050436
+[ 17:14:59 ] WARNING: KS-noise-ratio-hoist=14026743.842825
+[ 17:15:22 ] WARNING: KS-noise-ratio-hoist=33.916669
+[ 17:15:58 ] WARNING: KS-noise-ratio=1371.606942
+[ 17:18:44 ] WARNING: KS-noise-ratio=1.083541
+[ 17:18:47 ] WARNING: KS-noise-ratio-hoist=13150105.172644
+[ 17:19:09 ] WARNING: KS-noise-ratio-hoist=33.340558
+[ 17:19:46 ] WARNING: KS-noise-ratio=1727.119560
+[ 17:22:32 ] WARNING: KS-noise-ratio-hoist=12317147.970251
+[ 17:22:55 ] WARNING: KS-noise-ratio-hoist=35.032082
+[ 17:23:31 ] WARNING: KS-noise-ratio=1448.737384
+[ 17:27:53 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:27:53 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:31:19 ] WARNING: KS-noise-ratio=1.049334
+[ 17:31:21 ] WARNING: KS-noise-ratio-hoist=11386705.899264
+[ 17:31:43 ] WARNING: KS-noise-ratio-hoist=4.771959
+[ 17:32:19 ] WARNING: KS-noise-ratio=1728.117648
+[ 17:34:53 ] WARNING: KS-noise-ratio-hoist=11866800.195488
+[ 17:35:15 ] WARNING: KS-noise-ratio-hoist=4.913796
+[ 17:35:50 ] WARNING: KS-noise-ratio=1755.085805
+[ 17:38:22 ] WARNING: KS-noise-ratio=1.132685
+[ 17:38:24 ] WARNING: KS-noise-ratio-hoist=13112510.850347
+[ 17:38:46 ] WARNING: KS-noise-ratio-hoist=4.395520
+[ 17:39:22 ] WARNING: KS-noise-ratio=1498.821669
+[ 17:43:44 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:43:44 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:47:13 ] WARNING: KS-noise-ratio-hoist=11451054.623195
+[ 17:47:35 ] WARNING: KS-noise-ratio-hoist=4.481316
+[ 17:48:12 ] WARNING: KS-noise-ratio=1749.918479
+[ 17:49:39 ] WARNING: KS-noise-ratio=1.035796
+[ 17:49:42 ] WARNING: KS-noise-ratio-hoist=11911585.960355
+[ 17:50:03 ] WARNING: KS-noise-ratio-hoist=4.653752
+[ 17:50:40 ] WARNING: KS-noise-ratio=1402.956984
+[ 17:52:09 ] WARNING: KS-noise-ratio-hoist=13062697.095764
+[ 17:52:31 ] WARNING: KS-noise-ratio-hoist=4.850699
+[ 17:53:07 ] WARNING: KS-noise-ratio=1700.459090
+[ 21:25:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:25:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:29:32 ] WARNING: KS-noise-ratio=1.004314
+[ 21:29:33 ] WARNING: KS-noise-ratio=1.015611
+[ 21:29:33 ] WARNING: KS-noise-ratio=1.064809
+[ 21:29:34 ] WARNING: KS-noise-ratio=1.075141
+[ 21:29:35 ] WARNING: KS-noise-ratio-hoist=12951756.935219
+[ 21:29:35 ] WARNING: KS-noise-ratio-hoist=11726750.456053
+[ 21:29:35 ] WARNING: KS-noise-ratio=1.070162
+[ 21:29:36 ] WARNING: KS-noise-ratio-hoist=12302754.850248
+[ 21:29:37 ] WARNING: KS-noise-ratio-hoist=11323910.762555
+[ 21:29:38 ] WARNING: KS-noise-ratio-hoist=13403862.034902
+[ 21:29:59 ] WARNING: KS-noise-ratio-hoist=4.156229
+[ 21:30:00 ] WARNING: KS-noise-ratio-hoist=4.233671
+[ 21:30:00 ] WARNING: KS-noise-ratio-hoist=4.441859
+[ 21:30:02 ] WARNING: KS-noise-ratio-hoist=4.301417
+[ 21:30:03 ] WARNING: KS-noise-ratio-hoist=4.657699
+[ 21:30:38 ] WARNING: KS-noise-ratio=1661.914283
+[ 21:30:41 ] WARNING: KS-noise-ratio=1528.350215
+[ 21:30:42 ] WARNING: KS-noise-ratio=6420.123305
+[ 21:30:42 ] WARNING: KS-noise-ratio=5745.386701
+[ 21:30:43 ] WARNING: KS-noise-ratio=1575.800323
+[ 21:30:56 ] WARNING: KS-noise-ratio=12255.899522
+[ 21:30:57 ] WARNING: KS-noise-ratio=12431.183128
+[ 21:30:58 ] WARNING: KS-noise-ratio=12584.526853
+[ 21:30:59 ] WARNING: KS-noise-ratio=14205.552576
+[ 21:31:00 ] WARNING: KS-noise-ratio=13523.216637
+[ 21:31:02 ] WARNING: KS-noise-ratio=12576.212937
+[ 21:31:02 ] WARNING: KS-noise-ratio=10815.656804
+[ 21:31:04 ] WARNING: KS-noise-ratio=12070.617599
+[ 21:31:04 ] WARNING: KS-noise-ratio=5957.290188
+[ 21:31:06 ] WARNING: KS-noise-ratio=6440.507186
+[ 21:32:15 ] WARNING: KS-noise-ratio=1.034962
+[ 21:32:18 ] WARNING: KS-noise-ratio-hoist=12614349.547749
+[ 21:32:25 ] WARNING: KS-noise-ratio-hoist=13594934.905815
+[ 21:32:42 ] WARNING: KS-noise-ratio-hoist=4.463625
+[ 21:32:50 ] WARNING: KS-noise-ratio-hoist=4.466271
+[ 21:33:21 ] WARNING: KS-noise-ratio=6301.053840
+[ 21:33:24 ] WARNING: KS-noise-ratio=1.091190
+[ 21:33:26 ] WARNING: KS-noise-ratio=1.122042
+[ 21:33:26 ] WARNING: KS-noise-ratio-hoist=12413821.384657
+[ 21:33:28 ] WARNING: KS-noise-ratio-hoist=13088593.540566
+[ 21:33:29 ] WARNING: KS-noise-ratio=5927.618406
+[ 21:33:34 ] WARNING: KS-noise-ratio-hoist=12118265.501197
+[ 21:33:36 ] WARNING: KS-noise-ratio=12073.829216
+[ 21:33:38 ] WARNING: KS-noise-ratio=12363.829082
+[ 21:33:40 ] WARNING: KS-noise-ratio=13540.524957
+[ 21:33:43 ] WARNING: KS-noise-ratio=14438.332188
+[ 21:33:43 ] WARNING: KS-noise-ratio=13113.232672
+[ 21:33:45 ] WARNING: KS-noise-ratio=6568.394715
+[ 21:33:45 ] WARNING: KS-noise-ratio=13040.333269
+[ 21:33:47 ] WARNING: KS-noise-ratio=13491.540776
+[ 21:33:49 ] WARNING: KS-noise-ratio=13257.809982
+[ 21:33:51 ] WARNING: KS-noise-ratio=6024.070929
+[ 21:33:52 ] WARNING: KS-noise-ratio-hoist=4.348751
+[ 21:33:52 ] WARNING: KS-noise-ratio-hoist=4.159599
+[ 21:33:58 ] WARNING: KS-noise-ratio-hoist=5.033825
+[ 21:34:32 ] WARNING: KS-noise-ratio=1460.104250
+[ 21:34:32 ] WARNING: KS-noise-ratio=1384.824247
+[ 21:34:38 ] WARNING: KS-noise-ratio=1511.825072
+[ 21:35:02 ] WARNING: KS-noise-ratio-hoist=13000265.057443
+[ 21:35:08 ] WARNING: KS-noise-ratio-hoist=12515863.319350
+[ 21:35:26 ] WARNING: KS-noise-ratio-hoist=4.221481
+[ 21:35:33 ] WARNING: KS-noise-ratio-hoist=4.821675
+[ 21:36:07 ] WARNING: KS-noise-ratio=5489.082913
+[ 21:36:12 ] WARNING: KS-noise-ratio=3815.374528
+[ 21:36:20 ] WARNING: KS-noise-ratio=13345.983017
+[ 21:36:23 ] WARNING: KS-noise-ratio=12876.273438
+[ 21:36:25 ] WARNING: KS-noise-ratio=11673.858054
+[ 21:36:26 ] WARNING: KS-noise-ratio=4859.405353
+[ 21:36:27 ] WARNING: KS-noise-ratio=11948.404156
+[ 21:36:28 ] WARNING: KS-noise-ratio=4671.949582
+[ 21:36:29 ] WARNING: KS-noise-ratio=6136.176857
+[ 21:36:30 ] WARNING: KS-noise-ratio=4884.443778
+[ 21:36:32 ] WARNING: KS-noise-ratio=4998.869676
+[ 21:36:34 ] WARNING: KS-noise-ratio=3897.326301
+[ 21:37:19 ] WARNING: KS-noise-ratio=1.093884
+[ 21:37:20 ] WARNING: KS-noise-ratio=1.067020
+[ 21:37:22 ] WARNING: KS-noise-ratio-hoist=12153527.093068
+[ 21:37:22 ] WARNING: KS-noise-ratio-hoist=11107349.044565
+[ 21:37:27 ] WARNING: KS-noise-ratio=1.053783
+[ 21:37:29 ] WARNING: KS-noise-ratio-hoist=11098058.382126
+[ 21:37:46 ] WARNING: KS-noise-ratio-hoist=4.267740
+[ 21:37:47 ] WARNING: KS-noise-ratio-hoist=4.845927
+[ 21:37:54 ] WARNING: KS-noise-ratio-hoist=4.562201
+[ 21:38:23 ] WARNING: KS-noise-ratio=1212.806815
+[ 21:38:25 ] WARNING: KS-noise-ratio=1478.964488
+[ 21:38:33 ] WARNING: KS-noise-ratio=1627.948870
+[ 21:51:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:51:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:51:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:51:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:51:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:51:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:54:45 ] WARNING: KS-noise-ratio-hoist=11955430.484874
+[ 21:55:08 ] WARNING: KS-noise-ratio-hoist=4.075994
+[ 21:55:24 ] WARNING: Ctxt::bringToSet called with capacity=-169.707331, likely decryption error
+[ 21:55:25 ] WARNING: Ctxt::bringToSet called with capacity=-169.698371, likely decryption error
+[ 21:55:47 ] WARNING: KS-noise-ratio=4069.690046
+[ 21:56:00 ] WARNING: KS-noise-ratio=5270.082675
+[ 21:56:02 ] WARNING: KS-noise-ratio=5231.562077
+[ 21:56:04 ] WARNING: KS-noise-ratio=4480.548462
+[ 21:56:06 ] WARNING: KS-noise-ratio=4968.978585
+[ 21:56:09 ] WARNING: KS-noise-ratio=3829.049392
+[ 21:57:20 ] WARNING: KS-noise-ratio-hoist=12346003.573493
+[ 21:57:43 ] WARNING: KS-noise-ratio-hoist=4.332387
+[ 21:58:19 ] WARNING: KS-noise-ratio=5834.794374
+[ 21:58:32 ] WARNING: KS-noise-ratio=12925.308916
+[ 21:58:34 ] WARNING: KS-noise-ratio=12060.976073
+[ 21:58:36 ] WARNING: KS-noise-ratio=10615.661765
+[ 21:58:38 ] WARNING: KS-noise-ratio=11911.324779
+[ 21:58:40 ] WARNING: KS-noise-ratio=6429.100790
+[ 21:59:47 ] WARNING: KS-noise-ratio=1.057147
+[ 21:59:49 ] WARNING: KS-noise-ratio-hoist=11978264.017914
+[ 22:00:11 ] WARNING: KS-noise-ratio-hoist=4.643383
+[ 22:00:47 ] WARNING: KS-noise-ratio=5833.088762
+[ 22:01:01 ] WARNING: KS-noise-ratio=12901.471866
+[ 22:01:03 ] WARNING: KS-noise-ratio=11941.990528
+[ 22:01:05 ] WARNING: KS-noise-ratio=12884.742739
+[ 22:01:07 ] WARNING: KS-noise-ratio=11723.698219
+[ 22:01:09 ] WARNING: KS-noise-ratio=5662.034256
+[ 22:04:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:27 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:27 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:08:40 ] WARNING: Ctxt::bringToSet called with capacity=-169.659463, likely decryption error
+[ 22:08:42 ] WARNING: Ctxt::bringToSet called with capacity=-169.667587, likely decryption error
+[ 22:08:43 ] WARNING: Ctxt::bringToSet called with capacity=-169.604293, likely decryption error
+[ 15:31:59 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:31:59 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:36:13 ] WARNING: Ctxt::bringToSet called with capacity=-169.703648, likely decryption error
+[ 15:46:46 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:46:46 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:51:01 ] WARNING: Ctxt::bringToSet called with capacity=-169.570467, likely decryption error
+[ 15:56:18 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:56:18 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 15:59:55 ] WARNING: KS-noise-ratio-hoist=4.155980
+[ 15:59:56 ] WARNING: KS-noise-ratio-hoist=11630755.773216
+[ 16:00:36 ] WARNING: KS-noise-ratio=1645.353486
+[ 16:04:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 16:04:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 16:07:38 ] WARNING: KS-noise-ratio-hoist=4.134371
+[ 16:07:38 ] WARNING: KS-noise-ratio-hoist=12983101.877445
+[ 16:08:19 ] WARNING: KS-noise-ratio=1438.389870
+[ 16:09:51 ] WARNING: KS-noise-ratio=1.233819
+[ 16:09:53 ] WARNING: KS-noise-ratio-hoist=4.649208
+[ 16:09:54 ] WARNING: KS-noise-ratio-hoist=12390677.833841
+[ 16:10:34 ] WARNING: KS-noise-ratio=1460.179035
+[ 16:12:06 ] WARNING: KS-noise-ratio=1.036414
+[ 16:12:08 ] WARNING: KS-noise-ratio-hoist=4.421287
+[ 16:12:08 ] WARNING: KS-noise-ratio-hoist=12158105.067056
+[ 16:12:45 ] WARNING: KS-noise-ratio=17039.854210
+[ 16:54:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 16:54:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 16:57:42 ] WARNING: KS-noise-ratio=1.013879
+[ 16:57:44 ] WARNING: KS-noise-ratio-hoist=11394650.944356
+[ 16:58:08 ] WARNING: KS-noise-ratio-hoist=38.737255
+[ 16:58:46 ] WARNING: KS-noise-ratio=1588.794959
+[ 19:50:20 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 19:50:20 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 19:53:48 ] WARNING: KS-noise-ratio=1.028834
+[ 19:53:50 ] WARNING: KS-noise-ratio-hoist=13772017.696016
+[ 19:54:13 ] WARNING: KS-noise-ratio-hoist=33.741265
+[ 19:54:48 ] WARNING: KS-noise-ratio=1203.641310
+[ 20:02:32 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:02:32 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:06:04 ] WARNING: KS-noise-ratio=1.009029
+[ 20:06:06 ] WARNING: KS-noise-ratio-hoist=12686453.665095
+[ 20:06:29 ] WARNING: KS-noise-ratio-hoist=31.046074
+[ 20:07:05 ] WARNING: KS-noise-ratio=1404.513002
+[ 20:23:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:23:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:27:30 ] WARNING: KS-noise-ratio-hoist=11733642.544913
+[ 20:27:52 ] WARNING: KS-noise-ratio-hoist=34.378859
+[ 20:28:30 ] WARNING: KS-noise-ratio=1347.741057
+[ 20:39:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:39:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:42:30 ] WARNING: KS-noise-ratio=1.104525
+[ 20:42:32 ] WARNING: KS-noise-ratio-hoist=12512173.762281
+[ 20:42:55 ] WARNING: KS-noise-ratio-hoist=32.744091
+[ 20:43:31 ] WARNING: KS-noise-ratio=1669.370633
+[ 20:56:30 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:56:30 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:00:01 ] WARNING: KS-noise-ratio=1.203737
+[ 21:00:03 ] WARNING: KS-noise-ratio-hoist=12072634.330337
+[ 21:00:25 ] WARNING: KS-noise-ratio-hoist=34.931449
+[ 21:01:01 ] WARNING: KS-noise-ratio=1459.149912
+[ 21:19:25 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:19:25 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:34:55 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:34:55 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:37:57 ] WARNING: KS-noise-ratio=1.096603
+[ 21:37:59 ] WARNING: KS-noise-ratio-hoist=12380744.292270
+[ 21:38:00 ] WARNING: KS-noise-ratio-hoist=12380744.292270
+[ 21:38:02 ] WARNING: KS-noise-ratio-hoist=1.033243
+[ 21:38:03 ] WARNING: KS-noise-ratio-hoist=1.075820
+[ 21:38:39 ] WARNING: KS-noise-ratio-hoist=30.405866
+[ 21:38:39 ] WARNING: KS-noise-ratio-hoist=30.405866
+[ 21:38:43 ] WARNING: KS-noise-ratio-hoist=1.027962
+[ 21:38:45 ] WARNING: KS-noise-ratio-hoist=1.006882
+[ 21:38:49 ] WARNING: KS-noise-ratio-hoist=1.015413
+[ 21:39:34 ] WARNING: KS-noise-ratio=3713.649831
+[ 21:45:18 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:45:18 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:48:23 ] WARNING: KS-noise-ratio-hoist=12134161.983929
+[ 21:48:24 ] WARNING: KS-noise-ratio-hoist=12134161.983929
+[ 21:48:31 ] WARNING: KS-noise-ratio-hoist=1.017128
+[ 21:48:33 ] WARNING: KS-noise-ratio-hoist=1.013164
+[ 21:48:34 ] WARNING: KS-noise-ratio-hoist=1.035177
+[ 21:49:03 ] WARNING: KS-noise-ratio-hoist=33.820439
+[ 21:49:04 ] WARNING: KS-noise-ratio-hoist=33.820439
+[ 21:49:15 ] WARNING: KS-noise-ratio-hoist=1.061491
+[ 21:49:59 ] WARNING: KS-noise-ratio=1633.470235
+[ 01:14:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 01:14:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 01:18:14 ] WARNING: KS-noise-ratio-hoist=11494087.157954
+[ 01:18:21 ] WARNING: KS-noise-ratio=1.045794
+[ 01:18:23 ] WARNING: KS-noise-ratio=1.050983
+[ 01:18:49 ] WARNING: KS-noise-ratio-hoist=37.872980
+[ 01:19:38 ] WARNING: KS-noise-ratio=1910.717579
+[ 02:38:04 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:38:04 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:41:39 ] WARNING: KS-noise-ratio=1.155942
+[ 02:41:41 ] WARNING: KS-noise-ratio-hoist=13173703.607489
+[ 02:42:04 ] WARNING: KS-noise-ratio-hoist=34.041824
+[ 02:42:42 ] WARNING: KS-noise-ratio=1494.674741
+[ 02:56:17 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:56:17 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:59:24 ] WARNING: KS-noise-ratio-hoist=12550069.263941
+[ 02:59:25 ] WARNING: KS-noise-ratio-hoist=12550069.263941
+[ 02:59:26 ] WARNING: KS-noise-ratio-hoist=1.002061
+[ 02:59:28 ] WARNING: KS-noise-ratio-hoist=1.007942
+[ 02:59:30 ] WARNING: KS-noise-ratio-hoist=1.097519
+[ 02:59:31 ] WARNING: KS-noise-ratio-hoist=1.029625
+[ 02:59:32 ] WARNING: KS-noise-ratio-hoist=1.023435
+[ 02:59:34 ] WARNING: KS-noise-ratio-hoist=1.026611
+[ 02:59:36 ] WARNING: KS-noise-ratio-hoist=1.054576
+[ 03:00:05 ] WARNING: KS-noise-ratio-hoist=34.589325
+[ 03:00:05 ] WARNING: KS-noise-ratio-hoist=34.589325
+[ 03:01:00 ] WARNING: KS-noise-ratio=1473.270730
+[ 03:06:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:06:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:09:57 ] WARNING: KS-noise-ratio=1.078708
+[ 03:10:00 ] WARNING: KS-noise-ratio-hoist=11923824.716991
+[ 03:10:00 ] WARNING: KS-noise-ratio-hoist=11923824.716991
+[ 03:10:08 ] WARNING: KS-noise-ratio-hoist=1.033072
+[ 03:10:10 ] WARNING: KS-noise-ratio-hoist=1.005153
+[ 03:10:39 ] WARNING: KS-noise-ratio-hoist=29.127985
+[ 03:10:39 ] WARNING: KS-noise-ratio-hoist=29.127985
+[ 03:11:34 ] WARNING: KS-noise-ratio=1716.145996
+[ 03:30:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:30:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:33:39 ] WARNING: KS-noise-ratio-hoist=12351186.306393
+[ 03:33:40 ] WARNING: KS-noise-ratio-hoist=12351186.306393
+[ 03:33:42 ] WARNING: KS-noise-ratio-hoist=1.021765
+[ 03:33:46 ] WARNING: KS-noise-ratio-hoist=1.027920
+[ 03:33:47 ] WARNING: KS-noise-ratio-hoist=1.121535
+[ 03:33:49 ] WARNING: KS-noise-ratio-hoist=1.054861
+[ 03:33:50 ] WARNING: KS-noise-ratio-hoist=1.038771
+[ 03:34:19 ] WARNING: KS-noise-ratio-hoist=30.444364
+[ 03:34:20 ] WARNING: KS-noise-ratio-hoist=30.444364
+[ 03:35:15 ] WARNING: KS-noise-ratio=1632.191782
+[ 03:43:17 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:43:17 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:46:24 ] WARNING: KS-noise-ratio-hoist=14179221.316440
+[ 03:46:25 ] WARNING: KS-noise-ratio-hoist=14179221.316440
+[ 03:47:03 ] WARNING: KS-noise-ratio-hoist=33.461688
+[ 03:47:04 ] WARNING: KS-noise-ratio-hoist=33.461688
+[ 03:47:05 ] WARNING: KS-noise-ratio-hoist=1.001182
+[ 03:47:09 ] WARNING: KS-noise-ratio-hoist=1.001436
+[ 03:47:10 ] WARNING: KS-noise-ratio-hoist=1.016838
+[ 03:47:11 ] WARNING: KS-noise-ratio-hoist=1.047604
+[ 03:47:14 ] WARNING: KS-noise-ratio-hoist=1.042406
+[ 03:47:59 ] WARNING: KS-noise-ratio=1477.807557
+[ 04:00:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:00:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:03:20 ] WARNING: KS-noise-ratio=1.034718
+[ 04:03:22 ] WARNING: KS-noise-ratio-hoist=12426559.959815
+[ 04:03:45 ] WARNING: KS-noise-ratio-hoist=30.709531
+[ 04:04:21 ] WARNING: KS-noise-ratio=1420.355067
+[ 13:01:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:01:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:05:00 ] WARNING: KS-noise-ratio=1.034246
+[ 13:05:03 ] WARNING: KS-noise-ratio-hoist=12032906.661520
+[ 13:05:26 ] WARNING: KS-noise-ratio-hoist=4.457851
+[ 13:06:05 ] WARNING: KS-noise-ratio=1426.821487
+[ 13:31:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:31:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:35:29 ] WARNING: KS-noise-ratio-hoist=12486851.805538
+[ 13:35:53 ] WARNING: KS-noise-ratio-hoist=3.789953
+[ 13:36:32 ] WARNING: KS-noise-ratio=1499.469534
+[ 13:42:11 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:42:11 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:45:42 ] WARNING: KS-noise-ratio=1.051684
+[ 13:45:44 ] WARNING: KS-noise-ratio-hoist=13520132.883190
+[ 13:46:06 ] WARNING: KS-noise-ratio-hoist=4.644571
+[ 13:46:43 ] WARNING: KS-noise-ratio=3497.730330
+[ 13:46:54 ] WARNING: KS-noise-ratio=3039.242187
+[ 13:46:56 ] WARNING: KS-noise-ratio=3058.574206
+[ 13:46:59 ] WARNING: KS-noise-ratio=3904.157100
+[ 13:47:01 ] WARNING: KS-noise-ratio=3497.730330
+[ 13:47:20 ] WARNING: KS-noise-ratio=3039.242187
+[ 13:47:23 ] WARNING: KS-noise-ratio=3058.574206
+[ 13:47:25 ] WARNING: KS-noise-ratio=3904.157100
+[ 13:47:27 ] WARNING: KS-noise-ratio=3497.730330
+[ 13:47:29 ] WARNING: KS-noise-ratio=2591.914155
+[ 13:47:31 ] WARNING: KS-noise-ratio=2790.454389
+[ 14:15:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:15:26 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:19:02 ] WARNING: KS-noise-ratio-hoist=12808477.639388
+[ 14:19:24 ] WARNING: KS-noise-ratio-hoist=4.324761
+[ 14:20:01 ] WARNING: KS-noise-ratio=3794.569547
+[ 14:47:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:47:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:51:34 ] WARNING: KS-noise-ratio-hoist=12175246.420331
+[ 14:51:58 ] WARNING: KS-noise-ratio-hoist=4.418002
+[ 14:52:35 ] WARNING: KS-noise-ratio=3689.251974
+[ 14:52:47 ] WARNING: KS-noise-ratio=3397.985111
+[ 14:52:49 ] WARNING: KS-noise-ratio=3379.522373
+[ 14:52:51 ] WARNING: KS-noise-ratio=3110.842850
+[ 14:52:54 ] WARNING: KS-noise-ratio=3689.251974
+[ 14:53:14 ] WARNING: KS-noise-ratio=3397.985111
+[ 14:53:16 ] WARNING: KS-noise-ratio=3379.522373
+[ 14:53:18 ] WARNING: KS-noise-ratio=3110.842850
+[ 14:53:20 ] WARNING: KS-noise-ratio=3689.251974
+[ 14:53:22 ] WARNING: KS-noise-ratio=2164.281970
+[ 14:53:24 ] WARNING: KS-noise-ratio=2376.577258
+[ 23:43:42 ] WARNING: Ctxt::bringToSet called with capacity=-163.895592, likely decryption error
+[ 00:09:40 ] WARNING: Ctxt::bringToSet called with capacity=-163.872554, likely decryption error
+[ 13:21:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:21:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:24:40 ] WARNING: KS-noise-ratio=1.050456
+[ 13:24:42 ] WARNING: KS-noise-ratio-hoist=13031396.877472
+[ 13:25:05 ] WARNING: KS-noise-ratio-hoist=4.383474
+[ 13:25:42 ] WARNING: KS-noise-ratio=822.472182
+[ 13:35:37 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:35:37 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 13:39:10 ] WARNING: KS-noise-ratio=1.050968
+[ 13:39:12 ] WARNING: KS-noise-ratio-hoist=12885363.722495
+[ 13:39:34 ] WARNING: KS-noise-ratio-hoist=3.940998
+[ 13:40:13 ] WARNING: KS-noise-ratio=1673.801323
+[ 14:42:50 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:42:50 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:46:27 ] WARNING: KS-noise-ratio=1.052017
+[ 14:46:29 ] WARNING: KS-noise-ratio-hoist=12913700.022320
+[ 14:46:54 ] WARNING: KS-noise-ratio-hoist=4.595340
+[ 14:47:34 ] WARNING: KS-noise-ratio=1770.374300
+[ 16:11:52 ] WARNING: Ctxt::bringToSet called with capacity=-163.908192, likely decryption error
+[ 16:19:33 ] WARNING: KS-noise-ratio=1.095623
+[ 16:19:36 ] WARNING: KS-noise-ratio-hoist=11656.818033
+[ 17:02:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:02:56 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:06:47 ] WARNING: KS-noise-ratio-hoist=12268746.736421
+[ 17:07:14 ] WARNING: KS-noise-ratio-hoist=4.429296
+[ 17:07:58 ] WARNING: KS-noise-ratio=1514.723283
+[ 17:08:41 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:08:41 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 17:17:45 ] WARNING: KS-noise-ratio=1.007229
+[ 17:17:48 ] WARNING: KS-noise-ratio-hoist=3.677783
+[ 17:19:13 ] WARNING: KS-noise-ratio=2.307180
+[ 17:19:29 ] WARNING: KS-noise-ratio=12522.493116
+[ 17:21:51 ] WARNING: KS-noise-ratio=2.541409
+[ 17:22:06 ] WARNING: KS-noise-ratio=5395.797296
+[ 17:24:22 ] WARNING: KS-noise-ratio=2.331461
+[ 17:24:37 ] WARNING: KS-noise-ratio=5608.007941
+[ 17:27:00 ] WARNING: KS-noise-ratio=2.441429
+[ 17:27:16 ] WARNING: KS-noise-ratio=3284.659866
+[ 17:29:40 ] WARNING: KS-noise-ratio=2.204125
+[ 17:29:56 ] WARNING: KS-noise-ratio=5678.720163
+[ 17:32:19 ] WARNING: KS-noise-ratio=2.709701
+[ 17:32:33 ] WARNING: KS-noise-ratio=9930.536496
+[ 17:34:51 ] WARNING: KS-noise-ratio=2.944506
+[ 17:35:06 ] WARNING: KS-noise-ratio=4958.139079
+[ 17:37:25 ] WARNING: KS-noise-ratio=2.171576
+[ 17:37:40 ] WARNING: KS-noise-ratio=5767.150191
+[ 17:39:57 ] WARNING: KS-noise-ratio=2.549995
+[ 17:40:12 ] WARNING: KS-noise-ratio=6281.259174
+[ 17:42:27 ] WARNING: KS-noise-ratio=2.434799
+[ 17:42:42 ] WARNING: KS-noise-ratio=5435.570105
+[ 17:44:54 ] WARNING: KS-noise-ratio=2.440853
+[ 17:45:08 ] WARNING: KS-noise-ratio=5333.989596
+[ 17:47:18 ] WARNING: KS-noise-ratio=2.535638
+[ 17:47:32 ] WARNING: KS-noise-ratio=4582.105019
+[ 17:49:43 ] WARNING: KS-noise-ratio=2.425595
+[ 17:49:57 ] WARNING: KS-noise-ratio=2911.831801
+[ 17:52:08 ] WARNING: KS-noise-ratio=2.504913
+[ 17:52:22 ] WARNING: KS-noise-ratio=9674.033987
+[ 17:54:34 ] WARNING: KS-noise-ratio=2.470888
+[ 17:54:49 ] WARNING: KS-noise-ratio=3804.066659
+[ 17:57:01 ] WARNING: KS-noise-ratio=2.389207
+[ 17:57:15 ] WARNING: KS-noise-ratio=5831.205614
+[ 17:59:29 ] WARNING: KS-noise-ratio=2.605907
+[ 17:59:44 ] WARNING: KS-noise-ratio=5668.749755
+[ 18:01:59 ] WARNING: KS-noise-ratio=2.398811
+[ 18:02:14 ] WARNING: KS-noise-ratio=5533.499961
+[ 22:24:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:24:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:27:42 ] WARNING: KS-noise-ratio=1.014866
+[ 22:27:44 ] WARNING: KS-noise-ratio-hoist=12485168.487477
+[ 22:28:07 ] WARNING: KS-noise-ratio-hoist=4.747824
+[ 22:28:46 ] WARNING: KS-noise-ratio=1702.101458
+[ 22:35:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:35:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:39:28 ] WARNING: Ctxt::bringToSet called with capacity=-169.695742, likely decryption error
+[ 22:40:03 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:40:03 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:41:43 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:41:43 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:44:26 ] WARNING: Ctxt::bringToSet called with capacity=-169.728490, likely decryption error
+[ 22:46:06 ] WARNING: Ctxt::bringToSet called with capacity=-169.637534, likely decryption error
+[ 22:50:19 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:50:19 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:51:33 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:51:33 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:54:43 ] WARNING: Ctxt::bringToSet called with capacity=-169.671378, likely decryption error
+[ 22:55:51 ] WARNING: Ctxt::bringToSet called with capacity=-169.634649, likely decryption error
+[ 22:57:33 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:57:33 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:01:55 ] WARNING: Ctxt::bringToSet called with capacity=-169.774303, likely decryption error
+[ 23:10:20 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:10:20 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:14:37 ] WARNING: Ctxt::bringToSet called with capacity=-169.892220, likely decryption error
+[ 23:20:37 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:20:37 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:24:12 ] WARNING: KS-noise-ratio=1.044897
+[ 23:24:15 ] WARNING: KS-noise-ratio-hoist=12818878.866435
+[ 23:24:38 ] WARNING: KS-noise-ratio-hoist=4.681639
+[ 23:25:16 ] WARNING: KS-noise-ratio=1532.060603
+[ 23:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:28:49 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:28:49 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:32:00 ] WARNING: KS-noise-ratio=1.044608
+[ 23:32:02 ] WARNING: KS-noise-ratio-hoist=12954337.069817
+[ 23:32:24 ] WARNING: KS-noise-ratio=1.051150
+[ 23:32:25 ] WARNING: KS-noise-ratio-hoist=4.255860
+[ 23:32:27 ] WARNING: KS-noise-ratio-hoist=11413384.015570
+[ 23:32:50 ] WARNING: KS-noise-ratio-hoist=3.985171
+[ 23:33:04 ] WARNING: KS-noise-ratio=1728.922345
+[ 23:33:28 ] WARNING: KS-noise-ratio=1602.443735
+[ 23:37:27 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:37:27 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 23:41:06 ] WARNING: KS-noise-ratio-hoist=13601738.051837
+[ 23:41:29 ] WARNING: KS-noise-ratio-hoist=4.083671
+[ 23:42:07 ] WARNING: KS-noise-ratio=1451.365633
+[ 01:30:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 01:30:57 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:32:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:32:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:36:42 ] WARNING: Ctxt::bringToSet called with capacity=-169.580141, likely decryption error
+[ 02:38:48 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:38:48 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:52:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:52:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 02:56:41 ] WARNING: Ctxt::bringToSet called with capacity=-169.657434, likely decryption error
+[ 03:08:02 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:08:02 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:12:20 ] WARNING: Ctxt::bringToSet called with capacity=-169.665856, likely decryption error
+[ 03:21:35 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:21:35 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:26:04 ] WARNING: Ctxt::bringToSet called with capacity=-169.603009, likely decryption error
+[ 03:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:43:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:43:22 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:47:53 ] WARNING: Ctxt::bringToSet called with capacity=-169.619836, likely decryption error
+[ 03:53:08 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:53:08 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 03:57:38 ] WARNING: Ctxt::bringToSet called with capacity=-169.624630, likely decryption error
+[ 04:00:54 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:00:54 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:07:20 ] WARNING: Ctxt::bringToSet called with capacity=-169.720730, likely decryption error
+[ 04:10:49 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:10:49 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 04:17:17 ] WARNING: Ctxt::bringToSet called with capacity=-169.581972, likely decryption error
+[ 14:11:51 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:11:51 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:18:18 ] WARNING: Ctxt::bringToSet called with capacity=-169.761557, likely decryption error
+[ 21:39:47 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:39:47 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:42:39 ] WARNING: KS-noise-ratio=1.042598
+[ 21:42:42 ] WARNING: KS-noise-ratio-hoist=13128156.741606
+[ 21:42:42 ] WARNING: KS-noise-ratio-hoist=13128156.741606
+[ 21:42:48 ] WARNING: KS-noise-ratio-hoist=1.033056
+[ 21:42:50 ] WARNING: KS-noise-ratio-hoist=1.056490
+[ 21:45:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:45:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:47:52 ] WARNING: KS-noise-ratio=1.045305
+[ 21:47:55 ] WARNING: KS-noise-ratio-hoist=11703565.150473
+[ 21:47:55 ] WARNING: KS-noise-ratio-hoist=11703565.150473
+[ 21:48:00 ] WARNING: KS-noise-ratio-hoist=1.025477
+[ 21:48:05 ] WARNING: KS-noise-ratio-hoist=1.023310
+[ 21:48:18 ] WARNING: KS-noise-ratio-hoist=4.684508
+[ 21:48:19 ] WARNING: KS-noise-ratio-hoist=4.684508
+[ 21:48:45 ] WARNING: KS-noise-ratio=4.435235
+[ 21:48:46 ] WARNING: KS-noise-ratio=2.421510
+[ 21:49:01 ] WARNING: KS-noise-ratio=5012.771998
+[ 14:50:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:50:29 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 14:53:22 ] WARNING: KS-noise-ratio-hoist=13059648.914224
+[ 14:53:23 ] WARNING: KS-noise-ratio-hoist=13059648.914224
+[ 14:53:28 ] WARNING: KS-noise-ratio-hoist=1.037273
+[ 14:53:46 ] WARNING: KS-noise-ratio-hoist=4.347232
+[ 14:53:46 ] WARNING: KS-noise-ratio-hoist=4.347232
+[ 14:54:25 ] WARNING: KS-noise-ratio=4665.118034
+[ 20:10:15 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:10:15 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:16:36 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:16:36 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:20:12 ] WARNING: KS-noise-ratio=1.099156
+[ 20:20:14 ] WARNING: KS-noise-ratio-hoist=12946548.838672
+[ 20:20:37 ] WARNING: KS-noise-ratio-hoist=4.615341
+[ 20:21:16 ] WARNING: KS-noise-ratio=1658.738570
+[ 20:39:45 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:39:45 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:43:26 ] WARNING: KS-noise-ratio-hoist=10879236.293982
+[ 20:43:49 ] WARNING: KS-noise-ratio-hoist=4.244256
+[ 20:44:28 ] WARNING: KS-noise-ratio=1684.791232
+[ 20:48:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:48:00 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:50:56 ] WARNING: KS-noise-ratio-hoist=11682107.415492
+[ 20:50:57 ] WARNING: KS-noise-ratio-hoist=11682107.415492
+[ 20:50:58 ] WARNING: KS-noise-ratio-hoist=1.057962
+[ 20:50:59 ] WARNING: KS-noise-ratio-hoist=1.006084
+[ 20:51:00 ] WARNING: KS-noise-ratio-hoist=1.129289
+[ 20:51:02 ] WARNING: KS-noise-ratio-hoist=1.105610
+[ 20:51:07 ] WARNING: KS-noise-ratio-hoist=1.014605
+[ 20:51:20 ] WARNING: KS-noise-ratio-hoist=4.205807
+[ 20:51:21 ] WARNING: KS-noise-ratio-hoist=4.205807
+[ 20:52:00 ] WARNING: KS-noise-ratio=5782.051144
+[ 20:56:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 20:56:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:00:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:00:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:00:47 ] WARNING: KS-noise-ratio=25312283.176877
+[ 21:00:49 ] WARNING: KS-noise-ratio=24945919.355402
+[ 21:00:50 ] WARNING: KS-noise-ratio=23488087.504566
+[ 21:00:52 ] WARNING: KS-noise-ratio=25548126.371946
+[ 21:00:54 ] WARNING: KS-noise-ratio=23713539.400110
+[ 21:00:56 ] WARNING: KS-noise-ratio=25267543.830517
+[ 21:00:57 ] WARNING: KS-noise-ratio=26208366.472900
+[ 21:00:59 ] WARNING: KS-noise-ratio=26142031.726801
+[ 21:01:01 ] WARNING: KS-noise-ratio=27520016.438626
+[ 21:01:20 ] WARNING: KS-noise-ratio-hoist=4.731029
+[ 21:01:59 ] WARNING: KS-noise-ratio=1513.116288
+[ 21:03:01 ] WARNING: KS-noise-ratio=1.067285
+[ 21:03:04 ] WARNING: KS-noise-ratio-hoist=12661301.102041
+[ 21:03:04 ] WARNING: KS-noise-ratio-hoist=12661301.102041
+[ 21:03:08 ] WARNING: KS-noise-ratio-hoist=1.058189
+[ 21:03:13 ] WARNING: KS-noise-ratio-hoist=1.022031
+[ 21:03:14 ] WARNING: KS-noise-ratio-hoist=1.040121
+[ 21:03:27 ] WARNING: KS-noise-ratio-hoist=4.213863
+[ 21:03:28 ] WARNING: KS-noise-ratio-hoist=4.213863
+[ 21:04:06 ] WARNING: KS-noise-ratio=5108.393564
+[ 21:05:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:05:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:13:47 ] WARNING: KS-noise-ratio-hoist=4.316165
+[ 21:14:25 ] WARNING: KS-noise-ratio=1680.506506
+[ 21:18:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:18:09 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:21:55 ] WARNING: KS-noise-ratio=1.019409
+[ 21:21:57 ] WARNING: KS-noise-ratio-hoist=11117896.963170
+[ 21:21:58 ] WARNING: KS-noise-ratio-hoist=11117896.963170
+[ 21:22:00 ] WARNING: KS-noise-ratio-hoist=1.021257
+[ 21:22:03 ] WARNING: KS-noise-ratio-hoist=1.038406
+[ 21:22:09 ] WARNING: KS-noise-ratio-hoist=1.065156
+[ 21:22:20 ] WARNING: KS-noise-ratio-hoist=4.374308
+[ 21:22:21 ] WARNING: KS-noise-ratio-hoist=4.374308
+[ 21:22:59 ] WARNING: KS-noise-ratio=5096.550044
+[ 22:01:12 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:01:12 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:02:13 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:02:13 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:04:50 ] WARNING: KS-noise-ratio-hoist=13924363.094450
+[ 22:05:13 ] WARNING: KS-noise-ratio-hoist=4.604074
+[ 22:05:50 ] WARNING: KS-noise-ratio-hoist=4.791967
+[ 22:05:51 ] WARNING: KS-noise-ratio=1603.947907
+[ 22:06:04 ] WARNING: KS-noise-ratio-hoist=12627362.385809
+[ 22:06:50 ] WARNING: KS-noise-ratio=1503.820754
+[ 22:10:04 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:10:04 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:13:39 ] WARNING: KS-noise-ratio=1.121305
+[ 22:13:41 ] WARNING: KS-noise-ratio-hoist=3.715601
+[ 22:13:42 ] WARNING: KS-noise-ratio-hoist=11588060.652490
+[ 22:14:20 ] WARNING: KS-noise-ratio=1506.738354
+[ 22:17:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:17:10 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:17:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:17:31 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:20:44 ] WARNING: KS-noise-ratio=1.034640
+[ 22:20:47 ] WARNING: KS-noise-ratio-hoist=13318990.078246
+[ 22:21:09 ] WARNING: KS-noise-ratio-hoist=4.799466
+[ 22:21:09 ] WARNING: KS-noise-ratio-hoist=4.409467
+[ 22:21:52 ] WARNING: KS-noise-ratio=3337.807065
+[ 22:21:54 ] WARNING: KS-noise-ratio=1515.840039
+[ 22:23:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:23:34 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:24:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:24:01 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:27:11 ] WARNING: KS-noise-ratio=1.052827
+[ 22:27:33 ] WARNING: KS-noise-ratio=1206.187779
+[ 22:27:36 ] WARNING: KS-noise-ratio=1.059846
+[ 22:27:38 ] WARNING: KS-noise-ratio-hoist=12670459.904315
+[ 22:28:00 ] WARNING: KS-noise-ratio-hoist=4.428578
+[ 22:28:39 ] WARNING: KS-noise-ratio=1604.691297
+[ 22:30:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:30:52 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:34:30 ] WARNING: KS-noise-ratio-hoist=13774673.469591
+[ 22:34:52 ] WARNING: KS-noise-ratio-hoist=4.484478
+[ 22:35:26 ] WARNING: KS-noise-ratio=2042.489236
+[ 22:38:41 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:38:41 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:42:17 ] WARNING: KS-noise-ratio-hoist=4.572100
+[ 22:42:17 ] WARNING: KS-noise-ratio-hoist=12903922.478067
+[ 22:42:57 ] WARNING: KS-noise-ratio=1554.955431
+[ 22:46:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:46:07 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 22:49:48 ] WARNING: KS-noise-ratio-hoist=5.168537
+[ 21:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:28:21 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:32:00 ] WARNING: KS-noise-ratio=1.018348
+[ 21:32:02 ] WARNING: KS-noise-ratio-hoist=12995761.658186
+[ 21:32:25 ] WARNING: KS-noise-ratio-hoist=4.500075
+[ 21:33:03 ] WARNING: KS-noise-ratio=1576.561232
+[ 21:43:54 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:43:54 ] WARNING: CheckPrimes: non-FFT prime in smallPrimes
+[ 21:47:35 ] WARNING: KS-noise-ratio-hoist=12961996.105085
+[ 21:47:58 ] WARNING: KS-noise-ratio-hoist=4.961775
+[ 21:48:36 ] WARNING: KS-noise-ratio=1564.774149

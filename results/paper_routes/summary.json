@@ -1,0 +1,269 @@
+{
+  "claim_boundaries": {
+    "implementation_choice": "parallel coeffToSlot is wall-clock scheduling, not algebraic complexity",
+    "paper_main_claim": "HElib ciphertext result for aux=256 sparse exact cleaner",
+    "route_A": "model-level only; needs exact EvalMap matrix extraction before ciphertext claim",
+    "route_B": "plaintext operation count positive; previous unfused ciphertext executor failed",
+    "route_C": "external Fheanor ciphertext tests pass at small p=17; not apples-to-apples with HElib p=65537",
+    "route_D": "bounded cleaner tests pass; no CKKS ciphertext replacement implemented locally"
+  },
+  "existing_helib_baselines": {
+    "aux256_parallel_coeff2slot_repeat3": {
+      "correctness": "unknown",
+      "extract": 151.120953,
+      "linear1": 4.603212,
+      "linear2": 23.906354,
+      "total": 182.353824
+    },
+    "aux256_sparse_repeat1": {
+      "correctness": "unknown",
+      "extract": 144.869405,
+      "linear1": 4.458518,
+      "linear2": 43.957204,
+      "total": 195.591277
+    },
+    "aux35_original_repeat1": {
+      "correctness": "unknown",
+      "extract": 156.793361,
+      "linear1": 4.488775,
+      "linear2": 44.08485,
+      "total": 207.677903
+    }
+  },
+  "fheanor_tests": {
+    "routeC_fheanor_bfv_bootstrap17": {
+      "done_ms_values": [
+        3,
+        6,
+        16,
+        21,
+        134,
+        12083,
+        13997
+      ],
+      "max_done_ms": 13997,
+      "ok": true,
+      "passed": 1
+    },
+    "routeC_fheanor_bgv_bootstrap17": {
+      "done_ms_values": [
+        5,
+        0,
+        4,
+        2,
+        25,
+        0,
+        32,
+        101,
+        141,
+        35,
+        58,
+        93,
+        6,
+        431,
+        66,
+        67,
+        68,
+        66,
+        61,
+        5953,
+        7068
+      ],
+      "max_done_ms": 7068,
+      "ok": true,
+      "passed": 1
+    },
+    "routeC_fheanor_coeffs_to_slots_thin": {
+      "done_ms_values": [],
+      "max_done_ms": null,
+      "ok": true,
+      "passed": 1
+    },
+    "routeC_fheanor_slots_to_coeffs_thin": {
+      "done_ms_values": [],
+      "max_done_ms": null,
+      "ok": true,
+      "passed": 2
+    },
+    "routeD_fheanor_bounded_digit_retain": {
+      "done_ms_values": [],
+      "max_done_ms": null,
+      "ok": true,
+      "passed": 1
+    }
+  },
+  "routeB_plaintext_rader97": {
+    "ok": true,
+    "stdout": [
+      "ell=97 q=102433 gen_mod_ell=5 verified=True",
+      "dense: adds=9216 muls=9216 total=18432",
+      "rader+mixed-radix-NTT: adds=3840 muls=9120 total=12960",
+      "operation_ratio=0.7031",
+      "conv_length=96 conv_radices=[2, 2, 2, 2, 2, 3]"
+    ]
+  },
+  "sat_feature_search": {
+    "B": 17,
+    "aux": 256,
+    "feature_search": {
+      "degree_limit": 64,
+      "feature_set": "mixed",
+      "linear_span_sat": false,
+      "num_features": 160,
+      "selected_terms_count": 0,
+      "selected_terms_preview": [],
+      "z3_status": "disabled",
+      "z3_terms_bound": null
+    },
+    "interpolation": {
+      "degree": 1223,
+      "nonzero_terms": 307,
+      "ps_cost": {
+        "degree": 1223,
+        "k": 39,
+        "m": 5,
+        "mults": 73
+      },
+      "verified": true
+    },
+    "p": 65537,
+    "support_max_centered": -1,
+    "support_min_centered": 0,
+    "support_size": 1225,
+    "valid": true
+  },
+  "sat_sparse_cleaner": {
+    "B": 17,
+    "best": [
+      {
+        "aux": 256,
+        "degree": 1223,
+        "nonzero_terms": 307,
+        "support": 1225,
+        "tags": [
+          "sqrt_minus_one",
+          "order_4"
+        ],
+        "valid": true
+      },
+      {
+        "aux": 35,
+        "degree": 1223,
+        "nonzero_terms": 612,
+        "support": 1225,
+        "tags": [
+          "generic"
+        ],
+        "valid": true
+      }
+    ],
+    "best_generic": [
+      {
+        "aux": 35,
+        "degree": 1223,
+        "nonzero_terms": 612,
+        "support": 1225,
+        "tags": [
+          "generic"
+        ],
+        "valid": true
+      }
+    ],
+    "best_structured": [
+      {
+        "aux": 256,
+        "degree": 1223,
+        "nonzero_terms": 307,
+        "support": 1225,
+        "tags": [
+          "sqrt_minus_one",
+          "order_4"
+        ],
+        "valid": true
+      }
+    ],
+    "mode": "list",
+    "num_candidates": 2,
+    "num_valid": 2,
+    "p": 65537
+  },
+  "structural_route_models": {
+    "parameter_set": {
+      "label": "E",
+      "mvec": [
+        97,
+        523
+      ],
+      "ords": [
+        96,
+        29
+      ],
+      "p": 65537
+    },
+    "route_A_tower_normal_basis": [
+      {
+        "D": 96,
+        "direct_trace_automorphisms": 95,
+        "factors": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          3
+        ],
+        "helib_bsgs_diagonal_automorphisms": 18,
+        "note": "promising for trace-like submaps, but must be fused with the actual EvalMap matrix",
+        "staged_relative_trace_automorphisms": 7,
+        "verified_trace_transitivity": true
+      },
+      {
+        "D": 29,
+        "direct_trace_automorphisms": 28,
+        "factors": [
+          29
+        ],
+        "helib_bsgs_diagonal_automorphisms": 9,
+        "note": "not promising for this dimension versus existing BSGS-style diagonal execution",
+        "staged_relative_trace_automorphisms": 28,
+        "verified_trace_transitivity": true
+      }
+    ],
+    "route_B_good_thomas_rader": {
+      "D": 96,
+      "dense_total_ops": 18432,
+      "ell": 97,
+      "factors": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "note": "plaintext operation model; ciphertext speedup needs fused executor",
+      "rader_mixed_radix_total_ops_model": 12960,
+      "ratio": 0.703125
+    },
+    "route_C_and_D_external_pipeline_status": {
+      "discrete_ckks_integer_cleaning": {
+        "claim_boundary": "current evidence supports bounded-support cleaning and null-polynomial sparsity, not a CKKS ciphertext replacement pipeline",
+        "local_codebase": "not integrated",
+        "tests": [
+          "poly_eval::digit_extract::test_bounded_digit_retain_poly",
+          "local SAT/sparse exact cleaner for p=65537, B=17, aux=256"
+        ]
+      },
+      "gbfv_native_slot_to_coeff": {
+        "claim_boundary": "validates a recent alternative bootstrapping/linear-transform pipeline, but is not directly comparable to the HElib p=65537 baseline without porting parameters and adding apples-to-apples timings",
+        "local_codebase": "external/fheanor",
+        "tests": [
+          "lin_transform::pow2::test_slots_to_coeffs_thin",
+          "lin_transform::pow2::test_coeffs_to_slots_thin",
+          "bgv::bootstrap::test_pow2_bgv_thin_bootstrapping_17",
+          "bfv::bootstrap::test_pow2_bfv_thin_bootstrapping_17"
+        ]
+      }
+    }
+  }
+}

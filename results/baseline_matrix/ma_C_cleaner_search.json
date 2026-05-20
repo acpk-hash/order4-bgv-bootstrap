@@ -1,0 +1,18 @@
+{
+  "B": 17,
+  "best": [],
+  "chosen_practical": null,
+  "generic_aux": 35,
+  "generic_aux_result": {
+    "aux": 35,
+    "centered_aux": 35,
+    "collisions": 257,
+    "valid": false
+  },
+  "num_candidates": 63,
+  "num_invalid": 63,
+  "num_valid": 0,
+  "p": 257,
+  "support_size": 1225,
+  "type_b_feasible": false
+}

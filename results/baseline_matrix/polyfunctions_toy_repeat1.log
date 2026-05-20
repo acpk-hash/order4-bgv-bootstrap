@@ -1,0 +1,37 @@
+m=105, p=2, e=20
+Thin bootstrapping with our version
+Number of digits to extract: 8
+Execution time
+- Digit extraction: 0 seconds.
+- Total bootstrapping: 0 seconds.
+Noise capacity
+- Initial: 1147
+- Linear transformations: 145
+- Digit extract: 391
+- Remaining: 611
+Thin bootstrapping successful!
+
+m=105, p=2, e=20
+Fat bootstrapping with our version
+Number of digits to extract: 8
+Execution time
+- Digit extraction: 1 seconds.
+- Total bootstrapping: 1 seconds.
+Noise capacity
+- Initial: 1146
+- Linear transformations: 111
+- Digit extract: 444
+- Remaining: 591
+Fat bootstrapping successful!
+
+m=105, p=2, e=59
+Digit extraction with our version and e_inner_compose_list:
+1 
+Number of digits to extract: 8
+Execution time
+- Digit extraction: 0 seconds.
+Noise capacity
+- Initial: 1147
+- Digit extract: 944
+Digit extraction successful!
+

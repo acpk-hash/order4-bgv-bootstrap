@@ -1,0 +1,56 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{chen_han_lower_digits}
+Chen, H., Han, K.: Homomorphic lower digits removal and improved {FHE}
+  bootstrapping. Cryptology ePrint Archive, Paper 2018/067 (2018),
+  \url{https://eprint.iacr.org/2018/067}
+
+\bibitem{choe_integer_cleaning}
+Choe, H., Kim, J., Stehl{\'e}, D., Suvanto, E.: Leveraging discrete {CKKS} to
+  bootstrap in high precision. In: Proceedings of the 2025 ACM SIGSAC
+  Conference on Computer and Communications Security. ACM (2025).
+  \doi{10.1145/3719027.3765080}, \url{https://eprint.iacr.org/2025/1786}
+
+\bibitem{geelen_polyfunctions}
+Geelen, R., Iliashenko, I., Kang, J., Vercauteren, F.: On polynomial functions
+  modulo $p^e$ and faster bootstrapping for homomorphic encryption. Cryptology
+  ePrint Archive, Paper 2022/1364 (2022),
+  \url{https://eprint.iacr.org/2022/1364}
+
+\bibitem{better_gbfv}
+Geelen, R., Vercauteren, F.: Better {GBFV} bootstrapping and faster encrypted
+  edit distance computation. Cryptology ePrint Archive, Paper 2025/1104 (2025),
+  \url{https://eprint.iacr.org/2025/1104}
+
+\bibitem{halevi_shoup_helib_bootstrap}
+Halevi, S., Shoup, V.: Bootstrapping for {HElib}. Cryptology ePrint Archive,
+  Paper 2014/873 (2014), \url{https://eprint.iacr.org/2014/873}
+
+\bibitem{halevi_shoup_linear_transforms}
+Halevi, S., Shoup, V.: Faster homomorphic linear transformations in {HElib}.
+  Cryptology ePrint Archive, Paper 2018/244 (2018),
+  \url{https://eprint.iacr.org/2018/244}
+
+\bibitem{kim_bfv_from_ckks}
+Kim, J., Seo, J., Song, Y.: Simpler and faster {BFV} bootstrapping for
+  arbitrary plaintext modulus from {CKKS}. Cryptology ePrint Archive, Paper
+  2024/109 (2024), \url{https://eprint.iacr.org/2024/109}
+
+\bibitem{li_null_polynomials}
+Li, S.: Null polynomials modulo $m$. arXiv:math/0510217 (2005),
+  \url{https://arxiv.org/abs/math/0510217}
+
+\bibitem{ma_large_p}
+Ma, S., Huang, T., Wang, A., Wang, X.: Accelerating {BGV} bootstrapping for
+  large $p$ using null polynomials over $\mathbb{Z}_{p^e}$. Cryptology ePrint
+  Archive, Paper 2024/115 (2024), \url{https://eprint.iacr.org/2024/115}
+
+\bibitem{fheanor}
+Okada, H., Player, R., Pohmann, S.: Fheanor: a new, modular {FHE} library for
+  designing and optimising schemes. Cryptology ePrint Archive, Paper 2025/864
+  (2025), \url{https://eprint.iacr.org/2025/864}
+
+\end{thebibliography}

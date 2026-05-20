@@ -1,0 +1,24 @@
+{
+  "B": 17,
+  "aux": 256,
+  "canonical_interpolant": {
+    "degree": 1223,
+    "leading_coeff_centered": -4553,
+    "leading_coeff_mod_p": 60984,
+    "nonzero_terms": 307,
+    "verified_on_support": true
+  },
+  "minimal_degree_certificate": {
+    "argument": "There is a unique interpolating polynomial of degree < |S| on |S| distinct support points. If a lower-degree exact cleaner Q existed, then P-Q would have |S| roots and degree < |S| over a field, hence P=Q, contradicting deg(P)>deg(Q).",
+    "field": "F_65537",
+    "lower_degree_exact_cleaner_exists": false,
+    "minimum_degree": 1223
+  },
+  "p": 65537,
+  "support_formula": "(2B+1)^2",
+  "support_max_centered": 4369,
+  "support_min_centered": -4369,
+  "support_points_are_distinct": true,
+  "support_size": 1225,
+  "valid": true
+}

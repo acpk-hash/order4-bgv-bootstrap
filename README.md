@@ -1,0 +1,339 @@
+# Character-Filtered Exact Cleaners for Large-Prime BGV Bootstrapping
+
+This repository is a GitHub-ready artifact for a conservative but broader paper
+story built around three layers:
+
+1. a **positive implemented ciphertext result** for the order-four exact cleaner
+   and its specialized evaluator in large-prime BGV bootstrapping;
+2. an **order-adaptive cleaner framework** supported by exact offline search and
+   threshold sweeps;
+3. a **Galois-structured linear-transform design route** supported by planner
+   output, exact plaintext verification, and explicit negative/guardrail
+   ciphertext evidence.
+
+The artifact is intentionally self-contained but lightweight: it keeps the
+modified HElib source, the large-prime fatboot driver, scripts, logs, and paper
+sources, while excluding build directories, local installs, caches, and large
+external exploration repositories.
+
+## Main Positive Result
+
+For the HElib thin-bootstrapping parameter set
+
+```text
+p = 65537, B = 17, m = 50731, mvec = [97, 523], ords = [96, 29]
+```
+
+the auxiliary radix `A=256` satisfies `A^2 = -1 mod p`. The exact cleaner has
+the order-four form
+
+```text
+P(X) = c_1 X + X^3 Q(X^4).
+```
+
+The artifact implements two layers:
+
+1. `HELIB_EXPLICIT_AUX=256`: choose the sparse exact cleaner.
+2. `HELIB_AUX_ORDER4_EVAL=1`: evaluate the cleaner through the order-four
+   decomposition above.
+
+Repeat-three real ciphertext results. The first row is a direct run of
+`/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p`; the other rows are
+the isolated implementation in this artifact.
+
+| Variant | linear1 | linear2 | extract | total |
+|---|---:|---:|---:|---:|
+| Ma baseline aux=35 | 4.428140s | 45.268850s | 160.783267s | 213.102573s |
+| sparse aux=256 | 4.380695s | 44.512004s | 147.909934s | 199.397017s |
+| aux=256 + order-four evaluator | 4.272161s | 43.623283s | 80.770389s | 131.180978s |
+
+Speedup over sparse aux=256:
+
+```text
+extract = 45.39%
+total   = 34.21%
+```
+
+Speedup over Ma baseline aux=35:
+
+```text
+extract = 49.76%
+total   = 38.44%
+```
+
+## Broader Conservative Paper Scope
+
+The broader paper claim is **not** that all of the following are implemented in
+ciphertext form. Instead:
+
+- the order-four cleaner/evaluator is the **implemented positive path**;
+- higher-order subgroup cleaners are supported by **exact offline planner
+  evidence**;
+- the normal-basis / factorized transform route is supported by **planner output
+  and exact plaintext verification**, while current ciphertext integrations are
+  deliberately reported as negative or engineering-only evidence.
+
+This avoids overclaiming while still documenting the larger Galois-structured
+framework.
+
+## Repository Layout
+
+```text
+src/HElib_auxradix_opt/        modified HElib source
+src/BGV-Boot-auxradix-opt/     large-prime BGV fatboot driver
+scripts/                       cleaner search, planner, and transform scripts
+results/                       selected benchmark logs and summaries
+paper/                         LNCS paper source and generated PDF
+docs/                          mathematical explanation notes
+build_upload.sh                isolated build script
+run_auxradix_benchmark.sh      sparse-cleaner baseline benchmark
+run_order4_aux256_benchmark.sh order-four evaluator benchmark
+summarize_logs.py              compact timing summarizer
+ARTIFACT.md                    detailed reproducibility notes
+```
+
+## Build
+
+Dependencies are the same as HElib's normal CMake build, including a C++17
+compiler, CMake, GMP, and NTL.
+
+```bash
+cd /path/to/order-four-cleaner
+./build_upload.sh
+```
+
+The build script writes only inside this repository:
+
+```text
+build/
+local/
+cache/
+```
+
+These paths are ignored by Git.
+
+## Reproduce The Main Benchmark
+
+Run a quick smoke test with one bootstrap:
+
+```bash
+REPEAT=1 ./run_order4_aux256_benchmark.sh
+```
+
+Run the repeat-three benchmark used in the paper:
+
+```bash
+REPEAT=3 ./run_order4_aux256_benchmark.sh
+```
+
+Compare against the included sparse aux-256 baseline log:
+
+```bash
+python3 scripts/parse_helib_bootstrap_timings.py \
+  --baseline results/upload_aux_256_repeat3.log \
+  --optimized results/order4_aux256_repeat3.log
+```
+
+Compare against the directly measured `/baselines/BGV-Boot-for-Large-p`
+baseline log:
+
+```bash
+python3 scripts/parse_helib_bootstrap_timings.py \
+  --baseline results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log \
+  --optimized results/order4_aux256_repeat3.log
+```
+
+Expected correctness marker:
+
+```text
+### bts finished, everything ok ###
+```
+
+Expected order-four trigger:
+
+```text
+HELIB_AUX_ORDER4_EVAL enabled: deg(P)=1223, terms(P)=307, deg(Q)=305, terms(Q)=306
+```
+
+## Reproduce The New Offline Cleaner/Transform Evidence
+
+### Order-adaptive cleaner sweep
+
+```bash
+python3 scripts/order_adaptive_cleaner_sweep.py --p 65537 \
+  --json --output results/order_adaptive_cleaner_sweep_p65537.json
+```
+
+This produces the conservative threshold story used in the paper:
+
+- order four is the stable global choice at `B=17`;
+- order eight becomes support-safe only once `B <= 7`;
+- order sixteen is restricted to tiny local supports.
+
+### Character-projected search on the implemented global case
+
+```bash
+python3 scripts/character_projected_cleaner_search.py \
+  --p 65537 --B 17 --max-order 64 --max-decomposition 16 \
+  --aux 35 256 65281 \
+  --output results/character_projected_p65537_B17.json --json
+```
+
+For the target parameter set, the best valid candidate remains `A=256`. Its
+best decomposition is modulo `4`, with estimated evaluator multiplication cost
+`41` versus `73` for generic Paterson--Stockmeyer on the degree-1223 cleaner.
+The generic radix `A=35` is correct but its best decomposition is only the
+odd-polynomial modulo-`2` structure with estimated cost `55`.
+
+### Structured linear-transform planner and exact plaintext check
+
+```bash
+python3 scripts/linear_transform_factor_planner.py --all \
+  > results/linear_transform_factor_planner_all.txt
+
+python3 scripts/plaintext_rader_evalmap.py --ell 97 --seed 7 \
+  > results/plaintext_rader97_seed7.txt
+```
+
+The target set E planner output highlights:
+
+```text
+D=96 | HElib bsgs auts~18 | radix [2,2,2,2,2,3] auts~7 | primitive-ell Rader auts~9
+D=29 | HElib bsgs auts~9  | radix [29] auts~28
+```
+
+and the exact plaintext Rader verification reports:
+
+```text
+verified=True
+operation_ratio=0.7031
+conv_length=96 conv_radices=[2, 2, 2, 2, 2, 3]
+```
+
+These are design/planner claims, not a demonstrated ciphertext speedup claim.
+
+## Key Files
+
+- Implementation:
+  `src/HElib_auxradix_opt/src/extractDigits.cpp`
+- Main experiment note:
+  `results/order4_aux256_experiment.md`
+- Main repeat-three log:
+  `results/order4_aux256_repeat3.log`
+- Direct Ma baseline repeat-three log:
+  `results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log`
+- Parsed comparison JSON:
+  `results/order4_aux256_vs_aux256_repeat3.json`
+  and `results/baselines_BGV_Boot_for_Large_p_vs_order4_aux256_repeat3.json`
+- New order-adaptive sweep:
+  `results/order_adaptive_cleaner_sweep_p65537.json`
+- Character-projected search:
+  `scripts/character_projected_cleaner_search.py`
+  and `results/character_projected_p65537_B17.json`
+- Structured transform planner:
+  `results/linear_transform_factor_planner_all.txt`
+- Exact plaintext Rader verification:
+  `results/plaintext_rader97_seed7.txt`
+- Paper:
+  `paper/main.tex` and `paper/main.pdf`
+- Talk-oriented theory note:
+  `docs/order4_cleaner_theory.tex` and `docs/order4_cleaner_theory.pdf`
+- Concrete cleaner polynomial forms:
+  `docs/cleaner_polynomial_forms_p65537_B17.json`
+  generated by `scripts/export_cleaner_polynomial_forms.py`
+
+## Parameter Boundary
+
+For exact cleaner correctness alone, `p` can be any sufficiently large prime.
+For a support bound `B`, choosing
+
+```text
+A = 2B + 1
+```
+
+is collision-free whenever
+
+```text
+p > 4B(B+1).
+```
+
+This guarantees a unique degree-`< (2B+1)^2` exact cleaner on
+`S_A = {hA+lo : |h|, |lo| <= B}`.
+
+The order-four sparse optimization is stronger and needs more structure:
+
+```text
+p prime, p = 1 mod 4, p > 8B^2, choose A with A^2 = -1 mod p.
+```
+
+Then the support is automatically collision-free and the canonical cleaner has
+
+```text
+P_A(X) = (1/2) X + X^3 Q(X^4).
+```
+
+For the broader order-adaptive theory, the paper uses the signed-circulant
+sufficient bound
+
+```text
+(2B+1) * sum_{j=0}^{d-1} |A|^j < p,  where d = order/2.
+```
+
+For the target `p=65537`, this yields the practical thresholds used in the
+paper:
+
+```text
+order 4  -> B <= 127
+order 8  -> B <= 7
+order 16 -> B <= 1
+```
+
+The positive ciphertext implementation remains the order-four row at `B=17`.
+
+## Claim Boundary
+
+This artifact does not claim a globally optimal FHE bootstrapping method. The
+positive implemented claim is specific:
+
+```text
+fixed HElib large-prime BGV thin-bootstrap pipeline
++ bounded-support exact cleaner
++ order-four auxiliary radix A=256
++ specialized evaluator for P(X)=c_1 X + X^3 Q(X^4)
+```
+
+The broader paper framework additionally claims:
+
+```text
+- higher-order cleaner feasibility / threshold results from exact offline sweeps
+- Galois-structured linear-transform design evidence from planner output
+  and exact plaintext verification
+```
+
+Several linear-transform ideas were also tested. They are included as negative
+or engineering evidence in `results/linear_transform_attempts_summary.md`.
+
+In particular, the Rader/CRT route should currently be read as:
+
+```text
+promising algebraic design route,
+not yet a demonstrated ciphertext speedup.
+```
+
+## Paper
+
+The paper source is in:
+
+```text
+paper/main.tex
+```
+
+Build it with:
+
+```bash
+cd paper
+make
+```
+
+The included `paper/main.pdf` should be checked with `pdfinfo` and `pdffonts`
+after regeneration.
