@@ -1,0 +1,11 @@
+build/
+*/build/
+local/
+cache/
+*.o
+*.a
+*.so
+__pycache__/
+*.pyc
+helib.log
+src/HElib_auxradix_opt/
