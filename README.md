@@ -350,11 +350,21 @@ after regeneration.
   **power-of-two ring** `m = 2^16 = 65536` for `p = 65537` (32768 slots,
   79-bit security), obtained by porting the order-four evaluator into the
   homomorphic-NTT bootstrapping implementation (`patches/power_of_two_order4_port.patch`):
-  generic PS 53.5 s -> order-4 22.5 s (**2.38x**); vs. a Ma-style baseline radix
-  (`aux=35`) 44.3 s (**1.97x**); thick bootstrapping 58.2 s -> 18.3 s (**3.17x**).
+  generic PS 22.2 s -> order-4 14.0 s (**1.59x**, three-run means); vs. a Ma-style
+  baseline radix (`aux=35`, 25.5 s) **1.83x**; thick bootstrapping 34.1 s -> 14.4 s
+  (**2.37x**). See `results/power_of_two/suite/` for the definitive sequential
+  three-run logs (earlier single-run logs in this directory were taken under
+  machine load and overstate absolute times).
 - **`results/moderate_primes/`** — encrypted-domain logs for three further
   general-cyclotomic moderate primes (means over three sequential runs):
   `p=1601` (44.2 -> 23.2 s, 1.90x), `p=2917` (28.3 -> 15.4 s, 1.84x),
   `p=8101` (76.3 -> 21.4 s, 3.57x). The order-four evaluator triggers in every
   run (`HELIB_AUX_ORDER4_EVAL enabled: deg(P)=... deg(Q)=...`) and all slots
   decrypt correctly.
+- **`encrypted_linear_transform/`** — first **encrypted** instantiation of the
+  butterfly (Rader + mixed-radix [6,4,4]) CoeffToSlot block on the full ring
+  `m=50731`: correct on all 2784 slots (0 mismatches vs. an independent NTL
+  matvec), 41 automorphisms over 17 native rotation classes, 194 bits of noise
+  capacity consumed (no overflow even at bits=600); no extended key-switching
+  matrices required. At D=96 the monolithic BSGS remains faster (14.9 s vs
+  59.1 s), locating the O(log D) crossover at larger D.
