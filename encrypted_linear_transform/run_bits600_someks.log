@@ -1,0 +1,32 @@
+=== encrypted butterfly prototype: m=50731 p=65537 bits=600 allks=0 ===
+loaded 6 stages, nontrivial rotations in chain: 34, const-mults: 40
+loaded dump matrix
+INFO: total bits = 808.015, security level = 218.473context built in 119.478 s
+securityLevel = 218.473
+nslots=2784 d=18 dim0 size=96 native=1 dim1 size=29 native=1
+HElib slot polynomial G matches stage data G: YES
+keygen+KS in 16.1994 s
+input capacity: 569.265 bits
+WARNING: KS-noise-ratio = 2.57783e+07 > 1
+rotate1D(+1) => slot i holds old[i-1]; using amt = -offset
+constants encoded in 4.5139 s
+WARNING: KS-noise-ratio = 2.84612e+07 > 1
+WARNING: KS-noise-ratio = 2.71892e+07 > 1
+WARNING: KS-noise-ratio = 1.02244 > 1
+WARNING: KS-noise-ratio = 2.85133e+07 > 1
+WARNING: KS-noise-ratio = 2.83575e+07 > 1
+WARNING: KS-noise-ratio = 2.64355e+07 > 1
+WARNING: KS-noise-ratio = 1.03521 > 1
+  stage 1: 4.75311 s, capacity 517.199 bits
+  stage 2: 5.24244 s, capacity 495.918 bits
+  stage 3: 5.95535 s, capacity 468.875 bits
+  stage 4: 5.89908 s, capacity 448.649 bits
+  stage 5: 5.30565 s, capacity 427.181 bits
+  stage 6: 5.855 s, capacity 400.379 bits
+WARNING: KS-noise-ratio = 2.83575e+07 > 1
+WARNING: KS-noise-ratio = 2.71892e+07 > 1
+WARNING: KS-noise-ratio = 1.02244 > 1
+  DC fixup: 5.68141 s, capacity 376.299 bits
+ENCRYPTED CHAIN: 38.7017 s total, 41 rotations, final capacity 376.299 bits (input 569.265)
+VERIFY vs dump matvec (up to fixed Rader permutation): PASS  (2784 slots checked, 0 mismatches)
+done

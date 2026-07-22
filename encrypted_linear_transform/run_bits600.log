@@ -1,0 +1,31 @@
+=== encrypted butterfly prototype: m=50731 p=65537 bits=600 allks=1 ===
+loaded 6 stages, nontrivial rotations in chain: 34, const-mults: 40
+loaded dump matrix
+INFO: total bits = 808.015, security level = 218.473context built in 119.835 s
+securityLevel = 218.473
+nslots=2784 d=18 dim0 size=96 native=1 dim1 size=29 native=1
+HElib slot polynomial G matches stage data G: YES
+keygen+KS in 42.0882 s
+input capacity: 569.265 bits
+WARNING: KS-noise-ratio = 2.57783e+07 > 1
+rotate1D(+1) => slot i holds old[i-1]; using amt = -offset
+constants encoded in 4.71421 s
+WARNING: KS-noise-ratio = 2.73077e+07 > 1
+WARNING: KS-noise-ratio = 2.791e+07 > 1
+WARNING: KS-noise-ratio = 2.85133e+07 > 1
+WARNING: KS-noise-ratio = 2.74431e+07 > 1
+WARNING: KS-noise-ratio = 2.65434e+07 > 1
+  stage 1: 2.46774 s, capacity 518.045 bits
+  stage 2: 4.23633 s, capacity 496.764 bits
+  stage 3: 4.29287 s, capacity 469.721 bits
+  stage 4: 4.22615 s, capacity 449.495 bits
+  stage 5: 4.24285 s, capacity 428.026 bits
+  stage 6: 3.57666 s, capacity 401.224 bits
+WARNING: KS-noise-ratio = 2.74431e+07 > 1
+WARNING: KS-noise-ratio = 2.791e+07 > 1
+  DC fixup: 4.02633 s, capacity 377.145 bits
+ENCRYPTED CHAIN: 27.0789 s total, 41 rotations, final capacity 377.145 bits (input 569.265)
+VERIFY vs dump matvec (up to fixed Rader permutation): PASS  (2784 slots checked, 0 mismatches)
+BASELINE BSGS MatMul1D (transposed=0): precomp 19.94 s, mul 6.60127 s, capacity after 513.768 bits (input 569.265), matvec match: no (2784 mismatches)
+BASELINE BSGS MatMul1D (transposed=1): precomp 18.7815 s, mul 6.37246 s, capacity after 513.766 bits (input 569.265), matvec match: YES (0 mismatches)
+done
