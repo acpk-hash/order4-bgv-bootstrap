@@ -10,7 +10,7 @@ zero `axiom`**; `lake build` completes with no errors.
 ```bash
 # Lean toolchain is pinned in lean-toolchain (leanprover/lean4:v4.31.0-rc2)
 lake exe cache get          # fetch prebuilt Mathlib oleans
-lake build                  # builds BootstrapAlgebra.OrderFour + .Character
+lake build                  # builds BootstrapAlgebra.OrderFour + .Character + .Tightness
 ```
 
 A green build is the certificate: it re-checks every proof from the Mathlib
@@ -22,6 +22,7 @@ kernel up.
 |---|---|
 | `BootstrapAlgebra/OrderFour.lean` | order-four element, support stability, the character filter, the **Order-Four Character Filter** theorem, factored form |
 | `BootstrapAlgebra/Character.lean` | the Section-4 character-decomposition framework: **Isotypic decomposition** and the **Monomial Support Constraint** (covariance) |
+| `BootstrapAlgebra/Tightness.lean` | the quantitative results: **Tight term count** (counting + bound `\|T\| ≤ (\|S_A\|-1)/4 + 1`), **Parameter Admissibility** (injectivity core), and the **complexity theorem's** asymptotic cost-ratio limit |
 
 ## Interface: paper statement ↔ Lean name
 
@@ -57,6 +58,20 @@ Everything is formalized at the **coefficient level**: the substitution operator
 | **Prop (Monomial Support Constraint) (i)** — determined components `cₖ = hₖ/(Aᵏ-ωʲ)` for `Aᵏ ≠ ωʲ` | `covariance_determined` |
 | **Prop (Monomial Support Constraint) (ii)** — consistency `Aᵏ = ωʲ ⟹ hₖ = 0` | `covariance_consistency` |
 | the full dichotomy over every index `k` | `covariance_dichotomy` |
+
+### `Tightness.lean`  (namespace `OrderFour.Tightness`)
+
+| paper statement | Lean name |
+|---|---|
+| **Theorem (Tight term count)**, counting part: exactly `q` exponents `k < 4q+1` have `k ≡ 3 (mod 4)` | `card_v3` |
+| same, general form: for `n ≡ 1 (mod 4)` (here `n = \|S_A\| = (2B+1)²`, an odd square) the count is `(n-1)/4` | `card_v3_mod` |
+| **Theorem (Tight term count)**, bound: support in `{1}∪{k≡3 mod 4}` ⟹ at most `(\|S_A\|-1)/4 + 1` nonzero coefficients below `\|S_A\| = 4q+1` | `support_card_le` |
+| end-to-end: functional equation `(Aᵏ+A)·cₖ = A·[k=1]` ⟹ `\|T\| ≤ (\|S_A\|-1)/4 + 1` (chains the Character Filter with the count) | `term_count_bound` |
+| **Parameter Admissibility**, size bound: `\|η\|,\|λ\| ≤ B ⟹ \|ηA+λ\| ≤ \|A\|B + B` | `encode_abs_le` |
+| **Parameter Admissibility**, injectivity: `2(\|A\|B+B) < p` ⟹ encodings equal mod `p` are equal over `ℤ` (Definition 1, sufficiency) | `encode_injective_int` |
+| **Complexity theorem**, cost-ratio identity: `2√d/(2√(d/4)+4) = 2√d/(√d+4)` for `d ≥ 0` | `ratio_eq` |
+| the ratio is `< 2` for every `d ≥ 0` (limit approached from below) | `ratio_lt_two` |
+| **Complexity theorem**, asymptotic part: `2√d/(2√(d/4)+4) → 2` as `d → ∞` | `ratio_tendsto` |
 
 ## Notes
 
