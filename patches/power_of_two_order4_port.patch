@@ -1,0 +1,158 @@
+--- src/extractDigits.cpp.bak	2026-07-22 02:38:44.073836832 +0800
++++ src/extractDigits.cpp	2026-07-22 02:39:53.104872729 +0800
+@@ -16,6 +16,8 @@
+ #include <helib/EncryptedArray.h>
+ #include <helib/polyEval.h>
+ #include <helib/debugging.h>
++#include <cstdlib>
++#include <iostream>
+ 
+ namespace helib {
+ 
+@@ -539,6 +541,98 @@
+   }
+ }
+ 
++static bool envFlagEnabled(const char* name)
++{
++  const char* flag = std::getenv(name);
++  return flag != nullptr && flag[0] != '\0' && flag[0] != '0';
++}
++
++static long countNonZeroTerms(const NTL::ZZX& poly)
++{
++  long count = 0;
++  for (long i = 0; i <= NTL::deg(poly); i++)
++    if (!NTL::IsZero(NTL::coeff(poly, i)))
++      count++;
++  return count;
++}
++
++static bool splitOrderFourCleaner(NTL::ZZX& q,
++                                  NTL::ZZ& linearCoeff,
++                                  const NTL::ZZX& poly)
++{
++  q = NTL::ZZX::zero();
++  linearCoeff = NTL::ZZ::zero();
++  for (long i = 0; i <= NTL::deg(poly); i++) {
++    const NTL::ZZ& c = NTL::coeff(poly, i);
++    if (NTL::IsZero(c))
++      continue;
++    if (i == 1) {
++      linearCoeff = c;
++      continue;
++    }
++    if (i >= 3 && (i % 4) == 3) {
++      NTL::SetCoeff(q, (i - 3) / 4, c);
++      continue;
++    }
++    return false;
++  }
++  q.normalize();
++  return NTL::deg(q) >= 0 || !NTL::IsZero(linearCoeff);
++}
++
++static bool polyEvalOrderFourCleaner(Ctxt& ret,
++                                     const NTL::ZZX& poly,
++                                     const Ctxt& x)
++{
++  NTL::ZZX q;
++  NTL::ZZ linearCoeff;
++  if (!splitOrderFourCleaner(q, linearCoeff, poly))
++    return false;
++
++  Ctxt x2 = x;
++  x2.square();
++  x2.reLinearize();
++
++  Ctxt x3 = x2;
++  x3.multiplyBy(x);
++  x3.reLinearize();
++
++  Ctxt x4 = x2;
++  x4.square();
++  x4.reLinearize();
++
++  Ctxt qEval(x.getPubKey(), x.getPtxtSpace());
++  if (NTL::deg(q) >= 0) {
++    std::vector<Ctxt*> qRet{&qEval};
++    NTL::vec_ZZX qVec;
++    qVec.SetLength(1);
++    qVec[0] = q;
++    polyEvalNew(qRet, qVec, x4);
++    qEval.multiplyBy(x3);
++    qEval.reLinearize();
++  } else {
++    qEval.clear();
++  }
++
++  if (!NTL::IsZero(linearCoeff)) {
++    Ctxt linear = x;
++    linear.multByConstant(linearCoeff);
++    qEval += linear;
++  }
++
++  ret = qEval;
++
++  static bool printed = false;
++  if (!printed) {
++    std::cout << "HELIB_AUX_ORDER4_EVAL enabled: deg(P)=" << NTL::deg(poly)
++              << ", terms(P)=" << countNonZeroTerms(poly)
++              << ", deg(Q)=" << NTL::deg(q)
++              << ", terms(Q)=" << countNonZeroTerms(q) << "\n";
++    printed = true;
++  }
++  return true;
++}
++
+ void newExtractDigits(std::vector<Ctxt>& digits, const Ctxt& c)
+ {
+   const Context& context = c.getContext();
+@@ -556,8 +650,16 @@
+     // now the digit extraction is actually interpolation within the lowest
+     // digit
+     digits.resize(1, tmp);
+-    std::vector<Ctxt*> ctxt_ptr_vec{&digits[0]};
+-    polyEvalNew(ctxt_ptr_vec, context.getExtractPolys(), c);
++    const NTL::Vec<NTL::ZZX>& extractPolys = context.getExtractPolys();
++    if (!(envFlagEnabled("HELIB_AUX_ORDER4_EVAL") &&
++          extractPolys.length() == 1 &&
++          polyEvalOrderFourCleaner(digits[0], extractPolys[0], c))) {
++      if (envFlagEnabled("HELIB_AUX_ORDER4_EVAL"))
++        std::cout << "HELIB_AUX_ORDER4_EVAL skipped: cleaner does not have "
++                     "the required order-four support\n";
++      std::vector<Ctxt*> ctxt_ptr_vec{&digits[0]};
++      polyEvalNew(ctxt_ptr_vec, extractPolys, c);
++    }
+   } else {
+     // power-of-p aux
+     // numExtract is either 1 or 2
+--- src/recryption.cpp.bak	2026-07-22 02:38:44.079836922 +0800
++++ src/recryption.cpp	2026-07-22 02:40:17.656241114 +0800
+@@ -24,6 +24,9 @@
+ #include <helib/log.h>
+ #include <helib/keys.h>
+ #include <chrono>
++#include <cstdlib>
++#include <iostream>
++#include <NTL/ZZ.h>
+ 
+ using std::chrono::steady_clock;
+ using std::chrono::duration;
+@@ -489,6 +492,16 @@
+     aux = 2 * ceil(I_bound) + 1;
+     if (NTL::GCD(aux, p) > 1)
+       aux += 1;
++    if (const char* explicitAux = std::getenv("HELIB_EXPLICIT_AUX")) {
++      char* end = nullptr;
++      long parsedAux = std::strtol(explicitAux, &end, 10);
++      assertTrue(end != explicitAux && *end == '\0' && parsedAux > 1,
++                 "invalid HELIB_EXPLICIT_AUX");
++      assertTrue(NTL::GCD(parsedAux, p) == 1,
++                 "HELIB_EXPLICIT_AUX must be coprime to p");
++      aux = parsedAux;
++      std::cout << "using HELIB_EXPLICIT_AUX=" << aux << "\n";
++    }
+     eNew = r;
+     numExtract = 1;
+   } else if (t == 0) { // deduce the value of t

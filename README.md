@@ -337,3 +337,24 @@ make
 
 The included `paper/main.pdf` should be checked with `pdfinfo` and `pdffonts`
 after regeneration.
+
+## Update: cross-ring validation, moderate primes, and machine-checked proofs
+
+- **`lean/`** — Lean 4 + Mathlib formalization (zero `sorry`): the Order-Four
+  Character Filter (coefficient and polynomial forms), the factored form
+  `P_A = X/2 + X^3 Q(X^4)`, support characterization, and the Section-4
+  framework (isotypic decomposition, monomial support constraint).
+  Reproduce: `lake exe cache get && lake build`. See `lean/README.md` for the
+  paper-statement ↔ Lean-name interface table.
+- **`results/power_of_two/`** — encrypted-domain digit-extraction logs on the
+  **power-of-two ring** `m = 2^16 = 65536` for `p = 65537` (32768 slots,
+  79-bit security), obtained by porting the order-four evaluator into the
+  homomorphic-NTT bootstrapping implementation (`patches/power_of_two_order4_port.patch`):
+  generic PS 53.5 s -> order-4 22.5 s (**2.38x**); vs. a Ma-style baseline radix
+  (`aux=35`) 44.3 s (**1.97x**); thick bootstrapping 58.2 s -> 18.3 s (**3.17x**).
+- **`results/moderate_primes/`** — encrypted-domain logs for three further
+  general-cyclotomic moderate primes (means over three sequential runs):
+  `p=1601` (44.2 -> 23.2 s, 1.90x), `p=2917` (28.3 -> 15.4 s, 1.84x),
+  `p=8101` (76.3 -> 21.4 s, 3.57x). The order-four evaluator triggers in every
+  run (`HELIB_AUX_ORDER4_EVAL enabled: deg(P)=... deg(Q)=...`) and all slots
+  decrypt correctly.
