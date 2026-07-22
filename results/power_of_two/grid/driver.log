@@ -1,0 +1,32 @@
+[2026-07-22_16:49:31] GRID SEQUENCE BEGIN pid=3574876 taskset=8-25
+[2026-07-22_16:49:31] START i0_h26_OFF load=8.64 10.43 18.79 magma_running=8
+[2026-07-22_16:59:49] END i0_h26_OFF rc=0 load=9.42 9.72 14.33
+[2026-07-22_16:59:49] START i0_h26_ON load=9.42 9.72 14.33 magma_running=8
+[2026-07-22_17:09:42] END i0_h26_ON rc=0 load=12.22 10.70 12.50
+[2026-07-22_17:09:42] START i3_h26_OFF load=12.22 10.70 12.50 magma_running=8
+[2026-07-22_17:14:26] END i3_h26_OFF rc=0 load=9.55 10.04 11.74
+[2026-07-22_17:14:26] START i3_h26_ON load=9.55 10.04 11.74 magma_running=8
+[2026-07-22_17:18:58] END i3_h26_ON rc=0 load=9.50 9.82 11.21
+[2026-07-22_17:18:58] START i4_h26_OFF load=9.50 9.82 11.21 magma_running=8
+[2026-07-22_17:20:25] END i4_h26_OFF rc=0 load=9.54 9.77 11.07
+[2026-07-22_17:20:25] START i4_h26_ON load=9.54 9.77 11.07 magma_running=8
+[2026-07-22_17:21:46] END i4_h26_ON rc=0 load=9.69 9.79 10.97
+[2026-07-22_17:21:46] START i0_h12_OFF load=9.69 9.79 10.97 magma_running=8
+[2026-07-22_17:31:43] END i0_h12_OFF rc=0 load=9.74 9.74 10.36
+[2026-07-22_17:31:44] START i0_h12_ON load=9.74 9.74 10.36 magma_running=8
+[2026-07-22_17:41:24] END i0_h12_ON rc=0 load=9.68 9.73 10.06
+[2026-07-22_17:41:24] START i0_h18_OFF load=9.68 9.73 10.06 magma_running=8
+[2026-07-22_17:51:34] END i0_h18_OFF rc=0 load=10.06 9.75 9.87
+[2026-07-22_17:51:34] START i0_h18_ON load=10.06 9.75 9.87 magma_running=8
+[2026-07-22_18:01:23] END i0_h18_ON rc=0 load=10.02 9.70 9.75
+[2026-07-22_18:01:23] START i0_h40_OFF load=10.02 9.70 9.75 magma_running=8
+[2026-07-22_18:12:01] END i0_h40_OFF rc=0 load=10.33 9.99 9.84
+[2026-07-22_18:12:01] START i0_h40_ON load=10.33 9.99 9.84 magma_running=8
+[2026-07-22_18:22:04] END i0_h40_ON rc=0 load=9.63 9.88 9.88
+[2026-07-22_18:22:04] GRID_DONE
+[2026-07-22_18:22:55] START stretch p1601_OFF
+[2026-07-22_18:23:30] END stretch p1601_OFF rc=0
+[2026-07-22_18:24:06] START stretch p1601_OFF try2 gens=-1,5 ords=2,16
+[2026-07-22_18:28:38] END stretch p1601_OFF try2 rc=0
+[2026-07-22_18:28:53] START stretch p1601_ON
+[2026-07-22_18:32:52] END stretch p1601_ON rc=0
