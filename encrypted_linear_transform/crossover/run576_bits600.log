@@ -1,0 +1,34 @@
+=== crossover benchmark: m=51353 p=997057 D=576 bits=600 ===
+butterfly chain: 5 stages, 23 nontrivial rotations, 28 const-mults
+INFO: total bits = 803.454, security level = 222.602context built in 112.366 s, securityLevel=222.602
+  dim 0: size 576 native=1
+  dim 1: size 2 native=0
+nslots=1152 d=44 target dim=0
+keygen: addSome1DMatrices 15.7252 s, +12 targeted butterfly KS matrices 3.79502 s
+plaintext reference computed in 0.390731 s
+input capacity: 564.983 bits
+WARNING: KS-noise-ratio = 4.90183e+08 > 1
+rotate1D(+1) => slot i holds old[i-1]; to fetch v[i+o] use amt = -o
+butterfly constants encoded in 1.88133 s
+WARNING: KS-noise-ratio = 4.65158e+08 > 1
+WARNING: KS-noise-ratio = 5.00933e+08 > 1
+WARNING: KS-noise-ratio = 4.84115e+08 > 1
+  stage 1: 1.36023 s, capacity 510.503 bits
+  stage 2: 3.90209 s, capacity 483.473 bits
+  stage 3: 3.86845 s, capacity 456.616 bits
+  stage 4: 2.58543 s, capacity 430.971 bits
+  stage 5: 2.60386 s, capacity 406.136 bits
+BUTTERFLY: 14.3216 s, 23 rotations, capacity 564.983 -> 406.136 (consumed 158.848 bits)
+BUTTERFLY VERIFY vs DFT matvec (up to fixed digit-reversal perm): PASS (0 mismatched slots of 1152)
+--- butterfly timers ---
+  smartAutomorph: 12.2424 / 23 = 0.532278   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.086396 / 23 = 0.00375635   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=0): precomp 114.19 s, mul 23.5104 s, capacity 564.983 -> 502.733 (consumed 62.2508 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=0) ---
+  smartAutomorph: 10.3784 / 23 = 0.451234   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.089189 / 23 = 0.00387778   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=1): precomp 133.732 s, mul 23.8524 s, capacity 564.983 -> 502.733 (consumed 62.2508 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=1) ---
+  smartAutomorph: 10.438 / 23 = 0.453826   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.090929 / 23 = 0.00395343   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+done
