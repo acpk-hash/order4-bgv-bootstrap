@@ -14,7 +14,7 @@ echo ""
 
 # ---- Experiment 1: Plaintext Rader Verification ----
 echo "[Exp 1] Plaintext Rader prototype (operation count comparison)..."
-source /home/luck/xzy/0424project/.venv_sat/bin/activate 2>/dev/null || true
+source /home/user/experiments/.venv_sat/bin/activate 2>/dev/null || true
 python3 "$ROOT/scripts/plaintext_rader_evalmap.py" --ell 97 2>&1 | tee "$RESULTS/rader_plaintext.log"
 echo ""
 
@@ -49,10 +49,10 @@ if [[ -f "$ROOT/src/rader_bootstrap" ]]; then
 else
     echo "  Building rader_bootstrap..."
     /usr/bin/c++ -std=c++17 -O2 -no-pie \
-        -I/home/luck/xzy/0424project/tower_helib/include \
+        -I/home/user/experiments/tower_helib/include \
         -o "$ROOT/src/rader_bootstrap" \
         "$ROOT/src/rader_bootstrap.cpp" \
-        /home/luck/xzy/0424project/tower_helib/build/lib/libhelib.a \
+        /home/user/experiments/tower_helib/build/lib/libhelib.a \
         /usr/local/lib/libntl.a -lgmp -lgf2x -lpthread 2>&1 | tail -3
     if [[ -f "$ROOT/src/rader_bootstrap" ]]; then
         timeout 300 "$ROOT/src/rader_bootstrap" 2>&1 | tee "$RESULTS/rader_helib_verification.log"

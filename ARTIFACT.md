@@ -87,13 +87,13 @@ REPEAT=3 ./run_order4_aux256_benchmark.sh
 ```
 
 The direct Ma baseline comparison object is the checked-out repository under
-`/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p`. The repeat-three
+`/home/user/experiments/baselines/BGV-Boot-for-Large-p`. The repeat-three
 baseline log in this artifact was produced with:
 
 ```bash
-cd /home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p
+cd /home/user/experiments/baselines/BGV-Boot-for-Large-p
 timeout 1800s ./build/fatboot i=4 h=12 t=-1 newbts=1 repeat=3 newks=1 \
-  > /home/luck/xzy/0424project/github_order4_cleaner/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
+  > /home/user/order4-artifact/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
 ```
 
 ## Parsing

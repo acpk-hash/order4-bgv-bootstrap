@@ -10,7 +10,7 @@ with M1 offsets {0,16,...,80} and M2 offsets {0..15}.
 import json, random, sys
 from pathlib import Path
 
-ROOT = Path("/home/luck/xzy/0424project")
+ROOT = Path("/home/user/experiments")
 D = 96
 P = 65537
 

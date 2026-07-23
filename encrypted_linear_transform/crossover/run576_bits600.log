@@ -21,14 +21,14 @@ WARNING: KS-noise-ratio = 4.84115e+08 > 1
 BUTTERFLY: 14.3216 s, 23 rotations, capacity 564.983 -> 406.136 (consumed 158.848 bits)
 BUTTERFLY VERIFY vs DFT matvec (up to fixed digit-reversal perm): PASS (0 mismatched slots of 1152)
 --- butterfly timers ---
-  smartAutomorph: 12.2424 / 23 = 0.532278   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
-  automorph: 0.086396 / 23 = 0.00375635   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+  smartAutomorph: 12.2424 / 23 = 0.532278   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.086396 / 23 = 0.00375635   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
 BSGS MatMul1D (transposed=0): precomp 114.19 s, mul 23.5104 s, capacity 564.983 -> 502.733 (consumed 62.2508 bits), verify: PASS (0 mismatched slots)
 --- BSGS timers (transposed=0) ---
-  smartAutomorph: 10.3784 / 23 = 0.451234   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
-  automorph: 0.089189 / 23 = 0.00387778   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+  smartAutomorph: 10.3784 / 23 = 0.451234   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.089189 / 23 = 0.00387778   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
 BSGS MatMul1D (transposed=1): precomp 133.732 s, mul 23.8524 s, capacity 564.983 -> 502.733 (consumed 62.2508 bits), verify: PASS (0 mismatched slots)
 --- BSGS timers (transposed=1) ---
-  smartAutomorph: 10.438 / 23 = 0.453826   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
-  automorph: 0.090929 / 23 = 0.00395343   [/home/luck/xzy/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+  smartAutomorph: 10.438 / 23 = 0.453826   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.090929 / 23 = 0.00395343   [/home/user/order4-artifact/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
 done

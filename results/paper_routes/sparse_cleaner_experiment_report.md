@@ -141,7 +141,7 @@ results/paper_routes/helib_aux35_vs_aux256_repeat3_summary.json
 
 All listed ciphertext runs finish with `### bts finished, everything ok ###`.
 For the paper-facing comparison, the direct baseline is
-`/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p`, whose repeat-3
+`/home/user/experiments/baselines/BGV-Boot-for-Large-p`, whose repeat-3
 log is `results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log`.  The
 `upload_aux_default_repeat3.log` file is retained as an internal same-source
 reproduction, but it is not the primary comparison object.
@@ -166,9 +166,9 @@ Observed improvement:
 Commands:
 
 ```bash
-cd /home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p
+cd /home/user/experiments/baselines/BGV-Boot-for-Large-p
 timeout 1800s ./build/fatboot i=4 h=12 t=-1 newbts=1 repeat=3 newks=1 \
-  > /home/luck/xzy/0424project/github_order4_cleaner/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
+  > /home/user/order4-artifact/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
 
 HELIB_ZZX_CACHE_DIR=./cache/saved_ZZX \
 HELIB_EXPLICIT_AUX=256 \

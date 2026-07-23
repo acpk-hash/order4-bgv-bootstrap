@@ -279,7 +279,7 @@ def copy_existing(src: Path, dst: Path, force: bool) -> dict[str, Any] | None:
 
 
 def run_ma_large_p(args: argparse.Namespace, out_dir: Path) -> list[dict[str, Any]]:
-    base_bin = Path("/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p/build/fatboot")
+    base_bin = Path("/home/user/experiments/baselines/BGV-Boot-for-Large-p/build/fatboot")
     opt_bin = ROOT / "src/BGV-Boot-auxradix-opt/build/fatboot"
     old_logs = ROOT / "results"
     rows = []
@@ -421,7 +421,7 @@ def run_ntt(args: argparse.Namespace, out_dir: Path) -> list[dict[str, Any]]:
             }
             for p in NTT_PARAMS
         ]
-    bin_path = Path("/home/luck/xzy/0424project/baselines/bgv-bootstrapping-with-homomorphic-NTT/build/fatboot")
+    bin_path = Path("/home/user/experiments/baselines/bgv-bootstrapping-with-homomorphic-NTT/build/fatboot")
     rows = []
     for param in NTT_PARAMS:
         row = dict(param)

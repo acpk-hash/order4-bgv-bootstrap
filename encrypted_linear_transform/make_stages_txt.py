@@ -2,7 +2,7 @@
 """Convert butterfly_stages.json to a flat text file for the C++ prototype."""
 import json
 from pathlib import Path
-OUT = Path("/home/luck/xzy/0424project/order4bgv/tower_linear_transform/encrypted_prototype")
+OUT = Path("/home/user/experiments/order4bgv/tower_linear_transform/encrypted_prototype")
 exp = json.load(open(OUT/"butterfly_stages.json"))
 D = exp["D"]; d = exp["d"]
 with open(OUT/"stages.txt","w") as f:

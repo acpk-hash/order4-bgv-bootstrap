@@ -37,7 +37,7 @@ Do not commit those credentials.
 ## Install
 
 ```bash
-cd /home/luck/xzy/0424project/github_order4_cleaner
+cd /home/user/order4-artifact
 bash scripts/install_magma_local.sh
 ```
 
@@ -53,7 +53,7 @@ It does not modify the baseline repositories.
 ## Generate Bootstrapping_Polyfunctions Files
 
 ```bash
-cd /home/luck/xzy/0424project/github_order4_cleaner
+cd /home/user/order4-artifact
 bash scripts/run_polyfunctions_magma_generation.sh
 ```
 

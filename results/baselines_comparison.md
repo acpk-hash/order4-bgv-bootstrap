@@ -1,9 +1,9 @@
-# Baseline Comparison Against `/home/luck/xzy/0424project/baselines`
+# Baseline Comparison Against `/home/user/experiments/baselines`
 
 Date: 2026-04-29
 
 The main directly comparable baseline is
-`/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p`, the Ma large-prime
+`/home/user/experiments/baselines/BGV-Boot-for-Large-p`, the Ma large-prime
 BGV bootstrapping artifact.  The run uses the same parameter set as the order-four
 cleaner experiment:
 
@@ -15,9 +15,9 @@ gens = [48117, 5239], ords = [96, 29], h = 12, t = -1, repeat = 3.
 Command used for the direct baseline:
 
 ```bash
-cd /home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p
+cd /home/user/experiments/baselines/BGV-Boot-for-Large-p
 timeout 1800s ./build/fatboot i=4 h=12 t=-1 newbts=1 repeat=3 newks=1 \
-  > /home/luck/xzy/0424project/github_order4_cleaner/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
+  > /home/user/order4-artifact/results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log 2>&1
 ```
 
 All compared logs finish with:

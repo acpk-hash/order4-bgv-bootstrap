@@ -38,7 +38,7 @@ The artifact implements two layers:
    decomposition above.
 
 Repeat-three real ciphertext results. The first row is a direct run of
-`/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p`; the other rows are
+`/home/user/experiments/baselines/BGV-Boot-for-Large-p`; the other rows are
 the isolated implementation in this artifact.
 
 | Variant | linear1 | linear2 | extract | total |

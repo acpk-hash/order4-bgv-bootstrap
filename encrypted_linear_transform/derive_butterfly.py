@@ -13,7 +13,7 @@ Outputs butterfly_stages.json for the C++ encrypted prototype.
 """
 import json, random
 from pathlib import Path
-ROOT = Path("/home/luck/xzy/0424project")
+ROOT = Path("/home/user/experiments")
 OUT = ROOT/"order4bgv/tower_linear_transform/encrypted_prototype"
 D, P = 96, 65537
 cfg = json.load(open(ROOT/"order4bgv/tower_linear_transform/sage_verification/tower_stage_coefficients.json"))

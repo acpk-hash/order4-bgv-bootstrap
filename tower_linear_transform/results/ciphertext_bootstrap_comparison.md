@@ -27,9 +27,9 @@ HELIB_EXPLICIT_AUX=256 \
 Logs:
 
 ```text
-/home/luck/xzy/0424project/results/aux_radix_helib/aux_default35_repeat3.log
-/home/luck/xzy/0424project/results/aux_radix_helib/aux_256_repeat3.log
-/home/luck/xzy/0424project/results/aux_radix_helib/aux_64_repeat1.log
+/home/user/experiments/results/aux_radix_helib/aux_default35_repeat3.log
+/home/user/experiments/results/aux_radix_helib/aux_256_repeat3.log
+/home/user/experiments/results/aux_radix_helib/aux_64_repeat1.log
 ```
 
 Repeat-3 results:
@@ -76,7 +76,7 @@ Real optimized ciphertext timing: not available yet.
 Plaintext prototype:
 
 ```text
-/home/luck/xzy/0424project/scripts/plaintext_rader_evalmap.py
+/home/user/experiments/scripts/plaintext_rader_evalmap.py
 ```
 
 For the target `ell=97` block:
@@ -102,7 +102,7 @@ HELIB_EXPLICIT_AUX=256 \
 Log:
 
 ```text
-/home/luck/xzy/0424project/results/aux_radix_helib/structured_linear_target_i4_aux256_repeat1.log
+/home/user/experiments/results/aux_radix_helib/structured_linear_target_i4_aux256_repeat1.log
 ```
 
 Result:

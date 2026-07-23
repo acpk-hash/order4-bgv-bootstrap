@@ -84,7 +84,7 @@ def derive(D, p, radices, outfile):
         f.write(" ".join(map(str, perm)) + "\n")
     print("wrote", outfile)
 
-BASE = "/home/luck/xzy/0424project/order4bgv/tower_linear_transform/encrypted_prototype/crossover/"
+BASE = "/home/user/experiments/order4bgv/tower_linear_transform/encrypted_prototype/crossover/"
 derive(576, 997057, [4,4,4,3,3], BASE+"stages576.txt")
 print()
 derive(1152, 3984769, [4,4,4,3,3,2], BASE+"stages1152.txt")

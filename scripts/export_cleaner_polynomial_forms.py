@@ -309,7 +309,7 @@ order-four evaluator 不再直接对 degree \(1223\) 的 \(P\) 做通用求值�
   1-\frac{@@ORDER4_MULTS@@}{@@GENERIC_MULTS@@}
   =43.84\%.
 \]
-以 \texttt{/home/luck/xzy/0424project/baselines/BGV-Boot-for-Large-p}
+以 \texttt{/home/user/experiments/baselines/BGV-Boot-for-Large-p}
 中的 Ma large-\(p\) baseline 为正式对比对象，repeat-3 实测中，
 默认 \(A=35\) 的 extract 均值为 \(160.78\)s、total 均值为
 \(213.10\)s。切到 \(A=256\) sparse cleaner 后，extract 为

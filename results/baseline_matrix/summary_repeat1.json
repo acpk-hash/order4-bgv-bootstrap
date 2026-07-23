@@ -39,7 +39,7 @@
         "ma_typeA": {
           "B": 18,
           "bound_I": 17.474967,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_A_typeA_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_A_typeA_repeat1.log",
           "log2_aux": 8.174926,
           "passed_marker": true,
           "returncode": 0,
@@ -49,7 +49,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_A_typeA_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_A_typeA_repeat1.log",
             "reported_average": {
               "extract": 28.599312,
               "linear1": 2.185702,
@@ -93,7 +93,7 @@
           }
         },
         "ma_typeB": {
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_A_typeB_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_A_typeB_repeat1.log",
           "reason": "non-power-of-p condition (2B+1)^2 < p is false or B unknown",
           "status": "skipped"
         },
@@ -136,7 +136,7 @@
         "ma_typeA": {
           "B": 17,
           "bound_I": 16.277148,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_B_typeA_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_B_typeA_repeat1.log",
           "log2_aux": 6.988685,
           "passed_marker": true,
           "returncode": 0,
@@ -146,7 +146,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_B_typeA_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_B_typeA_repeat1.log",
             "reported_average": {
               "extract": 52.40755,
               "linear1": 4.179766,
@@ -190,7 +190,7 @@
           }
         },
         "ma_typeB": {
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_B_typeB_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_B_typeB_repeat1.log",
           "reason": "non-power-of-p condition (2B+1)^2 < p is false or B unknown",
           "status": "skipped"
         },
@@ -233,7 +233,7 @@
         "ma_typeA": {
           "B": 17,
           "bound_I": 16.306724,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_C_typeA_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_C_typeA_repeat1.log",
           "log2_aux": 8.005625,
           "passed_marker": true,
           "returncode": 0,
@@ -243,7 +243,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_C_typeA_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_C_typeA_repeat1.log",
             "reported_average": {
               "extract": 48.140396,
               "linear1": 5.646077,
@@ -287,7 +287,7 @@
           }
         },
         "ma_typeB": {
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_C_typeB_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_C_typeB_repeat1.log",
           "reason": "non-power-of-p condition (2B+1)^2 < p is false or B unknown",
           "status": "skipped"
         },
@@ -1767,7 +1767,7 @@
         "ma_typeA": {
           "B": 17,
           "bound_I": 16.305335,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_typeA_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_D_typeA_repeat1.log",
           "log2_aux": 12.999824,
           "passed_marker": true,
           "returncode": 0,
@@ -1777,7 +1777,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_typeA_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_D_typeA_repeat1.log",
             "reported_average": {
               "extract": 28.751751,
               "linear1": 3.624171,
@@ -1824,7 +1824,7 @@
           "B": 17,
           "bound_I": 16.305335,
           "extract_poly_degree_from_log": 1223,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_typeB_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_D_typeB_repeat1.log",
           "log2_aux": 5.129283,
           "passed_marker": true,
           "returncode": 0,
@@ -1834,7 +1834,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_typeB_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_D_typeB_repeat1.log",
             "reported_average": {
               "extract": 129.200217,
               "linear1": 3.525045,
@@ -1886,7 +1886,7 @@
           "bound_I": 16.305335,
           "explicit_aux": 45,
           "extract_poly_degree_from_log": 1223,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_ours_aux45_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_D_ours_aux45_repeat1.log",
           "log2_aux": 5.491853,
           "passed_marker": true,
           "returncode": 0,
@@ -1896,7 +1896,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_D_ours_aux45_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_D_ours_aux45_repeat1.log",
             "reported_average": {
               "extract": 126.192724,
               "linear1": 3.563891,
@@ -3066,7 +3066,7 @@
         "ma_typeA": {
           "B": 17,
           "bound_I": 16.402088,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_typeA_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_E_typeA_repeat1.log",
           "log2_aux": 16.000022,
           "passed_marker": true,
           "returncode": 0,
@@ -3076,7 +3076,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_typeA_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_E_typeA_repeat1.log",
             "reported_average": {
               "extract": 33.951467,
               "linear1": 4.467879,
@@ -3123,7 +3123,7 @@
           "B": 17,
           "bound_I": 16.402088,
           "extract_poly_degree_from_log": 1223,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_typeB_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_E_typeB_repeat1.log",
           "log2_aux": 5.129283,
           "passed_marker": true,
           "returncode": 0,
@@ -3133,7 +3133,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_typeB_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_E_typeB_repeat1.log",
             "reported_average": {
               "extract": 156.519949,
               "linear1": 4.47546,
@@ -3181,7 +3181,7 @@
           "bound_I": 16.402088,
           "explicit_aux": 256,
           "extract_poly_degree_from_log": 1223,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_ours_order4_aux256_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_E_ours_order4_aux256_repeat1.log",
           "log2_aux": 8.0,
           "passed_marker": true,
           "returncode": 0,
@@ -3191,7 +3191,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_ours_order4_aux256_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_E_ours_order4_aux256_repeat1.log",
             "reported_average": {
               "extract": 81.39087,
               "linear1": 4.512359,
@@ -3239,7 +3239,7 @@
           "bound_I": 16.402088,
           "explicit_aux": 256,
           "extract_poly_degree_from_log": 1223,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_ours_aux256_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ma_E_ours_aux256_repeat1.log",
           "log2_aux": 8.0,
           "passed_marker": true,
           "returncode": 0,
@@ -3249,7 +3249,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ma_E_ours_aux256_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ma_E_ours_aux256_repeat1.log",
             "reported_average": {
               "extract": 143.937097,
               "linear1": 4.52839,
@@ -4419,18 +4419,18 @@
         "ntt_article_baseline": {
           "B": 13,
           "bound_I": 12.275681,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_I_baseline_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_I_baseline_repeat1.log",
           "log2_aux": 16.000022,
           "passed_marker": false,
           "returncode": null,
           "status": "timeout",
           "timeout_marker": true,
-          "timing_parse_error": "no timing lines found in /home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_I_baseline_repeat1.log"
+          "timing_parse_error": "no timing lines found in /home/user/order4-artifact/results/baseline_matrix/ntt_I_baseline_repeat1.log"
         },
         "ntt_article_optimized": {
           "B": 13,
           "bound_I": 12.275681,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_I_optimized_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_I_optimized_repeat1.log",
           "log2_aux": 16.000022,
           "passed_marker": true,
           "returncode": 0,
@@ -4440,7 +4440,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_I_optimized_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ntt_I_optimized_repeat1.log",
             "reported_average": {
               "extract": 5.471658,
               "linear1": 3.856981,
@@ -5855,7 +5855,7 @@
         "ntt_article_baseline": {
           "B": 12,
           "bound_I": 11.813708,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_II_baseline_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_II_baseline_repeat1.log",
           "log2_aux": 12.999824,
           "passed_marker": true,
           "returncode": 0,
@@ -5865,7 +5865,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_II_baseline_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ntt_II_baseline_repeat1.log",
             "reported_average": {
               "extract": 5.669581,
               "linear1": 11.734367,
@@ -5911,7 +5911,7 @@
         "ntt_article_optimized": {
           "B": 12,
           "bound_I": 11.813708,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_II_optimized_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_II_optimized_repeat1.log",
           "log2_aux": 12.999824,
           "passed_marker": true,
           "returncode": 0,
@@ -5921,7 +5921,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_II_optimized_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ntt_II_optimized_repeat1.log",
             "reported_average": {
               "extract": 5.872211,
               "linear1": 2.991762,
@@ -6844,7 +6844,7 @@
         "ntt_article_baseline": {
           "B": 13,
           "bound_I": 12.275681,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_III_baseline_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_III_baseline_repeat1.log",
           "log2_aux": 16.999989,
           "passed_marker": true,
           "returncode": 0,
@@ -6854,7 +6854,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_III_baseline_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ntt_III_baseline_repeat1.log",
             "reported_average": {
               "extract": 5.923967,
               "linear1": 34.252357,
@@ -6900,7 +6900,7 @@
         "ntt_article_optimized": {
           "B": 13,
           "bound_I": 12.275681,
-          "log": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_III_optimized_repeat1.log",
+          "log": "/home/user/order4-artifact/results/baseline_matrix/ntt_III_optimized_repeat1.log",
           "log2_aux": 16.999989,
           "passed_marker": true,
           "returncode": 0,
@@ -6910,7 +6910,7 @@
             "failed": false,
             "num_run_timings": 1,
             "passed": true,
-            "path": "/home/luck/xzy/0424project/github_order4_cleaner/results/baseline_matrix/ntt_III_optimized_repeat1.log",
+            "path": "/home/user/order4-artifact/results/baseline_matrix/ntt_III_optimized_repeat1.log",
             "reported_average": {
               "extract": 5.220187,
               "linear1": 3.962181,

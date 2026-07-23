@@ -53,10 +53,10 @@ int main(int argc, char** argv)
   const long m = 50731, p = 65537, r = 1, c = 3;
   const long D = 96;
   const string proto_dir =
-      "/home/luck/xzy/0424project/order4bgv/tower_linear_transform/"
+      "/home/user/experiments/order4bgv/tower_linear_transform/"
       "encrypted_prototype/";
   const string dump_path =
-      "/home/luck/xzy/0424project/github_order4_cleaner/"
+      "/home/user/order4-artifact/"
       "step2_matrix_dim0_sz96.txt";
 
   cout << "=== encrypted butterfly prototype: m=" << m << " p=" << p
