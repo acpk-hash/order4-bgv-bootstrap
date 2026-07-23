@@ -1,0 +1,332 @@
+[
+  {
+    "p": 5,
+    "A": 2,
+    "max_B": 0,
+    "note": "smallest applicable prime",
+    "configurations": []
+  },
+  {
+    "p": 17,
+    "A": 4,
+    "max_B": 1,
+    "note": "HElib toy (Set A)",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      }
+    ]
+  },
+  {
+    "p": 29,
+    "A": 12,
+    "max_B": 1,
+    "note": "small prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      }
+    ]
+  },
+  {
+    "p": 41,
+    "A": 9,
+    "max_B": 2,
+    "note": "small prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      },
+      {
+        "B": 2,
+        "S_size": 25,
+        "degree": 23,
+        "baseline_terms": 12,
+        "order4_terms": 7,
+        "reduction_pct": 41.7,
+        "deg_Q": 5
+      }
+    ]
+  },
+  {
+    "p": 53,
+    "A": 23,
+    "max_B": 1,
+    "note": "small prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      }
+    ]
+  },
+  {
+    "p": 97,
+    "A": 22,
+    "max_B": 2,
+    "note": "medium prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      },
+      {
+        "B": 2,
+        "S_size": 25,
+        "degree": 23,
+        "baseline_terms": 12,
+        "order4_terms": 7,
+        "reduction_pct": 41.7,
+        "deg_Q": 5
+      }
+    ]
+  },
+  {
+    "p": 193,
+    "A": 81,
+    "max_B": 1,
+    "note": "medium prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      }
+    ]
+  },
+  {
+    "p": 257,
+    "A": 16,
+    "max_B": 7,
+    "note": "HElib Set C",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      },
+      {
+        "B": 2,
+        "S_size": 25,
+        "degree": 23,
+        "baseline_terms": 12,
+        "order4_terms": 7,
+        "reduction_pct": 41.7,
+        "deg_Q": 5
+      },
+      {
+        "B": 3,
+        "S_size": 49,
+        "degree": 47,
+        "baseline_terms": 24,
+        "order4_terms": 13,
+        "reduction_pct": 45.8,
+        "deg_Q": 11
+      },
+      {
+        "B": 4,
+        "S_size": 81,
+        "degree": 79,
+        "baseline_terms": 40,
+        "order4_terms": 21,
+        "reduction_pct": 47.5,
+        "deg_Q": 19
+      },
+      {
+        "B": 5,
+        "S_size": 121,
+        "degree": 119,
+        "baseline_terms": 60,
+        "order4_terms": 31,
+        "reduction_pct": 48.3,
+        "deg_Q": 29
+      },
+      {
+        "B": 6,
+        "S_size": 169,
+        "degree": 167,
+        "baseline_terms": 84,
+        "order4_terms": 43,
+        "reduction_pct": 48.8,
+        "deg_Q": 41
+      },
+      {
+        "B": 7,
+        "S_size": 225,
+        "degree": 223,
+        "baseline_terms": 112,
+        "order4_terms": 57,
+        "reduction_pct": 49.1,
+        "deg_Q": 55
+      }
+    ]
+  },
+  {
+    "p": 521,
+    "A": 235,
+    "max_B": 1,
+    "note": "medium prime",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      }
+    ]
+  },
+  {
+    "p": 769,
+    "A": 62,
+    "max_B": 6,
+    "note": "NTT-friendly",
+    "configurations": [
+      {
+        "B": 1,
+        "S_size": 9,
+        "degree": 7,
+        "baseline_terms": 4,
+        "order4_terms": 3,
+        "reduction_pct": 25.0,
+        "deg_Q": 1
+      },
+      {
+        "B": 2,
+        "S_size": 25,
+        "degree": 23,
+        "baseline_terms": 12,
+        "order4_terms": 7,
+        "reduction_pct": 41.7,
+        "deg_Q": 5
+      },
+      {
+        "B": 3,
+        "S_size": 49,
+        "degree": 47,
+        "baseline_terms": 24,
+        "order4_terms": 13,
+        "reduction_pct": 45.8,
+        "deg_Q": 11
+      },
+      {
+        "B": 5,
+        "S_size": 121,
+        "degree": 119,
+        "baseline_terms": 60,
+        "order4_terms": 31,
+        "reduction_pct": 48.3,
+        "deg_Q": 29
+      }
+    ]
+  },
+  {
+    "p": 65537,
+    "A": 256,
+    "max_B": 127,
+    "note": "Fermat F4 (main result)",
+    "configurations": [
+      {
+        "B": 5,
+        "S_size": 121,
+        "degree": 119,
+        "baseline_terms": 60,
+        "order4_terms": 31,
+        "reduction_pct": 48.3,
+        "deg_Q": 29
+      },
+      {
+        "B": 10,
+        "S_size": 441,
+        "degree": 439,
+        "baseline_terms": 220,
+        "order4_terms": 111,
+        "reduction_pct": 49.5,
+        "deg_Q": 109
+      },
+      {
+        "B": 15,
+        "S_size": 961,
+        "degree": 959,
+        "baseline_terms": 480,
+        "order4_terms": 241,
+        "reduction_pct": 49.8,
+        "deg_Q": 239
+      },
+      {
+        "B": 17,
+        "S_size": 1225,
+        "degree": 1223,
+        "baseline_terms": 612,
+        "order4_terms": 307,
+        "reduction_pct": 49.8,
+        "deg_Q": 305
+      },
+      {
+        "B": 20,
+        "S_size": 1681,
+        "degree": 1679,
+        "baseline_terms": 840,
+        "order4_terms": 421,
+        "reduction_pct": 49.9,
+        "deg_Q": 419
+      },
+      {
+        "B": 25,
+        "S_size": 2601,
+        "degree": 2599,
+        "baseline_terms": 1300,
+        "order4_terms": 651,
+        "reduction_pct": 49.9,
+        "deg_Q": 649
+      },
+      {
+        "B": 30,
+        "S_size": 3721,
+        "degree": 3719,
+        "baseline_terms": 1860,
+        "order4_terms": 931,
+        "reduction_pct": 49.9,
+        "deg_Q": 929
+      }
+    ]
+  }
+]
