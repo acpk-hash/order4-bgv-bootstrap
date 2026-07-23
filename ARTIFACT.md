@@ -167,38 +167,9 @@ python3 scripts/plaintext_rader_evalmap.py --ell 97 --seed 7 \
 These support the paper's transform-design section, not a positive ciphertext
 speedup claim.
 
-## Paper
+## Theory Summary
 
-The paper source is in:
-
-```text
-paper/main.tex
-```
-
-Build it with:
-
-```bash
-cd paper
-make
-```
-
-The included `paper/main.pdf` was checked with `pdfinfo` and `pdffonts`; rerun
-those checks after regeneration.
-
-## Theory Note
-
-The presentation-oriented mathematical explanation is in:
-
-```text
-docs/order4_cleaner_theory.tex
-docs/order4_cleaner_theory.pdf
-```
-
-It explains the fixed-support cleaner viewpoint, the order-four auxiliary radix
-identity, the sparse exponent filter, and the resulting evaluator
-decomposition.
-
-It also states the general parameter theorem used for claim boundaries:
+The general parameter conditions used for claim boundaries:
 
 ```text
 exact-cleaner correctness:
@@ -208,19 +179,13 @@ order-four sparse cleaner:
   p prime, p = 1 mod 4, p > 8B^2, A^2 = -1 mod p
 ```
 
-The complete coefficient lists for the concrete `p=65537, B=17` cleaners are
-in:
-
-```text
-docs/cleaner_polynomial_forms_p65537_B17.json
-```
-
-They can be regenerated with:
+The complete coefficient lists for the concrete `p=65537, B=17` cleaners can
+be regenerated with:
 
 ```bash
 python3 scripts/export_cleaner_polynomial_forms.py \
-  --json-output docs/cleaner_polynomial_forms_p65537_B17.json \
-  --tex-output docs/cleaner_polynomial_forms_p65537_B17.tex
+  --json-output cleaner_polynomial_forms_p65537_B17.json \
+  --tex-output cleaner_polynomial_forms_p65537_B17.tex
 ```
 
 ## Claim Boundary
