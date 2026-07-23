@@ -1,0 +1,22 @@
+[2026-07-23 16:42:26] === DRIVER START pid=1262024 (sequential OFF/ON, repeat=3) ===
+[2026-07-23 16:42:26] BEGIN OFF  p=4513 i=9 A=95 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p4513_off_r3.log
+[2026-07-23 16:50:49] END   OFF  p=4513 i=9 rc=0
+[2026-07-23 16:50:49] BEGIN ON   p=4513 i=9 A=95 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p4513_on_r3.log
+[2026-07-23 16:57:52] END   ON   p=4513 i=9 rc=0
+[2026-07-23 16:57:52] BEGIN OFF  p=13457 i=10 A=116 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p13457_off_r3.log
+[2026-07-23 17:07:02] END   OFF  p=13457 i=10 rc=0
+[2026-07-23 17:07:02] BEGIN ON   p=13457 i=10 A=116 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p13457_on_r3.log
+[2026-07-23 17:14:46] END   ON   p=13457 i=10 rc=0
+[2026-07-23 17:14:46] BEGIN OFF  p=2521 i=11 A=71 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p2521_off_r3.log
+[2026-07-23 17:24:50] END   OFF  p=2521 i=11 rc=0
+[2026-07-23 17:24:50] BEGIN ON   p=2521 i=11 A=71 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p2521_on_r3.log
+[2026-07-23 17:33:08] END   ON   p=2521 i=11 rc=0
+[2026-07-23 17:33:08] BEGIN OFF  p=14401 i=12 A=120 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p14401_off_r3.log
+[2026-07-23 17:41:25] END   OFF  p=14401 i=12 rc=0
+[2026-07-23 17:41:25] BEGIN ON   p=14401 i=12 A=120 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p14401_on_r3.log
+[2026-07-23 17:48:21] END   ON   p=14401 i=12 rc=0
+[2026-07-23 17:48:21] BEGIN OFF  p=15377 i=13 A=124 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p15377_off_r3.log
+[2026-07-23 17:51:59] END   OFF  p=15377 i=13 rc=0
+[2026-07-23 17:51:59] BEGIN ON   p=15377 i=13 A=124 -> /home/luck/xzy/0424project/order4bgv/results/multi_p_new/p15377_on_r3.log
+[2026-07-23 17:55:06] END   ON   p=15377 i=13 rc=0
+[2026-07-23 17:55:06] === DRIVER DONE ===

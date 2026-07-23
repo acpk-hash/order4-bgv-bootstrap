@@ -1,0 +1,34 @@
+=== po2_expand batch start 2026年 07月 23日 星期四 10:18:09 CST ===
+[10:18:09] p=3137 A=56 i=6 OFF start
+[10:22:35] p=3137 OFF done rc=0 ok=1
+[10:22:35] p=3137 A=56 i=6 ON start
+[10:26:31] p=3137 ON done rc=0 ok=1 trig=1
+[10:26:31] p=14401 A=120 i=7 OFF start
+[10:30:54] p=14401 OFF done rc=0 ok=1
+[10:30:54] p=14401 A=120 i=7 ON start
+[10:34:51] p=14401 ON done rc=0 ok=1 trig=1
+[10:34:51] p=4513 A=95 i=8 OFF start
+[10:41:32] p=4513 OFF done rc=0 ok=1
+[10:41:32] p=4513 A=95 i=8 ON start
+[10:47:47] p=4513 ON done rc=0 ok=1 trig=1
+[10:47:47] p=1297 A=36 i=9 OFF start
+[10:59:00] p=1297 OFF done rc=0 ok=1
+[10:59:00] p=1297 A=36 i=9 ON start
+[11:09:44] p=1297 ON done rc=0 ok=1 trig=1
+[11:09:44] p=7057 A=84 i=10 OFF start
+[11:20:53] p=7057 OFF done rc=0 ok=1
+[11:20:53] p=7057 A=84 i=10 ON start
+[11:31:41] p=7057 ON done rc=0 ok=1 trig=1
+[11:31:41] p=13457 A=116 i=11 OFF start
+[11:42:47] p=13457 OFF done rc=0 ok=1
+[11:42:47] p=13457 A=116 i=11 ON start
+[11:53:26] p=13457 ON done rc=0 ok=1 trig=1
+[11:53:26] p=15377 A=124 i=12 OFF start
+[12:04:36] p=15377 OFF done rc=0 ok=1
+[12:04:36] p=15377 A=124 i=12 ON start
+[12:15:20] p=15377 ON done rc=0 ok=1 trig=1
+[12:15:20] p=2521 A=71 i=13 OFF start
+[12:35:43] p=2521 OFF done rc=0 ok=1
+[12:35:43] p=2521 A=71 i=13 ON start
+[12:55:24] p=2521 ON done rc=0 ok=1 trig=1
+=== po2_expand batch end 2026年 07月 23日 星期四 12:55:24 CST ===

@@ -1,0 +1,14 @@
+Q bit count is 881
+encrypted message
+noise budget is 808 bits
+performed computations
+noise budget is 253 bits
+setup context
+initialized bootstrapper
+creating 19 galois keys
+created bootstrapping key
+moved to coefficients in 9344 ms and 22 key-switch operations
+homomorphically decrypted in 51 ms and 0 key-switch operations
+moved to slots in 8942 ms and 30 key-switch operations
+bootstrapped in 5523 ms and 17 key-switch operations
+noise budget is 477 bits

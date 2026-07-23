@@ -368,3 +368,11 @@ after regeneration.
   capacity consumed (no overflow even at bits=600); no extended key-switching
   matrices required. At D=96 the monolithic BSGS remains faster (14.9 s vs
   59.1 s), locating the O(log D) crossover at larger D.
+
+## Update: extended cross-parameter evidence (2026-07-23)
+
+- `results/general_rings_new/` — five additional general-ring primes (p = 2521, 4513, 13457, 14401, 15377; sets J–N), OFF/ON with repeat=3: speedups 1.69–1.79x. Note p=2521 runs on m=50731, the same ring as the main p=65537 set.
+- `results/power_of_two/expand/` — the power-of-two prime sweep now covers ten primes 1297 <= p <= 65537 on m=2^16 (h=26, degree 727): 1.59–1.74x, same-session sequential OFF/ON pairs.
+- `results/degree_scaling/` — key-weight scaling on both ring types (general m=50731: h in {12,18,26}; power-of-two m=2^16: h in {12,18,26,40}); the speedup grows monotonically with the digit-polynomial degree.
+- `okada_comparison/` — reproduction of Okada–Player–Pohmann (AC'23, ePrint 2023/1304) from their open-source SEAL implementation (`repro_p257.log`: full p=257 bootstrap, digit extraction 17 key switches, matching their Table 3), plus an encrypted composition benchmark (`compose_bench.cpp`, `t1_FINAL.log`): evaluating the factored Q (deg 55) takes 22 key switches / ~9.0s versus 41 / ~17.2s for the unfactored P_A, bit-identical results.
+- `patches/general_ring_sets_J_to_N.patch` — the five new fatboot parameter sets (gens/ords validated via HElib).
