@@ -1,4 +1,4 @@
-=== po2_expand batch start 2026年 07月 23日 星期四 10:18:09 CST ===
+=== po2_expand batch start 2026-07-23 10:18:09 ===
 [10:18:09] p=3137 A=56 i=6 OFF start
 [10:22:35] p=3137 OFF done rc=0 ok=1
 [10:22:35] p=3137 A=56 i=6 ON start
@@ -31,4 +31,4 @@
 [12:35:43] p=2521 OFF done rc=0 ok=1
 [12:35:43] p=2521 A=71 i=13 ON start
 [12:55:24] p=2521 ON done rc=0 ok=1 trig=1
-=== po2_expand batch end 2026年 07月 23日 星期四 12:55:24 CST ===
+=== po2_expand batch end 2026-07-23 12:55:24 ===

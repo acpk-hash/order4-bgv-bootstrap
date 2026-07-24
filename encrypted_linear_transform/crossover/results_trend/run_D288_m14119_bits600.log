@@ -1,0 +1,34 @@
+=== crossover benchmark: m=14119 p=199873 D=288 bits=600 ===
+butterfly chain: 5 stages, 19 nontrivial rotations, 24 const-mults
+INFO: total bits = 807.338, security level = 37.5447context built in 8.53425 s, securityLevel=37.5447
+  dim 0: size 288 native=1
+  dim 1: size 2 native=1
+nslots=576 d=21 target dim=0
+keygen: addSome1DMatrices 2.59366 s, +14 targeted butterfly KS matrices 0.983342 s
+plaintext reference computed in 0.0437145 s
+input capacity: 568.902 bits
+WARNING: KS-noise-ratio = 9.67448e+06 > 1
+rotate1D(+1) => slot i holds old[i-1]; to fetch v[i+o] use amt = -o
+butterfly constants encoded in 0.287613 s
+WARNING: KS-noise-ratio = 9.87432e+06 > 1
+WARNING: KS-noise-ratio = 1.01371e+07 > 1
+WARNING: KS-noise-ratio = 1.02108e+07 > 1
+  stage 1: 0.311434 s, capacity 521.441 bits
+  stage 2: 0.890297 s, capacity 495.951 bits
+  stage 3: 0.308322 s, capacity 472.083 bits
+  stage 4: 0.60019 s, capacity 447.469 bits
+  stage 5: 0.601721 s, capacity 424.057 bits
+BUTTERFLY: 2.713 s, 19 rotations, capacity 568.902 -> 424.057 (consumed 144.846 bits)
+BUTTERFLY VERIFY vs DFT matvec (up to fixed digit-reversal perm): PASS (0 mismatched slots of 576)
+--- butterfly timers ---
+  smartAutomorph: 2.2952 / 19 = 0.1208   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.013018 / 19 = 0.000685158   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=0): precomp 9.49271 s, mul 2.66194 s, capacity 568.902 -> 514.967 (consumed 53.9354 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=0) ---
+  smartAutomorph: 1.25085 / 16 = 0.0781782   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.008444 / 16 = 0.00052775   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=1): precomp 9.37114 s, mul 2.64826 s, capacity 568.902 -> 514.967 (consumed 53.9354 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=1) ---
+  smartAutomorph: 1.2493 / 16 = 0.0780814   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.008435 / 16 = 0.000527187   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+done

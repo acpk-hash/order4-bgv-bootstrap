@@ -1,0 +1,34 @@
+=== crossover benchmark: m=19601 p=3984769 D=1152 bits=600 ===
+butterfly chain: 6 stages, 25 nontrivial rotations, 31 const-mults
+INFO: total bits = 799.545, security level = 68.5775context built in 16.0505 s, securityLevel=68.5775
+  dim 0: size 1152 native=1
+nslots=1152 d=16 target dim=0
+keygen: addSome1DMatrices 7.46559 s, +19 targeted butterfly KS matrices 2.08701 s
+plaintext reference computed in 0.267886 s
+input capacity: 564.436 bits
+WARNING: KS-noise-ratio = 4.17599e+09 > 1
+rotate1D(+1) => slot i holds old[i-1]; to fetch v[i+o] use amt = -o
+butterfly constants encoded in 0.662453 s
+WARNING: KS-noise-ratio = 4.19898e+09 > 1
+WARNING: KS-noise-ratio = 4.01497e+09 > 1
+WARNING: KS-noise-ratio = 4.28832e+09 > 1
+  stage 1: 0.469625 s, capacity 504.174 bits
+  stage 2: 1.35944 s, capacity 474.625 bits
+  stage 3: 1.35012 s, capacity 445.283 bits
+  stage 4: 0.909223 s, capacity 416.635 bits
+  stage 5: 0.907181 s, capacity 388.405 bits
+  stage 6: 0.467273 s, capacity 362.609 bits
+BUTTERFLY: 5.46376 s, 25 rotations, capacity 564.436 -> 362.609 (consumed 201.827 bits)
+BUTTERFLY VERIFY vs DFT matvec (up to fixed digit-reversal perm): PASS (0 mismatched slots of 1152)
+--- butterfly timers ---
+  smartAutomorph: 4.67129 / 25 = 0.186852   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.026468 / 25 = 0.00105872   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=0): precomp 62.4258 s, mul 9.26099 s, capacity 564.436 -> 495.595 (consumed 68.8414 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=0) ---
+  smartAutomorph: 3.88796 / 33 = 0.117817   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.026257 / 33 = 0.000795667   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+BSGS MatMul1D (transposed=1): precomp 61.4907 s, mul 9.27599 s, capacity 564.436 -> 495.595 (consumed 68.8414 bits), verify: PASS (0 mismatched slots)
+--- BSGS timers (transposed=1) ---
+  smartAutomorph: 3.8857 / 33 = 0.117749   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  automorph: 0.026476 / 33 = 0.000802303   [/home/user/experiments/repo/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+done

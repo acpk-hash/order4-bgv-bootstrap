@@ -355,3 +355,23 @@ not yet a demonstrated ciphertext speedup.
 - `results/degree_scaling/` — key-weight scaling on both ring types (general m=50731: h in {12,18,26}; power-of-two m=2^16: h in {12,18,26,40}); the speedup grows monotonically with the digit-polynomial degree.
 - `okada_comparison/` — reproduction of Okada–Player–Pohmann (AC'23, ePrint 2023/1304) from their open-source SEAL implementation (`repro_p257.log`: full p=257 bootstrap, digit extraction 17 key switches, matching their Table 3), plus an encrypted composition benchmark (`compose_bench.cpp`, `t1_FINAL.log`): evaluating the factored Q (deg 55) takes 22 key switches / ~9.0s versus 41 / ~17.2s for the unfactored P_A, bit-identical results.
 - `patches/general_ring_sets_J_to_N.patch` — the five new fatboot parameter sets (gens/ords validated via HElib).
+
+## Update: rebuttal-phase experiments (2026-07-24)
+
+- `results/p257_order4/` — boundary demonstration at p=257 inside the power-of-two
+  pipeline: lowering the key weight to h=7 makes the support condition hold
+  ((2*7+1)^2 = 225 < 257), and the order-four evaluator then reduces encrypted
+  digit extraction from 12.6 s to 8.0 s (**1.58x**; deg(P_A)=223 -> deg(Q)=55,
+  57 nonzero terms, all 128 slots correct). Reproduce: `./run_p257_boundary.sh`
+  (details in `results/p257_order4/SUMMARY.md`).
+- `encrypted_linear_transform/crossover/results_trend/` — encrypted
+  butterfly-vs-BSGS crossover across block dimensions D = 192, 288, 576, 1152 on
+  four purpose-built rings (ring recipe and full table in `TREND_SUMMARY.md`):
+  within-row time ratios 1.25 / 1.03 / 0.61 / 0.59, so BSGS wins below and the
+  butterfly wins above a crossover just past D=288. Stage chains are
+  plaintext-verified (`derive_trend.py`, `stages{192,288,576,1152}.txt`) and both
+  encrypted paths decrypt with 0 slot mismatches.
+  Reproduce: `./run_crossover_trend.sh`.
+- `run_po2_prime_sweep.sh` — self-contained runner for the ten-prime
+  power-of-two sweep of `results/power_of_two/expand/` (h=26; expected
+  1.59-1.74x), with the prime -> parameter-index -> radix table inline.
