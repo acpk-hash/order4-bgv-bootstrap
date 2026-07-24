@@ -9,8 +9,7 @@ This GitHub artifact includes:
 - scripts for polynomial search, degree/term certificates, order-adaptive sweeps,
   transform planning, exact plaintext verification, and log parsing;
 - selected benchmark logs and parsed JSON files;
-- the LNCS paper source and compiled PDF;
-- a short Chinese mathematical theory note for presentations.
+- the modified HElib fork implementing the order-four evaluator (src/HElib_auxradix_opt).
 
 The large exploratory external repositories from the working directory are not
 included. In particular, the original `upload/external` directory contained

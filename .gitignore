@@ -7,7 +7,7 @@ cache/saved_ZZX/*.txt
 *.so
 __pycache__/
 *.pyc
-src/HElib_auxradix_opt/
 build/
 local/
 cache/saved_ZZX/*.txt
+tower_linear_transform/src/rader_bootstrap

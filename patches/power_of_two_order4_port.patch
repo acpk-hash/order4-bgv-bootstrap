@@ -1,5 +1,5 @@
---- src/extractDigits.cpp.bak	2026-07-22 02:38:44.073836832 +0800
-+++ src/extractDigits.cpp	2026-07-22 02:39:53.104872729 +0800
+--- src/extractDigits.cpp.bak	2026-07-22 02:38:44
++++ src/extractDigits.cpp	2026-07-22 02:39:53
 @@ -16,6 +16,8 @@
  #include <helib/EncryptedArray.h>
  #include <helib/polyEval.h>
@@ -127,8 +127,8 @@
    } else {
      // power-of-p aux
      // numExtract is either 1 or 2
---- src/recryption.cpp.bak	2026-07-22 02:38:44.079836922 +0800
-+++ src/recryption.cpp	2026-07-22 02:40:17.656241114 +0800
+--- src/recryption.cpp.bak	2026-07-22 02:38:44
++++ src/recryption.cpp	2026-07-22 02:40:17
 @@ -24,6 +24,9 @@
  #include <helib/log.h>
  #include <helib/keys.h>
