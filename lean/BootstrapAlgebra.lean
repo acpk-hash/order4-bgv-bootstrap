@@ -1,0 +1,3 @@
+import BootstrapAlgebra.OrderFour
+import BootstrapAlgebra.Character
+import BootstrapAlgebra.Tightness

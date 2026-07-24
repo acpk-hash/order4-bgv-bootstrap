@@ -1,0 +1,43 @@
+p=257 context, plaintext modulus 257, N=32768, slot_rank d=256, slots n=128
+encrypted constant test input x=86; noise budget 808 bits
+PROBE square(86): coeff0=200 expect 200 ; nonzero-count=1
+    [bsgs] deg=1 bs=2 gs=1 | powers done +415ms | giant done +426ms
+PROBE bsgs[P(x)=x](86): coeff0=86 expect 86
+    [bsgs] deg=3 bs=2 gs=2 | powers done +403ms | giant done +828ms
+PROBE bsgs[x^3](86): coeff0=238 expect 238
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10890ms | giant done +16741ms
+[b] P_A direct (BSGS, deg 223): 16741 ms, 41 key-switches, noise budget 168
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4773ms | giant done +7397ms
+[c] factored Q path (y=x^4, Q deg 55): 8894 ms, 22 key-switches, noise budget 446
+correctness (i): full-plaintext (c)==(b): NO
+correctness (ii): x_bench=86 expected lambda=6 ; P_A(x)=6 factored(x)=76 -> digit semantics: NO
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10782ms | giant done +16658ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4805ms | giant done +7434ms
+  support idx 0 (eta=-7,lam=-7,x=138): P_A=250 fac=111 exp=250 FAIL
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10784ms | giant done +16629ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4782ms | giant done +7391ms
+  support idx 30 (eta=-5,lam=-7,x=170): P_A=250 fac=139 exp=250 FAIL
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10772ms | giant done +16615ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4772ms | giant done +7395ms
+  support idx 60 (eta=-3,lam=-7,x=202): P_A=250 fac=252 exp=250 FAIL
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10779ms | giant done +16616ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4826ms | giant done +7455ms
+  support idx 112 (eta=0,lam=0,x=0): P_A=0 fac=0 exp=0 OK
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10737ms | giant done +16580ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4789ms | giant done +7408ms
+  support idx 150 (eta=3,lam=-7,x=41): P_A=250 fac=233 exp=250 FAIL
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10763ms | giant done +16606ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4789ms | giant done +7401ms
+  support idx 200 (eta=6,lam=-2,x=94): P_A=255 fac=213 exp=255 FAIL
+    [bsgs] deg=223 bs=15 gs=15 | powers done +10716ms | giant done +16537ms
+    [bsgs] deg=55 bs=8 gs=7 | powers done +4776ms | giant done +7389ms
+  support idx 224 (eta=7,lam=7,x=119): P_A=7 fac=146 exp=7 FAIL
+extra sweep: 1/7 points correct
+--- reference: [18] native norm-based digit extractor (e=2 semantics) ---
+[a] their native f (norm-based, deg 257): 4672 ms, 17 key-switches, noise budget 528
+
+========== SUMMARY (p=257) ==========
+eval                         |   ms   |  KS | correct
+[b] P_A direct   (deg 223)   | 16741  | 41  | ref
+[c] factored Q   (deg 55)    | 8894  | 22  | NO
+Q needs slot rank 112-ish (deg 55 -> rank >=56, i.e. 64) vs P_A deg 223 -> rank 256.
