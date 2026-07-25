@@ -1,0 +1,18 @@
+p=257 ring: N=32768 (M=2^16), slot rank d=256, slots n=128  [128-bit security default]
+rank check: Q needs d >= 56 -> OK ; their f (deg 257) needs d >= 257 -> NOT AVAILABLE on this ring ; unfactored P_A (deg 223) needs d >= 224 -> OK
+encrypted constant input x=86; noise budget 808 bits
+PROBE square(86): 200 expect 200
+    [bsgs] deg=55 bs=8 gs=7
+[combined] factored Q path on N=32768: 9151 ms, 22 key-switches, noise budget 441
+result for x=86 (eta=5,lambda=6): 6 expect 6
+    [bsgs] deg=55 bs=8 gs=7
+  support (eta=-7,lam=-7,x=138): got 250 expect 250  OK
+    [bsgs] deg=55 bs=8 gs=7
+  support (eta=-5,lam=3,x=180): got 3 expect 3  OK
+    [bsgs] deg=55 bs=8 gs=7
+  support (eta=0,lam=0,x=0): got 0 expect 0  OK
+    [bsgs] deg=55 bs=8 gs=7
+  support (eta=3,lam=-2,x=46): got 255 expect 255  OK
+    [bsgs] deg=55 bs=8 gs=7
+  support (eta=7,lam=7,x=119): got 7 expect 7  OK
+correctness: 5/5 support points OK
