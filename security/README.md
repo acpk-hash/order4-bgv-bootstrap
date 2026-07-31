@@ -69,6 +69,7 @@ the hit-probability amplification, not a theorem the paper states.
 | `rot_estimate.py` | the rotated primal hybrid of ePrint 2026/279, both meet-in-the-middle heuristics, plus modulus and weight sweeps |
 | `admissibility.py` | the order-four admissibility filter, `p = a^2 + b^2` with `max(a,b) > 2B` |
 | `sets*.json` | parameter set definitions |
+| `make_results.py` | regenerates `results/RESULTS.md` from the JSONL files; rerun after appending new runs |
 | `results/RESULTS.md` | summary tables, including the ciphertext benchmarks |
 | `results/*.jsonl` | one record per run, structured |
 | `raw/` | unedited campaign logs, the source of everything above |
