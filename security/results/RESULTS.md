@@ -66,17 +66,21 @@ ePrint 2026/279.
 
 | set | p | built log2 Q | OFF (s) | ON (s) | speedup | total OFF | total ON |
 |---|---:|---:|---:|---:|---:|---:|---:|
+| 128A | 13457 | 1406.9 | 183.15 | 100.97 | 1.81x | 312.98 | 231.72 |
 | 128B | 2917 | 1153.0 | 127.23 | 70.68 | 1.80x | 229.42 | 170.23 |
-| 80A | 4513 | 1524.2 | 89.31 | 50.12 | 1.78x | 139.79 | 100.03 |
+| 128C | 15377 | 1193.1 | 135.00 | 76.32 | 1.77x | 195.27 | 139.40 |
+| 128D | 8101 | 1267.5 | 152.39 | 81.07 | 1.88x | 207.47 | 134.78 |
+| 128E | 14401 | 1132.6 | 129.77 | 70.85 | 1.83x | 188.43 | 129.94 |
+| 80A | 4513 | 1497.9 | 80.46 | 46.28 | 1.74x | 126.67 | 92.18 |
 | 80B | 14401 | 1642.0 | 100.05 | 57.40 | 1.74x | 141.63 | 97.51 |
+| 80C | 13457 | 1786.8 | 113.73 | 66.23 | 1.72x | 161.88 | 114.14 |
+| 80D | 2521 | 2026.2 | 148.93 | 86.03 | 1.73x | 198.97 | 136.64 |
 
 The two families behave differently and are reported separately rather
 than assuming one rule covers both. Trimming the power-of-two chain
 improves the ratio; lengthening the general-ring chain leaves it flat,
 1.79x at the 1055 bit chain the paper runs against 1.78x at the
 recommended 1524.
-
-Incomplete, one mode only: 80C (off)
 
 
 ## 4. Where the security numbers come from
@@ -90,7 +94,7 @@ Incomplete, one mode only: 80C (off)
 | `stock_estimator.jsonl` | 115 | the stock estimator, six attacks per instance |
 | `cross_verification.jsonl` | 90 | independent recomputation and the integer boundary searches |
 | `bootstrap_power_of_two.jsonl` | 20 | ciphertext bootstrapping, power-of-two ring, both evaluators |
-| `bootstrap_general_rings.jsonl` | 8 | ciphertext bootstrapping, general rings |
+| `bootstrap_general_rings.jsonl` | 18 | ciphertext bootstrapping, general rings |
 
 The correct post-attack figure for an instance is the minimum over every
 attack run, not the stock figure minus a delta: the stock minimum is often
