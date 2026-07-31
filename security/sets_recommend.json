@@ -1,0 +1,10 @@
+[
+ {"name":"rec-enc-phi50112-h14", "family":"rec", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":14, "log2qboot":70.394535, "helib":78.8964, "B":18},
+ {"name":"rec-enc-phi50112-h16", "family":"rec", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":16, "log2qboot":70.394535, "helib":78.8964, "B":19},
+ {"name":"rec-enc-phi50112-h20", "family":"rec", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":20, "log2qboot":70.394535, "helib":78.8964, "B":21},
+ {"name":"rec-enc-phi50112-h28", "family":"rec", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":28, "log2qboot":70.394535, "helib":78.8964, "B":25},
+ {"name":"rec-enc-phi44100-h16", "family":"rec", "p":13457, "m":45193, "phim":44100, "log2Q":1055.33, "hmain":120, "h":16, "log2qboot":65.524087, "helib":120.193, "B":19},
+ {"name":"rec-enc-phi44100-h20", "family":"rec", "p":13457, "m":45193, "phim":44100, "log2Q":1055.33, "hmain":120, "h":20, "log2qboot":65.524087, "helib":120.193, "B":21},
+ {"name":"rec-enc-phi44100-h28", "family":"rec", "p":13457, "m":45193, "phim":44100, "log2Q":1055.33, "hmain":120, "h":28, "log2qboot":65.524087, "helib":120.193, "B":25},
+ {"name":"rec-enc-phi17136-h20", "family":"rec", "p":2917,  "m":17587, "phim":17136, "log2Q":1055.05, "hmain":120, "h":20, "log2qboot":58.754093, "helib":58.3056, "B":21}
+]

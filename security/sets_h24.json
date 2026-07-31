@@ -1,0 +1,9 @@
+[
+ {"name":"oppoint-gen-p13457-h24", "family":"opgen", "p":13457, "m":45193, "phim":44100, "log2Q":1055.33, "hmain":120, "h":24, "log2qboot":65.524087, "helib":120.193, "B":23},
+ {"name":"oppoint-gen-p14401-h24", "family":"opgen", "p":14401, "m":43033, "phim":41140, "log2Q":1055.05, "hmain":120, "h":24, "log2qboot":65.579525, "helib":113.424, "B":23},
+ {"name":"oppoint-gen-p4513-h24",  "family":"opgen", "p":4513,  "m":37637, "phim":36960, "log2Q":1055.29, "hmain":120, "h":24, "log2qboot":62.595152, "helib":103.802, "B":23},
+ {"name":"oppoint-gen-p2917-h24",  "family":"opgen", "p":2917,  "m":17587, "phim":17136, "log2Q":1055.05, "hmain":120, "h":24, "log2qboot":58.754093, "helib":58.3056, "B":23},
+ {"name":"oppoint-gen-p65537-h24", "family":"opgen", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":24, "log2qboot":70.394535, "helib":78.8964, "B":23},
+ {"name":"oppoint-po2-p65537-h24", "family":"oppo2", "p":65537, "m":65536, "phim":32768, "log2Q":1313.73, "hmain":120, "h":24, "log2qboot":60.967760, "helib":78.939, "B":12},
+ {"name":"oppoint-po2-p1297-h24",  "family":"oppo2", "p":1297,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":24, "log2qboot":51.308785, "helib":78.6697, "B":12}
+]

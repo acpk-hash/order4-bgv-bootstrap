@@ -1,0 +1,39 @@
+[
+ {"name":"MHWW24-V-A-repro(h12)", "family":"anchor", "p":65537, "m":50731, "phim":50112, "log2Q":2035.46, "hmain":120, "h":12, "log2qboot":81.059743, "helib":78.3637, "B":17},
+ {"name":"ours-gen-p65537",       "family":"general", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":12, "log2qboot":70.394535, "helib":78.8964, "B":17},
+ {"name":"ours-gen-p1601",        "family":"general", "p":1601,  "m":24901, "phim":24192, "log2Q":1054.78, "hmain":120, "h":12, "log2qboot":57.894697, "helib":74.518,  "B":17},
+ {"name":"ours-gen-p2521",        "family":"general", "p":2521,  "m":50731, "phim":50112, "log2Q":1055.05, "hmain":120, "h":12, "log2qboot":61.662996, "helib":134.028, "B":17},
+ {"name":"ours-gen-p2917",        "family":"general", "p":2917,  "m":17587, "phim":17136, "log2Q":1055.05, "hmain":120, "h":12, "log2qboot":58.754093, "helib":58.3056, "B":17},
+ {"name":"ours-gen-p4513",        "family":"general", "p":4513,  "m":37637, "phim":36960, "log2Q":1055.29, "hmain":120, "h":12, "log2qboot":62.595152, "helib":103.802, "B":17},
+ {"name":"ours-gen-p8101",        "family":"general", "p":8101,  "m":23771, "phim":21600, "log2Q":1055.08, "hmain":120, "h":12, "log2qboot":62.368816, "helib":68.5538, "B":16},
+ {"name":"ours-gen-p13457",       "family":"general", "p":13457, "m":45193, "phim":44100, "log2Q":1055.33, "hmain":120, "h":12, "log2qboot":65.524087, "helib":120.193, "B":17},
+ {"name":"ours-gen-p14401",       "family":"general", "p":14401, "m":43033, "phim":41140, "log2Q":1055.05, "hmain":120, "h":12, "log2qboot":65.579525, "helib":113.424, "B":17},
+ {"name":"ours-gen-p15377",       "family":"general", "p":15377, "m":19679, "phim":17880, "log2Q":1055.22, "hmain":120, "h":12, "log2qboot":63.744063, "helib":60.0088, "B":16},
+
+ {"name":"ours-po2-p1297",        "family":"po2", "p":1297,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":51.308785, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p1601",        "family":"po2", "p":1601,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":51.764620, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p2521",        "family":"po2", "p":2521,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":53.247347, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p3137",        "family":"po2", "p":3137,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":53.220434, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p4513",        "family":"po2", "p":4513,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":54.507566, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p7057",        "family":"po2", "p":7057,  "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":54.975009, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p13457",       "family":"po2", "p":13457, "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":56.371869, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p14401",       "family":"po2", "p":14401, "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":56.518599, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p15377",       "family":"po2", "p":15377, "m":65536, "phim":32768, "log2Q":1319.65, "hmain":120, "h":26, "log2qboot":57.245457, "helib":78.6697, "B":13},
+ {"name":"ours-po2-p65537",       "family":"po2", "p":65537, "m":65536, "phim":32768, "log2Q":1313.73, "hmain":120, "h":26, "log2qboot":60.967760, "helib":78.939,  "B":13},
+
+ {"name":"ours-p257-h7",          "family":"okada-band", "p":257, "m":65536, "phim":32768, "log2Q":1325.96, "hmain":120, "h":7, "log2qboot":47.803830, "helib":78.3855, "B":7},
+
+ {"name":"degscale-gen-h18",      "family":"degscale", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":18, "log2qboot":70.394618, "helib":78.8964, "B":20},
+ {"name":"degscale-gen-h26",      "family":"degscale", "p":65537, "m":50731, "phim":50112, "log2Q":2017.44, "hmain":120, "h":26, "log2qboot":70.394711, "helib":78.8964, "B":24},
+ {"name":"degscale-po2-h12",      "family":"degscale", "p":65537, "m":65536, "phim":32768, "log2Q":1313.73, "hmain":120, "h":12, "log2qboot":60.967579, "helib":78.939, "B":9},
+ {"name":"degscale-po2-h40",      "family":"degscale", "p":65537, "m":65536, "phim":32768, "log2Q":1313.73, "hmain":120, "h":40, "log2qboot":60.967891, "helib":78.939, "B":16},
+
+ {"name":"MHWW24-A-p17",          "family":"mhww-baseline", "p":17,    "m":38309, "phim":36960, "log2Q":1461.91, "hmain":120, "h":14, "log2qboot":70.366294, "helib":80.065,  "B":0},
+ {"name":"MHWW24-B-p127",         "family":"mhww-baseline", "p":127,   "m":56647, "phim":55080, "log2Q":2252.54, "hmain":120, "h":12, "log2qboot":66.606197, "helib":77.9363, "B":0},
+ {"name":"MHWW24-C-p257",         "family":"mhww-baseline", "p":257,   "m":55427, "phim":54096, "log2Q":2175.94, "hmain":120, "h":12, "log2qboot":70.626921, "helib":78.9296, "B":0},
+ {"name":"MHWW24-D-p8191",        "family":"mhww-baseline", "p":8191,  "m":45193, "phim":44100, "log2Q":1802.68, "hmain":120, "h":12, "log2qboot":72.760209, "helib":78.0208, "B":0},
+ {"name":"MaNTT-po2-p65537",      "family":"mhww-baseline", "p":65537, "m":65536, "phim":32768, "log2Q":1331.71, "hmain":120, "h":26, "log2qboot":71.639156, "helib":78.1288, "B":0},
+
+ {"name":"microbench-m2^15",      "family":"microbench", "p":65537, "m":32768, "phim":16384, "log2Q":1313.73, "hmain":120, "h":26, "log2qboot":59.794063, "helib":48.9695, "B":13},
+ {"name":"microbench-m2^14",      "family":"microbench", "p":65537, "m":16384, "phim":8192,  "log2Q":1313.73, "hmain":120, "h":26, "log2qboot":58.605146, "helib":33.9848, "B":13}
+]

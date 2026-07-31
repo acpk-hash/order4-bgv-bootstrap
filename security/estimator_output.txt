@@ -1,0 +1,163 @@
+﻿======================================================================================================================
+MHWW24-V-A-repro(h12) MAIN     n=50112  log2q=2035.46  h=120  -> MIN=82.2 via primal_hybrid_nb | primal_usvp=84.5, primal_bdd=84.5, primal_hybrid=82.6, dual=84.8, dual_hybrid=85.6 | [676s]
+MHWW24-V-A-repro(h12) ENCAP    n=50112  log2q=81.06    h=12   -> MIN=89.6 via primal_hybrid_nb | primal_hybrid=91.2 | [289s]
+ours-gen-p65537 MAIN           n=50112  log2q=2017.44  h=120  -> MIN=82.6 via primal_hybrid_nb | primal_usvp=85.1, primal_bdd=85.0, primal_hybrid=83.1, dual=85.6, dual_hybrid=86.0 | [770s]
+ours-gen-p65537 ENCAP          n=50112  log2q=70.39    h=12   -> MIN=90.9 via primal_hybrid_nb | primal_hybrid=92.5 | [267s]
+ours-gen-p1601 MAIN            n=24192  log2q=1054.78  h=120  -> MIN=76.1 via primal_hybrid_nb | primal_usvp=78.2, primal_bdd=78.2, primal_hybrid=77.0, dual=78.8, dual_hybrid=78.9 | [424s]
+ours-gen-p1601 ENCAP           n=24192  log2q=57.89    h=12   -> MIN=82.7 via primal_hybrid_nb | primal_hybrid=84.6 | [218s]
+ours-gen-p2521 MAIN            n=50112  log2q=1055.05  h=120  -> MIN=134.9 via primal_hybrid_nb | primal_usvp=163.6, primal_bdd=163.4, primal_hybrid=136.3, dual=164.7, dual_hybrid=164.2 | [879s]
+ours-gen-p2521 ENCAP           n=50112  log2q=61.66    h=12   -> MIN=91.7 via primal_hybrid_nb | primal_hybrid=93.5 | [256s]
+ours-gen-p2917 MAIN            n=17136  log2q=1055.05  h=120  -> MIN=56.9 via primal_hybrid_nb | primal_usvp=57.3, primal_bdd=57.3, primal_hybrid=57.6, dual=57.9, dual_hybrid=58.4 | [260s]
+ours-gen-p2917 ENCAP           n=17136  log2q=58.75    h=12   -> MIN=78.1 via primal_hybrid_nb | primal_hybrid=79.7 | [201s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+MHWW24-V-A-repro(h12)    50112       82.2     89.6     82.2  main      primal_hybrid_nb primal_hybrid_nb
+ours-gen-p65537          50112       82.6     90.9     82.6  main      primal_hybrid_nb primal_hybrid_nb
+ours-gen-p1601           24192       76.1     82.7     76.1  main      primal_hybrid_nb primal_hybrid_nb
+ours-gen-p2521           50112      134.9     91.7     91.7  encap     primal_hybrid_nb primal_hybrid_nb
+ours-gen-p2917           17136       56.9     78.1     56.9  main      primal_hybrid_nb primal_hybrid_nb
+======================================================================================================================
+ours-gen-p4513 MAIN            n=36960  log2q=1055.29  h=120  -> MIN=106.8 via primal_hybrid_nb | primal_usvp=118.2, primal_bdd=118.2, primal_hybrid=107.9, dual=119.2, dual_hybrid=118.9 | [497s]
+ours-gen-p4513 ENCAP           n=36960  log2q=62.60    h=12   -> MIN=87.6 via primal_hybrid_nb | primal_hybrid=89.4 | [233s]
+ours-gen-p8101 MAIN            n=21600  log2q=1055.08  h=120  -> MIN=69.5 via primal_hybrid_nb | primal_usvp=70.6, primal_bdd=70.4, primal_hybrid=70.1, dual=71.2, dual_hybrid=71.4 | [363s]
+ours-gen-p8101 ENCAP           n=21600  log2q=62.37    h=12   -> MIN=80.8 via primal_hybrid_nb | primal_hybrid=82.4 | [211s]
+ours-gen-p13457 MAIN           n=44100  log2q=1055.33  h=120  -> MIN=122.6 via primal_hybrid_nb | primal_usvp=142.3, primal_bdd=142.4, primal_hybrid=123.8, dual=143.4, dual_hybrid=143.1 | [803s]
+ours-gen-p13457 ENCAP          n=44100  log2q=65.52    h=12   -> MIN=89.7 via primal_hybrid_nb | primal_hybrid=91.3 | [246s]
+ours-gen-p14401 MAIN           n=41140  log2q=1055.05  h=120  -> MIN=116.1 via primal_hybrid_nb | primal_usvp=132.2, primal_bdd=132.2, primal_hybrid=117.3, dual=133.3, dual_hybrid=133.1 | [767s]
+ours-gen-p14401 ENCAP          n=41140  log2q=65.58    h=12   -> MIN=88.7 via primal_hybrid_nb | primal_hybrid=90.4 | [259s]
+ours-gen-p15377 MAIN           n=17880  log2q=1055.22  h=120  -> MIN=59.4 via primal_hybrid_nb | primal_usvp=59.6, primal_bdd=59.8, primal_hybrid=59.9, dual=60.2, dual_hybrid=60.7 | [271s]
+ours-gen-p15377 ENCAP          n=17880  log2q=63.74    h=12   -> MIN=78.1 via primal_hybrid_nb | primal_hybrid=79.5 | [215s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+ours-gen-p4513           36960      106.8     87.6     87.6  encap     primal_hybrid_nb primal_hybrid_nb
+ours-gen-p8101           21600       69.5     80.8     69.5  main      primal_hybrid_nb primal_hybrid_nb
+ours-gen-p13457          44100      122.6     89.7     89.7  encap     primal_hybrid_nb primal_hybrid_nb
+ours-gen-p14401          41140      116.1     88.7     88.7  encap     primal_hybrid_nb primal_hybrid_nb
+ours-gen-p15377          17880       59.4     78.1     59.4  main      primal_hybrid_nb primal_hybrid_nb
+======================================================================================================================
+ours-po2-p1297 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [571s]
+ours-po2-p1297 ENCAP           n=32768  log2q=51.31    h=26   -> MIN=145.3 via primal_hybrid_nb | primal_hybrid=150.0 | [262s]
+ours-po2-p1601 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [594s]
+ours-po2-p1601 ENCAP           n=32768  log2q=51.76    h=26   -> MIN=144.9 via primal_hybrid_nb | primal_hybrid=149.6 | [244s]
+ours-po2-p2521 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [623s]
+ours-po2-p2521 ENCAP           n=32768  log2q=53.25    h=26   -> MIN=144.6 via primal_hybrid_nb | primal_hybrid=149.1 | [268s]
+ours-po2-p3137 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [638s]
+ours-po2-p3137 ENCAP           n=32768  log2q=53.22    h=26   -> MIN=144.6 via primal_hybrid_nb | primal_hybrid=149.1 | [265s]
+ours-po2-p4513 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [639s]
+ours-po2-p4513 ENCAP           n=32768  log2q=54.51    h=26   -> MIN=143.9 via primal_hybrid_nb | primal_hybrid=148.3 | [271s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+ours-po2-p1297           32768       81.8    145.3     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p1601           32768       81.8    144.9     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p2521           32768       81.8    144.6     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p3137           32768       81.8    144.6     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p4513           32768       81.8    143.9     81.8  main      primal_hybrid_nb primal_hybrid_nb
+======================================================================================================================
+ours-po2-p7057 MAIN            n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [578s]
+ours-po2-p7057 ENCAP           n=32768  log2q=54.98    h=26   -> MIN=143.9 via primal_hybrid_nb | primal_hybrid=148.3 | [270s]
+ours-po2-p13457 MAIN           n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [602s]
+ours-po2-p13457 ENCAP          n=32768  log2q=56.37    h=26   -> MIN=143.4 via primal_hybrid_nb | primal_hybrid=147.9 | [292s]
+ours-po2-p14401 MAIN           n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [617s]
+ours-po2-p14401 ENCAP          n=32768  log2q=56.52    h=26   -> MIN=143.3 via primal_hybrid_nb | primal_hybrid=147.5 | [288s]
+ours-po2-p15377 MAIN           n=32768  log2q=1319.65  h=120  -> MIN=81.8 via primal_hybrid_nb | primal_usvp=84.4, primal_bdd=84.4, primal_hybrid=82.4, dual=85.0, dual_hybrid=85.4 | [633s]
+ours-po2-p15377 ENCAP          n=32768  log2q=57.25    h=26   -> MIN=143.3 via primal_hybrid_nb | primal_hybrid=147.5 | [286s]
+ours-po2-p65537 MAIN           n=32768  log2q=1313.73  h=120  -> MIN=81.9 via primal_hybrid_nb | primal_usvp=84.7, primal_bdd=84.7, primal_hybrid=82.6, dual=85.6, dual_hybrid=85.7 | [653s]
+ours-po2-p65537 ENCAP          n=32768  log2q=60.97    h=26   -> MIN=141.9 via primal_hybrid_nb | primal_hybrid=145.9 | [271s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+ours-po2-p7057           32768       81.8    143.9     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p13457          32768       81.8    143.4     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p14401          32768       81.8    143.3     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p15377          32768       81.8    143.3     81.8  main      primal_hybrid_nb primal_hybrid_nb
+ours-po2-p65537          32768       81.9    141.9     81.9  main      primal_hybrid_nb primal_hybrid_nb
+======================================================================================================================
+ours-p257-h7 MAIN              n=32768  log2q=1325.96  h=120  -> MIN=81.4 via primal_hybrid_nb | primal_usvp=84.1, primal_bdd=84.4, primal_hybrid=82.2, dual=84.7, dual_hybrid=85.0 | [486s]
+ours-p257-h7 ENCAP             n=32768  log2q=47.80    h=7    -> MIN=61.0 via primal_hybrid | primal_hybrid=61.0 | [173s]
+degscale-gen-h18 MAIN          n=50112  log2q=2017.44  h=120  -> MIN=82.6 via primal_hybrid_nb | primal_usvp=85.1, primal_bdd=85.0, primal_hybrid=83.1, dual=85.6, dual_hybrid=86.0 | [791s]
+degscale-gen-h18 ENCAP         n=50112  log2q=70.39    h=18   -> MIN=118.0 via primal_hybrid_nb | primal_hybrid=120.6 | [343s]
+degscale-gen-h26 MAIN          n=50112  log2q=2017.44  h=120  -> MIN=82.6 via primal_hybrid_nb | primal_usvp=85.1, primal_bdd=85.0, primal_hybrid=83.1, dual=85.6, dual_hybrid=86.0 | [807s]
+degscale-gen-h26 ENCAP         n=50112  log2q=70.39    h=26   -> MIN=151.0 via primal_hybrid_nb | primal_hybrid=154.6 | [360s]
+degscale-po2-h12 MAIN          n=32768  log2q=1313.73  h=120  -> MIN=81.9 via primal_hybrid_nb | primal_usvp=84.7, primal_bdd=84.7, primal_hybrid=82.6, dual=85.6, dual_hybrid=85.7 | [653s]
+degscale-po2-h12 ENCAP         n=32768  log2q=60.97    h=12   -> MIN=86.5 via primal_hybrid_nb | primal_hybrid=88.1 | [251s]
+degscale-po2-h40 MAIN          n=32768  log2q=1313.73  h=120  -> MIN=81.9 via primal_hybrid_nb | primal_usvp=84.7, primal_bdd=84.7, primal_hybrid=82.6, dual=85.6, dual_hybrid=85.7 | [632s]
+degscale-po2-h40 ENCAP         n=32768  log2q=60.97    h=40   -> MIN=189.7 via primal_hybrid_nb | primal_hybrid=195.8 | [277s]
+MHWW24-A-p17 MAIN              n=36960  log2q=1461.91  h=120  -> MIN=83.1 via primal_hybrid_nb | primal_usvp=86.0, primal_bdd=86.0, primal_hybrid=84.2, dual=86.6, dual_hybrid=87.0 | [454s]
+MHWW24-A-p17 ENCAP             n=36960  log2q=70.37    h=14   -> MIN=95.4 via primal_hybrid_nb | primal_hybrid=97.7 | [210s]
+MHWW24-B-p127 MAIN             n=55080  log2q=2252.54  h=120  -> MIN=81.7 via primal_hybrid_nb | primal_usvp=84.0, primal_bdd=84.1, primal_hybrid=82.2, dual=84.4, dual_hybrid=85.1 | [730s]
+MHWW24-B-p127 ENCAP            n=55080  log2q=66.61    h=12   -> MIN=88.4 via primal_hybrid_nb | primal_hybrid=94.1 | [174s]
+MHWW24-C-p257 MAIN             n=54096  log2q=2175.94  h=120  -> MIN=82.9 via primal_hybrid_nb | primal_usvp=85.4, primal_bdd=85.4, primal_hybrid=83.3, dual=85.7, dual_hybrid=86.1 | [704s]
+MHWW24-C-p257 ENCAP            n=54096  log2q=70.63    h=12   -> MIN=83.4 via primal_hybrid_nb | primal_hybrid=93.3 | [182s]
+MHWW24-D-p8191 MAIN            n=44100  log2q=1802.68  h=120  -> MIN=81.2 via primal_hybrid_nb | primal_usvp=83.7, primal_bdd=83.7, primal_hybrid=81.9, dual=84.3, dual_hybrid=84.8 | [566s]
+MHWW24-D-p8191 ENCAP           n=44100  log2q=72.76    h=12   -> MIN=88.7 via primal_hybrid_nb | primal_hybrid=90.4 | [179s]
+MaNTT-po2-p65537 MAIN          n=32768  log2q=1331.71  h=120  -> MIN=80.9 via primal_hybrid_nb | primal_usvp=83.8, primal_bdd=83.6, primal_hybrid=81.8, dual=84.5, dual_hybrid=84.7 | [365s]
+MaNTT-po2-p65537 ENCAP         n=32768  log2q=71.64    h=26   -> MIN=138.5 via primal_hybrid_nb | primal_hybrid=142.0 | [221s]
+microbench-m2^15 MAIN          n=16384  log2q=1313.73  h=120  -> MIN=47.8 via primal_bdd    | primal_usvp=47.8, primal_bdd=47.8, primal_hybrid=48.2, dual=48.2, dual_hybrid=49.1 | [39s]
+microbench-m2^15 ENCAP         n=16384  log2q=59.79    h=26   -> MIN=122.5 via primal_hybrid_nb | primal_hybrid=126.9 | [172s]
+microbench-m2^14 MAIN          n=8192   log2q=1313.73  h=120  -> MIN=46.3 via primal_usvp   | primal_usvp=46.3, primal_bdd=46.3, primal_hybrid=47.1, dual=47.1, dual_hybrid=48.1 | [20s]
+microbench-m2^14 ENCAP         n=8192   log2q=58.61    h=26   -> MIN=103.3 via primal_hybrid_nb | primal_usvp=506.4, primal_bdd=504.9, primal_hybrid=107.8, dual=513.3, dual_hybrid=486.1 | [91s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+ours-p257-h7             32768       81.4     61.0     61.0  encap     primal_hybrid_nb primal_hybrid 
+degscale-gen-h18         50112       82.6    118.0     82.6  main      primal_hybrid_nb primal_hybrid_nb
+degscale-gen-h26         50112       82.6    151.0     82.6  main      primal_hybrid_nb primal_hybrid_nb
+degscale-po2-h12         32768       81.9     86.5     81.9  main      primal_hybrid_nb primal_hybrid_nb
+degscale-po2-h40         32768       81.9    189.7     81.9  main      primal_hybrid_nb primal_hybrid_nb
+MHWW24-A-p17             36960       83.1     95.4     83.1  main      primal_hybrid_nb primal_hybrid_nb
+MHWW24-B-p127            55080       81.7     88.4     81.7  main      primal_hybrid_nb primal_hybrid_nb
+MHWW24-C-p257            54096       82.9     83.4     82.9  main      primal_hybrid_nb primal_hybrid_nb
+MHWW24-D-p8191           44100       81.2     88.7     81.2  main      primal_hybrid_nb primal_hybrid_nb
+MaNTT-po2-p65537         32768       80.9    138.5     80.9  main      primal_hybrid_nb primal_hybrid_nb
+microbench-m2^15         16384       47.8    122.5     47.8  main      primal_bdd     primal_hybrid_nb
+microbench-m2^14         8192        46.3    103.3     46.3  main      primal_usvp    primal_hybrid_nb
+======================================================================================================================
+oppoint-gen-p13457-h24 ENCAP   n=44100  log2q=65.52    h=24   -> MIN=140.7 via primal_hybrid_nb | primal_hybrid=144.3 | [296s]
+oppoint-gen-p14401-h24 ENCAP   n=41140  log2q=65.58    h=24   -> MIN=139.0 via primal_hybrid_nb | primal_hybrid=142.5 | [268s]
+oppoint-gen-p4513-h24 ENCAP    n=36960  log2q=62.60    h=24   -> MIN=137.1 via primal_hybrid_nb | primal_hybrid=140.7 | [230s]
+oppoint-gen-p2917-h24 ENCAP    n=17136  log2q=58.75    h=24   -> MIN=118.2 via primal_hybrid_nb | primal_hybrid=122.2 | [191s]
+oppoint-gen-p65537-h24 ENCAP   n=50112  log2q=70.39    h=24   -> MIN=143.0 via primal_hybrid_nb | primal_hybrid=146.3 | [274s]
+oppoint-po2-p65537-h24 ENCAP   n=32768  log2q=60.97    h=24   -> MIN=134.4 via primal_hybrid_nb | primal_hybrid=138.3 | [225s]
+oppoint-po2-p1297-h24 ENCAP    n=32768  log2q=51.31    h=24   -> MIN=137.6 via primal_hybrid_nb | primal_hybrid=142.0 | [212s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+oppoint-gen-p13457-h24   44100          -    140.7    140.7  encap     -              primal_hybrid_nb
+oppoint-gen-p14401-h24   41140          -    139.0    139.0  encap     -              primal_hybrid_nb
+oppoint-gen-p4513-h24    36960          -    137.1    137.1  encap     -              primal_hybrid_nb
+oppoint-gen-p2917-h24    17136          -    118.2    118.2  encap     -              primal_hybrid_nb
+oppoint-gen-p65537-h24   50112          -    143.0    143.0  encap     -              primal_hybrid_nb
+oppoint-po2-p65537-h24   32768          -    134.4    134.4  encap     -              primal_hybrid_nb
+oppoint-po2-p1297-h24    32768          -    137.6    137.6  encap     -              primal_hybrid_nb
+======================================================================================================================
+rec-enc-phi50112-h14 ENCAP     n=50112  log2q=70.39    h=14   -> MIN=100.2 via primal_hybrid_nb | primal_hybrid=102.1 | [273s]
+rec-enc-phi50112-h16 ENCAP     n=50112  log2q=70.39    h=16   -> MIN=109.4 via primal_hybrid_nb | primal_hybrid=111.5 | [260s]
+rec-enc-phi50112-h20 ENCAP     n=50112  log2q=70.39    h=20   -> MIN=126.4 via primal_hybrid_nb | primal_hybrid=129.3 | [269s]
+rec-enc-phi50112-h28 ENCAP     n=50112  log2q=70.39    h=28   -> MIN=158.8 via primal_hybrid_nb | primal_hybrid=162.7 | [304s]
+rec-enc-phi44100-h16 ENCAP     n=44100  log2q=65.52    h=16   -> MIN=107.6 via primal_hybrid_nb | primal_hybrid=110.0 | [212s]
+rec-enc-phi44100-h20 ENCAP     n=44100  log2q=65.52    h=20   -> MIN=124.5 via primal_hybrid_nb | primal_hybrid=127.5 | [222s]
+rec-enc-phi44100-h28 ENCAP     n=44100  log2q=65.52    h=28   -> MIN=156.3 via primal_hybrid_nb | primal_hybrid=160.3 | [273s]
+rec-enc-phi17136-h20 ENCAP     n=17136  log2q=58.75    h=20   -> MIN=105.5 via primal_hybrid_nb | primal_hybrid=109.1 | [204s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+rec-enc-phi50112-h14     50112          -    100.2    100.2  encap     -              primal_hybrid_nb
+rec-enc-phi50112-h16     50112          -    109.4    109.4  encap     -              primal_hybrid_nb
+rec-enc-phi50112-h20     50112          -    126.4    126.4  encap     -              primal_hybrid_nb
+rec-enc-phi50112-h28     50112          -    158.8    158.8  encap     -              primal_hybrid_nb
+rec-enc-phi44100-h16     44100          -    107.6    107.6  encap     -              primal_hybrid_nb
+rec-enc-phi44100-h20     44100          -    124.5    124.5  encap     -              primal_hybrid_nb
+rec-enc-phi44100-h28     44100          -    156.3    156.3  encap     -              primal_hybrid_nb
+rec-enc-phi17136-h20     17136          -    105.5    105.5  encap     -              primal_hybrid_nb
+======================================================================================================================
+rec-main-phi54096-Q1055 MAIN   n=54096  log2q=1055.00  h=120  -> MIN=142.7 via primal_hybrid_nb | primal_usvp=177.9, primal_bdd=177.9, primal_hybrid=144.2, dual=179.0, dual_hybrid=178.4 | [839s]
+rec-main-phi55080-Q1055 MAIN   n=55080  log2q=1055.00  h=120  -> MIN=144.6 via primal_hybrid_nb | primal_usvp=181.6, primal_bdd=181.6, primal_hybrid=146.1, dual=182.6, dual_hybrid=182.0 | [754s]
+rec-main-phi50112-Q1500 MAIN   n=50112  log2q=1500.00  h=120  -> MIN=104.1 via primal_hybrid_nb | primal_usvp=113.2, primal_bdd=113.1, primal_hybrid=104.7, dual=114.0, dual_hybrid=113.9 | [799s]
+======================================================================================================================
+set                      phi(m)      main    encap      MIN  binding   main_argmin    encap_argmin  
+rec-main-phi54096-Q1055  54096      142.7        -    142.7  main      primal_hybrid_nb -             
+rec-main-phi55080-Q1055  55080      144.6        -    144.6  main      primal_hybrid_nb -             
+rec-main-phi50112-Q1500  50112      104.1        -    104.1  main      primal_hybrid_nb -             
+======================================================================================================================
+RECO-80--p4513-m37637-h14 MAIN n=36960  log2q=1055.29  h=120  -> MIN=106.8 via primal_hybrid_nb | primal_usvp=118.2, primal_bdd=118.2, primal_hybrid=107.9, dual=119.2, dual_hybrid=118.9 | [420s]
+RECO-80--p4513-m37637-h14 ENCAP n=36960  log2q=62.60    h=14   -> MIN=96.5 via primal_hybrid_nb | primal_hybrid=98.7 | [212s]
+RECO-100-p13457-m45193-h18 MAIN n=44100  log2q=1055.33  h=120  -> MIN=122.6 via primal_hybrid_nb | primal_usvp=142.3, primal_bdd=142.4, primal_hybrid=123.8, dual=143.4, dual_hybrid=143.1 | [657s]
+RECO-100-p13457-m45193-h18 ENCAP n=44100  log2q=65.52    h=18   -> MIN=116.1 via primal_hybrid_nb | primal_hybrid=118.9 | [242s]
+RECO-128-p13457-m65047-h26 MAIN n=62776  log2q=1055.00  h=120  -> MIN=158.8 via primal_hybrid_nb | primal_usvp=210.2, primal_bdd=210.2, primal_hybrid=160.2, dual=211.3, dual_hybrid=210.7 | [1165s]
+RECO-128-p13457-m65047-h26 ENCAP n=62776  log2q=66.00    h=26   -> MIN=158.5 via primal_hybrid_nb | primal_hybrid=162.2 | [384s]

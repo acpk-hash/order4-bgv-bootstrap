@@ -1,0 +1,192 @@
+[2026-07-31 13:13:39] START V_p4513_ON p=4513 idx=8 aux=95 order4=1 avail=242GB
+[2026-07-31 13:18:49] DONE  V_p4513_ON rc=0 wall=310s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=95
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 16
+      AAA_bootKeySwitch: 11.6992 / 3 = 3.89972   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.4677 / 3 = 3.48924   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 33.3156 / 3 = 11.1052   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.28121 / 3 = 0.427071   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 57.0807 / 3 = 19.0269   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 31667128
+[2026-07-31 13:18:49] START V_p4513_OFF p=4513 idx=8 aux=95 order4=0 avail=243GB
+[2026-07-31 13:24:24] DONE  V_p4513_OFF rc=0 wall=334s
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 16
+      AAA_bootKeySwitch: 11.6891 / 3 = 3.89635   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.4948 / 3 = 3.49827   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 61.167 / 3 = 20.389   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.27307 / 3 = 0.424358   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 84.9405 / 3 = 28.3135   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 31776788
+[2026-07-31 13:24:24] START R_p13457_OFF p=13457 idx=11 aux=116 order4=0 avail=243GB
+[2026-07-31 13:25:54] START R_p2521_OFF p=2521 idx=13 aux=71 order4=0 avail=237GB
+[2026-07-31 13:25:54] START R_p13457_ON p=13457 idx=11 aux=116 order4=1 avail=237GB
+[2026-07-31 13:28:54] START R_p2521_ON p=2521 idx=13 aux=71 order4=1 avail=176GB
+[2026-07-31 13:33:43] DONE  R_p13457_OFF rc=0 wall=559s
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 11.8676 / 3 = 3.95586   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.5816 / 3 = 3.52721   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 64.0584 / 3 = 21.3528   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.13587 / 3 = 0.378623   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 87.966 / 3 = 29.322   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62576552
+[2026-07-31 13:34:43] DONE  R_p13457_ON rc=0 wall=529s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=116
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 11.5235 / 3 = 3.84117   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.2203 / 3 = 3.40676   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 32.8273 / 3 = 10.9424   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.11748 / 3 = 0.372492   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 56.0043 / 3 = 18.6681   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62466740
+[2026-07-31 13:36:43] START R_p14401_ON p=14401 idx=7 aux=120 order4=1 avail=106GB
+[2026-07-31 13:37:43] START R_p14401_OFF p=14401 idx=7 aux=120 order4=0 avail=85GB
+[2026-07-31 13:40:03] DONE  R_p14401_ON rc=0 wall=200s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=120
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 32
+      AAA_bootKeySwitch: 11.8295 / 3 = 3.94315   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.5855 / 3 = 3.5285   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 34.4277 / 3 = 11.4759   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.37363 / 3 = 0.457875   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 58.5312 / 3 = 19.5104   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16354592
+[2026-07-31 13:41:51] DONE  R_p14401_OFF rc=0 wall=247s
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 32
+      AAA_bootKeySwitch: 13.7236 / 3 = 4.57452   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 12.1243 / 3 = 4.04142   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 73.178 / 3 = 24.3927   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.64308 / 3 = 0.547693   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 101.066 / 3 = 33.6886   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16460720
+[2026-07-31 13:41:51] WAIT R_p15377_OFF 26GB available
+[2026-07-31 13:44:33] WAIT R_p15377_ON 7GB available
+[2026-07-31 13:45:14] DONE  R_p2521_OFF rc=0 wall=1160s
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 4
+      AAA_bootKeySwitch: 13.4612 / 3 = 4.48707   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 14.1199 / 3 = 4.70664   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 74.1403 / 3 = 24.7134   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.0337 / 3 = 0.344566   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 103.157 / 3 = 34.3857   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 124153108
+[2026-07-31 13:45:22] START R_p15377_OFF p=15377 idx=12 aux=124 order4=0 avail=121GB
+[2026-07-31 13:45:33] START R_p15377_ON p=15377 idx=12 aux=124 order4=1 avail=121GB
+[2026-07-31 13:46:12] DONE  R_p2521_ON rc=0 wall=1038s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=71
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 4
+      AAA_bootKeySwitch: 12.8784 / 3 = 4.29281   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 11.1722 / 3 = 3.72408   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 38.4538 / 3 = 12.8179   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 0.977509 / 3 = 0.325836   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 63.8581 / 3 = 21.286   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 124305592
+[2026-07-31 13:48:15] START R_p1601_ON p=1601 idx=5 aux=40 order4=1 avail=207GB
+[2026-07-31 13:49:12] START R_p1601_OFF p=1601 idx=5 aux=40 order4=0 avail=184GB
+[2026-07-31 13:51:45] DONE  R_p1601_ON rc=0 wall=210s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=40
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 32
+      AAA_bootKeySwitch: 12.504 / 3 = 4.168   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 11.1094 / 3 = 3.70312   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 37.1783 / 3 = 12.3928   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.50848 / 3 = 0.502826   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 62.6454 / 3 = 20.8818   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16363008
+[2026-07-31 13:53:17] DONE  R_p1601_OFF rc=0 wall=245s
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 32
+      AAA_bootKeySwitch: 12.7177 / 3 = 4.23925   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 11.1357 / 3 = 3.71188   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 68.7818 / 3 = 22.9273   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.54256 / 3 = 0.514188   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 94.5264 / 3 = 31.5088   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16471180
+[2026-07-31 13:53:17] START R_p3137_OFF p=3137 idx=6 aux=56 order4=0 avail=117GB
+[2026-07-31 13:54:45] START R_p3137_ON p=3137 idx=6 aux=56 order4=1 avail=101GB
+[2026-07-31 13:54:56] DONE  R_p15377_ON rc=0 wall=563s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=124
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 12.1089 / 3 = 4.03629   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.7049 / 3 = 3.5683   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 35.2073 / 3 = 11.7358   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.1818 / 3 = 0.393934   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 59.5359 / 3 = 19.8453   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62468292
+[2026-07-31 13:55:18] DONE  R_p15377_OFF rc=0 wall=596s
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 12.2995 / 3 = 4.09983   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.7939 / 3 = 3.59798   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 64.9884 / 3 = 21.6628   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.17449 / 3 = 0.391496   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 89.585 / 3 = 29.8617   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62575168
+[2026-07-31 13:55:18] START R_p1297_OFF p=1297 idx=9 aux=36 order4=0 avail=216GB
+[2026-07-31 13:57:14] DONE  R_p3137_OFF rc=0 wall=237s
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 32
+      AAA_bootKeySwitch: 12.3895 / 3 = 4.12983   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.9687 / 3 = 3.65624   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 65.9303 / 3 = 21.9768   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.47651 / 3 = 0.49217   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 91.1004 / 3 = 30.3668   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16468396
+[2026-07-31 13:57:14] START R_p7057_ON p=7057 idx=10 aux=84 order4=1 avail=204GB
+[2026-07-31 13:57:56] START R_p1297_ON p=1297 idx=9 aux=36 order4=1 avail=210GB
+[2026-07-31 13:58:08] DONE  R_p3137_ON rc=0 wall=203s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=56
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 32
+      AAA_bootKeySwitch: 11.9574 / 3 = 3.98581   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.5953 / 3 = 3.53177   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 34.3031 / 3 = 11.4344   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.45891 / 3 = 0.486302   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 58.6492 / 3 = 19.5497   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 16360952
+[2026-07-31 13:58:08] START R_p7057_OFF p=7057 idx=10 aux=84 order4=0 avail=224GB
+[2026-07-31 14:05:11] DONE  R_p1297_OFF rc=0 wall=593s
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 8
+      AAA_bootKeySwitch: 12.7294 / 3 = 4.24312   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 11.3381 / 3 = 3.77937   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 68.99 / 3 = 22.9967   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.22938 / 3 = 0.409795   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 94.6327 / 3 = 31.5442   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62574716
+[2026-07-31 14:06:21] DONE  R_p7057_ON rc=0 wall=547s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=84
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 11.9411 / 3 = 3.98038   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.5129 / 3 = 3.5043   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 33.7375 / 3 = 11.2458   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.1658 / 3 = 0.3886   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 57.6891 / 3 = 19.2297   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62468576
+[2026-07-31 14:07:12] DONE  R_p1297_ON rc=0 wall=556s
+    Computing key-independent tables...using HELIB_EXPLICIT_AUX=36
+    INFO: total bits = 1070.7, security level = 92.5658
+    nslots = 8
+      AAA_bootKeySwitch: 12.2925 / 3 = 4.09749   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.8637 / 3 = 3.62124   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 35.3362 / 3 = 11.7787   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.19746 / 3 = 0.399153   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 60.0221 / 3 = 20.0074   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62468852
+[2026-07-31 14:07:44] DONE  R_p7057_OFF rc=0 wall=576s
+    INFO: total bits = 1066, security level = 92.8902
+    nslots = 8
+      AAA_bootKeySwitch: 11.9707 / 3 = 3.99024   [<HELIB_FORK>/src/recryption.cpp:2536]
+      AAA_coeffToSlot: 10.5786 / 3 = 3.52619   [<HELIB_FORK>/src/recryption.cpp:2910]
+      AAA_extractDigitsThin: 63.3972 / 3 = 21.1324   [<HELIB_FORK>/src/recryption.cpp:2953]
+      AAA_slotToCoeff: 1.13978 / 3 = 0.379927   [<HELIB_FORK>/src/recryption.cpp:2519]
+      thinReCrypt: 87.408 / 3 = 29.136   [<HELIB_FORK>/src/recryption.cpp:2437]
+    	Maximum resident set size (kbytes): 62578668
+[2026-07-31 14:07:44] batch complete
