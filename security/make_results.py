@@ -46,17 +46,29 @@ def load(name):
 
 
 def pair_by(rows, key):
+    """Pair OFF with ON per set.
+
+    A set measured more than once carries a `reported` flag on the run the
+    response quotes. Tables are built from that run so the artifact and the
+    response cannot disagree; the repeats stay in the file and are listed
+    separately, because dropping a measurement that was taken is not the same
+    as choosing which one to quote.
+    """
     d = collections.defaultdict(dict)
+    repeats = []
     for r in rows:
+        if r.get("reported") is False:
+            repeats.append(r)
+            continue
         d[r[key]][r.get("mode")] = r
     complete = {k: v for k, v in d.items() if "on" in v and "off" in v}
     partial = {k: v for k, v in d.items() if k not in complete}
-    return complete, partial
+    return complete, partial, repeats
 
 
 po2, gen = load("bootstrap_power_of_two.jsonl"), load("bootstrap_general_rings.jsonl")
-po2_ok, po2_part = pair_by(po2, "p")
-gen_ok, gen_part = pair_by(gen, "set")
+po2_ok, po2_part, po2_rep = pair_by(po2, "p")
+gen_ok, gen_part, gen_rep = pair_by(gen, "set")
 
 L = []
 A = L.append
@@ -152,6 +164,27 @@ else:
 if gen_part:
     A("Incomplete, one mode only: %s\n"
       % ", ".join("%s (%s)" % (k, ",".join(v)) for k, v in sorted(gen_part.items())))
+
+if gen_rep or po2_rep:
+    A("\n### Repeat runs\n")
+    A("A set measured more than once keeps every run in the JSONL. The table")
+    A("above uses the run marked `reported`, which is the one quoted in the")
+    A("response, so the two cannot disagree. The repeats are listed here rather")
+    A("than dropped, with the machine conditions each was taken under.\n")
+    A("They are worth keeping. The repeat below was taken on an essentially idle")
+    A("machine while the reported run shared it with several other jobs, so the")
+    A("repeat is the better measurement of absolute time. That the ratio barely")
+    A("moves between them, 1.78x against 1.74x, is itself the evidence that the")
+    A("ratio is the robust quantity and the absolute times are not.\n")
+    A("| set | mode | built log2 Q | extract (s) | other jobs at start | load |")
+    A("|---|---|---:|---:|---:|---:|")
+    for r in sorted(gen_rep + po2_rep,
+                    key=lambda r: (str(r.get("set", r.get("p"))), str(r.get("mode")))):
+        A("| %s | %s | %.1f | %.2f | %s | %s |"
+          % (r.get("set", r.get("p")), r.get("mode"), r.get("actual_log2Q", 0),
+             r.get("mean_extract_s", r.get("extract_s", 0)),
+             r.get("n_other_fatboot_at_start", "?"), r.get("load1_at_start", "?")))
+    A("")
 
 # ---------------------------------------------------------------- section 4
 A("\n## 4. Where the security numbers come from\n")

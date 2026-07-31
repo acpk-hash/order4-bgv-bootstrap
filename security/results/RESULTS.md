@@ -71,7 +71,7 @@ ePrint 2026/279.
 | 128C | 15377 | 1193.1 | 135.00 | 76.32 | 1.77x | 195.27 | 139.40 |
 | 128D | 8101 | 1267.5 | 152.39 | 81.07 | 1.88x | 207.47 | 134.78 |
 | 128E | 14401 | 1132.6 | 129.77 | 70.85 | 1.83x | 188.43 | 129.94 |
-| 80A | 4513 | 1497.9 | 80.46 | 46.28 | 1.74x | 126.67 | 92.18 |
+| 80A | 4513 | 1524.2 | 89.31 | 50.12 | 1.78x | 139.79 | 100.03 |
 | 80B | 14401 | 1642.0 | 100.05 | 57.40 | 1.74x | 141.63 | 97.51 |
 | 80C | 13457 | 1786.8 | 113.73 | 66.23 | 1.72x | 161.88 | 114.14 |
 | 80D | 2521 | 2026.2 | 148.93 | 86.03 | 1.73x | 198.97 | 136.64 |
@@ -81,6 +81,25 @@ than assuming one rule covers both. Trimming the power-of-two chain
 improves the ratio; lengthening the general-ring chain leaves it flat,
 1.79x at the 1055 bit chain the paper runs against 1.78x at the
 recommended 1524.
+
+
+### Repeat runs
+
+A set measured more than once keeps every run in the JSONL. The table
+above uses the run marked `reported`, which is the one quoted in the
+response, so the two cannot disagree. The repeats are listed here rather
+than dropped, with the machine conditions each was taken under.
+
+They are worth keeping. The repeat below was taken on an essentially idle
+machine while the reported run shared it with several other jobs, so the
+repeat is the better measurement of absolute time. That the ratio barely
+moves between them, 1.78x against 1.74x, is itself the evidence that the
+ratio is the robust quantity and the absolute times are not.
+
+| set | mode | built log2 Q | extract (s) | other jobs at start | load |
+|---|---|---:|---:|---:|---:|
+| 80A | off | 1497.9 | 80.46 | 1 | 1.93 |
+| 80A | on | 1497.9 | 46.28 | 0 | 2.11 |
 
 
 ## 4. Where the security numbers come from
@@ -94,7 +113,7 @@ recommended 1524.
 | `stock_estimator.jsonl` | 115 | the stock estimator, six attacks per instance |
 | `cross_verification.jsonl` | 90 | independent recomputation and the integer boundary searches |
 | `bootstrap_power_of_two.jsonl` | 20 | ciphertext bootstrapping, power-of-two ring, both evaluators |
-| `bootstrap_general_rings.jsonl` | 18 | ciphertext bootstrapping, general rings |
+| `bootstrap_general_rings.jsonl` | 20 | ciphertext bootstrapping, general rings |
 
 The correct post-attack figure for an instance is the minimum over every
 attack run, not the stock figure minus a delta: the stock minimum is often
