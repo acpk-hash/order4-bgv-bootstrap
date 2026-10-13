@@ -1,0 +1,7 @@
+build/
+local/
+third_party/src/
+cache/
+**/build/
+.git/
+ae/out/

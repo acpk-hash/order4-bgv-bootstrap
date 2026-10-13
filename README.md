@@ -1,377 +1,207 @@
-# Character-Filtered Exact Cleaners for Large-Prime BGV Bootstrapping
+# Order-Four Symmetry in BGV Bootstrapping — Artifact
 
-This repository is a GitHub-ready artifact for a conservative but broader paper
-story built around three layers:
+Artifact for
 
-1. a **positive implemented ciphertext result** for the order-four exact cleaner
-   and its specialized evaluator in large-prime BGV bootstrapping;
-2. an **order-adaptive cleaner framework** supported by exact offline search and
-   threshold sweeps;
-3. a **Galois-structured linear-transform design route** supported by planner
-   output, exact plaintext verification, and explicit negative/guardrail
-   ciphertext evidence.
+> Zhenyu Xiong, Mingsheng Wang. **Order-Four Symmetry in BGV Bootstrapping:
+> Faster Digit Extraction for Large Primes.** Asiacrypt 2026.
 
-The artifact is intentionally self-contained but lightweight: it keeps the
-modified HElib source, the large-prime fatboot driver, scripts, logs, and paper
-sources, while excluding build directories, local installs, caches, and large
-external exploration repositories.
+The paper replaces the bounded-support digit-extraction polynomial `P_A` of
+Ma et al. (EUROCRYPT 2024) by its order-four factorisation
+`P_A(X) = ½X + X³·Q(X⁴)` whenever the auxiliary radix satisfies `A² ≡ −1 (mod p)`,
+and evaluates `Q` instead of `P_A` inside HElib thin bootstrapping. This
+repository contains the implementation (a modified HElib), the drivers and exact
+command lines behind every ciphertext table in Section 7, the raw logs of the
+reported runs, the security-estimation scripts and transcripts, and a Lean 4
+formalisation of the algebraic core.
 
-## Main Positive Result
+**Everything needed for evaluation is reachable from this README.** Directories
+not listed in the map below are development history and are not needed.
 
-For the HElib thin-bootstrapping parameter set
+---
 
-```text
-p = 65537, B = 17, m = 50731, mvec = [97, 523], ords = [96, 29]
+## 1. Quick start (≈ 25 min, 16 GB RAM)
+
+```sh
+docker build -t order4-bgv .                    # ~10 min: NTL, 3 x HElib, 3 drivers
+docker run --rm -v $PWD/ae/out:/artifact/ae/out order4-bgv ae/run.sh smoke
+docker run --rm -v $PWD/ae/out:/artifact/ae/out order4-bgv ae/run.sh admissibility
+python3 ae/make_tables.py --logs ae/out/smoke 5     # your smoke run beside the paper
+python3 ae/make_tables.py                       # all tables from the shipped logs, no build needed
 ```
 
-the auxiliary radix `A=256` satisfies `A^2 = -1 mod p`. The exact cleaner has
-the order-four form
+`smoke` runs one Table 5 configuration (`p = 14401` on `m = 2^16`) with the
+order-four evaluator off and on, one trial each, decrypts, and checks every
+slot. Expected: both runs print `### bts finished, everything ok ###`, the chain
+is built at 1066 bits, and digit extraction is roughly 2x faster with the
+evaluator on. A single trial in the Docker image on our host gave
+23.62 s → 12.24 s (1.93x); three trials gave 1.89x. The paper's 2.13x for this
+row comes from concurrent runs (Sec. 7, item 4).
 
-```text
-P(X) = c_1 X + X^3 Q(X^4).
+## 2. Claims and where they are checked
+
+| # | Claim (paper location) | Command | Expected | Cost |
+|---|---|---|---|---|
+| C1 | Factored form: `P_A` has 307 instead of 612 terms, `deg Q = 305` at `p = 65537, B = 17` (Sec. 5, Thm. 2) | `python3 scripts/verify_order4.py` | `Verification PASSED`, 612 → 307 | 1 min |
+| C2 | Algebraic core machine-checked (Sec. 7 preamble) | `cd lean && lake exe cache get && lake build` | build succeeds, no `sorry` | 10 min + Mathlib cache |
+| C3 | Table 5: digit extraction on `m = 2^16`, ten primes, 1.84x–2.13x, mean 1.91x | `ae/run.sh tab5 [p ...]` then `ae/make_tables.py --logs ae/out 5` | speedup per prime about 1.85x–1.95x; see Sec. 7, item 4 for `p = 14401` | 2.7 h, up to 118 GB |
+| C4 | Table 6: nine general cyclotomic sets, 1.72x–1.88x | `ae/run.sh tab6 [set ...]` then `ae/make_tables.py --logs ae/out 6` | speedup per set within ~5% (our Docker rerun of 80B: 1.72x vs 1.74x) | 5.6 h, up to 61 GB |
+| C5 | Table 7: `m = 50731`, Ma et al. 213.1 s → ours 131.2 s (1.62x), combined 118.5 s (1.80x) | `ae/run.sh tab7` then `ae/make_tables.py --logs ae/out 7` | ratios ±5% | 1 h, 17 GB |
+| C6 | Two witnessed admissibility failures (Sec. 7.3) | `ae/run.sh admissibility` | `p too small to hold the overflow part` at `p = 257, h = 12`; no order-four radix for `p = 8191` | 1 min |
+| C7 | Table 2 λ* at the built chain and the per-attack table (Sec. 7.1, App. "Per-attack detail") | `security/built_chain.py <set>` | the paper's columns to 0.01 bit | 15–40 min per set |
+| C8 | Tables 1–2 security figures, rotated hybrid of ePrint 2026/279 (Sec. 7.1) | see `security/README.md` | `security/results/*.jsonl` | hours |
+| C9 | Okada et al. composition, p = 257 (Sec. 7.4) | see `okada_comparison/` | logs there | needs their SEAL code |
+| C10 | Butterfly linear transform, 41 rotations, 0 mismatches (Sec. 6) | see `encrypted_linear_transform/README.md` | logs there | 1 min per run |
+
+Absolute times depend on the machine; the paper's claims are the **ratios**
+between runs on one machine. `ae/make_tables.py` prints each ratio beside the
+paper's value and its relative deviation. Running it with no arguments
+tabulates the shipped logs of the reported runs; every row agrees with the
+paper to 0.3%.
+
+All runs are single-threaded except the "combined" row of Table 7, which turns
+on HElib's parallel CoeffToSlot (`HELIB_AUX_PARALLEL_COEFF2SLOT=1`).
+
+## 3. Hardware and software
+
+* x86-64 with AVX2. The reported runs used Intel Xeon processors; Tables 5
+  and 6 were measured on an Intel Xeon Gold 6230R (2.1 GHz, 256 GB).
+* RAM: 16 GB for `smoke`, `tab7` and the cheap rows; 64 GB for all of Table 6;
+  128 GB for Table 5 row `p = 2521` (peak 118 GB). The other Table 5 rows need
+  15–59 GB. Memory grows as the slot count falls, not with the ring.
+* Disk: 3 GB for the image.
+* Docker image: Ubuntu 22.04, GCC 11.4, CMake 3.22, NTL 11.5.1 (default
+  configuration, built from source), GMP 6.2.1. These are the versions on the
+  measurement host.
+
+**NTL must use its default configuration.** With `NTL_ENABLE_AVX_FFT=on`, NTL's
+single-precision primes shrink from 60 to 50 bits, HElib builds a different
+modulus chain (1086 instead of 1066 bits on `m = 2^16`), and the `m = 2^16`
+driver crashes. The Dockerfile checks this (`ae/check_ntl.cpp`).
+
+Without Docker: install the packages above, then `JOBS=8 ae/build_all.sh`.
+
+## 4. What is built
+
+`ae/build_all.sh` produces three executables in `build/bin/`:
+
+| executable | used for | HElib | driver |
+|---|---|---|---|
+| `fatboot_order4` | Tables 6 and 7 (ours) | `src/HElib_auxradix_opt` | `src/BGV-Boot-auxradix-opt` |
+| `fatboot_po2` | Table 5 | HElib `3e337a6` + Ma et al. NTT patch + `third_party/patches/helib-ntt-order4.patch` | Ma et al. NTT `fatboot.cpp` `800bae0` + `third_party/patches/ma-ntt-fatboot-order4.patch` |
+| `fatboot_ma_largep` | Table 7, row "Ma et al." | HElib `3e337a6` + Ma et al. `bgvboot-final.patch` | upstream `83b54d5`, unmodified |
+
+The two Ma et al. repositories are cloned at the pinned commits during the
+build. `bgv-bootstrapping-with-homomorphic-NTT` carries no licence, so only our
+diff against it is distributed.
+
+**Modifications to public code**, as required by the call for artifacts:
+
+* `third_party/patches/helib-auxradix-order4.REFERENCE.patch` is the full
+  diff of `src/HElib_auxradix_opt` against HElib `3e337a6` with Ma et al.'s
+  patch applied. The order-four evaluator is `src/extractDigits.cpp`
+  (`HELIB_AUX_ORDER4_EVAL`) and the radix selection is `src/recryption.cpp`
+  (`HELIB_EXPLICIT_AUX`). Everything else in that diff is behind environment
+  variables that are off by default and is not used by any table.
+* `third_party/patches/helib-ntt-order4.patch` (2 files, +122 lines) ports the
+  same evaluator to Ma et al.'s power-of-two HElib.
+* `third_party/patches/ma-ntt-fatboot-order4.patch` adds parameter sets for the
+  ten primes of Table 5 and the `bits=` / `mainhwt=` options to their driver.
+* `src/BGV-Boot-auxradix-opt/fatboot.cpp` adds parameter sets J–S (Table 6)
+  and `bits=` to the Ma et al. Large-p driver.
+
+## 5. Configuration
+
+Environment variables read by the modified HElib:
+
+| variable | meaning |
+|---|---|
+| `HELIB_EXPLICIT_AUX=A` | use auxiliary radix `A` instead of the driver default `2B+1` |
+| `HELIB_AUX_ORDER4_EVAL=1` | evaluate `P_A` as `½X + X³Q(X⁴)`; ignored, with a message, when `A² ≢ −1` |
+| `HELIB_AUX_PARALLEL_COEFF2SLOT=1` | parallel CoeffToSlot (Table 7, "combined" only) |
+| `HELIB_ZZX_CACHE_DIR=dir` | cache for digit-extraction polynomials (set by `ae/run.sh`) |
+
+Driver arguments: `i` parameter-set index, `h` encapsulated-key weight,
+`bits` requested chain length, `mainhwt` main-key weight, `repeat` trials.
+`ae/run.sh` contains the exact values for every row. Note that HElib builds a
+longer chain than the `bits` requested; the built chain is printed as
+`INFO: total bits = ...`.
+
+## 6. Reading the output
+
+Each run prints one line per trial and then the mean:
+
 ```
-
-The artifact implements two layers:
-
-1. `HELIB_EXPLICIT_AUX=256`: choose the sparse exact cleaner.
-2. `HELIB_AUX_ORDER4_EVAL=1`: evaluate the cleaner through the order-four
-   decomposition above.
-
-Repeat-three real ciphertext results. The first row is a direct run of
-`/home/user/experiments/baselines/BGV-Boot-for-Large-p`; the other rows are
-the isolated implementation in this artifact.
-
-| Variant | linear1 | linear2 | extract | total |
-|---|---:|---:|---:|---:|
-| Ma baseline aux=35 | 4.428140s | 45.268850s | 160.783267s | 213.102573s |
-| sparse aux=256 | 4.380695s | 44.512004s | 147.909934s | 199.397017s |
-| aux=256 + order-four evaluator | 4.272161s | 43.623283s | 80.770389s | 131.180978s |
-
-Speedup over sparse aux=256:
-
-```text
-extract = 45.39%
-total   = 34.21%
-```
-
-Speedup over Ma baseline aux=35:
-
-```text
-extract = 49.76%
-total   = 38.44%
-```
-
-## Broader Conservative Paper Scope
-
-The broader paper claim is **not** that all of the following are implemented in
-ciphertext form. Instead:
-
-- the order-four cleaner/evaluator is the **implemented positive path**;
-- higher-order subgroup cleaners are supported by **exact offline planner
-  evidence**;
-- the normal-basis / factorized transform route is supported by **planner output
-  and exact plaintext verification**, while current ciphertext integrations are
-  deliberately reported as negative or engineering-only evidence.
-
-This avoids overclaiming while still documenting the larger Galois-structured
-framework.
-
-## Repository Layout
-
-```text
-src/HElib_auxradix_opt/        modified HElib source
-src/BGV-Boot-auxradix-opt/     large-prime BGV fatboot driver
-scripts/                       cleaner search, planner, and transform scripts
-results/                       selected benchmark logs and summaries
-lean/                          machine-checked proofs (Lean 4, zero sorry)
-okada_comparison/              AC'23 Galois-evaluator reproduction + composition benchmark
-build_upload.sh                isolated build script
-run_auxradix_benchmark.sh      sparse-cleaner baseline benchmark
-run_order4_aux256_benchmark.sh order-four evaluator benchmark
-summarize_logs.py              compact timing summarizer
-ARTIFACT.md                    detailed reproducibility notes
-```
-
-## Build
-
-Dependencies are the same as HElib's normal CMake build, including a C++17
-compiler, CMake, GMP, and NTL.
-
-```bash
-cd /path/to/order-four-cleaner
-./build_upload.sh
-```
-
-The build script writes only inside this repository:
-
-```text
-build/
-local/
-cache/
-```
-
-These paths are ignored by Git.
-
-## Reproduce The Main Benchmark
-
-Run a quick smoke test with one bootstrap:
-
-```bash
-REPEAT=1 ./run_order4_aux256_benchmark.sh
-```
-
-Run the repeat-three benchmark used in the paper:
-
-```bash
-REPEAT=3 ./run_order4_aux256_benchmark.sh
-```
-
-Compare against the included sparse aux-256 baseline log:
-
-```bash
-python3 scripts/parse_helib_bootstrap_timings.py \
-  --baseline results/upload_aux_256_repeat3.log \
-  --optimized results/order4_aux256_repeat3.log
-```
-
-Compare against the directly measured `/baselines/BGV-Boot-for-Large-p`
-baseline log:
-
-```bash
-python3 scripts/parse_helib_bootstrap_timings.py \
-  --baseline results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log \
-  --optimized results/order4_aux256_repeat3.log
-```
-
-Expected correctness marker:
-
-```text
+time for linear1 = 3.56, linear2 = 18.30, extract = 20.06, total = 42.34
 ### bts finished, everything ok ###
 ```
 
-Expected order-four trigger:
+`linear1` + `linear2` are SlotToCoeff and CoeffToSlot, `extract` is digit
+extraction (the stage the paper changes), and `total` is the whole recryption.
+`everything ok` means every slot decrypted to the expected value; a run without
+it is not counted. With `HELIB_AUX_ORDER4_EVAL=1` the run also prints, for
+example, `HELIB_AUX_ORDER4_EVAL enabled: deg(P)=1223, terms(P)=307, deg(Q)=305`.
 
-```text
-HELIB_AUX_ORDER4_EVAL enabled: deg(P)=1223, terms(P)=307, deg(Q)=305, terms(Q)=306
+## 7. Known deviations between the paper text and the measurements
+
+We list these so that evaluators are not surprised.
+
+1. **Table 5, OFF column, auxiliary radix.** Section 7 says OFF and ON share
+   the auxiliary radix `A`. That holds for Tables 6 and 7. In Table 5, OFF runs
+   Ma et al.'s driver at its default radix `2B+1 = 27`, and ON runs the
+   order-four radix; both build the same chain. Table 5 therefore compares
+   against the baseline as published, and its ratio includes the effect of the
+   radix as well as the evaluator. `ae/run.sh tab5` reproduces exactly what was
+   measured. (With `A` forced on OFF the `m = 2^16` driver does not run.)
+2. **Single-trial and first-trial values.** Table 5's last column ("at
+   1314–1332") and the power-of-two rows of the degree-scaling table in the
+   full version report the first of three trials; the mean of three differs by
+   up to 0.05x (`results/power_of_two/`). Set 80-E and the general-ring rows
+   of the degree-scaling table are single trials (`results/baseline_matrix/`,
+   `results/degree_scaling/`, `results/paper/degscale_gen/`).
+3. **Compiler flags.** The paper says `-O2`; HElib's `Release` build, used for
+   all runs, compiles with `-O3 -march=native`.
+4. **Table 5 runs were concurrent.** The reported Table 5 runs executed OFF and
+   ON of a prime at the same time, with two to four runs on the machine
+   (`results/paper/tab5_po2/`, timestamps in the logs). Run alone in the Docker
+   image, `p = 14401` gives 22.80 s → 12.07 s (1.89x, three trials) against the
+   reported 24.39 s → 11.48 s (2.13x); the other primes of the table lie at
+   1.84x–1.95x. Expect isolated reruns of that row near 1.9x.
+
+Our reruns in the Docker image (one physical core per run): Table 6 set 80B
+1.72x (paper 1.74x); Table 7 Ma et al. baseline 211.75 s (paper 213.10 s);
+Table 5 `p = 14401` 1.89x (paper 2.13x, item 4); all nine rows of the
+per-attack security table to 0.01 bit.
+
+## 8. Repository map
+
+```
+ae/                        build, run and tabulation scripts for evaluation
+  build_all.sh             builds build/bin/{fatboot_order4,fatboot_po2,fatboot_ma_largep}
+  run.sh                   one target per table (ae/run.sh list)
+  make_tables.py           Tables 5-7 from logs, next to the paper's values
+  paper_values.json        the numbers printed in the paper
+Dockerfile                 reproducible environment
+results/paper/             raw logs of the reported runs, one file per run
+  tab5_po2/  tab6_general/  tab7_m50731/  admissibility/  degscale_gen/
+src/HElib_auxradix_opt/    modified HElib (Apache-2.0, see its NOTICE)
+src/BGV-Boot-auxradix-opt/ driver for Tables 6 and 7 (MIT, Ma et al.)
+third_party/patches/       our diffs against pinned upstream code
+security/                  Lattice Estimator scripts, transcripts and summaries
+  built_chain.py           per-attack lambda* at the built chain (Table 2, appendix)
+  results/built_chain/     its output for the nine sets
+lean/                      Lean 4 + Mathlib formalisation (zero sorry)
+scripts/verify_order4.py   plaintext check of the factored form
+encrypted_linear_transform/  Section 6 butterfly prototype and logs
+okada_comparison/          Section 7.4 composition with Okada et al.
 ```
 
-## Reproduce The New Offline Cleaner/Transform Evidence
+`results/paper/` logs are unedited except that the absolute path of the
+measurement host's home directory is replaced by `<HOST>`.
 
-### Order-adaptive cleaner sweep
+## 9. Licence
 
-```bash
-python3 scripts/order_adaptive_cleaner_sweep.py --p 65537 \
-  --json --output results/order_adaptive_cleaner_sweep_p65537.json
-```
-
-This produces the conservative threshold story used in the paper:
-
-- order four is the stable global choice at `B=17`;
-- order eight becomes support-safe only once `B <= 7`;
-- order sixteen is restricted to tiny local supports.
-
-### Character-projected search on the implemented global case
-
-```bash
-python3 scripts/character_projected_cleaner_search.py \
-  --p 65537 --B 17 --max-order 64 --max-decomposition 16 \
-  --aux 35 256 65281 \
-  --output results/character_projected_p65537_B17.json --json
-```
-
-For the target parameter set, the best valid candidate remains `A=256`. Its
-best decomposition is modulo `4`, with estimated evaluator multiplication cost
-`41` versus `73` for generic Paterson--Stockmeyer on the degree-1223 cleaner.
-The generic radix `A=35` is correct but its best decomposition is only the
-odd-polynomial modulo-`2` structure with estimated cost `55`.
-
-### Structured linear-transform planner and exact plaintext check
-
-```bash
-python3 scripts/linear_transform_factor_planner.py --all \
-  > results/linear_transform_factor_planner_all.txt
-
-python3 scripts/plaintext_rader_evalmap.py --ell 97 --seed 7 \
-  > results/plaintext_rader97_seed7.txt
-```
-
-The target set E planner output highlights:
-
-```text
-D=96 | HElib bsgs auts~18 | radix [2,2,2,2,2,3] auts~7 | primitive-ell Rader auts~9
-D=29 | HElib bsgs auts~9  | radix [29] auts~28
-```
-
-and the exact plaintext Rader verification reports:
-
-```text
-verified=True
-operation_ratio=0.7031
-conv_length=96 conv_radices=[2, 2, 2, 2, 2, 3]
-```
-
-These are design/planner claims, not a demonstrated ciphertext speedup claim.
-
-## Key Files
-
-- Implementation:
-  `src/HElib_auxradix_opt/src/extractDigits.cpp`
-- Main experiment note:
-  `results/order4_aux256_experiment.md`
-- Main repeat-three log:
-  `results/order4_aux256_repeat3.log`
-- Direct Ma baseline repeat-three log:
-  `results/baseline_BGV_Boot_for_Large_p_i4_repeat3.log`
-- Parsed comparison JSON:
-  `results/order4_aux256_vs_aux256_repeat3.json`
-  and `results/baselines_BGV_Boot_for_Large_p_vs_order4_aux256_repeat3.json`
-- New order-adaptive sweep:
-  `results/order_adaptive_cleaner_sweep_p65537.json`
-- Character-projected search:
-  `scripts/character_projected_cleaner_search.py`
-  and `results/character_projected_p65537_B17.json`
-- Structured transform planner:
-  `results/linear_transform_factor_planner_all.txt`
-- Exact plaintext Rader verification:
-  `results/plaintext_rader97_seed7.txt`
-- Concrete cleaner polynomial forms (regenerable):
-  `python3 scripts/export_cleaner_polynomial_forms.py`
-  generated by `scripts/export_cleaner_polynomial_forms.py`
-
-## Parameter Boundary
-
-For exact cleaner correctness alone, `p` can be any sufficiently large prime.
-For a support bound `B`, choosing
-
-```text
-A = 2B + 1
-```
-
-is collision-free whenever
-
-```text
-p > 4B(B+1).
-```
-
-This guarantees a unique degree-`< (2B+1)^2` exact cleaner on
-`S_A = {hA+lo : |h|, |lo| <= B}`.
-
-The order-four sparse optimization is stronger and needs more structure:
-
-```text
-p prime, p = 1 mod 4, p > 8B^2, choose A with A^2 = -1 mod p.
-```
-
-Then the support is automatically collision-free and the canonical cleaner has
-
-```text
-P_A(X) = (1/2) X + X^3 Q(X^4).
-```
-
-For the broader order-adaptive theory, the paper uses the signed-circulant
-sufficient bound
-
-```text
-(2B+1) * sum_{j=0}^{d-1} |A|^j < p,  where d = order/2.
-```
-
-For the target `p=65537`, this yields the practical thresholds used in the
-paper:
-
-```text
-order 4  -> B <= 127
-order 8  -> B <= 7
-order 16 -> B <= 1
-```
-
-The positive ciphertext implementation remains the order-four row at `B=17`.
-
-## Claim Boundary
-
-This artifact does not claim a globally optimal FHE bootstrapping method. The
-positive implemented claim is specific:
-
-```text
-fixed HElib large-prime BGV thin-bootstrap pipeline
-+ bounded-support exact cleaner
-+ order-four auxiliary radix A=256
-+ specialized evaluator for P(X)=c_1 X + X^3 Q(X^4)
-```
-
-The broader paper framework additionally claims:
-
-```text
-- higher-order cleaner feasibility / threshold results from exact offline sweeps
-- Galois-structured linear-transform design evidence from planner output
-  and exact plaintext verification
-```
-
-Several linear-transform ideas were also tested. They are included as negative
-or engineering evidence in `results/linear_transform_attempts_summary.md`.
-
-In particular, the Rader/CRT route should currently be read as:
-
-```text
-promising algebraic design route,
-not yet a demonstrated ciphertext speedup.
-```
-
-
-## Update: cross-ring validation, moderate primes, and machine-checked proofs
-
-- **`lean/`** — Lean 4 + Mathlib formalization (zero `sorry`): the Order-Four
-  Character Filter (coefficient and polynomial forms), the factored form
-  `P_A = X/2 + X^3 Q(X^4)`, support characterization, and the Section-4
-  framework (isotypic decomposition, monomial support constraint).
-  Reproduce: `lake exe cache get && lake build`. See `lean/README.md` for the
-  paper-statement ↔ Lean-name interface table.
-- **`results/power_of_two/`** — encrypted-domain digit-extraction logs on the
-  **power-of-two ring** `m = 2^16 = 65536` for `p = 65537` (32768 slots,
-  79-bit security), obtained by porting the order-four evaluator into the
-  homomorphic-NTT bootstrapping implementation (`patches/power_of_two_order4_port.patch`):
-  generic PS 22.2 s -> order-4 14.0 s (**1.59x**, three-run means); vs. a Ma-style
-  baseline radix (`aux=35`, 25.5 s) **1.83x**; thick bootstrapping 34.1 s -> 14.4 s
-  (**2.37x**). See `results/power_of_two/suite/` for the definitive sequential
-  three-run logs (earlier single-run logs in this directory were taken under
-  machine load and overstate absolute times).
-- **`results/moderate_primes/`** — encrypted-domain logs for three further
-  general-cyclotomic moderate primes (means over three sequential runs):
-  `p=1601` (44.2 -> 23.2 s, 1.90x), `p=2917` (28.3 -> 15.4 s, 1.84x),
-  `p=8101` (76.3 -> 21.4 s, 3.57x). The order-four evaluator triggers in every
-  run (`HELIB_AUX_ORDER4_EVAL enabled: deg(P)=... deg(Q)=...`) and all slots
-  decrypt correctly.
-- **`encrypted_linear_transform/`** — first **encrypted** instantiation of the
-  butterfly (Rader + mixed-radix [6,4,4]) CoeffToSlot block on the full ring
-  `m=50731`: correct on all 2784 slots (0 mismatches vs. an independent NTL
-  matvec), 41 automorphisms over 17 native rotation classes, 194 bits of noise
-  capacity consumed (no overflow even at bits=600); no extended key-switching
-  matrices required. At D=96 the monolithic BSGS remains faster (14.9 s vs
-  59.1 s), locating the O(log D) crossover at larger D.
-
-## Update: extended cross-parameter evidence (2026-07-23)
-
-- `results/general_rings_new/` — five additional general-ring primes (p = 2521, 4513, 13457, 14401, 15377; sets J–N), OFF/ON with repeat=3: speedups 1.69–1.79x. Note p=2521 runs on m=50731, the same ring as the main p=65537 set.
-- `results/power_of_two/expand/` — the power-of-two prime sweep now covers ten primes 1297 <= p <= 65537 on m=2^16 (h=26, degree 727): 1.59–1.74x, same-session sequential OFF/ON pairs.
-- `results/degree_scaling/` — key-weight scaling on both ring types (general m=50731: h in {12,18,26}; power-of-two m=2^16: h in {12,18,26,40}); the speedup grows monotonically with the digit-polynomial degree.
-- `okada_comparison/` — reproduction of Okada–Player–Pohmann (AC'23, ePrint 2023/1304) from their open-source SEAL implementation (`repro_p257.log`: full p=257 bootstrap, digit extraction 17 key switches, matching their Table 3), plus an encrypted composition benchmark (`compose_bench.cpp`, `t1_FINAL.log`): evaluating the factored Q (deg 55) takes 22 key switches / ~9.0s versus 41 / ~17.2s for the unfactored P_A, bit-identical results.
-- `patches/general_ring_sets_J_to_N.patch` — the five new fatboot parameter sets (gens/ords validated via HElib).
-
-## Update: rebuttal-phase experiments (2026-07-24)
-
-- `results/p257_order4/` — boundary demonstration at p=257 inside the power-of-two
-  pipeline: lowering the key weight to h=7 makes the support condition hold
-  ((2*7+1)^2 = 225 < 257), and the order-four evaluator then reduces encrypted
-  digit extraction from 12.6 s to 8.0 s (**1.58x**; deg(P_A)=223 -> deg(Q)=55,
-  57 nonzero terms, all 128 slots correct). Reproduce: `./run_p257_boundary.sh`
-  (details in `results/p257_order4/SUMMARY.md`).
-- `encrypted_linear_transform/crossover/results_trend/` — encrypted
-  butterfly-vs-BSGS crossover across block dimensions D = 192, 288, 576, 1152 on
-  four purpose-built rings (ring recipe and full table in `TREND_SUMMARY.md`):
-  within-row time ratios 1.25 / 1.03 / 0.61 / 0.59, so BSGS wins below and the
-  butterfly wins above a crossover just past D=288. Stage chains are
-  plaintext-verified (`derive_trend.py`, `stages{192,288,576,1152}.txt`) and both
-  encrypted paths decrypt with 0 slot mismatches.
-  Reproduce: `./run_crossover_trend.sh`.
-- `run_po2_prime_sweep.sh` — self-contained runner for the ten-prime
-  power-of-two sweep of `results/power_of_two/expand/` (h=26; expected
-  1.59-1.74x), with the prime -> parameter-index -> radix table inline.
+See `LICENSE`. Our code is MIT. `src/HElib_auxradix_opt` is a modified HElib
+(Apache-2.0); `src/BGV-Boot-auxradix-opt` derives from Ma et al. (MIT).
+`scripts/install_magma_local.sh` and `scripts/run_polyfunctions_magma_generation.sh`
+concern the Geelen et al. baseline, which needs the proprietary Magma system;
+they are optional and no table depends on them.

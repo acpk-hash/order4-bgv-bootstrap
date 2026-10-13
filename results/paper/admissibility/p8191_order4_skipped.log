@@ -1,0 +1,94 @@
+chosen idx = 1
+encapHwt = 24
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+s2cFirst ? 0
+toy ? 0
+repeat times = 1
+### partition is 0 6 10 13 
+*** GTestFatboot: p=8191, r=1, bits=980, t=0, c=3, m=65536 mvec=[65536], gens=[5], ords=[4096]
+Computing key-independent tables...using HELIB_EXPLICIT_AUX=256
+
+t = -1
+bound on I = 11.813708
+log2(aux) = 8.000000
+log2(beta) = 27.212092
+log2(qks) >= 37.212649, final log2(qks) = 37.212651
+log2(R) >= 19.673492, final log2(R) = 20.169926
+INFO: total bits = 1319.65, security level = 78.6697
+frob indices = 0 1 
+frob indices = 0 1 
+deg of poly for non-power-of-p aux is 623
+security=78.6697
+# small primes = 6
+# ctxt primes = 17
+# bits in ctxt primes = 984
+# special primes = 6
+# bits in special primes = 335
+scale=10
+ done in 157.036 seconds
+  e=0, e'=0, t=24
+  m = 65536, p = 8191, phi(m) = 32768
+  ord(p) = 8
+  normBnd = 1
+  polyNormBnd = 1
+  factors = [2]
+  generator 5 has order (!= Z_m^*) of 4096
+r = 1
+nslots = 4096
+hwt = 120
+ctxtPrimes = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
+specialPrimes = [27,28,29,30,31,32]
+number of bits = 1320
+
+security level = 78.6697
+Generating keys, Dim 0 has size 4096, using KSS_BSGS
+computing key-dependent tables...Sparse boot key hwt = 24
+ done in 26.5322 seconds
+baby step indices = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 
+giant step indices = 0 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 1.625069, cap: 20.309185
+
+baby step indices = 0 8 16 24 32 40 48 56 
+giant step indices = 0 1 2 3 60 61 62 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 1.587068, cap: 23.312830
+
+baby step indices = 0 
+giant step indices = 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 
+In BlockMatMul1DExec, dim = 0, D = 4096, native = 0, strategy = 1, iter0 = 0, iter1 = 0
+BlockMatMul1D time: 1.619887, cap: 26.261735
+WARNING: KS-noise-ratio = 359769 > 1
+baby step indices = 0 
+giant step indices = 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 
+In BlockMatMul1DExec, dim = 0, D = 4096, native = 0, strategy = 1, iter0 = 0, iter1 = 0
+BlockMatMul1D time: 5.767391, cap: 26.441796
+baby step indices = 0 8 16 24 32 40 48 56 
+giant step indices = 0 1 2 3 60 61 62 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 5.334663, cap: 23.291713
+
+baby step indices = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 
+giant step indices = 0 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 6.706293, cap: 19.639096
+
+WARNING: KS-noise-ratio = 32.2435 > 1
+baby step indices = 0 
+giant step indices = 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 
+In BlockMatMul1DExec, dim = 0, D = 4096, native = 0, strategy = 1, iter0 = 0, iter1 = 0
+BlockMatMul1D time: 5.719774, cap: 26.422496
+baby step indices = 0 8 16 24 32 40 48 56 
+giant step indices = 0 1 2 3 60 61 62 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 5.282075, cap: 23.291713
+
+baby step indices = 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 
+giant step indices = 0 63 
+In MatMul1D, D = 4096, g = 64, native = 0, iterative = 0
+MatMul1D, time: 6.841762, cap: 19.639096
+
+HELIB_AUX_ORDER4_EVAL skipped: cleaner does not have the required order-four support

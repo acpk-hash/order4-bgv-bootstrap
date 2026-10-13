@@ -1,0 +1,308 @@
+chosen idx = 0
+encapHwt = 26
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+s2cFirst ? 0
+toy ? 0
+repeat times = 3
+### partition is 0 6 12 16 
+override mainhwt = 120, override bits = 782 -> effective bits = 782, table skHwt = 120
+*** GTestFatboot: p=65537, r=1, bits=782, t=120, c=3, m=65536 mvec=[65536], gens=[-1 5], ords=[2 16384]
+Computing key-independent tables...
+t = -1
+bound on I = 12.275681
+log2(aux) = 4.754888
+log2(beta) = 30.212291
+log2(qks) >= 36.967756, final log2(qks) = 36.967764
+log2(R) >= 19.591864, final log2(R) = 20.169926
+INFO: total bits = 1066, security level = 92.8902
+deg of poly for non-power-of-p aux is 727
+security=92.8902
+# small primes = 6
+# ctxt primes = 14
+# bits in ctxt primes = 796
+# special primes = 5
+# bits in special primes = 270
+scale=10
+ done in 396.23 seconds
+  e=0, e'=0, t=26
+  m = 65536, p = 65537, phi(m) = 32768
+  ord(p) = 1
+  normBnd = 1
+  polyNormBnd = 1
+  factors = [2]
+  generator -1 has order (== Z_m^*) of 2
+  generator 5 has order (== Z_m^*) of 16384
+r = 1
+nslots = 32768
+hwt = 120
+ctxtPrimes = [6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+specialPrimes = [24,25,26,27,28]
+number of bits = 1067
+
+security level = 92.8902
+Generating keys, Dim 0 has size 2, using KSS_FULL
+Dim 1 has size 16384, using KSS_BSGS
+computing key-dependent tables...Sparse boot key hwt = 26
+ done in 25.7179 seconds
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 0.879657, cap: 22.693556
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.146140, cap: 27.584939
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.611307, cap: 28.400592
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.778241, cap: 51.114464
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.230917, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.277605, cap: 21.726262
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.642727, cap: 39.314236
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.212026, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.286003, cap: 21.726262
+
+WARNING: KS-noise-ratio = 28.9756 > 1
+WARNING: KS-noise-ratio = 1262.5 > 1
+time for linear1 = 3.637248, linear2 = 18.428720, extract = 20.217862, total = 42.668587
+bits for linear1 = 78.679087, linear2 = 88.636933, extract = 324.073160, min cap = 6.755473, after cap = 344.443345, after prod = 757.153439
+cap / time = 6.070245
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 0.846652, cap: 22.689684
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.087795, cap: 27.584939
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.570321, cap: 28.400592
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.706631, cap: 51.075324
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.178765, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.280872, cap: 21.726262
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.621915, cap: 39.313998
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.186441, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.287842, cap: 21.726262
+
+WARNING: KS-noise-ratio = 32.9241 > 1
+WARNING: KS-noise-ratio = 1284.98 > 1
+time for linear1 = 3.504919, linear2 = 18.264375, extract = 20.230392, total = 42.427670
+bits for linear1 = 78.675215, linear2 = 88.636695, extract = 324.068100, min cap = 6.755473, after cap = 344.456131, after prod = 757.160926
+cap / time = 6.105106
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 0.857095, cap: 22.665775
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.091032, cap: 27.584939
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 1.586572, cap: 28.400592
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.670958, cap: 51.140210
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.183933, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.271488, cap: 21.726262
+
+baby step indices = 0 
+giant step indices = 0 4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120 124 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.605189, cap: 39.232048
+
+baby step indices = 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120 
+giant step indices = 0 1 2 3 124 125 126 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 3.214262, cap: 27.596435
+
+baby step indices = 0 1 2 3 4 5 6 7 121 122 123 124 125 126 127 
+giant step indices = 0 127 
+In MatMul1D, D = 16384, g = 128, native = 1, iterative = 0
+MatMul1D, time: 2.267954, cap: 21.726262
+
+WARNING: KS-noise-ratio = 32.1954 > 1
+WARNING: KS-noise-ratio = 1443.61 > 1
+time for linear1 = 3.534851, linear2 = 18.214287, extract = 19.727318, total = 41.909462
+bits for linear1 = 78.651306, linear2 = 88.554745, extract = 324.032481, min cap = 6.755473, after cap = 344.481015, after prod = 757.068241
+cap / time = 6.181760
+
+### summary over 3 test
+time for linear1 = 3.559006, linear2 = 18.302461, extract = 20.058524, total = 42.335239
+bits for linear1 = 78.668536, linear2 = 88.609458, extract = 324.057914, min cap = 6.755473, after cap = 344.460164, after prod = 757.127535
+cap / time = 6.118689
+
+
+### bts finished, everything ok ###
+
+  AAA_bootKeySwitch: 28.5022 / 3 = 9.50074   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2536]
+  AAA_coeffToSlot: 27.3259 / 3 = 9.10865   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2910]
+  AAA_embeddingLargest: 0.216862 / 741 = 0.000292661   [<HOST>/0424project/worktrees/HElib_ntt/src/norms.cpp:250]
+  AAA_embeddingLargest_x2: 0.510652 / 1001 = 0.000510142   [<HOST>/0424project/worktrees/HElib_ntt/src/norms.cpp:423]
+  AAA_extractDigitsThin: 60.1746 / 3 = 20.0582   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2953]
+  AAA_modDownEnbeddings: 0.535231 / 1001 = 0.000534696   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:506]
+  AAA_slotToCoeff: 10.6768 / 3 = 3.55895   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2519]
+  BasicAutomorphPrecon: 1.73268 / 27 = 0.0641734   [<HOST>/0424project/worktrees/HElib_ntt/src/matmul.cpp:70]
+  Decrypt: 0.119032 / 3 = 0.0396773   [<HOST>/0424project/worktrees/HElib_ntt/src/keys.cpp:1350]
+  DoubleCRT: 23.3863 / 2113 = 0.0110678   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:718]
+  FFT: 13.8473 / 30116 = 0.0004598   [<HOST>/0424project/worktrees/HElib_ntt/src/CModulus.cpp:479]
+  FFT: 31.4383 / 2743 = 0.0114613   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:70]
+  FFT: 31.4275 / 30116 = 0.00104355   [<HOST>/0424project/worktrees/HElib_ntt/src/CModulus.cpp:448]
+  FFT_aux: 13.834 / 30116 = 0.000459358   [<HOST>/0424project/worktrees/HElib_ntt/src/CModulus.cpp:360]
+  FFT_remainder: 17.5659 / 30116 = 0.000583276   [<HOST>/0424project/worktrees/HElib_ntt/src/CModulus.cpp:455]
+  KS_loop: 19.0735 / 1833 = 0.0104056   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:219]
+  KS_loop_1: 3.29725 / 1833 = 0.00179882   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:227]
+  KS_loop_2: 2.10339 / 1833 = 0.00114752   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:231]
+  KS_loop_3: 3.43211 / 1833 = 0.0018724   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:236]
+  KS_loop_4: 1.05098 / 1833 = 0.000573367   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:240]
+  NORM_VAL: 1.15005 / 627 = 0.00183421   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:541]
+  addCtxt: 12.0503 / 4011 = 0.00300431   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:1458]
+  addPart: 4.26678 / 4569 = 0.000933854   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:905]
+  addPrimes: 14.9281 / 630 = 0.0236953   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:625]
+  addPrimes_5: 16.6408 / 627 = 0.0265403   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:518]
+  automorph: 0.16229 / 90 = 0.00180322   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:2489]
+  automorph: 18.0032 / 567 = 0.0317516   [<HOST>/0424project/worktrees/HElib_ntt/src/matmul.cpp:118]
+  breakIntoDigits: 16.8328 / 249 = 0.0676015   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:481]
+  decode: 49.8377 / 3 = 16.6126   [<HOST>/0424project/worktrees/HElib_ntt/src/EncryptedArray.cpp:375]
+  do_mul: 11.244 / 7749 = 0.00145103   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:280]
+  extractDigitsThin: 60.1745 / 3 = 20.0582   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2162]
+  iFFT: 8.4813 / 15464 = 0.000548454   [<HOST>/0424project/worktrees/HElib_ntt/src/CModulus.cpp:488]
+  keySwitchPart: 21.1428 / 225 = 0.093968   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:836]
+  modDownToSet: 62.7244 / 1116 = 0.0562046   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:409]
+  mul_MatMul1DExec: 65.5832 / 27 = 2.42901   [<HOST>/0424project/worktrees/HElib_ntt/src/matmul.cpp:1285]
+  multByConstant: 3.82268 / 1704 = 0.00224336   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:1884]
+  multByConstant: 0.049868 / 3 = 0.0166227   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:1910]
+  multLowLvl: 24.2254 / 168 = 0.144199   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:1733]
+  multiplyBy: 23.7545 / 87 = 0.273041   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:1809]
+  privateAssign: 2.40177 / 1851 = 0.00129755   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:329]
+  randomize: 8.04309 / 1833 = 0.00438794   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:1318]
+  randomize_stream: 4.50644 / 4639692 = 9.71279e-07   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:1348]
+  reLinearize: 31.3735 / 891 = 0.0352116   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:736]
+  smartAutomorph: 8.95814 / 90 = 0.0995349   [<HOST>/0424project/worktrees/HElib_ntt/src/Ctxt.cpp:2514]
+  thinReCrypt: 127.012 / 3 = 42.3375   [<HOST>/0424project/worktrees/HElib_ntt/src/recryption.cpp:2437]
+  toPoly: 28.3328 / 2740 = 0.0103404   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:985]
+  toPoly_CRT: 15.0179 / 2740 = 0.00548099   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:1052]
+  toPoly_FFT: 12.252 / 2740 = 0.00447155   [<HOST>/0424project/worktrees/HElib_ntt/src/DoubleCRT.cpp:1030]
+  rusage.ru_maxrss=31344680
+||||| stats |||||
+KS-noise-ratio ave=18.1686 max=1443.61
+KS-noise-ratio-hoist ave=256591 max=2.35032e+06
+break-into-digits-ratio ave=0.314714 max=0.405516
+excess-ctxtPrimes ave=14.4222 max=14.4222
+excess-specialPrimes ave=4.50046 max=4.50046
+mod-switch-added-noise ave=0.319251 max=0.393211
+ptxt_rat_sk ave=0.00627926 max=0.00627926
+ptxt_rat_sk ave=0.312548 max=0.312548
+raw-mod-switch-noise ave=0.27993 max=0.294374
+window1-nchoices ave=4.41667 max=8
+window1-out ave=0 max=0
+window2-nchoices ave=4.42949 max=7
+window2-out ave=0 max=0
+||||| stats |||||
+KS-noise-ratio ave=18.1686 max=1443.61
+KS-noise-ratio-hoist ave=256591 max=2.35032e+06
+break-into-digits-ratio ave=0.314714 max=0.405516
+excess-ctxtPrimes ave=14.4222 max=14.4222
+excess-specialPrimes ave=4.50046 max=4.50046
+mod-switch-added-noise ave=0.319251 max=0.393211
+ptxt_rat_sk ave=0.00627926 max=0.00627926
+ptxt_rat_sk ave=0.312548 max=0.312548
+raw-mod-switch-noise ave=0.27993 max=0.294374
+window1-nchoices ave=4.41667 max=8
+window1-out ave=0 max=0
+window2-nchoices ave=4.42949 max=7
+window2-out ave=0 max=0
+	Command being timed: "timeout 21600 <HOST>/0424project/baselines/bgv-bootstrapping-with-homomorphic-NTT/build_adj/fatboot i=0 bits=782 mainhwt=120 h=26 t=-1 newbts=1 newks=1 thick=0 cache=1 repeat=3"
+	User time (seconds): 579.44
+	System time (seconds): 21.36
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:00.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31344680
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11942081
+	Voluntary context switches: 3
+	Involuntary context switches: 789
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 224
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,143 @@
+chosen idx = 4
+encapHwt = 12
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+repeat times = 1
+force bsgs = 0
+force hoist = 0
+*** GTestFatboot: p=65537, r=1, bits=1500, t=0, c=3, m=50731 mvec=[97 523], gens=[48117 5239], ords=[96 29]
+Computing key-independent tables...using HELIB_EXPLICIT_AUX=256
+
+t = -1
+bound on I = 16.402088
+log2(aux) = 8.000000
+log2(beta) = 30.546816
+log2(qks) >= 41.244072, final log2(qks) = 41.244073
+log2(R) >= 29.148675, final log2(R) = 29.150462
+INFO: total bits = 2017.44, security level = 78.8964deg of poly for non-power-of-p aux is 1223
+security=78.8964
+# small primes = 6
+# ctxt primes = 26
+# bits in ctxt primes = 1505
+# special primes = 9
+# bits in special primes = 512
+scale=10
+ done in 269.344 seconds
+  e=0, e'=0, t=12
+  m = 50731, p = 65537, phi(m) = 50112
+  ord(p) = 18
+  normBnd = 1.62099
+  polyNormBnd = 5.6346
+  factors = [97 523]
+  generator 48117 has order (== Z_m^*) of 96
+  generator 5239 has order (== Z_m^*) of 29
+r = 1
+nslots = 2784
+hwt = 120
+ctxtPrimes = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+specialPrimes = [36,37,38,39,40,41,42,43,44]
+number of bits = 2018
+
+security level = 78.8964
+Generating keys, Keys generated. Now genRecryptData...
+computing key-dependent tables...Sparse boot key hwt = 12
+genRecryptData done. recryptKeyID=1
+lcAksBsgs=0 lcAksDelayed=0
+Post-key setup done.
+ done in 41.988 seconds
+Encrypt succeeded.
+WARNING: KS-noise-ratio = 1.06026 > 1
+WARNING: KS-noise-ratio = 1312.24 > 1
+time for linear1 = 4.706311, linear2 = 43.322513, extract = 145.237830, total = 195.548506
+bits for linear1 = 55.722606, linear2 = 62.255498, extract = 354.035681, min cap = 10.697257, after cap = 1038.414986, after prod = 1454.706165
+cap / time = 4.970609
+
+### summary over 1 test
+time for linear1 = 4.706311, linear2 = 43.322513, extract = 145.237830, total = 195.548506
+bits for linear1 = 55.722606, linear2 = 62.255498, extract = 354.035681, min cap = 10.697257, after cap = 1038.414986, after prod = 1454.706165
+cap / time = 4.970609
+
+
+### bts finished, everything ok ###
+
+  AAA_bootKeySwitch: 23.7646 / 1 = 23.7646   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1968]
+  AAA_coeffToSlot: 21.3883 / 1 = 21.3883   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:2396]
+  AAA_embeddingLargest: 0.790796 / 290 = 0.00272688   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/norms.cpp:250]
+  AAA_embeddingLargest_x2: 0.632906 / 239 = 0.00264814   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/norms.cpp:423]
+  AAA_extractDigitsThin: 145.236 / 1 = 145.236   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:2447]
+  AAA_modDownEnbeddings: 0.744655 / 239 = 0.00311571   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:506]
+  AAA_slotToCoeff: 4.70624 / 1 = 4.70624   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1954]
+  BasicAutomorphPrecon: 4.62847 / 8 = 0.578559   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:90]
+  BluesteinFFT: 89.2302 / 24461 = 0.00364786   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/bluestein.cpp:141]
+  Decrypt: 0.614162 / 1 = 0.614162   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/keys.cpp:1362]
+  DoubleCRT: 56.3205 / 533 = 0.105667   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:718]
+  FFT: 82.8696 / 17404 = 0.00476152   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:448]
+  FFT: 82.8792 / 768 = 0.107916   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:70]
+  FFT: 66.6159 / 17404 = 0.00382762   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:479]
+  FFT_aux: 66.6029 / 17404 = 0.00382687   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:360]
+  FFT_remainder: 16.2423 / 17404 = 0.000933251   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:455]
+  KS_loop: 18.0832 / 592 = 0.0305459   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:219]
+  KS_loop_1: 3.11619 / 592 = 0.00526384   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:227]
+  KS_loop_2: 1.85394 / 592 = 0.00313165   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:231]
+  KS_loop_3: 3.16889 / 592 = 0.00535285   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:236]
+  KS_loop_4: 1.1584 / 592 = 0.00195675   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:240]
+  NORM_VAL: 1.35534 / 234 = 0.00579203   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:541]
+  addCtxt: 10.5594 / 1657 = 0.00637258   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1529]
+  addPart: 4.17482 / 1469 = 0.00284195   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:976]
+  addPrimes: 41.5096 / 235 = 0.176637   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:625]
+  addPrimes_5: 43.4473 / 234 = 0.185672   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:518]
+  automorph: 15.7747 / 157 = 0.100476   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:148]
+  automorph: 0.096702 / 21 = 0.00460486   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+  breakIntoDigits: 43.7047 / 84 = 0.520294   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:481]
+  decode: 16.6173 / 1 = 16.6173   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/EncryptedArray.cpp:375]
+  do_mul: 9.86435 / 2237 = 0.00440963   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:280]
+  extractDigitsThin: 145.236 / 1 = 145.236   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1597]
+  iFFT: 40.8024 / 7057 = 0.00578183   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:488]
+  iFFT_division: 13.6791 / 7057 = 0.00193837   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:570]
+  keySwitchPart: 46.6734 / 77 = 0.606148   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:907]
+  modDownToSet: 104.405 / 265 = 0.393981   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:409]
+  mul_MatMul1DExec: 41.4533 / 6 = 6.90889   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:1155]
+  multByConstant: 0.120909 / 1 = 0.120909   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1981]
+  multByConstant: 2.51694 / 376 = 0.00669398   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1955]
+  multLowLvl: 66.5744 / 75 = 0.887658   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1804]
+  multiplyBy: 60.7063 / 32 = 1.89707   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1880]
+  privateAssign: 2.67074 / 535 = 0.00499204   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:329]
+  randomize: 7.47637 / 592 = 0.012629   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1318]
+  randomize_stream: 4.19747 / 4345993 = 9.65824e-07   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1348]
+  reLinearize: 75.3861 / 150 = 0.502574   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:736]
+  smartAutomorph: 10.8667 / 21 = 0.51746   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  thinReCrypt: 195.55 / 1 = 195.55   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1872]
+  toPoly: 54.9216 / 767 = 0.0716057   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:985]
+  toPoly_CRT: 9.47881 / 767 = 0.0123583   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1052]
+  toPoly_FFT: 44.746 / 767 = 0.0583389   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1030]
+  rusage.ru_maxrss=10547292
+||||| stats |||||
+KS-noise-ratio ave=17.0566 max=1312.24
+KS-noise-ratio-hoist ave=1.44302e+06 max=1.15442e+07
+break-into-digits-ratio ave=0.323098 max=0.395325
+excess-ctxtPrimes ave=5.43078 max=5.43078
+excess-specialPrimes ave=2.48795 max=2.48795
+mod-switch-added-noise ave=0.328504 max=0.41537
+ptxt_rat_sk ave=0.00187839 max=0.00187839
+ptxt_rat_sk ave=0.334456 max=0.334456
+raw-mod-switch-noise ave=0.316791 max=0.316791
+window1-nchoices ave=4.8 max=7
+window1-out ave=0 max=0
+window2-nchoices ave=4.32857 max=8
+window2-out ave=0 max=0
+||||| stats |||||
+KS-noise-ratio ave=17.0566 max=1312.24
+KS-noise-ratio-hoist ave=1.44302e+06 max=1.15442e+07
+break-into-digits-ratio ave=0.323098 max=0.395325
+excess-ctxtPrimes ave=5.43078 max=5.43078
+excess-specialPrimes ave=2.48795 max=2.48795
+mod-switch-added-noise ave=0.328504 max=0.41537
+ptxt_rat_sk ave=0.00187839 max=0.00187839
+ptxt_rat_sk ave=0.334456 max=0.334456
+raw-mod-switch-noise ave=0.316791 max=0.316791
+window1-nchoices ave=4.8 max=7
+window1-out ave=0 max=0
+window2-nchoices ave=4.32857 max=8
+window2-out ave=0 max=0

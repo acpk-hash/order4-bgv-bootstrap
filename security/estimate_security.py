@@ -12,7 +12,7 @@
 # structure "cannot be leveraged to improve the probability".
 import sys, os, time, math, json, argparse
 
-EST_PATH = os.path.expanduser("~/sagesetup/lattice-estimator")
+EST_PATH = os.environ.get("LATTICE_ESTIMATOR", os.path.expanduser("~/sagesetup/lattice-estimator"))
 sys.path.insert(0, EST_PATH)
 
 from estimator import *  # noqa

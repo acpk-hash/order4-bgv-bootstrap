@@ -1,0 +1,12 @@
+chosen idx = 2
+encapHwt = 12
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+repeat times = 1
+force bsgs = 0
+force hoist = 0
+*** GTestFatboot: p=257, r=2, bits=1610, t=0, c=3, m=55427 mvec=[43 1289], gens=[52850 2581], ords=[42 -46]
+Computing key-independent tables...terminate called after throwing an instance of 'helib::LogicError'
+  what():  non-power-of-p aux: p too small to hold the overflow part

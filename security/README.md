@@ -61,6 +61,19 @@ The theoretical ceiling on the gain is `log2 N`, which is 13 to 16 bits on these
 rings. Every measured loss is well below it. That ceiling is our derivation from
 the hit-probability amplification, not a theorem the paper states.
 
+## Built-chain security (Table 2, last column; appendix per-attack table)
+
+`built_chain.py` evaluates the main-key instance (`h' = 120`) at the modulus
+chain HElib actually built in the Table 6 runs, with uSVP, BDD, dual and the
+primal hybrid at (mitm, babai) = FF, TF, TT. Output for all nine sets is in
+`results/built_chain/`; `lambda_star` is the row minimum.
+
+```
+for s in 80A 80B 80C 80D 128A 128B 128C 128D 128E; do
+  sage -python built_chain.py $s > results/built_chain/$s.json
+done
+```
+
 ## Files
 
 | file | contents |
@@ -82,6 +95,7 @@ Stock estimator:
 ```
 git clone https://github.com/malb/lattice-estimator
 git -C lattice-estimator checkout 3e48ef4
+export LATTICE_ESTIMATOR=$PWD/lattice-estimator
 sage -python estimate_security.py --validate           # reproduce the baseline
 sage -python estimate_security.py --sets sets.json
 ```

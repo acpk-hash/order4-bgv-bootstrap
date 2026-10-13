@@ -75,7 +75,7 @@ Everything is formalized at the **coefficient level**: the substitution operator
 
 ## Notes
 
-- The formalization also *confirms a reviewer observation*: the functional
+- The formalization also *confirms an observation*: the functional
   equation `P(AX)+A·P(X)=AX` **alone** forces the support into `{1}∪{k≡3 mod 4}`
   and `c₁ = 1/2` (see `order_four_filter`), so the separate oddness argument is
   not logically required for the support characterization.

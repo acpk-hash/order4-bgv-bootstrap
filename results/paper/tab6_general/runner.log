@@ -1,0 +1,152 @@
+[2026-07-31 13:43:52] === QUEUE START pid=40634 ===
+[2026-07-31 13:43:52] WAIT 80A off: need 128G avail, have 12G
+[2026-07-31 13:46:52] LAUNCH 80A off attempt=1 i=9 bits=1101 h=12 A=95 (avail=231G othersfatboot=6 load=22.33)
+[2026-07-31 13:50:08] CHAIN-OK 80A off: total=1524.2 target=1510 bits=1101
+PARSED 80A off: log2Q=1524.2 extract=89.312632 total=139.790153 cap_after=724.089914 decrypt_ok=True rss_gb=12.7
+[2026-07-31 13:58:08] DONE 80A off rc=0
+[2026-07-31 13:58:08] LAUNCH 80A on attempt=1 i=9 bits=1101 h=12 A=95 (avail=218G othersfatboot=11 load=10.90)
+[2026-07-31 14:01:23] CHAIN-OK 80A on: total=1524.2 target=1510 bits=1101
+PARSED 80A on: log2Q=1524.2 extract=50.116331 total=100.029437 cap_after=696.949178 decrypt_ok=True rss_gb=12.5
+[2026-07-31 14:07:08] DONE 80A on rc=0
+[2026-07-31 14:07:08] LAUNCH 128B off attempt=1 i=14 bits=856 h=26 A=54 (avail=122G othersfatboot=6 load=13.63)
+[2026-07-31 14:23:26] 80E follow-on: waiting for the main queue
+[2026-07-31 14:24:39] CHAIN-OK 128B off: total=1153.03 target=1184 bits=856
+PARSED 128B off: log2Q=1153.03 extract=127.232672 total=229.424562 cap_after=450.009604 decrypt_ok=True rss_gb=38.0
+[2026-07-31 14:37:39] DONE 128B off rc=0
+[2026-07-31 14:37:39] LAUNCH 128B on attempt=1 i=14 bits=856 h=26 A=54 (avail=242G othersfatboot=0 load=7.64)
+[2026-07-31 14:54:55] CHAIN-OK 128B on: total=1153.03 target=1184 bits=856
+[2026-07-31 14:55:35] LAUNCH 128B on attempt=1 i=14 bits=856 h=26 A=54 (avail=219G othersfatboot=3 load=3.84)
+[2026-07-31 15:12:51] CHAIN-OK 128B on: total=1153.03 target=1184 bits=856
+PARSED 128B on: log2Q=1153.03 extract=70.675768 total=170.231391 cap_after=419.73701 decrypt_ok=True rss_gb=37.7
+[2026-07-31 15:22:51] DONE 128B on rc=0
+[2026-07-31 15:25:28] QUEUE: 128B on ended rc=143 (continuing queue)
+[2026-07-31 15:25:28] === PRIORITY 1 COMPLETE ===
+[2026-07-31 15:25:28] LAUNCH 80B off attempt=1 i=12 bits=1228 h=12 A=120 (avail=242G othersfatboot=0 load=5.77)
+[2026-07-31 15:28:28] CHAIN-OK 80B off: total=1642.05 target=1680 bits=1228
+PARSED 80B off: log2Q=1642.05 extract=100.054748 total=141.630655 cap_after=807.127364 decrypt_ok=True rss_gb=8.7
+[2026-07-31 15:36:43] DONE 80B off rc=0
+[2026-07-31 15:36:43] LAUNCH 80B on attempt=1 i=12 bits=1228 h=12 A=120 (avail=242G othersfatboot=0 load=4.40)
+[2026-07-31 15:39:43] CHAIN-OK 80B on: total=1642.05 target=1680 bits=1228
+PARSED 80B on: log2Q=1642.05 extract=57.401989 total=97.513289 cap_after=776.094319 decrypt_ok=True rss_gb=8.5
+[2026-07-31 15:45:43] DONE 80B on rc=0
+[2026-07-31 15:45:43] LAUNCH 80C off attempt=1 i=10 bits=1318 h=12 A=116 (avail=243G othersfatboot=0 load=1.45)
+[2026-07-31 15:48:59] CHAIN-OK 80C off: total=1786.76 target=1800 bits=1318
+[2026-07-31 15:51:22] === PAR SCHEDULER START pid=113345 ===
+[2026-07-31 15:51:22] PAR-ADMIT 128A (avail=231G runsum_before=25G proj=55G waited=0s)
+[2026-07-31 15:51:22] PAR-WORKER1 picked: 128D 16 8101 57521 56832 90 26 934 1287 22 48000000 100
+[2026-07-31 15:51:22] PAR-ADMIT 128D (avail=231G runsum_before=80G proj=22G waited=0s)
+[2026-07-31 15:51:22] PAR-LAUNCH 128A off attempt=1 i=18 bits=1039 h=26 A=116 (avail=231G othersfatboot=3 load=1.27 conc_with=128D,80C)
+[2026-07-31 15:51:22] PAR-LAUNCH 128D off attempt=1 i=16 bits=934 h=26 A=90 (avail=231G othersfatboot=3 load=1.27 conc_with=128A,80C)
+[2026-07-31 15:51:42] PAR-WORKER2 picked: 128E 17 14401 54359 51480 120 26 839 1161 22 45000000 100
+[2026-07-31 15:51:42] PAR-WAIT 128E: avail=231G (need 100G) runsum=102G (+22 must be <=120G)
+[2026-07-31 15:54:11] PAIRED: === start, waiting for any run still in flight ===
+[2026-07-31 15:54:23] PAR-JANITOR: old queue exited, 80C slot released
+[2026-07-31 15:54:42] PAR-ADMIT 128E (avail=209G runsum_before=77G proj=22G waited=180s)
+[2026-07-31 15:54:42] PAR-LAUNCH 128E off attempt=1 i=17 bits=839 h=26 A=120 (avail=209G othersfatboot=6 load=3.29 conc_with=128A,128D)
+[2026-07-31 15:56:08] PAR-CHAIN-OK 128D off: total=1289.76 target=1287 bits=934
+[2026-07-31 15:56:15] REPAIR: queued: 80E 4 65537 50731 50112 256 12 1500 2017 32 64000000 100
+[2026-07-31 15:56:15] REPAIR: waiting for 80C_off to finish before queueing 80C
+[2026-07-31 15:58:06] === PAR SCHEDULER v2 START pid=118958 ===
+[2026-07-31 15:58:06] ADOPT-80C: watching orphaned 80C off fatboot (i=10)
+[2026-07-31 15:58:06] PAR-ADMIT 128A (avail=231G runsum_before=25G proj=55G waited=0s)
+[2026-07-31 15:58:06] PAR-WORKER1 picked: 128D 16 8101 57521 56832 90 26 934 1287 22 48000000 100
+[2026-07-31 15:58:06] PAR-ADMIT 128D (avail=231G runsum_before=80G proj=22G waited=0s)
+[2026-07-31 15:58:06] PAR-LAUNCH 128A off attempt=1 i=18 bits=1039 h=26 A=116 (avail=231G othersfatboot=3 load=1.78 conc_with=128D,80C)
+[2026-07-31 15:58:06] PAR-LAUNCH 128D off attempt=1 i=16 bits=934 h=26 A=90 (avail=231G othersfatboot=4 load=1.78 conc_with=128A,80C)
+[2026-07-31 15:58:26] PAR-WORKER2 picked: 128E 17 14401 54359 51480 120 26 839 1161 22 45000000 100
+[2026-07-31 15:58:26] PAR-WAIT 128E: avail=243G (need 100G) runsum=102G (+22 must be <=120G)
+PARSED 80C off: log2Q=1786.76 extract=113.726563 total=161.876995 cap_after=905.400022 decrypt_ok=True rss_gb=12.1
+[2026-07-31 15:58:29] DONE 80C off rc=0
+PARSED 80C off: log2Q=1786.76 extract=113.726563 total=161.876995 cap_after=905.400022 decrypt_ok=True rss_gb=12.1
+[2026-07-31 15:58:36] ADOPT-80C: off leg adopted ok; enqueueing 80C for ON leg
+[2026-07-31 15:58:36] ADOPT-80C: enqueued
+[2026-07-31 15:58:45] REPAIR: waiting for the parallel campaign to drain
+[2026-07-31 15:59:26] PAR-ADMIT 128E (avail=242G runsum_before=77G proj=22G waited=60s)
+[2026-07-31 15:59:26] PAR-LAUNCH 128E off attempt=1 i=17 bits=839 h=26 A=120 (avail=242G othersfatboot=4 load=2.86 conc_with=128A,128D)
+[2026-07-31 16:02:52] PAR-CHAIN-MISS 128D off: got 1289.76 band=[0.97*1287,1287] -> kill+adjust
+[2026-07-31 16:02:55] PAR-LAUNCH 128D off attempt=2 i=16 bits=918 h=26 A=90 (avail=205G othersfatboot=5 load=4.95 conc_with=128A,80C)
+[2026-07-31 16:04:57] PAR-CHAIN-OK 128E off: total=1132.56 band=[0.97*1161,1161] bits=839
+[2026-07-31 16:07:55] PAR-CHAIN-OK 128D off: total=1267.48 band=[0.97*1287,1287] bits=918
+[2026-07-31 16:12:22] PAR-CHAIN-MISS 128A off: got 1383.39 band=[0.97*1427,1427] -> kill+adjust
+[2026-07-31 16:12:25] PAR-LAUNCH 128A off attempt=2 i=18 bits=1055 h=26 A=116 (avail=144G othersfatboot=6 load=4.83 conc_with=128D,80C)
+PARSED 128E off: log2Q=1132.56 extract=129.770604 total=188.427344 cap_after=399.66057 decrypt_ok=True rss_gb=16.2
+[2026-07-31 16:15:57] PAR-DONE 128E off rc=0
+[2026-07-31 16:15:57] PAR-LAUNCH 128E on attempt=1 i=17 bits=839 h=26 A=120 (avail=153G othersfatboot=5 load=4.50 conc_with=128A,128D)
+[2026-07-31 16:18:09] ORPHANKILL: killing stale fatboot pid=119010 (i=18 bits=1039, latest=1055) ppid=1
+[2026-07-31 16:18:38] ORPHANKILL: daemon start pid=137294
+PARSED 128D off: log2Q=1267.48 extract=152.388198 total=207.465054 cap_after=476.023528 decrypt_ok=True rss_gb=13.7
+[2026-07-31 16:19:40] PAR-DONE 128D off rc=0
+[2026-07-31 16:19:40] PAR-LAUNCH 128D on attempt=1 i=16 bits=918 h=26 A=90 (avail=204G othersfatboot=4 load=3.49 conc_with=128A,128E)
+[2026-07-31 16:21:27] PAR-CHAIN-OK 128E on: total=1132.56 band=[0.97*1161,1161] bits=839
+[2026-07-31 16:24:25] PAR-CHAIN-OK 128D on: total=1267.48 band=[0.97*1287,1287] bits=918
+[2026-07-31 16:26:40] PAR-CHAIN-OK 128A off: total=1406.93 band=[0.97*1427,1427] bits=1055
+PARSED 128E on: log2Q=1132.56 extract=70.848302 total=129.936521 cap_after=371.936255 decrypt_ok=True rss_gb=15.9
+[2026-07-31 16:29:27] PAR-DONE 128E on rc=0
+[2026-07-31 16:29:27] PAR-SET-DONE 128E off_rc=0 on_rc=0
+[2026-07-31 16:29:27] PAR-WORKER2 picked: 128C 15 15377 55459 53640 124 26 877 1212 28 52000000 100
+[2026-07-31 16:29:27] PAR-ADMIT 128C (avail=168G runsum_before=77G proj=28G waited=0s)
+[2026-07-31 16:29:27] PAR-LAUNCH 128C off attempt=1 i=15 bits=877 h=26 A=124 (avail=168G othersfatboot=4 load=3.15 conc_with=128A,128D)
+PARSED 128D on: log2Q=1267.48 extract=81.073931 total=134.777908 cap_after=448.876349 decrypt_ok=True rss_gb=13.3
+[2026-07-31 16:32:41] PAR-DONE 128D on rc=0
+[2026-07-31 16:32:41] PAR-SET-DONE 128D off_rc=0 on_rc=0
+[2026-07-31 16:32:41] PAR-WORKER1 picked: 80D 11 2521 50731 50112 71 12 1498 2040 32 64000000 100
+[2026-07-31 16:32:41] PAR-ADMIT 80D (avail=170G runsum_before=83G proj=32G waited=0s)
+[2026-07-31 16:32:41] PAR-LAUNCH 80D off attempt=1 i=11 bits=1498 h=12 A=71 (avail=170G othersfatboot=4 load=3.35 conc_with=128A,128C)
+[2026-07-31 16:35:28] PAR-CHAIN-MISS 128C off: got 1172.61 band=[0.97*1212,1212] -> kill+adjust
+[2026-07-31 16:35:31] PAR-LAUNCH 128C off attempt=2 i=15 bits=892 h=26 A=124 (avail=158G othersfatboot=5 load=3.54 conc_with=128A,128D)
+[2026-07-31 16:35:46] ORPHANKILL: killing stale fatboot pid=152312 (i=15 bits=877, latest=892) ppid=1
+[2026-07-31 16:36:26] PAR-CHAIN-OK 80D off: total=2026.15 band=[0.97*2040,2040] bits=1498
+[2026-07-31 16:41:31] PAR-CHAIN-OK 128C off: total=1193.06 band=[0.97*1212,1212] bits=892
+PARSED 128A off: log2Q=1406.93 extract=183.152117 total=312.984146 cap_after=599.591163 decrypt_ok=True rss_gb=61.6
+[2026-07-31 16:45:11] PAR-DONE 128A off rc=0
+[2026-07-31 16:45:11] PAR-LAUNCH 128A on attempt=1 i=18 bits=1055 h=26 A=116 (avail=210G othersfatboot=4 load=3.57 conc_with=128C,80D)
+PARSED 80D off: log2Q=2026.15 extract=148.931932 total=198.965756 cap_after=1119.423593 decrypt_ok=True rss_gb=10.1
+[2026-07-31 16:47:56] PAR-DONE 80D off rc=0
+[2026-07-31 16:47:56] PAR-LAUNCH 80D on attempt=1 i=11 bits=1498 h=12 A=71 (avail=206G othersfatboot=4 load=3.36 conc_with=128A,128C)
+[2026-07-31 16:51:41] PAR-CHAIN-OK 80D on: total=2026.15 band=[0.97*2040,2040] bits=1498
+PARSED 128C off: log2Q=1193.06 extract=134.999071 total=195.271958 cap_after=438.523268 decrypt_ok=True rss_gb=22.2
+[2026-07-31 16:53:01] PAR-DONE 128C off rc=0
+[2026-07-31 16:53:01] PAR-LAUNCH 128C on attempt=1 i=15 bits=892 h=26 A=124 (avail=201G othersfatboot=4 load=3.11 conc_with=128A,80D)
+[2026-07-31 16:59:01] PAR-CHAIN-OK 128C on: total=1193.06 band=[0.97*1212,1212] bits=892
+[2026-07-31 16:59:26] PAR-CHAIN-OK 128A on: total=1406.93 band=[0.97*1427,1427] bits=1055
+PARSED 80D on: log2Q=2026.15 extract=86.029239 total=136.636401 cap_after=1093.965845 decrypt_ok=True rss_gb=9.7
+[2026-07-31 17:00:11] PAR-DONE 80D on rc=0
+[2026-07-31 17:00:11] PAR-SET-DONE 80D off_rc=0 on_rc=0
+[2026-07-31 17:00:11] PAR-WORKER1 picked: 80C 10 13457 45193 44100 116 12 1318 1800 25 52000000 100
+[2026-07-31 17:00:11] PAR-ADMIT 80C (avail=161G runsum_before=83G proj=25G waited=0s)
+[2026-07-31 17:00:11] PAR-SKIP 80C off (done marker exists)
+[2026-07-31 17:00:11] PAR-LAUNCH 80C on attempt=1 i=10 bits=1318 h=12 A=116 (avail=161G othersfatboot=4 load=3.14 conc_with=128A,128C)
+[2026-07-31 17:03:27] PAR-CHAIN-OK 80C on: total=1786.76 band=[0.97*1800,1800] bits=1318
+PARSED 128C on: log2Q=1193.06 extract=76.318166 total=139.396752 cap_after=410.785813 decrypt_ok=True rss_gb=21.8
+[2026-07-31 17:07:32] PAR-DONE 128C on rc=0
+[2026-07-31 17:07:32] PAR-SET-DONE 128C off_rc=0 on_rc=0
+[2026-07-31 17:07:32] PAR-WORKER2 drained
+PARSED 80C on: log2Q=1786.76 extract=66.227148 total=114.135947 cap_after=876.267149 decrypt_ok=True rss_gb=11.8
+[2026-07-31 17:10:42] PAR-DONE 80C on rc=0
+[2026-07-31 17:10:42] PAR-SET-DONE 80C off_rc=0 on_rc=0
+[2026-07-31 17:10:42] PAR-WORKER1 drained
+PARSED 128A on: log2Q=1406.93 extract=100.971828 total=231.720432 cap_after=571.724656 decrypt_ok=True rss_gb=61.1
+[2026-07-31 17:13:57] PAR-DONE 128A on rc=0
+[2026-07-31 17:13:57] PAR-SET-DONE 128A off_rc=0 on_rc=0
+[2026-07-31 17:13:57] === SIX-SET DRAIN COMPLETE ===
+[2026-07-31 17:13:57] OPTIONAL 80A redo starting (band [1465,1510])
+[2026-07-31 17:13:57] PAR-ADMIT 80A (avail=221G runsum_before=0G proj=13G waited=0s)
+[2026-07-31 17:13:57] PAR-LAUNCH 80A off attempt=1 i=9 bits=1074 h=12 A=95 (avail=221G othersfatboot=2 load=2.23 conc_with=none)
+[2026-07-31 17:16:57] PAR-CHAIN-MISS 80A off: got 1431.92 band=[0.97*1510,1510] -> kill+adjust
+[2026-07-31 17:17:00] PAR-LAUNCH 80A off attempt=2 i=9 bits=1114 h=12 A=95 (avail=203G othersfatboot=3 load=2.21 conc_with=none)
+[2026-07-31 17:17:04] ORPHANKILL: killing stale fatboot pid=194653 (i=9 bits=1074, latest=1114) ppid=1
+[2026-07-31 17:20:15] PAR-CHAIN-MISS 80A off: got 1524.2 band=[0.97*1510,1510] -> kill+adjust
+[2026-07-31 17:20:18] PAR-LAUNCH 80A off attempt=3 i=9 bits=1087 h=12 A=95 (avail=231G othersfatboot=1 load=1.93 conc_with=none)
+[2026-07-31 17:20:26] ORPHANKILL: killing stale fatboot pid=196231 (i=9 bits=1114, latest=1087) ppid=1
+[2026-07-31 17:23:33] PAR-CHAIN-OK 80A off: total=1497.91 band=[0.97*1510,1510] bits=1087
+PARSED 80A off: log2Q=1497.91 extract=80.462938 total=126.668997 cap_after=681.231226 decrypt_ok=True rss_gb=12.7
+[2026-07-31 17:30:33] PAR-DONE 80A off rc=0
+[2026-07-31 17:30:33] PAR-LAUNCH 80A on attempt=1 i=9 bits=1087 h=12 A=95 (avail=243G othersfatboot=0 load=2.11 conc_with=none)
+[2026-07-31 17:33:49] PAR-CHAIN-OK 80A on: total=1497.91 band=[0.97*1510,1510] bits=1087
+PARSED 80A on: log2Q=1497.91 extract=46.28093 total=92.176058 cap_after=649.668285 decrypt_ok=True rss_gb=12.5
+[2026-07-31 17:39:04] PAR-DONE 80A on rc=0
+[2026-07-31 17:39:04] PAR-SET-DONE 80A off_rc=0 on_rc=0
+[2026-07-31 17:39:04] === PAR SCHEDULER v2 ALLDONE ===
+[2026-07-31 17:39:13] ORPHANKILL: daemon exit (PAR_ALLDONE)
+[2026-07-31 17:39:24] REPAIR: campaign drained after 100 min, starting the 2^17 batch
+[2026-07-31 17:39:24] REPAIR: 2^17 batch launched

@@ -5,7 +5,7 @@ defaultTargets = ["BootstrapAlgebra"]
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-version = "git#master"
+rev = "24ef8a8c893173686f1ce65b5961175cd6f6413d"
 
 [[lean_lib]]
 name = "BootstrapAlgebra"

@@ -33,7 +33,7 @@ struct Parameters
     const long r; // exponent
     // p^r is the plaintext-space modulus
     const long c;        // number of columns in the key-switching matrices
-    const long bits;     // # of bits in the modulus chain
+    long bits;     // # of bits in the modulus chain  [rebuttal patch: mutable]
     const long skHwt;    // Hamming weight of recryption secret key
     const long nthreads; // number of threads
     const long seed;     // random number seed
@@ -644,6 +644,9 @@ int main(int argc, char *argv[])
     long force_hoist_arg = 0;
     amap.arg("forcehoist", force_hoist_arg, "force hoisted automorphisms: 0 default/on, -1 off");
 
+    long bits_arg = 0;
+    amap.arg("bits", bits_arg, "override modulus chain bits (0 = table default)");
+
     amap.parse(argc, argv);
     // some candidate primes:
     // 2^14 - 3
@@ -774,6 +777,144 @@ int main(int argc, char *argv[])
                     0, 0, force_chen_han, 0, 0, 
                 // global_gens,global_ords,global_mvec,outer_rep,inner_rep
                 {48117, 5239}, {96, 29}, {97, 523}, 1, 5),
+/*F*/   Parameters( // d = 3, p = 1601 order-four, good dim, m = 24901 = 37*673
+                // r = 1 required: p^e+1 < 2^30 caps e, so r+1<=e_bnd fails for r>=2.
+                // context build validated: security = 80.6 at bits=700, nslots=8064, e=2, e'=1.
+                // p, r, c, bits, h
+                1601, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {10769, 2702}, {36, 224}, {37, 673}, 1, 5),
+/*G*/   Parameters( // d = 5, p = 8101 order-four (90^2=8100=-1), good dim, m = 23771 = 11*2161
+                // gens/ords via CRT constructor (gp4), validated vs Set C/F. carrier=2161.
+                // p, r, c, bits, h
+                8101, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {19450, 2168}, {10, 432}, {11, 2161}, 1, 5),
+/*H*/   Parameters( // d = 6, p = 2917 order-four (54^2=2916=-1), bad dim, m = 17587 = 43*409
+                // m=42311=29*1459 rejected (ThinEvalMap bad inertPrefix). This Set C-like
+                // structure (43 good dim 42, 409 carrier bad dim -68) builds: sec=58.3, nslots=2856.
+                // gens/ords via CRT constructor (gp5), carrier=409. context build validated t=-1.
+                // p, r, c, bits, h
+                2917, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {1637, 9418}, {42, -68}, {43, 409}, 1, 5),
+/*I*/   Parameters( // d = 12, p = 1297 order-four (36^2=1296=-1), bad dim, m = 48547 = 43*1129
+                // gens/ords via CRT constructor (gp6), validated vs Set C/F. carrier=1129
+                // (43 good dim 42, 1129 carrier bad dim -94). nslots=3948.
+                // p, r, c, bits, h
+                1297, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {9033, 3398}, {42, -94}, {43, 1129}, 1, 5),
+/*J*/   Parameters( // d = 4, p = 4513 order-four (95^2=4512=-1), bad dim, m = 37637 = 61*617
+                // gens/ords via CRT constructor, validated vs Set F/H/I. carrier=617
+                // (61 good dim 60, 617 carrier bad dim -154). PAlgebra confirmed, nslots=9240.
+                // p, r, c, bits, h
+                4513, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {21596, 32087}, {60, -154}, {61, 617}, 1, 5),
+/*K*/   Parameters( // d = 7, p = 13457 order-four (116^2=13456=-1), good dim, m = 45193 = 43*1051
+                // gens/ords via CRT constructor, validated vs Set D/F. same ring as Set D.
+                // carrier=1051 (43 good dim 42, 1051 carrier good dim 150). PAlgebra confirmed,
+                // both dims good, nslots=6300.
+                // p, r, c, bits, h
+                13457, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {26276, 11611}, {42, 150}, {43, 1051}, 1, 5),
+/*L*/   Parameters( // d = 18, p = 2521 order-four (71^2=2520=-1), good dim, m = 50731 = 97*523
+                // suspect primary m=47749 (double-bad, offline unreliable) rejected; alternate
+                // m=50731 = Set E's exact ring/gens/ords, carrier=523 (97 good 96, 523 carrier
+                // good 29). PAlgebra confirmed, both dims good, nslots=2784.
+                // p, r, c, bits, h
+                2521, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {48117, 5239}, {96, 29}, {97, 523}, 1, 5),
+/*M*/   Parameters( // d = 11, p = 14401 order-four (120^2=14400=-1), good dim, m = 43033 = 23*1871
+                // suspect primary m=29941 (cyclic single-gen, unfit for mvec recryption) rejected;
+                // alternate m=43033, carrier=1871 (23 good 22, 1871 carrier good 170). PAlgebra
+                // confirmed, both dims good, nslots=3740.
+                // p, r, c, bits, h
+                14401, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {22453, 11248}, {22, 170}, {23, 1871}, 1, 5),
+/*N*/   Parameters( // d = 4, p = 15377 order-four (124^2=15376=-1), good dim, m = 19679 = 11*1789
+                // suspect primary m=42541 (q2=379 not carrier) rejected; alternate m=19679,
+                // carrier=1789 (11 good 10, 1789 carrier good 447). PAlgebra confirmed, both dims
+                // good, nslots=4470.
+                // p, r, c, bits, h
+                15377, 1, 3, 760, 0,
+                // nthreads,seed,useCache,c_m,
+                    1, 0, 1, 100,
+                // force_bsgs,force_hoist,chen_han,debug,scale
+                    0, 0, force_chen_han, 0, 0,
+                // global_gens,global_ords,global_mvec,outer_rep,inner_rep
+                {14313, 3587}, {10, 447}, {11, 1789}, 1, 5),
+/*O*/   Parameters( // i=14: 128-B. d = 4, p = 2917 order-four (54^2=-1), m = 53983 = 1459*37
+                // carrier=37 (1459 good dim 1458, 37 carrier dim 9), nslots=13122
+                // p, r, c, bits, h
+                2917, 1, 3, 856, 0,
+                    1, 0, 1, 100,
+                    0, 0, force_chen_han, 0, 0,
+                {33560, 7296}, {1458, 9}, {1459, 37}, 1, 5),
+/*P*/   Parameters( // i=15: 128-C. d = 4, p = 15377 order-four (124^2=-1), m = 55459 = 31*1789
+                // carrier=1789 (31 good dim 30, 1789 carrier dim 447), nslots=13410
+                // p, r, c, bits, h
+                15377, 1, 3, 877, 0,
+                    1, 0, 1, 100,
+                    0, 0, force_chen_han, 0, 0,
+                {30414, 44734}, {30, 447}, {31, 1789}, 1, 5),
+/*Q*/   Parameters( // i=16: 128-D. d = 8, p = 8101 order-four (90^2=-1), m = 57521 = 97*593
+                // carrier=593 (97 good dim 96, 593 carrier BAD dim -74), nslots=7104
+                // p, r, c, bits, h
+                8101, 1, 3, 934, 0,
+                    1, 0, 1, 100,
+                    0, 0, force_chen_han, 0, 0,
+                {10675, 52187}, {96, -74}, {97, 593}, 1, 5),
+/*R*/   Parameters( // i=17: 128-E. d = 10, p = 14401 order-four (120^2=-1), m = 54359 = 19*2861
+                // carrier=2861 (19 good dim 18, 2861 carrier BAD dim -286), nslots=5148
+                // p, r, c, bits, h
+                14401, 1, 3, 839, 0,
+                    1, 0, 1, 100,
+                    0, 0, force_chen_han, 0, 0,
+                {20028, 34334}, {18, -286}, {19, 2861}, 1, 5),
+/*S*/   Parameters( // i=18: 128-A. d = 2, p = 13457 order-four (116^2=-1), m = 65047 = 29*2243
+                // carrier=2243 (29 good dim 28, 2243 carrier dim 1121), nslots=31388
+                // p, r, c, bits, h
+                13457, 1, 3, 1039, 0,
+                    1, 0, 1, 100,
+                    0, 0, force_chen_han, 0, 0,
+                {6730, 51592}, {28, 1121}, {29, 2243}, 1, 5),
 
         };
     // clang-format on
@@ -797,6 +938,8 @@ int main(int argc, char *argv[])
     std::cout << "repeat times = " << repeat_arg << "\n";
     std::cout << "force bsgs = " << force_bsgs_arg << "\n";
     std::cout << "force hoist = " << force_hoist_arg << "\n";
+    if (bits_arg > 0) real_params[i_arg].bits = bits_arg;
+    std::cout << "bits (effective) = " << real_params[i_arg].bits << "\n";
     real_params[i_arg].inner_rep = repeat_arg;
     GTestFatboot test(real_params[i_arg],
                       noPrint,

@@ -8,6 +8,14 @@ Third-party and forked source code keeps its original license:
 - `src/BGV-Boot-auxradix-opt/` is based on the large-prime BGV bootstrapping
   artifact licensed under the MIT License; see
   `src/BGV-Boot-auxradix-opt/LICENSE`.
+- `third_party/patches/*.patch` are diffs against third-party repositories
+  that are fetched at pinned commits by `ae/build_all.sh` and keep those
+  repositories' terms. `bgv-bootstrapping-with-homomorphic-NTT` (Ma et al.) has
+  no licence file, so its code is not redistributed here; only our diff
+  against it, with the usual three lines of unified-diff context, is.
+- `okada_comparison/*.cpp` are benchmark harnesses written by us that compile
+  against the SEAL-based implementation of Okada, Player and Pohmann (AC'23);
+  that implementation is not included.
 
 Unless another file or subdirectory states otherwise, the experiment scripts,
 benchmark wrappers, result summaries, and documentation added at the repository

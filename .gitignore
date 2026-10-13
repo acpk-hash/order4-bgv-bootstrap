@@ -11,3 +11,7 @@ build/
 local/
 cache/saved_ZZX/*.txt
 tower_linear_transform/src/rader_bootstrap
+third_party/src/
+ae/out/
+helib.log
+security/results/built_chain/*.err

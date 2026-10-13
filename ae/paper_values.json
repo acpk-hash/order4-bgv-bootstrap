@@ -1,0 +1,34 @@
+{
+  "_comment": "Numbers as printed in the Asiacrypt 2026 camera-ready version of paper #528 (Section 7). extract/total in seconds, mean of three trials unless noted.",
+  "tab5_po2": {
+    "_caption": "Table 5: digit extraction on m=2^16, recommended 80-bit point (h'=120, h=26, B=13, deg P_A=727)",
+    "1297":  {"A": 36,  "slots": 8,     "logQ": 1071, "off": 23.00, "on": 11.78, "speedup": 1.95},
+    "1601":  {"A": 40,  "slots": 32,    "logQ": 1071, "off": 22.93, "on": 12.39, "speedup": 1.85},
+    "2521":  {"A": 71,  "slots": 4,     "logQ": 1071, "off": 24.71, "on": 12.82, "speedup": 1.93},
+    "3137":  {"A": 56,  "slots": 32,    "logQ": 1071, "off": 21.98, "on": 11.43, "speedup": 1.92},
+    "4513":  {"A": 95,  "slots": 16,    "logQ": 1066, "off": 20.39, "on": 11.11, "speedup": 1.84},
+    "7057":  {"A": 84,  "slots": 8,     "logQ": 1066, "off": 21.13, "on": 11.25, "speedup": 1.88},
+    "13457": {"A": 116, "slots": 8,     "logQ": 1066, "off": 21.35, "on": 10.94, "speedup": 1.95},
+    "14401": {"A": 120, "slots": 32,    "logQ": 1066, "off": 24.39, "on": 11.48, "speedup": 2.13},
+    "15377": {"A": 124, "slots": 8,     "logQ": 1066, "off": 21.66, "on": 11.74, "speedup": 1.85},
+    "65537": {"A": 256, "slots": 32768, "logQ": 1066, "off": 20.06, "on": 10.81, "speedup": 1.85, "total_off": 42.34, "total_on": 33.25}
+  },
+  "tab6_general": {
+    "_caption": "Table 6: general cyclotomic rings at the recommended chains",
+    "80A":  {"p": 4513,  "logQ": 1524.2, "off": 89.31,  "on": 50.12,  "speedup": 1.78, "total_off": 139.79, "total_on": 100.03},
+    "80B":  {"p": 14401, "logQ": 1642.0, "off": 100.05, "on": 57.40,  "speedup": 1.74, "total_off": 141.63, "total_on": 97.51},
+    "80C":  {"p": 13457, "logQ": 1786.8, "off": 113.73, "on": 66.23,  "speedup": 1.72, "total_off": 161.88, "total_on": 114.14},
+    "80D":  {"p": 2521,  "logQ": 2026.2, "off": 148.93, "on": 86.03,  "speedup": 1.73, "total_off": 198.97, "total_on": 136.64},
+    "128A": {"p": 13457, "logQ": 1406.9, "off": 183.15, "on": 100.97, "speedup": 1.81, "total_off": 312.98, "total_on": 231.72},
+    "128B": {"p": 2917,  "logQ": 1153.0, "off": 127.23, "on": 70.68,  "speedup": 1.80, "total_off": 229.42, "total_on": 170.23},
+    "128C": {"p": 15377, "logQ": 1193.1, "off": 135.00, "on": 76.32,  "speedup": 1.77, "total_off": 195.27, "total_on": 139.40},
+    "128D": {"p": 8101,  "logQ": 1267.5, "off": 152.39, "on": 81.07,  "speedup": 1.88, "total_off": 207.47, "total_on": 134.78},
+    "128E": {"p": 14401, "logQ": 1132.6, "off": 129.77, "on": 70.85,  "speedup": 1.83, "total_off": 188.43, "total_on": 129.94}
+  },
+  "tab7_m50731": {
+    "_caption": "Table 7: p=65537, m=50731, 2784 slots. linear = linear1 + linear2",
+    "ma":       {"linear": 49.70, "extract": 160.78, "total": 213.10, "speedup": 1.00},
+    "order4":   {"linear": 47.89, "extract": 80.77,  "total": 131.18, "speedup": 1.62},
+    "combined": {"linear": 29.34, "extract": 86.38,  "total": 118.49, "speedup": 1.80}
+  }
+}
