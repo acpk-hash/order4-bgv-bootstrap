@@ -1,3 +1,4 @@
+#include <cstdlib>
 /* enc_butterfly.cpp
  *
  * Encrypted prototype of the O(log D) mixed-radix/Rader butterfly evaluation
@@ -52,12 +53,12 @@ int main(int argc, char** argv)
 
   const long m = 50731, p = 65537, r = 1, c = 3;
   const long D = 96;
-  const string proto_dir =
-      "/home/user/experiments/order4bgv/tower_linear_transform/"
-      "encrypted_prototype/";
-  const string dump_path =
-      "/home/user/order4-artifact/"
-      "step2_matrix_dim0_sz96.txt";
+  // stages.txt lives next to this file; the HElib Step2 dump at the repository
+  // root. Both can be overridden from the environment.
+  const char* pd = getenv("BUTTERFLY_DIR");
+  const char* dp = getenv("STEP2_DUMP");
+  const string proto_dir = pd ? string(pd) + "/" : string("./");
+  const string dump_path = dp ? string(dp) : string("../step2_matrix_dim0_sz96.txt");
 
   cout << "=== encrypted butterfly prototype: m=" << m << " p=" << p
        << " bits=" << bits << " allks=" << allks << " ===" << endl;

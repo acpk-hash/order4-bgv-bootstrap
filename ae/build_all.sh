@@ -10,6 +10,8 @@
 #                                HElib 3e337a6 + Ma et al. homomorphic-NTT patch
 #                                + third_party/patches/helib-ntt-order4.patch;
 #                                driver = Ma et al. NTT fatboot + our patch.
+#   build/bin/enc_butterfly      ours, Section 5 encrypted butterfly prototype
+#                                (m = 50731), same HElib as fatboot_order4.
 #   build/bin/fatboot_ma_largep  baseline of Ma et al. (Table 7, row "Ma et al."),
 #                                unmodified upstream.
 #
@@ -65,6 +67,11 @@ build_order4() {
         -Dhelib_DIR="$ROOT/local/helib_auxradix_opt/share/cmake/helib" > /dev/null
   cmake --build "$ROOT/build/fatboot_order4" --target fatboot --parallel "$JOBS" > /dev/null
   cp "$ROOT/build/fatboot_order4/fatboot" "$BIN/fatboot_order4"
+  # Section 5: encrypted butterfly prototype, same HElib
+  local L="$ROOT/local/helib_auxradix_opt"
+  "${CXX:-g++}" -O2 -std=c++17 -march=native -DHELIB_BOOT_THREADS -DHELIB_THREADS \
+      "$ROOT/encrypted_linear_transform/enc_butterfly.cpp" -I"$L/include" -L"$L/lib" \
+      -lhelib -lntl -lgmp -lpthread -o "$BIN/enc_butterfly"
 }
 
 build_po2() {

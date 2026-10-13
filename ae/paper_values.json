@@ -1,7 +1,19 @@
 {
-  "_comment": "Numbers as printed in the Asiacrypt 2026 camera-ready version of paper #528 (Section 7). extract/total in seconds, mean of three trials unless noted.",
-  "tab5_po2": {
-    "_caption": "Table 5: digit extraction on m=2^16, recommended 80-bit point (h'=120, h=26, B=13, deg P_A=727)",
+  "_comment": "Reference values as printed in the paper. 'cr' = Asiacrypt 2026 camera-ready (the PDF submitted with this artifact), 'full' = IACR ePrint full version. Times in seconds, mean of three trials unless noted.",
+
+  "tolerance": {
+    "_comment": "Pass/fail thresholds used by ae/verify.sh. Speedups are ratios of two runs on one machine and are compared relatively; absolute times are machine dependent and are never checked.",
+    "shipped_logs_rel": 0.005,
+    "rerun_speedup_rel": 0.15,
+    "rerun_speedup_min_po2": 1.5,
+    "rerun_speedup_min_general": 1.5,
+    "rerun_speedup_min_m50731_order4": 1.35,
+    "security_abs_bits": 0.02
+  },
+
+  "po2": {
+    "_where": {"cr": "Table 4, Sec. 6.2", "full": "Table 5, Sec. 6.2"},
+    "_caption": "Digit extraction on m = 2^16 at the recommended 80-bit point (h' = 120, h = 26, B = 13, deg P_A = 727)",
     "1297":  {"A": 36,  "slots": 8,     "logQ": 1071, "off": 23.00, "on": 11.78, "speedup": 1.95},
     "1601":  {"A": 40,  "slots": 32,    "logQ": 1071, "off": 22.93, "on": 12.39, "speedup": 1.85},
     "2521":  {"A": 71,  "slots": 4,     "logQ": 1071, "off": 24.71, "on": 12.82, "speedup": 1.93},
@@ -11,24 +23,55 @@
     "13457": {"A": 116, "slots": 8,     "logQ": 1066, "off": 21.35, "on": 10.94, "speedup": 1.95},
     "14401": {"A": 120, "slots": 32,    "logQ": 1066, "off": 24.39, "on": 11.48, "speedup": 2.13},
     "15377": {"A": 124, "slots": 8,     "logQ": 1066, "off": 21.66, "on": 11.74, "speedup": 1.85},
-    "65537": {"A": 256, "slots": 32768, "logQ": 1066, "off": 20.06, "on": 10.81, "speedup": 1.85, "total_off": 42.34, "total_on": 33.25}
+    "65537": {"A": 256, "slots": 32768, "logQ": 1066, "off": 20.06, "on": 10.81, "speedup": 1.85,
+              "total_off": 42.34, "total_on": 33.25}
   },
-  "tab6_general": {
-    "_caption": "Table 6: general cyclotomic rings at the recommended chains",
-    "80A":  {"p": 4513,  "logQ": 1524.2, "off": 89.31,  "on": 50.12,  "speedup": 1.78, "total_off": 139.79, "total_on": 100.03},
-    "80B":  {"p": 14401, "logQ": 1642.0, "off": 100.05, "on": 57.40,  "speedup": 1.74, "total_off": 141.63, "total_on": 97.51},
-    "80C":  {"p": 13457, "logQ": 1786.8, "off": 113.73, "on": 66.23,  "speedup": 1.72, "total_off": 161.88, "total_on": 114.14},
-    "80D":  {"p": 2521,  "logQ": 2026.2, "off": 148.93, "on": 86.03,  "speedup": 1.73, "total_off": 198.97, "total_on": 136.64},
-    "128A": {"p": 13457, "logQ": 1406.9, "off": 183.15, "on": 100.97, "speedup": 1.81, "total_off": 312.98, "total_on": 231.72},
-    "128B": {"p": 2917,  "logQ": 1153.0, "off": 127.23, "on": 70.68,  "speedup": 1.80, "total_off": 229.42, "total_on": 170.23},
-    "128C": {"p": 15377, "logQ": 1193.1, "off": 135.00, "on": 76.32,  "speedup": 1.77, "total_off": 195.27, "total_on": 139.40},
-    "128D": {"p": 8101,  "logQ": 1267.5, "off": 152.39, "on": 81.07,  "speedup": 1.88, "total_off": 207.47, "total_on": 134.78},
-    "128E": {"p": 14401, "logQ": 1132.6, "off": 129.77, "on": 70.85,  "speedup": 1.83, "total_off": 188.43, "total_on": 129.94}
+
+  "general": {
+    "_where": {"cr": "Table 5, Sec. 6.3", "full": "Table 6, Sec. 6.3"},
+    "_caption": "Digit extraction and whole recryption on the nine recommended general cyclotomic sets",
+    "80A":  {"p": 4513,  "m": 37637, "logQ": 1524.2, "off": 89.31,  "on": 50.12,  "speedup": 1.78, "total_off": 139.79, "total_on": 100.03},
+    "80B":  {"p": 14401, "m": 43033, "logQ": 1642.0, "off": 100.05, "on": 57.40,  "speedup": 1.74, "total_off": 141.63, "total_on": 97.51},
+    "80C":  {"p": 13457, "m": 45193, "logQ": 1786.8, "off": 113.73, "on": 66.23,  "speedup": 1.72, "total_off": 161.88, "total_on": 114.14},
+    "80D":  {"p": 2521,  "m": 50731, "logQ": 2026.2, "off": 148.93, "on": 86.03,  "speedup": 1.73, "total_off": 198.97, "total_on": 136.64},
+    "128A": {"p": 13457, "m": 65047, "logQ": 1406.9, "off": 183.15, "on": 100.97, "speedup": 1.81, "total_off": 312.98, "total_on": 231.72},
+    "128B": {"p": 2917,  "m": 53983, "logQ": 1153.0, "off": 127.23, "on": 70.68,  "speedup": 1.80, "total_off": 229.42, "total_on": 170.23},
+    "128C": {"p": 15377, "m": 55459, "logQ": 1193.1, "off": 135.00, "on": 76.32,  "speedup": 1.77, "total_off": 195.27, "total_on": 139.40},
+    "128D": {"p": 8101,  "m": 57521, "logQ": 1267.5, "off": 152.39, "on": 81.07,  "speedup": 1.88, "total_off": 207.47, "total_on": 134.78},
+    "128E": {"p": 14401, "m": 54359, "logQ": 1132.6, "off": 129.77, "on": 70.85,  "speedup": 1.83, "total_off": 188.43, "total_on": 129.94}
   },
-  "tab7_m50731": {
-    "_caption": "Table 7: p=65537, m=50731, 2784 slots. linear = linear1 + linear2",
+
+  "m50731": {
+    "_where": {"cr": "Table 6, Sec. 6.4", "full": "Table 8, Sec. 6.4"},
+    "_caption": "p = 65537, m = 50731, 2784 slots; linear = linear1 + linear2; speedup of total vs Ma et al.",
     "ma":       {"linear": 49.70, "extract": 160.78, "total": 213.10, "speedup": 1.00},
     "order4":   {"linear": 47.89, "extract": 80.77,  "total": 131.18, "speedup": 1.62},
     "combined": {"linear": 29.34, "extract": 86.38,  "total": 118.49, "speedup": 1.80}
+  },
+
+  "security_built_chain": {
+    "_where": {"cr": "Table 3, last column (lambda*)", "full": "Table 4 and Table 10, App. D"},
+    "_caption": "Main-key instance at the chain HElib built, h' = 120. Per-attack costs in bits; 80A and 128B only lambda* in the paper.",
+    "80A":  {"lambda_star": 80.5},
+    "80B":  {"usvp": 85.54,  "bdd": 85.81,  "dual": 86.17,  "hyb_FF": 84.82,  "hyb_TF": 82.75,  "hyb_TT": 83.39,  "lambda_star": 82.75},
+    "80C":  {"usvp": 84.53,  "bdd": 84.33,  "dual": 84.89,  "hyb_FF": 84.17,  "hyb_TF": 81.94,  "hyb_TT": 82.48,  "lambda_star": 81.94},
+    "80D":  {"usvp": 84.75,  "bdd": 84.75,  "dual": 85.35,  "hyb_FF": 84.62,  "hyb_TF": 82.44,  "hyb_TT": 82.90,  "lambda_star": 82.44},
+    "128A": {"usvp": 153.38, "bdd": 153.14, "dual": 154.42, "hyb_FF": 140.64, "hyb_TF": 129.81, "hyb_TT": 130.85, "lambda_star": 129.81},
+    "128B": {"lambda_star": 131.0},
+    "128C": {"usvp": 154.27, "bdd": 154.27, "dual": 155.31, "hyb_FF": 140.84, "hyb_TF": 129.90, "hyb_TT": 131.13, "lambda_star": 129.90},
+    "128D": {"usvp": 153.81, "bdd": 153.81, "dual": 154.78, "hyb_FF": 140.78, "hyb_TF": 129.84, "hyb_TT": 130.98, "lambda_star": 129.84},
+    "128E": {"usvp": 155.89, "bdd": 155.89, "dual": 157.00, "hyb_FF": 141.88, "hyb_TF": 130.77, "hyb_TT": 132.05, "lambda_star": 130.77}
+  },
+
+  "plaintext": {
+    "_where": {"cr": "Sec. 4.1-4.3, Theorems 2 and 4", "full": "same"},
+    "p": 65537, "A": 256, "B": 17,
+    "deg_P": 1223, "terms_odd_baseline": 612, "terms_P": 307, "deg_Q": 305, "terms_Q": 306
+  },
+
+  "admissibility": {
+    "_where": {"cr": "Sec. 6.3, 'Two witnessed admissibility failures'; Theorem 3", "full": "same"},
+    "p257_abort_message": "p too small to hold the overflow part",
+    "p_without_order_four_radix": 8191
   }
 }

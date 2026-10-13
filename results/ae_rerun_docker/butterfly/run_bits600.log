@@ -1,0 +1,54 @@
+=== encrypted butterfly prototype: m=50731 p=65537 bits=600 allks=1 ===
+loaded 6 stages, nontrivial rotations in chain: 34, const-mults: 40
+loaded dump matrix
+INFO: total bits = 808.015, security level = 218.473context built in 58.8707 s
+securityLevel = 218.473
+nslots=2784 d=18 dim0 size=96 native=1 dim1 size=29 native=1
+HElib slot polynomial G matches stage data G: YES
+keygen+KS in 34.9641 s
+input capacity: 569.265 bits
+WARNING: KS-noise-ratio = 2.57783e+07 > 1
+rotate1D(+1) => slot i holds old[i-1]; using amt = -offset
+constants encoded in 2.60942 s
+WARNING: KS-noise-ratio = 2.73077e+07 > 1
+WARNING: KS-noise-ratio = 2.791e+07 > 1
+WARNING: KS-noise-ratio = 2.85133e+07 > 1
+WARNING: KS-noise-ratio = 2.74431e+07 > 1
+WARNING: KS-noise-ratio = 2.65434e+07 > 1
+  stage 1: 2.07434 s, capacity 518.045 bits
+  stage 2: 3.52488 s, capacity 496.764 bits
+  stage 3: 3.58202 s, capacity 469.721 bits
+  stage 4: 3.53313 s, capacity 449.495 bits
+  stage 5: 3.52449 s, capacity 428.026 bits
+  stage 6: 2.99853 s, capacity 401.224 bits
+WARNING: KS-noise-ratio = 2.74431e+07 > 1
+WARNING: KS-noise-ratio = 2.791e+07 > 1
+  DC fixup: 3.37642 s, capacity 377.145 bits
+ENCRYPTED CHAIN: 22.6228 s total, 41 rotations, final capacity 377.145 bits (input 569.265)
+VERIFY vs dump matvec (up to fixed Rader permutation): PASS  (2784 slots checked, 0 mismatches)
+BASELINE BSGS MatMul1D (transposed=0): precomp 13.12 s, mul 5.78883 s, capacity after 513.812 bits (input 569.265), matvec match: no (2784 mismatches)
+BASELINE BSGS MatMul1D (transposed=1): precomp 13.0113 s, mul 5.78301 s, capacity after 513.792 bits (input 569.265), matvec match: YES (0 mismatches)
+done
+	Command being timed: "/artifact/build/bin/enc_butterfly 600 1 1"
+	User time (seconds): 174.46
+	System time (seconds): 4.49
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:58.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4547088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2465738
+	Voluntary context switches: 1
+	Involuntary context switches: 469
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
