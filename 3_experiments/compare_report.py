@@ -35,9 +35,9 @@ GROUPS = {
         ("G1_ours_off_radix27", "G1", "ours, OFF, baseline radix A = 27, baseline chain (1314)"),
         ("G2_ours_off_radix256", "G2", "ours, OFF, order-four radix A = 256, baseline chain (1314)"),
         ("G3_ours_on_radix256", "G3", "ours, ON, A = 256, baseline chain (1314) (treatment)"),
-        ("G4_ours_off_radix27_rec", "G4", "ours, OFF, A = 27, recommended 1066-bit chain (Table 4 OFF)"),
+        ("G4_ours_off_radix27_rec", "G4", "ours, OFF, A = 27, recommended 1066-bit chain (Table 5 OFF)"),
         ("G5_ours_off_radix256_rec", "G5", "ours, OFF, A = 256, recommended 1066-bit chain"),
-        ("G6_ours_on_radix256_rec", "G6", "ours, ON, A = 256, recommended 1066-bit chain (Table 4 ON)"),
+        ("G6_ours_on_radix256_rec", "G6", "ours, ON, A = 256, recommended 1066-bit chain (Table 5 ON)"),
     ],
 }
 
@@ -46,12 +46,12 @@ RATIOS = [
     ("m50731", "G0", "G1", "total", "Do our changes, switched off, leave the baseline unchanged?", (0.95, 1.05), None),
     ("m50731", "G1", "G2", "extract", "Effect of the radix alone (evaluator OFF)", None, None),
     ("m50731", "G2", "G3", "extract", "Effect of the evaluator alone (same radix)", (1.5, None), None),
-    ("m50731", "G0", "G3", "total", "Ours vs original baseline, whole recryption (Table 6)", (1.35, None), 1.62),
-    ("m50731", "G0", "G4", "total", "Combined vs original baseline (Table 6, 'combined')", (1.35, None), 1.80),
+    ("m50731", "G0", "G3", "total", "Ours vs original baseline, whole recryption (Table 8)", (1.35, None), 1.62),
+    ("m50731", "G0", "G4", "total", "Combined vs original baseline (Table 8, 'combined')", (1.35, None), 1.80),
     ("po2", "G0", "G1", "total", "Do our changes, switched off, leave the baseline unchanged?", (0.95, 1.05), None),
     ("po2", "G1", "G2", "extract", "Effect of the radix alone, baseline chain (1314)", None, None),
-    ("po2", "G2", "G3", "extract", "Effect of the evaluator alone, baseline chain (1314) (Table 4, last column, p = 65537)", (1.4, None), 1.59),
-    ("po2", "G4", "G6", "extract", "Table 4 as measured: baseline radix OFF vs ON, 1066-bit chain", (1.5, None), 1.85),
+    ("po2", "G2", "G3", "extract", "Effect of the evaluator alone, baseline chain (1314) (Table 5, last column, p = 65537)", (1.4, None), 1.59),
+    ("po2", "G4", "G6", "extract", "Table 5 as measured: baseline radix OFF vs ON, 1066-bit chain", (1.5, None), 1.85),
     ("po2", "G5", "G6", "extract", "Effect of the evaluator alone, 1066-bit chain", (1.4, None), None),
     ("po2", "G4", "G6", "total", "Whole recryption, 1066-bit chain (paper: 42.34 s -> 33.25 s)", (1.1, None), 1.27),
 ]

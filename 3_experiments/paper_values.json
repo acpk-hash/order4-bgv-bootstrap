@@ -1,5 +1,5 @@
 {
-  "_comment": "Reference values as printed in the paper. 'cr' = Asiacrypt 2026 camera-ready (the PDF submitted with this artifact), 'full' = IACR ePrint full version. Times in seconds, mean of three trials unless noted.",
+  "_comment": "Reference values as printed in the paper. 'cr' = Asiacrypt 2026 camera-ready (the PDF submitted with this artifact), 'full' = IACR ePrint full version (same numbering for Tables 1-8). Times in seconds, mean of three trials unless noted.",
 
   "tolerance": {
     "_comment": "Pass/fail thresholds used by ae/verify.sh. Speedups are ratios of two runs on one machine and are compared relatively; absolute times are machine dependent and are never checked.",
@@ -12,7 +12,7 @@
   },
 
   "po2": {
-    "_where": {"cr": "Table 4, Sec. 6.2", "full": "Table 5, Sec. 6.2"},
+    "_where": {"cr": "Table 5, Sec. 6.2", "full": "Table 5, Sec. 6.2"},
     "_caption": "Digit extraction on m = 2^16 at the recommended 80-bit point (h' = 120, h = 26, B = 13, deg P_A = 727)",
     "1297":  {"A": 36,  "slots": 8,     "logQ": 1071, "off": 23.00, "on": 11.78, "speedup": 1.95},
     "1601":  {"A": 40,  "slots": 32,    "logQ": 1071, "off": 22.93, "on": 12.39, "speedup": 1.85},
@@ -28,7 +28,7 @@
   },
 
   "general": {
-    "_where": {"cr": "Table 5, Sec. 6.3", "full": "Table 6, Sec. 6.3"},
+    "_where": {"cr": "Table 6, Sec. 6.3", "full": "Table 6, Sec. 6.3"},
     "_caption": "Digit extraction and whole recryption on the nine recommended general cyclotomic sets",
     "80A":  {"p": 4513,  "m": 37637, "logQ": 1524.2, "off": 89.31,  "on": 50.12,  "speedup": 1.78, "total_off": 139.79, "total_on": 100.03},
     "80B":  {"p": 14401, "m": 43033, "logQ": 1642.0, "off": 100.05, "on": 57.40,  "speedup": 1.74, "total_off": 141.63, "total_on": 97.51},
@@ -42,7 +42,7 @@
   },
 
   "m50731": {
-    "_where": {"cr": "Table 6, Sec. 6.4", "full": "Table 8, Sec. 6.4"},
+    "_where": {"cr": "Table 8, Sec. 6.4", "full": "Table 8, Sec. 6.4"},
     "_caption": "p = 65537, m = 50731, 2784 slots; linear = linear1 + linear2; speedup of total vs Ma et al.",
     "ma":       {"linear": 49.70, "extract": 160.78, "total": 213.10, "speedup": 1.00},
     "order4":   {"linear": 47.89, "extract": 80.77,  "total": 131.18, "speedup": 1.62},
@@ -50,7 +50,7 @@
   },
 
   "security_built_chain": {
-    "_where": {"cr": "Table 3, last column (lambda*)", "full": "Table 4 and Table 10, App. D"},
+    "_where": {"cr": "Table 4, last column (lambda*)", "full": "Table 4 and Table 10, App. D"},
     "_caption": "Main-key instance at the chain HElib built, h' = 120. Per-attack costs in bits; 80A and 128B only lambda* in the paper.",
     "80A":  {"lambda_star": 80.5},
     "80B":  {"usvp": 85.54,  "bdd": 85.81,  "dual": 86.17,  "hyb_FF": 84.82,  "hyb_TF": 82.75,  "hyb_TT": 83.39,  "lambda_star": 82.75},

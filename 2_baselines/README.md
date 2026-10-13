@@ -12,8 +12,8 @@ patches only to the copy. To check that a tree is unmodified, compare it with
 | directory | upstream | commit | licence | role |
 |---|---|---|---|---|
 | `HElib-3e337a6/` | https://github.com/homenc/HElib | `3e337a66a91a92d49de6a9505340826b0eb71081` | Apache-2.0 (`LICENSE.md`) | base library of every build |
-| `BGV-Boot-for-Large-p-83b54d5/` | https://github.com/msh086/BGV-Boot-for-Large-p | `83b54d5` | MIT (`LICENSE`) | Ma et al., EUROCRYPT 2024: baseline of camera-ready Table 6 [full version Table 8]; its driver is also the base of our driver |
-| `bgv-bootstrapping-with-homomorphic-NTT-800bae0/` | https://github.com/msh086/bgv-bootstrapping-with-homomorphic-NTT | `800bae0` | **none published**, see `NOTICE.md` inside | Ma et al., homomorphic NTT for power-of-two rings: baseline of camera-ready Table 4 [full version Table 5] |
+| `BGV-Boot-for-Large-p-83b54d5/` | https://github.com/msh086/BGV-Boot-for-Large-p | `83b54d5` | MIT (`LICENSE`) | Ma et al., EUROCRYPT 2024: baseline of Table 8; its driver is also the base of our driver |
+| `bgv-bootstrapping-with-homomorphic-NTT-800bae0/` | https://github.com/msh086/bgv-bootstrapping-with-homomorphic-NTT | `800bae0` | **none published**, see `NOTICE.md` inside | Ma et al., homomorphic NTT for power-of-two rings: baseline of Table 5 |
 | `ntl-11.5.1.tar.gz` | https://libntl.org | 11.5.1, SHA-256 `210d06c31306cbc6eaf6814453c56c776d9d8e8df36d74eb306f6a523d1c6a8a` | LGPL-2.1+ | number theory library used by HElib |
 
 ## How each baseline is built
@@ -35,11 +35,11 @@ Our own executables start from the same trees and add the diffs in
 
 ## Baselines not included
 
-* **HElib native bootstrapping** (camera-ready Table 6, first row): it is the
+* **HElib native bootstrapping** (Table 8, first row): it is the
   same `HElib-3e337a6/` tree with its own Chen–Han digit extraction; at
   `p = 65537` it does not finish within 12 hours, and the paper claims no ratio
   against it.
-* **Geelen et al., EUROCRYPT 2023** (camera-ready Table 6, second row): their
+* **Geelen et al., EUROCRYPT 2023** (Table 8, second row): their
   polynomial generation needs the commercial Magma system at `p = 65537`; the
   paper's row is an extrapolation, marked as such, and is not measured.
 * **Okada et al., ASIACRYPT 2023** (Sec. 6.4): their SEAL-based code is not

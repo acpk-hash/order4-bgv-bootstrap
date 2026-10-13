@@ -7,10 +7,10 @@
     python3 3_experiments/make_tables.py --check shipped        # exit 1 unless every row matches the paper
     python3 3_experiments/make_tables.py --logs out --check rerun
 
-Experiments (camera-ready numbering; full version in brackets):
-    po2      Table 4 [Table 5]   m = 2^16, ten primes, OFF vs ON
-    general  Table 5 [Table 6]   nine general cyclotomic sets, OFF vs ON
-    m50731   Table 6 [Table 8]   p = 65537, m = 50731: Ma et al. vs ours
+Experiments (table numbers as in the camera-ready version and the full version):
+    po2      Table 5   m = 2^16, ten primes, OFF vs ON
+    general  Table 6   nine general cyclotomic sets, OFF vs ON
+    m50731   Table 8   p = 65537, m = 50731: Ma et al. vs ours
 
 A value is the mean over the per-trial lines
 
@@ -66,7 +66,7 @@ def ok(r):
 
 def where(key):
     w = PAPER[key]["_where"]
-    return f"{w['cr']} [full version: {w['full']}]"
+    return w['cr']
 
 
 def rows_po2(logs):

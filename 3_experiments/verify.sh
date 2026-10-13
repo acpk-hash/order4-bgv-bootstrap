@@ -102,7 +102,7 @@ t_lean() {
 
 test_ E1 "environment: NTL configuration, executables built"          t_env
 test_ P1 "plaintext: P_A = X/2 + X^3 Q(X^4) on every (p,A,B) used"     python3 3_experiments/tests/test_plaintext.py
-test_ L1 "shipped logs regenerate Tables 4-6 within 0.5%"              python3 3_experiments/make_tables.py --check shipped
+test_ L1 "shipped logs regenerate Tables 5,6,8 within 0.5%"           python3 3_experiments/make_tables.py --check shipped
 test_ S1 "security at built chain: transcripts equal paper (0.02 bit)" python3 3_experiments/tests/test_security.py
 test_ A1 "admissibility failures: p=257 abort, p=8191 no radix"       t_admissibility
 if [[ ${#SEC_SETS[@]} -gt 0 ]]; then
@@ -119,7 +119,7 @@ if [[ $LEVEL == compare || $LEVEL == full ]]; then
   test_ K1 "baselines: control groups G0-G6 vs original code"        t_compare
 fi
 if [[ $LEVEL == full ]]; then
-  test_ C2 "ciphertext: all rows of Tables 4-6 rerun within 15%"       t_full
+  test_ C2 "ciphertext: all rows of Tables 5,6,8 rerun within 15%"    t_full
 fi
 
 { echo; echo "summary: $PASS passed, $FAIL failed, $SKIP skipped   (logs: ${OUT#"$ROOT"/}/tests/)"; } | tee -a "$REPORT"

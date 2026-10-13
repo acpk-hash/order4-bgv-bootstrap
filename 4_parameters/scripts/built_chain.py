@@ -1,6 +1,6 @@
 #!/usr/bin/env sage -python
-"""Per-attack security at the modulus chain HElib actually built (camera-ready
-Table 3, column lambda*; full version Table 10, App. D).
+"""Per-attack security at the modulus chain HElib actually built (Table 4,
+column lambda*; full version Table 10, App. D).
 
 Main-key instance: n = phi(m), q = 2^(integer log2 Q of the appendix table), sparse ternary
 secret of weight h' = 120, sigma = 3.2, m = n samples, cost model MATZOV
@@ -27,7 +27,7 @@ from estimator.io import Logging  # noqa: E402
 Logging.set_level(Logging.LEVEL0)
 
 # set: (m, phi(m), built log2 Q, integer log2 q used) -- the chains printed by
-# the general-ring runs (camera-ready Table 5), and the integer modulus of the appendix table (128D: the
+# the general-ring runs (Table 6), and the integer modulus of the appendix table (128D: the
 # displayed 1267.5 was rounded up to 1268, the conservative direction).
 SETS = {
     "80A": (37637, 36960, 1524.2, 1524), "80B": (43033, 41140, 1642.05, 1642),

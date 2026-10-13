@@ -5,9 +5,9 @@
 #   3_experiments/run.sh smoke                      one po2 configuration, OFF+ON, one trial (~10 min, 16 GB)
 #   3_experiments/run.sh admissibility              the two witnessed admissibility failures (<1 min)
 #   3_experiments/run.sh butterfly                  Section 5 encrypted butterfly prototype (~3 min, 5 GB)
-#   3_experiments/run.sh po2     [p ...]            camera-ready Table 4  (full version Table 5)
-#   3_experiments/run.sh general [set ...]          camera-ready Table 5  (full version Table 6)
-#   3_experiments/run.sh m50731  [row ...]          camera-ready Table 6  (full version Table 8)
+#   3_experiments/run.sh po2     [p ...]            Table 5
+#   3_experiments/run.sh general [set ...]          Table 6
+#   3_experiments/run.sh m50731  [row ...]          Table 8
 #   3_experiments/run.sh all                        everything above except smoke (~9.5 h)
 #
 # Logs are written to $OUT (default out/) as <experiment>/<run>.log|.out, in
@@ -148,14 +148,14 @@ list() {
   cat <<'EOF'
 Measured on the paper's host, single-threaded, REPEAT=3 unless noted.
 
-target            runs  wall clock   peak RAM          paper (camera-ready / full version)
-smoke                2  ~10 min      15 GB             one row of Table 4 / Table 5, REPEAT=1
+target            runs  wall clock   peak RAM          paper
+smoke                2  ~10 min      15 GB             one row of Table 5, REPEAT=1
 admissibility        1  <1 min       <2 GB             Sec. 6.3, Theorem 3
 butterfly            1  ~3 min       5 GB              Sec. 5 (prototype, m = 50731)
-po2     [p ..]      20  ~2.7 h       15-59 GB;         Table 4 / Table 5
+po2     [p ..]      20  ~2.7 h       15-59 GB;         Table 5
                                      118 GB for p=2521
-general [set ..]    18  ~5.6 h       8-61 GB           Table 5 / Table 6
-m50731  [row ..]     4  ~1 h         17 GB, 2 cores    Table 6 / Table 8
+general [set ..]    18  ~5.6 h       8-61 GB           Table 6
+m50731  [row ..]     4  ~1 h         17 GB, 2 cores    Table 8
                                      for 'combined'
 all                 43  ~9.5 h       118 GB (p=2521)
 

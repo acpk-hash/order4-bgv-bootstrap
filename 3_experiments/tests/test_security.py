@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Security at the built modulus chain (camera-ready Table 3, column lambda*;
+"""Security at the built modulus chain (Table 4, column lambda*;
 full version Table 10, App. D).
 
     python3 3_experiments/tests/test_security.py                  # check the stored transcripts

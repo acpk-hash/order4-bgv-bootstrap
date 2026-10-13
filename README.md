@@ -7,9 +7,9 @@ Artifact for the Asiacrypt 2026 paper
 
 Badges requested: **Available**, **Functional**, **Reproduced**.
 
-Paper references use the numbering of the **camera-ready version**. The IACR
-ePrint full version has one more table at the front and an appendix; its
-numbers are given in brackets, e.g. "Table 4 [5]".
+Paper references use the numbering of the **camera-ready version** (the PDF
+submitted with this artifact). The IACR ePrint full version numbers Tables 1–8
+and Sections 1–7 identically and adds appendices with Tables 9 and 10.
 
 ---
 
@@ -70,8 +70,8 @@ The artifact is grouped by role; each group has its own README.
   run.sh                 one target per experiment of the paper
   compare_baselines.sh   one-click comparison: original baselines + control groups (Sec. 6)
   verify.sh              automated tests, PASS/FAIL per claim: quick | smoke | compare | full
-  make_tables.py         Tables 4-6 from logs, next to the paper, with --check
-  make_figures.py        figures of Tables 3-6 (5_results/figures/)
+  make_tables.py         Tables 5, 6, 8 from logs, next to the paper, with --check
+  make_figures.py        figures of Tables 4, 5, 6, 8 (5_results/figures/)
   compare_report.py      report, CSV and figures of compare_baselines.sh
   paper_values.json      the paper's numbers and every test tolerance
   tests/                 test_plaintext.py, test_security.py
@@ -82,12 +82,12 @@ Run-time output goes to `out/` (git-ignored). Every script prints its usage with
 ## 3. Requirements
 
 **Hardware.** x86-64 with AVX2. The reported runs used Intel Xeon processors
-(Tables 4 and 5: Xeon Gold 6230R, 2.1 GHz).
+(Tables 5 and 6: Xeon Gold 6230R, 2.1 GHz).
 
 | level | what runs | wall clock | peak RAM | cores |
 |---|---|---|---|---|
 | quick | build checks, plaintext algebra, shipped logs, security transcripts, admissibility | 2 min (+ 10 min Docker build) | 2 GB | 1 |
-| smoke | quick + one Table 4 row + Section 5 prototype | 15 min | 16 GB | 1 |
+| smoke | quick + one Table 5 row + Section 5 prototype | 15 min | 16 GB | 1 |
 | compare | quick + one-click baseline comparison (Sec. 6) | 2.5 h | 32 GB | 2 |
 | full | smoke + compare + every ciphertext run of the paper | 13 h | **128 GB** (one row needs 118 GB) | 2 |
 
@@ -122,7 +122,7 @@ The build prints `NTL 11.5.1, NTL_SP_NBITS=60: ok` and ends with a listing of
 ```
 PASS E1    environment: NTL configuration, executables built
 PASS P1    plaintext: P_A = X/2 + X^3 Q(X^4) on every (p,A,B) used
-PASS L1    shipped logs regenerate Tables 4-6 within 0.5%
+PASS L1    shipped logs regenerate Tables 5,6,8 within 0.5%
 PASS S1    security at built chain: transcripts equal paper (0.02 bit)
 PASS A1    admissibility failures: p=257 abort, p=8191 no radix
 PASS C1    ciphertext smoke: po2 p=14401 OFF/ON, decrypts, >= 1.5x
@@ -143,15 +143,15 @@ Level = the `verify.sh` level that runs the check (Sec. 3).
 | ID  | Claim | Paper | Check | Expected | Level |
 |-----|---------------------------------------|--------------|---------------------------|--------------------|--------|
 | P1  | `P_A = X/2 + X^3 Q(X^4)`: only `k = 1` and `k = 3 mod 4` occur, at most `(N-1)/4 + 1` terms for `N = (2B+1)^2`; at `p = 65537, B = 17`: 612 → 307 terms, `deg Q = 305` | Sec. 4.1–4.2, Thms 2, 4 | `tests/test_plaintext.py` | `PASSED` | quick |
-| L1  | Tables 4–6 [5, 6, 8] are the means of the shipped logs | Sec. 6.2–6.4 | `make_tables.py --check shipped` | 22 rows within 0.5% | quick |
-| S1  | λ* at the built chain, per attack | Table 3 [4], App. D [Tab. 10] | `tests/test_security.py` | 51 values within 0.02 bit | quick |
+| L1  | Tables 5, 6 and 8 are the means of the shipped logs | Sec. 6.2–6.4 | `make_tables.py --check shipped` | 22 rows within 0.5% | quick |
+| S1  | λ* at the built chain, per attack | Table 4, full version Table 10 | `tests/test_security.py` | 51 values within 0.02 bit | quick |
 | A1  | Both admissibility conditions fail visibly: `p = 257, h = 12` aborts; `p = 8191` (3 mod 4) has no order-four radix | Sec. 6.3, Thm 3 | `run.sh admissibility` | abort message; no `A` | quick |
-| C1  | Order-four digit extraction is about 2x faster on `m = 2^16` | Table 4 [5] | `run.sh smoke` | decrypts; 1066-bit chain; ≥ 1.5x | smoke |
+| C1  | Order-four digit extraction is about 2x faster on `m = 2^16` | Table 5 | `run.sh smoke` | decrypts; 1066-bit chain; ≥ 1.5x | smoke |
 | B1  | Section 5 butterfly on ciphertexts: 41 rotations, correct on all 2784 slots | Sec. 5 | `run.sh butterfly` | 0 mismatches | smoke |
-| K1  | Against the original baseline code, with equivalence, radix and evaluator controls | Tables 4, 6 [5, 8] | `compare_baselines.sh` | all checked ratios PASS (Sec. 6) | compare |
-| C2a | Ten primes on `m = 2^16`: 1.84x–2.13x | Table 4 [5], Sec. 6.2 | `run.sh po2` | each row within 15% and ≥ 1.5x | full |
-| C2b | Nine general cyclotomic sets: 1.72x–1.88x | Table 5 [6], Sec. 6.3 | `run.sh general` | each row within 15% and ≥ 1.5x | full |
-| C2c | `m = 50731`: Ma et al. 213.1 s → ours 131.2 s (1.62x); combined 118.5 s (1.80x) | Table 6 [8], Sec. 6.4 | `run.sh m50731` | each ratio within 15% | full |
+| K1  | Against the original baseline code, with equivalence, radix and evaluator controls | Tables 5 and 8 | `compare_baselines.sh` | all checked ratios PASS (Sec. 6) | compare |
+| C2a | Ten primes on `m = 2^16`: 1.84x–2.13x | Table 5, Sec. 6.2 | `run.sh po2` | each row within 15% and ≥ 1.5x | full |
+| C2b | Nine general cyclotomic sets: 1.72x–1.88x | Table 6, Sec. 6.3 | `run.sh general` | each row within 15% and ≥ 1.5x | full |
+| C2c | `m = 50731`: Ma et al. 213.1 s → ours 131.2 s (1.62x); combined 118.5 s (1.80x) | Table 8, Sec. 6.4 | `run.sh m50731` | each ratio within 15% | full |
 | S2  | λ* recomputed with the Lattice Estimator | as S1 | `verify.sh --security-rerun 80B` | within 0.02 bit | optional |
 | F1  | The algebraic core is machine-checked | Sec. 6 | `verify.sh --lean` | builds, no `sorry` | optional |
 
@@ -167,8 +167,8 @@ vanishes by accident mod `p`; the count is one below the bound, reported as a no
 
 **Not covered by scripts** (supporting data, `5_results/supplementary/`): the
 composition with Okada et al. (Sec. 6.4) needs their SEAL code; the full
-version's degree-scaling table (Table 7); the HElib-native and Geelen et al.
-rows of Table 6 [8], which the paper does not measure (`2_baselines/README.md`).
+degree-scaling table (Table 7); the HElib-native and Geelen et al.
+rows of Table 8, which the paper does not measure (`2_baselines/README.md`).
 
 ## 6. One-click comparison with the original baselines
 
@@ -181,7 +181,7 @@ rows of Table 6 [8], which the paper does not measure (`2_baselines/README.md`).
 Each experiment is a fixed set of groups at `p = 65537`; every group is one run
 of three trials, decrypting and checking every slot.
 
-**`m50731`** (Ma et al. Large-p, camera-ready Table 6):
+**`m50731`** (Ma et al. Large-p, Table 8):
 
 | group | executable | radix A | evaluator | role |
 |---|---|---|---|---|
@@ -191,17 +191,17 @@ of three trials, decrypting and checking every slot.
 | G3 | `fatboot_order4` | 256 | ON | **treatment** |
 | G4 | `fatboot_order4` + parallel CoeffToSlot | 256 | ON | the paper's "combined" row (needs 2 cores) |
 
-**`po2`** (Ma et al. homomorphic NTT, `m = 2^16`, camera-ready Table 4):
+**`po2`** (Ma et al. homomorphic NTT, `m = 2^16`, Table 5):
 
 | group | executable | chain | radix A | evaluator | role |
 |---|---|---|---|---|---|
 | G0 | `baseline_ma_ntt` (original code) | baseline's own, 1314 bits built | 27 | – | baseline |
 | G1 | `fatboot_po2` | 1314 | 27 | OFF | **equivalence control** |
 | G2 | `fatboot_po2` | 1314 | 256 | OFF | **radix control** |
-| G3 | `fatboot_po2` | 1314 | 256 | ON | treatment (Table 4, last column) |
-| G4 | `fatboot_po2` | recommended, 1066 | 27 | OFF | Table 4 OFF as measured |
+| G3 | `fatboot_po2` | 1314 | 256 | ON | treatment (Table 5, last column) |
+| G4 | `fatboot_po2` | recommended, 1066 | 27 | OFF | Table 5 OFF as measured |
 | G5 | `fatboot_po2` | 1066 | 256 | OFF | radix control at the recommended chain |
-| G6 | `fatboot_po2` | 1066 | 256 | ON | Table 4 ON |
+| G6 | `fatboot_po2` | 1066 | 256 | ON | Table 5 ON |
 
 `3_experiments/compare_report.py` then answers one question per ratio and marks
 it PASS/FAIL against a stated range:
@@ -211,8 +211,8 @@ it PASS/FAIL against a stated range:
 | G0/G1 (total) | do our changes, switched off, leave the baseline unchanged? | 0.95–1.05 |
 | G1/G2 (extract) | what does the radix alone do? | informative |
 | G2/G3 (extract) | what does the evaluator alone do, at the same radix? | ≥ 1.5 (m50731), ≥ 1.4 (po2) |
-| G0/G3, G0/G4 (total) | ours vs the original baseline (Table 6) | ≥ 1.35; paper 1.62, 1.80 |
-| G4/G6 (extract, total) | Table 4 as measured | ≥ 1.5 / ≥ 1.1; paper 1.85 / 1.27 |
+| G0/G3, G0/G4 (total) | ours vs the original baseline (Table 8) | ≥ 1.35; paper 1.62, 1.80 |
+| G4/G6 (extract, total) | Table 5 as measured | ≥ 1.5 / ≥ 1.1; paper 1.85 / 1.27 |
 | G5/G6 (extract) | evaluator alone at the recommended chain | ≥ 1.4 |
 
 Output: `out/compare/{m50731,po2}/<group>.log`, `out/compare/summary.csv`,
@@ -245,7 +245,7 @@ python3 3_experiments/make_tables.py --check shipped # L1, 1 s
 python3 3_experiments/tests/test_security.py         # S1, 1 s
 ```
 
-### 7.3 Table 4 [5]: power-of-two ring `m = 2^16`
+### 7.3 Table 5: power-of-two ring `m = 2^16`
 
 ```sh
 3_experiments/run.sh po2                         # all ten primes, ~2.7 h
@@ -258,7 +258,7 @@ python3 3_experiments/make_tables.py --logs out --check rerun po2
 | peak RAM (GB) | 59 | 15 | **118** | 15 | 30 | 59 | 59 | 15 | 59 | 29 |
 | wall, OFF + ON (min) | 19 | 8 | 37 | 7 | 11 | 19 | 18 | 8 | 19 | 20 |
 
-### 7.4 Table 5 [6]: general cyclotomic rings
+### 7.4 Table 6: general cyclotomic rings
 
 ```sh
 3_experiments/run.sh general                     # all nine sets, ~5.6 h
@@ -271,7 +271,7 @@ python3 3_experiments/make_tables.py --logs out --check rerun general
 | peak RAM (GB) | 12 | 8 | 12 | 10 | 61 | 38 | 22 | 13 | 16 |
 | wall, OFF + ON (min) | 20 | 20 | 23 | 27 | 61 | 58 | 32 | 30 | 30 |
 
-### 7.5 Table 6 [8]: `p = 65537, m = 50731`
+### 7.5 Table 8: `p = 65537, m = 50731`
 
 ```sh
 3_experiments/run.sh m50731                      # ma, sparse, order4, combined: ~1 h, 17 GB
@@ -345,16 +345,16 @@ extraction (the only stage the method changes), `total` the whole recryption.
 `make_tables.py` prints, for each row, the speedup next to the paper's value:
 
 ```
-po2: Table 4, Sec. 6.2 [full version: Table 5, Sec. 6.2]
+po2: Table 5, Sec. 6.2
        p   logQ   OFF(s)    ON(s)  speedup   paper     dev  n
    14401   1066    22.80    12.07    1.89x   2.13x  -11.3%  3
 ```
 
-`speedup` is OFF/ON of `extract` (Tables 4–5) or Ma/ours of `total` (Table 6);
+`speedup` is OFF/ON of `extract` (Tables 5–6) or Ma/ours of `total` (Table 8);
 `dev` its relative deviation from the paper; `n` the trials. **Tolerances** are
 in `3_experiments/paper_values.json`: shipped logs must match the paper to 0.5%
 (they are its data); reruns must be within 15% and above 1.5x (1.35x for
-Table 6), because a ratio of two timings moves by a few per cent on another
+Table 8), because a ratio of two timings moves by a few per cent on another
 machine and by more on a loaded one. Absolute seconds are never checked.
 
 ## 10. Reference reruns and figures
@@ -365,14 +365,14 @@ per run, two for "combined", three trials, idle host). Logs:
 
 | run | paper | Docker rerun |
 |---|---|---|
-| Table 4 [5], `p = 14401`, extract OFF → ON | 24.39 → 11.48 s, 2.13x | 22.80 → 12.07 s, 1.89x (Sec. 11, item 2) |
-| Table 5 [6], set 80B, extract OFF → ON | 100.05 → 57.40 s, 1.74x | 100.86 → 58.59 s, 1.72x |
-| Table 6 [8], Ma et al., total | 213.10 s | 211.75 s |
-| Table 6 [8], ours, total | 131.18 s, 1.62x | 134.83 s, 1.57x |
-| Table 6 [8], combined, total | 118.49 s, 1.80x | 113.18 s, 1.87x |
+| Table 5, `p = 14401`, extract OFF → ON | 24.39 → 11.48 s, 2.13x | 22.80 → 12.07 s, 1.89x (Sec. 11, item 2) |
+| Table 6, set 80B, extract OFF → ON | 100.05 → 57.40 s, 1.74x | 100.86 → 58.59 s, 1.72x |
+| Table 8, Ma et al., total | 213.10 s | 211.75 s |
+| Table 8, ours, total | 131.18 s, 1.62x | 134.83 s, 1.57x |
+| Table 8, combined, total | 118.49 s, 1.80x | 113.18 s, 1.87x |
 | Sec. 6.3, `p = 257, h = 12` | aborts | aborts, same message |
 | Sec. 5 butterfly | 41 rotations, 0 mismatches | 41 rotations, 0 mismatches |
-| Table 3 [4] λ*, App. D [Table 10] | nine sets | all 51 values within 0.01 bit |
+| Table 4 λ*, full version Table 10 | nine sets | all 51 values within 0.01 bit |
 
 **Baseline comparison (Sec. 6) on the same host**, Docker image, two
 dedicated cores, three trials per group; full report in
@@ -389,7 +389,7 @@ beside it. All 9 checked ratios pass:
 | po2 | G0/G1, total | original code vs our build with the evaluator OFF | 54.1 / 53.6 s = 1.01x | – |
 | po2 | G1/G2, extract | radix alone (27 → 256), baseline chain | 1.14x | – |
 | po2 | G2/G3, extract | evaluator alone, baseline chain | 1.66x | 1.59x (first trial) |
-| po2 | G4/G6, extract | Table 4 as measured, 1066-bit chain | 1.94x | 1.85x |
+| po2 | G4/G6, extract | Table 5 as measured, 1066-bit chain | 1.94x | 1.85x |
 | po2 | G5/G6, extract | evaluator alone, 1066-bit chain | 1.69x | – |
 | po2 | G4/G6, total | whole recryption, 1066-bit chain | 1.32x | 1.27x |
 
@@ -406,19 +406,19 @@ Figures (PNG and PDF) are in `5_results/figures/` and
 
 ## 11. Known deviations between the paper text and the measurements
 
-1. **Table 4 [5], OFF radix.** Section 6 states that OFF and ON use the same
-   auxiliary radix `A`. This holds for Tables 5 and 6 [6, 8]. In Table 4 [5],
+1. **Table 5, OFF radix.** Section 6 states that OFF and ON use the same
+   auxiliary radix `A`. This holds for Tables 6 and 8. In Table 5,
    OFF ran Ma et al.'s driver at its default radix `A = 2B+1 = 27` and ON at the
    order-four radix; both build the same chain. Its ratio therefore includes the
    choice of radix as well as the evaluator. The comparison of Sec. 6 measures
    both parts separately (po2: G4/G6 as in the paper, G5/G6 the evaluator alone).
-2. **Table 4 [5] runs were concurrent.** OFF and ON of a prime ran at the same
+2. **Table 5 runs were concurrent.** OFF and ON of a prime ran at the same
    time, with two to four runs on the host. Alone, `p = 14401` gives 1.89x instead
    of 2.13x; the other nine primes lie at 1.84x–1.95x.
-3. **Trials.** The "at 1314–1332" column of Table 4 [5] and the power-of-two rows
-   of the full version's Table 7 are first trials, not means of three; the means
+3. **Trials.** The "at 1314–1332" column of Table 5 and the power-of-two rows
+   of Table 7 are first trials, not means of three; the means
    differ by up to 0.05x (`5_results/supplementary/power_of_two_first_trials/`).
-   Set 80-E and the general-ring rows of the full version's Table 7 are single trials.
+   Set 80-E and the general-ring rows of Table 7 are single trials.
 4. **Compiler flags.** The paper says `-O2`; HElib's `Release` build, used for
    every run, compiles with `-O3 -march=native`.
 
@@ -426,10 +426,10 @@ Figures (PNG and PDF) are in `5_results/figures/` and
 
 | executable | used for | HElib | driver |
 |---|---|---|---|
-| `fatboot_order4` | Tables 5, 6 [6, 8] | `1_implementation/helib_order4` | `1_implementation/driver_order4` |
-| `fatboot_po2` | Table 4 [5] | HElib `3e337a6` + Ma et al. NTT patch + `patches/helib-ntt-order4.patch` | Ma et al. NTT driver + `patches/ma-ntt-fatboot-order4.patch` |
+| `fatboot_order4` | Tables 6 and 8 | `1_implementation/helib_order4` | `1_implementation/driver_order4` |
+| `fatboot_po2` | Table 5 | HElib `3e337a6` + Ma et al. NTT patch + `patches/helib-ntt-order4.patch` | Ma et al. NTT driver + `patches/ma-ntt-fatboot-order4.patch` |
 | `enc_butterfly` | Section 5 | as `fatboot_order4` | `1_implementation/butterfly/enc_butterfly.cpp` |
-| `baseline_ma_largep` | Table 6 [8], Ma et al.; G0 | HElib `3e337a6` + `bgvboot-final.patch` | original `83b54d5` |
+| `baseline_ma_largep` | Table 8, Ma et al.; G0 | HElib `3e337a6` + `bgvboot-final.patch` | original `83b54d5` |
 | `baseline_ma_ntt` | G0 of the po2 comparison | HElib `3e337a6` + `github_20241003.patch` | original `800bae0` |
 
 What we changed in public code (`1_implementation/README.md` has details):
@@ -442,15 +442,15 @@ What we changed in public code (`1_implementation/README.md` has details):
   `HELIB_AUX_PARALLEL_COEFF2SLOT` ("combined" row).
 * `patches/helib-ntt-order4.patch` (2 files, +122 lines): the evaluator in Ma et
   al.'s power-of-two HElib.
-* `patches/ma-ntt-fatboot-order4.patch`: Table 4's parameter sets and the
+* `patches/ma-ntt-fatboot-order4.patch`: Table 5's parameter sets and the
   options `bits=`, `mainhwt=` in their driver.
-* `driver_order4/fatboot.cpp`: sets J–S (Table 5) and `bits=` in the Large-p driver.
+* `driver_order4/fatboot.cpp`: sets J–S (Table 6) and `bits=` in the Large-p driver.
 
 | variable | meaning |
 |---|---|
 | `HELIB_EXPLICIT_AUX=A` | auxiliary radix `A` instead of the driver default `2B+1` |
 | `HELIB_AUX_ORDER4_EVAL=1` | factored evaluation; ignored with a message if `A² ≢ −1 (mod p)` |
-| `HELIB_AUX_PARALLEL_COEFF2SLOT=1` | parallel CoeffToSlot (Table 6 [8], "combined") |
+| `HELIB_AUX_PARALLEL_COEFF2SLOT=1` | parallel CoeffToSlot (Table 8, "combined") |
 | `HELIB_ZZX_CACHE_DIR=dir` | cache of digit-extraction polynomials (set by the scripts) |
 
 Driver arguments: `i` parameter-set index, `h` encapsulated-key weight, `bits`

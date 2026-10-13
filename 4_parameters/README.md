@@ -1,7 +1,7 @@
 # 4_parameters — parameter selection and concrete security
 
 This folder contains everything behind the parameter sets of the paper
-(camera-ready Sec. 6.1, Tables 2 and 3; full version Tables 3, 4, 9 and 10):
+(Sec. 6.1, Tables 3 and 4; full version also Tables 9 and 10):
 the pinned Lattice Estimator, our estimation scripts, every transcript, and
 the recommended parameters in machine-readable form.
 
@@ -10,9 +10,9 @@ the recommended parameters in machine-readable form.
   recommended_parameters.csv     the recommended sets (table below), one row per set
   lattice-estimator-3e48ef4/     Lattice Estimator, unmodified, commit 3e48ef4 (LGPLv3+)
   scripts/
-    built_chain.py               per-attack security at the chain HElib built  (Table 3, λ*)
-    estimate_security.py         stock estimator, six attacks per instance      (Tables 2-3)
-    rot_estimate.py              rotated primal hybrid of ePrint 2026/279       (Table 2)
+    built_chain.py               per-attack security at the chain HElib built  (Table 4, λ*)
+    estimate_security.py         stock estimator, six attacks per instance      (Tables 3-4)
+    rot_estimate.py              rotated primal hybrid of ePrint 2026/279       (Table 3)
     admissibility.py             order-four admissibility per prime             (Thm 3, full Table 9)
     make_results.py              regenerates transcripts/summaries/RESULTS.md
     sets*.json                   instance definitions
@@ -43,7 +43,7 @@ the recommended parameters in machine-readable form.
    Cost model `RC.MATZOV`, `σ = 3.2`, sparse ternary secrets, `m = n` samples.
 5. **Built chain.** HElib does not build the chain it is asked for, so λ* of every
    set with a ciphertext run is recomputed at the chain HElib printed
-   (`INFO: total bits = …`); this is the last column of Table 3.
+   (`INFO: total bits = …`); this is the last column of Table 4.
 
 ## 2. Recommended parameters
 
@@ -52,7 +52,7 @@ recommended by the paper; built = the chain HElib actually built in the
 ciphertext runs. "stock" is the stock Lattice Estimator on the main key,
 "rotated" the same instance under ePrint 2026/279 (power-of-two rings only).
 
-**Power-of-two rings** (camera-ready Table 2, full version Table 3): `p = 65537`, `h' = 120`, `h = 26`.
+**Power-of-two rings** (Table 3): `p = 65537`, `h' = 120`, `h = 26`.
 
 | set | m | slots | target | log2 Q recommended | log2 Q built | main, stock | main, rotated | encapsulated | **λ*** |
 |---|---|---|---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ ciphertext runs. "stock" is the stock Lattice Estimator on the main key,
 | po2-100 | 2^17 | 32768 | 100 | 1676 | – | 117.8 | 106.0 | 149.6 | **106.0** |
 | po2-128 | 2^17 | 32768 | 128 | 1277 | – | 143.6 | 131.4 | 149.6 | **131.4** |
 
-**General cyclotomic rings** (camera-ready Table 3, full version Table 4): `h' = 120`,
+**General cyclotomic rings** (Table 4): `h' = 120`,
 five distinct primes per level. λ* is at the built chain.
 
 | set | p | m | φ(m) | slots | h | log2 Q recommended | log2 Q built | main | encapsulated | **λ*** |
@@ -79,7 +79,7 @@ five distinct primes per level. λ* is at the built chain.
 80-E has no ciphertext run at its own chain (paper, Sec. 6.3). On every row with
 a built chain the binding attack is the primal hybrid with meet-in-the-middle
 and without Babai (TF); `transcripts/built_chain/<set>.json` has all six attacks.
-These are the sets measured in camera-ready Tables 4 and 5.
+These are the sets measured in Tables 5 and 6.
 
 ## 3. Reproducing
 
@@ -111,8 +111,8 @@ python3 make_results.py
 
 | quantity | transcript | reproduced by us |
 |---|---|---|
-| Table 3 λ* (built chain) and full-version Table 10 | `transcripts/built_chain/` | all nine sets, every attack within 0.01 bit (`3_experiments/tests/test_security.py`) |
-| Table 2 boundary chains, sq-root / estim. columns, rotated losses | `summaries/cross_verification.jsonl`, `rot_2026_279_twelve.jsonl`, `modulus_sweep.jsonl` | stored transcripts |
-| Table 2 `λ_est` (95.6 / 117.8 / 143.6) | `raw/estimator_a1.jsonl` | stored transcript |
-| Table 3 encapsulated column, sets 80-A to 80-E and 128-A | `estimator_output.txt` | stored transcript |
-| Table 3 encapsulated column, sets 128-B to 128-E; Table 3 "main" column at the recommended chain; Table 2 caption values 111.2 and 139.9 | not in the transcripts | not reproduced here. In the paper these values exceed λ* of the same row by 6 to 29 bits, so they do not determine λ*; λ* itself (main key at the built chain) is reproduced for every set with a ciphertext run |
+| Table 4 λ* (built chain) and full-version Table 10 | `transcripts/built_chain/` | all nine sets, every attack within 0.01 bit (`3_experiments/tests/test_security.py`) |
+| Table 3 boundary chains, sq-root / estim. columns, rotated losses | `summaries/cross_verification.jsonl`, `rot_2026_279_twelve.jsonl`, `modulus_sweep.jsonl` | stored transcripts |
+| Table 3 `λ_est` (95.6 / 117.8 / 143.6) | `raw/estimator_a1.jsonl` | stored transcript |
+| Table 4 encapsulated column, sets 80-A to 80-E and 128-A | `estimator_output.txt` | stored transcript |
+| Table 4 encapsulated column, sets 128-B to 128-E; Table 4 "main" column at the recommended chain; Table 3 caption values 111.2 and 139.9 | not in the transcripts | not reproduced here. In the paper these values exceed λ* of the same row by 6 to 29 bits, so they do not determine λ*; λ* itself (main key at the built chain) is reproduced for every set with a ciphertext run |

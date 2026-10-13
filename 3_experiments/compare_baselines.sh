@@ -18,7 +18,7 @@
 #            effect of the evaluator
 #   G3  our executable, evaluator ON, radix A      -> treatment
 #   (m50731) G4 = G3 + parallel CoeffToSlot      -> the paper's "combined" row
-#   (po2)    G4-G6 repeat G1-G3 at the recommended 80-bit chain (Table 4)
+#   (po2)    G4-G6 repeat G1-G3 at the recommended 80-bit chain (Table 5)
 #
 # Output: out/compare/<experiment>/<group>.log, and
 #         out/compare/report.md, out/compare/summary.csv, out/compare/figures/

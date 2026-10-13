@@ -6,11 +6,11 @@
 
 Writes PNG and PDF to 5_results/figures/ (or --out):
 
-    table4_po2.png        camera-ready Table 4 [5]: extraction time OFF vs ON, ten primes on m = 2^16
-    table5_general.png    camera-ready Table 5 [6]: the same on nine general cyclotomic sets
-    table6_m50731.png     camera-ready Table 6 [8]: whole recryption by stage, Ma et al. vs ours
+    table5_po2.png        Table 5: extraction time OFF vs ON, ten primes on m = 2^16
+    table6_general.png    Table 6: the same on nine general cyclotomic sets
+    table8_m50731.png     Table 8: whole recryption by stage, Ma et al. vs ours
     speedup_rerun.png     speedups of the paper next to our Docker reruns (5_results/reruns)
-    security_lambda.png   camera-ready Table 3: lambda* at the built chain vs the 80/128-bit targets
+    table4_security.png   Table 4: lambda* at the built chain vs the 80/128-bit targets
 """
 import argparse
 import json
@@ -39,8 +39,8 @@ def fig_po2(logs, out):
                     above=sp)
     ax.set_xlabel("plaintext prime p  (m = 2^16, 80-bit chain, h = 26)")
     ax.set_ylabel("digit extraction (s)")
-    ax.set_title("Table 4: digit extraction on the power-of-two ring, mean of 3 trials")
-    return pl.save(fig, out / "table4_po2")
+    ax.set_title("Table 5: digit extraction on the power-of-two ring, mean of 3 trials")
+    return pl.save(fig, out / "table5_po2")
 
 
 def fig_general(logs, out):
@@ -55,8 +55,8 @@ def fig_general(logs, out):
     pl.grouped_bars(ax, labels, [off, on], ["OFF: generic evaluation of P_A", "ON: X/2 + X^3 Q(X^4)"], above=sp)
     ax.set_xlabel("parameter set (80-x: h = 12, 128-x: h = 26)")
     ax.set_ylabel("digit extraction (s)")
-    ax.set_title("Table 5: digit extraction on general cyclotomic rings (same radix A for OFF and ON), mean of 3 trials")
-    return pl.save(fig, out / "table5_general")
+    ax.set_title("Table 6: digit extraction on general cyclotomic rings (same radix A for OFF and ON), mean of 3 trials")
+    return pl.save(fig, out / "table6_general")
 
 
 def stages(r):
@@ -75,8 +75,8 @@ def fig_m50731(logs, out):
     pl.stacked_hbars(ax, [names[k] for k, _ in rows], parts,
                      ["linear transforms", "digit extraction", "other (key switching, mod-down)"])
     ax.set_xlabel("whole recryption (s)")
-    fig.suptitle("Table 6: p = 65537, m = 50731, 2784 slots, by stage", x=0.01, ha="left", fontsize=10)
-    return pl.save(fig, out / "table6_m50731")
+    fig.suptitle("Table 8: p = 65537, m = 50731, 2784 slots, by stage", x=0.01, ha="left", fontsize=10)
+    return pl.save(fig, out / "table8_m50731")
 
 
 def fig_rerun(out):
@@ -84,13 +84,13 @@ def fig_rerun(out):
     labels, paper, ours = [], [], []
     for p, ref, a, b, s in mt.rows_po2(rr):
         if s is not None:
-            labels.append(f"T4 p={p}"); paper.append(ref["speedup"]); ours.append(s)
+            labels.append(f"T5 p={p}"); paper.append(ref["speedup"]); ours.append(s)
     for s_, ref, a, b, s in mt.rows_general(rr):
         if s is not None:
-            labels.append(f"T5 {s_}"); paper.append(ref["speedup"]); ours.append(s)
+            labels.append(f"T6 {s_}"); paper.append(ref["speedup"]); ours.append(s)
     for k, ref, base, r, s in mt.rows_m50731(rr):
         if s is not None and k != "ma":
-            labels.append(f"T6 {k}"); paper.append(ref["speedup"]); ours.append(s)
+            labels.append(f"T8 {k}"); paper.append(ref["speedup"]); ours.append(s)
     if not labels:
         return None
     fig, ax = pl.plt.subplots(figsize=(7, 3.2))
@@ -125,8 +125,8 @@ def fig_security(out):
     ax.set_xticks(range(len(labels))); ax.set_xticklabels(labels)
     ax.set_ylabel("bits"); ax.set_ylim(0, 175)
     ax.legend(loc="upper left", fontsize=8, ncol=2)
-    ax.set_title("Table 3: security at the chain HElib built (Lattice Estimator 3e48ef4)")
-    return pl.save(fig, out / "security_lambda")
+    ax.set_title("Table 4: security at the chain HElib built (Lattice Estimator 3e48ef4)")
+    return pl.save(fig, out / "table4_security")
 
 
 def main():
