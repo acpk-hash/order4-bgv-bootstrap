@@ -88,13 +88,20 @@ gen_one() {
 }
 
 # ---------------------------------------------------------------- Table 7
-tab7() {
+tab7() {  # tab7 [ma sparse order4 combined]
   local d=$OUT/tab7_m50731 args=(i=4 h=12 t=-1 newbts=1 newks=1 thick=0 repeat="$REPEAT")
-  run "$d/ma_largep.log" "$BIN/fatboot_ma_largep" -- i=4 h=12 t=-1 newbts=1 newks=1 repeat="$REPEAT"
-  run "$d/sparse_aux256.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 -- "${args[@]}"
-  run "$d/order4.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 HELIB_AUX_ORDER4_EVAL=1 -- "${args[@]}"
-  run "$d/combined.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 HELIB_AUX_ORDER4_EVAL=1 \
-      HELIB_AUX_PARALLEL_COEFF2SLOT=1 -- "${args[@]}"
+  local rows=("$@"); [[ ${#rows[@]} -eq 0 ]] && rows=(ma sparse order4 combined)
+  for r in "${rows[@]}"; do case $r in
+    ma)       run "$d/ma_largep.log" "$BIN/fatboot_ma_largep" -- \
+                  i=4 h=12 t=-1 newbts=1 newks=1 repeat="$REPEAT" ;;
+    sparse)   run "$d/sparse_aux256.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 -- "${args[@]}" ;;
+    order4)   run "$d/order4.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 \
+                  HELIB_AUX_ORDER4_EVAL=1 -- "${args[@]}" ;;
+    # runs the two CoeffToSlot transforms concurrently: give it two cores
+    combined) run "$d/combined.log" "$BIN/fatboot_order4" HELIB_EXPLICIT_AUX=256 \
+                  HELIB_AUX_ORDER4_EVAL=1 HELIB_AUX_PARALLEL_COEFF2SLOT=1 -- "${args[@]}" ;;
+    *)        echo "unknown Table 7 row $r" >&2 ;;
+  esac; done
 }
 
 # ---------------------------------------------------------------- Sec 7.3
@@ -119,7 +126,7 @@ Measured on the paper's host, single-threaded, REPEAT=3 (wall clock per run):
 target          what                                   runs   wall total   peak RAM
 smoke           Table 5, p=14401, OFF+ON, REPEAT=1        2   ~6 min       15 GB
 admissibility   p=257 abort + p mod 4 check               1   <1 min       <2 GB
-tab7            Table 7, m=50731 (Ma, sparse, ON, comb.)  4   ~1 h         17 GB
+tab7 [row ..]   Table 7, m=50731 (ma sparse order4 combined) 4  ~1 h        17 GB, 2 cores for combined
 tab5 [p ..]     Table 5, ten primes on m=2^16            20   ~2.7 h       15-59 GB, 118 GB for p=2521
 tab6 [set ..]   Table 6, nine general rings              18   ~5.6 h       8-61 GB
 
@@ -134,7 +141,7 @@ case $cmd in
   smoke)         REPEAT=1 po2_one 14401 "$OUT/smoke/tab5_po2" ;;
   tab5)          for p in "${@:-1297 1601 2521 3137 4513 7057 13457 14401 15377 65537}"; do for q in $p; do po2_one "$q"; done; done ;;
   tab6)          for s in "${@:-80A 80B 80C 80D 128A 128B 128C 128D 128E}"; do for t in $s; do gen_one "$t"; done; done ;;
-  tab7)          tab7 ;;
+  tab7)          tab7 "$@" ;;
   admissibility) admissibility ;;
   *)             echo "unknown target $cmd" >&2; list; exit 1 ;;
 esac

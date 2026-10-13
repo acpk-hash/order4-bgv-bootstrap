@@ -59,7 +59,10 @@ tabulates the shipped logs of the reported runs; every row agrees with the
 paper to 0.3%.
 
 All runs are single-threaded except the "combined" row of Table 7, which turns
-on HElib's parallel CoeffToSlot (`HELIB_AUX_PARALLEL_COEFF2SLOT=1`).
+on HElib's parallel CoeffToSlot (`HELIB_AUX_PARALLEL_COEFF2SLOT=1`) and runs the
+two CoeffToSlot transforms concurrently; give that run at least two cores.
+Timings are sensitive to other load on the machine (memory bandwidth as much as
+CPU): run one experiment at a time on an otherwise idle host.
 
 ## 3. Hardware and software
 
@@ -167,10 +170,26 @@ We list these so that evaluators are not surprised.
    reported 24.39 s → 11.48 s (2.13x); the other primes of the table lie at
    1.84x–1.95x. Expect isolated reruns of that row near 1.9x.
 
-Our reruns in the Docker image (one physical core per run): Table 6 set 80B
-1.72x (paper 1.74x); Table 7 Ma et al. baseline 211.75 s (paper 213.10 s);
-Table 5 `p = 14401` 1.89x (paper 2.13x, item 4); all nine rows of the
-per-attack security table to 0.01 bit.
+Our reruns in the Docker image, one physical core per run (two for
+"combined"), three trials each, logs in `results/ae_rerun_docker/`
+(`python3 ae/make_tables.py --logs results/ae_rerun_docker`):
+
+| run | paper | Docker rerun |
+|---|---|---|
+| Table 5, `p = 14401`, extract OFF → ON | 24.39 → 11.48 s, 2.13x | 22.80 → 12.07 s, 1.89x (item 4) |
+| Table 6, set 80B, extract OFF → ON | 100.05 → 57.40 s, 1.74x | 100.86 → 58.59 s, 1.72x |
+| Table 7, Ma et al. total | 213.10 s | 211.75 s |
+| Table 7, sparse `A = 256` total (not in the paper; shipped log) | 199.40 s | 197.97 s |
+| Table 7, order-four total | 131.18 s, 1.62x | 134.83 s, 1.57x |
+| Table 7, combined total | 118.49 s, 1.80x | 113.18 s, 1.87x |
+| Sec. 7.3, `p = 257, h = 12` | abort | abort, same message |
+| Per-attack security table, nine sets | | equal to 0.01 bit |
+
+`results/ae_rerun_docker/tab7_m50731/under_load/` keeps two Table 7 attempts
+made while another user loaded the host (load average ≈ 56): single trials of
+the order-four row ranged from 81.6 s to 132.0 s of extraction, and `linear2`,
+which the evaluator does not touch, slowed by the same factor. Run on an idle
+machine.
 
 ## 8. Repository map
 
