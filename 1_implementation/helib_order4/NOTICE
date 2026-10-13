@@ -1,0 +1,26 @@
+HElib
+Copyright (C) 2012-2020 IBM Corp.
+
+
+----------------------------------------------------------------------------
+Modifications (Apache License 2.0, Section 4(b))
+
+This directory is HElib commit 3e337a66a91a92d49de6a9505340826b0eb71081
+(https://github.com/homenc/HElib), modified in two layers:
+
+1. bgvboot-final.patch of Ma et al., "Accelerating BGV Bootstrapping for Large
+   p Using Null Polynomials Over Z_{p^e}" (EUROCRYPT 2024),
+   https://github.com/msh086/BGV-Boot-for-Large-p (MIT License).
+2. Changes by the authors of "Order-Four Symmetry in BGV Bootstrapping: Faster
+   Digit Extraction for Large Primes" (Asiacrypt 2026), 2026: the order-four
+   digit-extraction evaluator (HELIB_AUX_ORDER4_EVAL), the explicit auxiliary
+   radix (HELIB_EXPLICIT_AUX), and experimental options that are off by
+   default. Files changed or added in this layer:
+     include/helib/{Ctxt.h, EvalMap.h, matmul.h, polyEval.h}
+     src/{Ctxt.cpp, EvalMap.cpp, extractDigits.cpp, keySwitching.cpp, keys.cpp,
+          matmul.cpp, polyEval.cpp, recryption.cpp}
+     src/{Ctxt_fixed.cpp, batchBootstrap.cpp, batchBootstrap.h,
+          tensor_P_matrix.h, tensor_T16_coeffs.h, test_batch_amortization.cpp} (new)
+   The full diff of layer 2 against layer 1 is
+   1_implementation/patches/helib-auxradix-order4.REFERENCE.patch in the
+   artifact repository.

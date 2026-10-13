@@ -1,0 +1,10 @@
+.git/
+/build/
+/local/
+/cache/
+/out/
+/third_party/
+/ae/
+/security/
+/src/
+6_proofs/lean/.lake/

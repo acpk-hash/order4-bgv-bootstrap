@@ -1,0 +1,11 @@
+name = "BootstrapAlgebra"
+version = "0.1.0"
+defaultTargets = ["BootstrapAlgebra"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "24ef8a8c893173686f1ce65b5961175cd6f6413d"
+
+[[lean_lib]]
+name = "BootstrapAlgebra"

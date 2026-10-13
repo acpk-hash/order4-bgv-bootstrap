@@ -1,0 +1,257 @@
+chosen idx = 16
+encapHwt = 26
+t for new bts is -1
+new bts ? 1
+new ks ? 1
+thick bts ?0
+repeat times = 3
+force bsgs = 0
+force hoist = 0
+bits (effective) = 918
+*** GTestFatboot: p=8101, r=1, bits=918, t=0, c=3, m=57521 mvec=[97 593], gens=[10675 52187], ords=[96 -74]
+Computing key-independent tables...using HELIB_EXPLICIT_AUX=90
+
+t = -1
+bound on I = 23.909886
+log2(aux) = 6.491853
+log2(beta) = 27.629565
+log2(qks) >= 36.818813, final log2(qks) = 36.818842
+log2(R) >= 27.855045, final log2(R) = 27.858925
+INFO: total bits = 1267.48, security level = 127.433deg of poly for non-power-of-p aux is 2399
+security=127.433
+# small primes = 6
+# ctxt primes = 16
+# bits in ctxt primes = 926
+# special primes = 6
+# bits in special primes = 341
+scale=10
+ done in 285.727 seconds
+  e=0, e'=0, t=26
+  m = 57521, p = 8101, phi(m) = 56832
+  ord(p) = 8
+  normBnd = 1.62099
+  polyNormBnd = 5.47142
+  factors = [97 593]
+  generator 10675 has order (== Z_m^*) of 96
+  generator 52187 has order (!!= Z_m^*) of 74
+r = 1
+nslots = 7104
+hwt = 120
+ctxtPrimes = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+specialPrimes = [26,27,28,29,30,31]
+number of bits = 1268
+
+security level = 127.433
+Generating keys, Keys generated. Now genRecryptData...
+computing key-dependent tables...Sparse boot key hwt = 26
+genRecryptData done. recryptKeyID=1
+lcAksBsgs=0 lcAksDelayed=0
+Post-key setup done.
+ done in 21.9401 seconds
+Encrypt succeeded.
+WARNING: KS-noise-ratio = 1.02282 > 1
+WARNING: KS-noise-ratio = 10.7998 > 1
+WARNING: KS-noise-ratio = 1.99429 > 1
+WARNING: KS-noise-ratio = 2.72934 > 1
+WARNING: KS-noise-ratio = 1.79936 > 1
+WARNING: KS-noise-ratio = 2.51682 > 1
+WARNING: KS-noise-ratio = 18.1674 > 1
+WARNING: KS-noise-ratio = 2.85192 > 1
+WARNING: KS-noise-ratio = 2.83031 > 1
+WARNING: KS-noise-ratio = 2.69937 > 1
+WARNING: KS-noise-ratio = 2.57826 > 1
+WARNING: KS-noise-ratio = 2.34544 > 1
+WARNING: KS-noise-ratio = 2.2928 > 1
+WARNING: KS-noise-ratio = 2.17503 > 1
+WARNING: KS-noise-ratio = 2.47841 > 1
+WARNING: KS-noise-ratio = 3.01984 > 1
+WARNING: KS-noise-ratio = 2.61709 > 1
+WARNING: KS-noise-ratio = 2.90219 > 1
+WARNING: KS-noise-ratio = 2.66738 > 1
+WARNING: KS-noise-ratio = 2.7271 > 1
+WARNING: KS-noise-ratio = 2.59488 > 1
+WARNING: KS-noise-ratio = 2.18464 > 1
+WARNING: KS-noise-ratio = 2.27204 > 1
+WARNING: KS-noise-ratio = 2.75491 > 1
+WARNING: KS-noise-ratio = 2.42197 > 1
+WARNING: KS-noise-ratio = 2.84347 > 1
+WARNING: KS-noise-ratio = 2.72282 > 1
+WARNING: KS-noise-ratio = 2.39345 > 1
+WARNING: KS-noise-ratio = 2.74501 > 1
+time for linear1 = 6.573905, linear2 = 46.410985, extract = 151.683442, total = 206.522765
+bits for linear1 = 52.309236, linear2 = 55.555627, extract = 348.226395, min cap = 9.189277, after cap = 475.996856, after prod = 879.778878
+cap / time = 2.007035
+WARNING: KS-noise-ratio = 1.07274 > 1
+WARNING: KS-noise-ratio = 12.1343 > 1
+WARNING: KS-noise-ratio = 2.06084 > 1
+WARNING: KS-noise-ratio = 2.46382 > 1
+WARNING: KS-noise-ratio = 2.43668 > 1
+WARNING: KS-noise-ratio = 2.26531 > 1
+WARNING: KS-noise-ratio = 16.9068 > 1
+WARNING: KS-noise-ratio = 2.34058 > 1
+WARNING: KS-noise-ratio = 2.73785 > 1
+WARNING: KS-noise-ratio = 2.60523 > 1
+WARNING: KS-noise-ratio = 2.56022 > 1
+WARNING: KS-noise-ratio = 2.08836 > 1
+WARNING: KS-noise-ratio = 2.19649 > 1
+WARNING: KS-noise-ratio = 2.03668 > 1
+WARNING: KS-noise-ratio = 2.52812 > 1
+WARNING: KS-noise-ratio = 2.69489 > 1
+WARNING: KS-noise-ratio = 2.89758 > 1
+WARNING: KS-noise-ratio = 2.82254 > 1
+WARNING: KS-noise-ratio = 2.55853 > 1
+WARNING: KS-noise-ratio = 2.62148 > 1
+WARNING: KS-noise-ratio = 2.97543 > 1
+WARNING: KS-noise-ratio = 2.72136 > 1
+WARNING: KS-noise-ratio = 2.98536 > 1
+WARNING: KS-noise-ratio = 2.45453 > 1
+WARNING: KS-noise-ratio = 2.94357 > 1
+WARNING: KS-noise-ratio = 2.58098 > 1
+WARNING: KS-noise-ratio = 2.72068 > 1
+WARNING: KS-noise-ratio = 2.35907 > 1
+WARNING: KS-noise-ratio = 2.54866 > 1
+time for linear1 = 6.494859, linear2 = 46.621719, extract = 149.832022, total = 205.092860
+bits for linear1 = 52.166280, linear2 = 55.541046, extract = 348.218323, min cap = 9.189277, after cap = 476.064946, after prod = 879.824315
+cap / time = 2.022057
+WARNING: KS-noise-ratio = 10.0184 > 1
+WARNING: KS-noise-ratio = 2.03887 > 1
+WARNING: KS-noise-ratio = 2.78096 > 1
+WARNING: KS-noise-ratio = 2.09806 > 1
+WARNING: KS-noise-ratio = 2.58794 > 1
+WARNING: KS-noise-ratio = 17.2842 > 1
+WARNING: KS-noise-ratio = 2.25177 > 1
+WARNING: KS-noise-ratio = 2.42295 > 1
+WARNING: KS-noise-ratio = 2.50135 > 1
+WARNING: KS-noise-ratio = 2.8243 > 1
+WARNING: KS-noise-ratio = 2.2286 > 1
+WARNING: KS-noise-ratio = 2.19262 > 1
+WARNING: KS-noise-ratio = 2.47085 > 1
+WARNING: KS-noise-ratio = 2.55579 > 1
+WARNING: KS-noise-ratio = 2.71469 > 1
+WARNING: KS-noise-ratio = 2.47931 > 1
+WARNING: KS-noise-ratio = 2.68778 > 1
+WARNING: KS-noise-ratio = 2.64115 > 1
+WARNING: KS-noise-ratio = 2.5467 > 1
+WARNING: KS-noise-ratio = 2.50112 > 1
+WARNING: KS-noise-ratio = 2.47355 > 1
+WARNING: KS-noise-ratio = 2.87809 > 1
+WARNING: KS-noise-ratio = 2.43589 > 1
+WARNING: KS-noise-ratio = 2.38179 > 1
+WARNING: KS-noise-ratio = 2.88976 > 1
+WARNING: KS-noise-ratio = 2.18928 > 1
+WARNING: KS-noise-ratio = 2.62399 > 1
+WARNING: KS-noise-ratio = 2.4816 > 1
+time for linear1 = 6.479977, linear2 = 46.512690, extract = 155.649130, total = 210.779538
+bits for linear1 = 52.223455, linear2 = 55.532161, extract = 348.140296, min cap = 9.189277, after cap = 476.008783, after prod = 879.681240
+cap / time = 1.966965
+
+### summary over 3 test
+time for linear1 = 6.516247, linear2 = 46.515131, extract = 152.388198, total = 207.465054
+bits for linear1 = 52.232990, linear2 = 55.542945, extract = 348.195005, min cap = 9.189277, after cap = 476.023528, after prod = 879.761478
+cap / time = 1.998415
+
+
+### bts finished, everything ok ###
+
+  AAA_bootKeySwitch: 74.8239 / 3 = 24.9413   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1968]
+  AAA_coeffToSlot: 69.3072 / 3 = 23.1024   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:2396]
+  AAA_embeddingLargest: 3.9841 / 1353 = 0.00294464   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/norms.cpp:250]
+  AAA_embeddingLargest_x2: 2.98442 / 1034 = 0.00288628   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/norms.cpp:423]
+  AAA_extractDigitsThin: 457.158 / 3 = 152.386   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:2447]
+  AAA_modDownEnbeddings: 3.53269 / 1034 = 0.00341653   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:506]
+  AAA_slotToCoeff: 19.5485 / 3 = 6.51616   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1954]
+  BasicAutomorphPrecon: 15.3061 / 33 = 0.463822   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:90]
+  BluesteinFFT: 282.196 / 66583 = 0.00423826   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/bluestein.cpp:141]
+  Decrypt: 1.70799 / 3 = 0.56933   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/keys.cpp:1362]
+  DoubleCRT: 158.001 / 2311 = 0.0683692   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:718]
+  FFT: 199.396 / 45269 = 0.0044047   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:479]
+  FFT: 243.562 / 3421 = 0.0711962   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:70]
+  FFT: 243.539 / 45269 = 0.00537982   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:448]
+  FFT_aux: 199.364 / 45269 = 0.00440399   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:360]
+  FFT_remainder: 44.1141 / 45269 = 0.000974488   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:455]
+  KS_loop: 37.5699 / 1728 = 0.0217419   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:219]
+  KS_loop_1: 6.68438 / 1728 = 0.00386827   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:227]
+  KS_loop_2: 3.6111 / 1728 = 0.00208976   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:231]
+  KS_loop_3: 6.83566 / 1728 = 0.00395582   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:236]
+  KS_loop_4: 2.2192 / 1728 = 0.00128426   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:240]
+  NORM_VAL: 6.43065 / 1107 = 0.00580908   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:541]
+  addCtxt: 41.6996 / 9582 = 0.00435187   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1529]
+  addPart: 8.4916 / 4362 = 0.00194672   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:976]
+  addPrimes: 137.229 / 1110 = 0.12363   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:625]
+  addPrimes_5: 145.705 / 1107 = 0.131622   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:518]
+  automorph: 0.57316 / 144 = 0.00398028   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2560]
+  automorph: 21.0965 / 312 = 0.067617   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:148]
+  breakIntoDigits: 146.467 / 411 = 0.356367   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:481]
+  decode: 70.3106 / 3 = 23.4369   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/EncryptedArray.cpp:375]
+  do_mul: 29.1682 / 9051 = 0.00322264   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:280]
+  extractDigitsThin: 457.158 / 3 = 152.386   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1597]
+  iFFT: 138.098 / 21314 = 0.00647924   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:488]
+  iFFT_division: 42.5947 / 21314 = 0.00199844   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/CModulus.cpp:570]
+  keySwitchPart: 158.153 / 381 = 0.415099   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:907]
+  modDownToSet: 337.165 / 1110 = 0.303752   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:409]
+  mul_MatMul1DExec: 150.598 / 18 = 8.36654   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/matmul.cpp:1155]
+  multByConstant: 12.7965 / 2190 = 0.00584316   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1955]
+  multByConstant: 0.262733 / 3 = 0.0875777   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1981]
+  multLowLvl: 202.877 / 303 = 0.669562   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1804]
+  multiplyBy: 229.247 / 156 = 1.46953   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:1880]
+  privateAssign: 8.74887 / 2856 = 0.00306333   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:329]
+  randomize: 15.5531 / 1728 = 0.00900063   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1318]
+  randomize_stream: 8.73151 / 9119448 = 9.5746e-07   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1348]
+  reLinearize: 272.274 / 618 = 0.440573   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:736]
+  smartAutomorph: 73.1973 / 144 = 0.508314   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/Ctxt.cpp:2585]
+  thinReCrypt: 622.404 / 3 = 207.468   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/recryption.cpp:1872]
+  toPoly: 194.161 / 3418 = 0.0568055   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:985]
+  toPoly_CRT: 36.9948 / 3418 = 0.0108235   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1052]
+  toPoly_FFT: 154.109 / 3418 = 0.0450875   [<HOST>/0424project/github_order4_cleaner/src/HElib_auxradix_opt/src/DoubleCRT.cpp:1030]
+  rusage.ru_maxrss=14387476
+||||| stats |||||
+KS-noise-ratio ave=0.749414 max=18.1674
+KS-noise-ratio-hoist ave=78474.3 max=901377
+break-into-digits-ratio ave=0.325294 max=0.42772
+excess-ctxtPrimes ave=8.30569 max=8.30569
+excess-specialPrimes ave=2.4201 max=2.4201
+mod-switch-added-noise ave=0.329381 max=0.435302
+ptxt_rat_sk ave=0.00281842 max=0.00281842
+ptxt_rat_sk ave=0.324675 max=0.324675
+raw-mod-switch-noise ave=0.327678 max=0.345853
+window1-nchoices ave=4.53333 max=5
+window1-out ave=0 max=0
+window2-nchoices ave=4.84722 max=8
+window2-out ave=0 max=0
+||||| stats |||||
+KS-noise-ratio ave=0.749414 max=18.1674
+KS-noise-ratio-hoist ave=78474.3 max=901377
+break-into-digits-ratio ave=0.325294 max=0.42772
+excess-ctxtPrimes ave=8.30569 max=8.30569
+excess-specialPrimes ave=2.4201 max=2.4201
+mod-switch-added-noise ave=0.329381 max=0.435302
+ptxt_rat_sk ave=0.00281842 max=0.00281842
+ptxt_rat_sk ave=0.324675 max=0.324675
+raw-mod-switch-noise ave=0.327678 max=0.345853
+window1-nchoices ave=4.53333 max=5
+window1-out ave=0 max=0
+window2-nchoices ave=4.84722 max=8
+window2-out ave=0 max=0
+	Command being timed: "<HOST>/rebuttal_bench_0731/src/BGV-Boot-auxradix-opt/build/fatboot i=16 h=26 bits=918 t=-1 newbts=1 newks=1 thick=0 repeat=3"
+	User time (seconds): 984.29
+	System time (seconds): 18.73
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:43.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 14387476
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11182024
+	Voluntary context switches: 1
+	Involuntary context switches: 2516
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

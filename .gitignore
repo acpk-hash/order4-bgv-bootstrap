@@ -1,13 +1,15 @@
-build/
-*/build/
-local/
-cache/saved_ZZX/*.txt
-*.o
-*.a
-*.so
+# build products
+/build/
+/local/
+/cache/
+/out/
+6_proofs/lean/.lake/
 __pycache__/
 *.pyc
-build/
-local/
-cache/saved_ZZX/*.txt
-tower_linear_transform/src/rader_bootstrap
+helib.log
+4_parameters/transcripts/built_chain/*.err
+# scratch from earlier layouts
+/third_party/
+/ae/
+/security/
+/src/

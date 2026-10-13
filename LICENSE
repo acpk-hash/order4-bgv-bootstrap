@@ -1,13 +1,24 @@
 This repository is a composite research artifact.
 
-Third-party and forked source code keeps its original license:
+Third-party and forked source code keeps its original licence:
 
-- `src/HElib_auxradix_opt/` is a modified HElib tree.  HElib is licensed under
-  the Apache License 2.0; see `src/HElib_auxradix_opt/LICENSE.md` and
-  `src/HElib_auxradix_opt/NOTICE`.
-- `src/BGV-Boot-auxradix-opt/` is based on the large-prime BGV bootstrapping
-  artifact licensed under the MIT License; see
-  `src/BGV-Boot-auxradix-opt/LICENSE`.
+- `1_implementation/helib_order4/` is a modified HElib tree. HElib is licensed
+  under the Apache License 2.0; see `1_implementation/helib_order4/LICENSE.md`,
+  and its `NOTICE` for the list of modifications.
+- `1_implementation/driver_order4/` is based on the large-prime BGV
+  bootstrapping driver of Ma et al., licensed under the MIT License; see
+  `1_implementation/driver_order4/LICENSE`.
+- `2_baselines/` holds unmodified third-party sources under their own terms:
+  HElib (Apache-2.0), Ma et al. Large-p (MIT), NTL (LGPL-2.1+), and Ma et al.
+  homomorphic NTT, which has no published licence and is NOT covered by this
+  licence (see `2_baselines/bgv-bootstrapping-with-homomorphic-NTT-800bae0/NOTICE.md`).
+- `4_parameters/lattice-estimator-3e48ef4/` is the Lattice Estimator, unmodified,
+  LGPLv3+.
+- `1_implementation/patches/*.patch` are diffs against the trees in
+  `2_baselines/`; the context lines they contain keep those trees' terms.
+- `5_results/supplementary/okada_comparison/*.cpp` are benchmark harnesses
+  written by us that compile against the SEAL-based implementation of Okada,
+  Player and Pohmann (AC'23); that implementation is not included.
 
 Unless another file or subdirectory states otherwise, the experiment scripts,
 benchmark wrappers, result summaries, and documentation added at the repository

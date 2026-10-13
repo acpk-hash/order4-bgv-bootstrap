@@ -1,0 +1,12 @@
+order4-bgv artifact verification, level=smoke, 2026-10-13T12:41:49Z
+host: Linux 6.8.0-138-generic x86_64, 1 CPUs, 252 GB
+
+PASS E1    environment: NTL configuration, executables built                  1s
+PASS P1    plaintext: P_A = X/2 + X^3 Q(X^4) on every (p,A,B) used           36s
+PASS L1    shipped logs regenerate Tables 4-6 within 0.5%                     0s
+PASS S1    security at built chain: transcripts equal paper (0.02 bit)        0s
+PASS A1    admissibility failures: p=257 abort, p=8191 no radix              51s
+PASS C1    ciphertext smoke: po2 p=14401 OFF/ON, decrypts, >= 1.5x          314s
+PASS B1    Sec. 5 butterfly: 41 rotations, 2784 slots, 0 mismatches         178s
+
+summary: 7 passed, 0 failed, 0 skipped   (logs: out/tests/)

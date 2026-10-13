@@ -1,0 +1,14 @@
+set,ring,p,m,phi_m,slots,h_main,h_encap,target_bits,recommended_log2Q,built_log2Q,lambda_main_stock,lambda_main_rotated,lambda_encap,lambda_star,lambda_star_basis,security_table,ciphertext_table
+po2-80,power-of-two,65537,65536,32768,32768,120,26,80,1078,1066,95.6,86.7,138.7,86.7,main key at recommended Q under ePrint 2026/279,Table 3,Table 5
+po2-100,power-of-two,65537,131072,65536,32768,120,26,100,1676,,117.8,106.0,149.6,106.0,main key at recommended Q under ePrint 2026/279,Table 3,none
+po2-128,power-of-two,65537,131072,65536,32768,120,26,128,1277,,143.6,131.4,149.6,131.4,main key at recommended Q under ePrint 2026/279,Table 3,none
+80-A,general,4513,37637,36960,9240,120,12,80,1510,1524.2,81.1,,87.6,80.5,main key at built chain,Table 4,Table 6
+80-B,general,14401,43033,41140,3740,120,12,80,1680,1642.0,81.3,,88.7,82.75,main key at built chain,Table 4,Table 6
+80-C,general,13457,45193,44100,6300,120,12,80,1800,1786.8,81.4,,89.7,81.94,main key at built chain,Table 4,Table 6
+80-D,general,2521,50731,50112,2784,120,12,80,2040,2026.2,81.9,,91.7,82.44,main key at built chain,Table 4,Table 6
+80-E,general,65537,50731,50112,2784,120,12,80,2017,,82.6,,90.9,,no ciphertext run at its own chain,Table 4,none
+128-A,general,13457,65047,62776,31388,120,26,128,1427,1406.9,128.5,,158.5,129.81,main key at built chain,Table 4,Table 6
+128-B,general,2917,53983,52488,13122,120,26,128,1184,1153.0,128.6,,153.4,131.0,main key at built chain,Table 4,Table 6
+128-C,general,15377,55459,53640,13410,120,26,128,1212,1193.1,128.4,,154.1,129.90,main key at built chain,Table 4,Table 6
+128-D,general,8101,57521,56832,7104,120,26,128,1287,1267.5,128.5,,155.7,129.84,main key at built chain,Table 4,Table 6
+128-E,general,14401,54359,51480,5148,120,26,128,1161,1132.6,128.5,,153.0,130.77,main key at built chain,Table 4,Table 6
