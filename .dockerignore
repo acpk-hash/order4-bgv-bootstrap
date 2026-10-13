@@ -1,8 +1,10 @@
-build/
-local/
-third_party/src/
-cache/
-**/build/
 .git/
-ae/out/
-lean/.lake/
+/build/
+/local/
+/cache/
+/out/
+/third_party/
+/ae/
+/security/
+/src/
+6_proofs/lean/.lake/
