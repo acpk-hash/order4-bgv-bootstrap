@@ -1,0 +1,13 @@
+experiment,group,description,status,trials,log2Q,radix,order4,linear,extract,other,total,log
+m50731,G0,"Ma et al. Large-p, original code (2_baselines/)",ok,3,2017.440,35,False,49.573,160.586,2.546,212.705,m50731/G0_original_ma_largep.log
+m50731,G1,"ours, evaluator OFF, baseline radix A = 35",ok,3,2017.440,35,False,50.021,161.684,2.561,214.267,m50731/G1_ours_off_radix35.log
+m50731,G2,"ours, evaluator OFF, order-four radix A = 256",ok,3,2017.440,256,False,49.548,146.913,2.564,199.025,m50731/G2_ours_off_radix256.log
+m50731,G3,"ours, evaluator ON, A = 256 (treatment)",ok,3,2017.440,256,True,49.310,83.396,2.535,135.241,m50731/G3_ours_on_radix256.log
+m50731,G4,G3 + parallel CoeffToSlot (2 cores),ok,3,2017.440,256,True,27.436,83.739,2.567,113.743,m50731/G4_ours_on_parallel.log
+po2,G0,"Ma et al. NTT, original code, own chain (1314 bits built)",ok,3,1313.730,27,False,26.736,26.911,0.491,54.138,po2/G0_original_ma_ntt.log
+po2,G1,"ours, OFF, baseline radix A = 27, baseline chain (1314)",ok,3,1313.730,27,False,26.668,26.464,0.490,53.622,po2/G1_ours_off_radix27.log
+po2,G2,"ours, OFF, order-four radix A = 256, baseline chain (1314)",ok,3,1313.730,256,False,26.567,23.210,0.491,50.267,po2/G2_ours_off_radix256.log
+po2,G3,"ours, ON, A = 256, baseline chain (1314) (treatment)",ok,3,1313.730,256,True,26.380,14.020,0.482,40.883,po2/G3_ours_on_radix256.log
+po2,G4,"ours, OFF, A = 27, recommended 1066-bit chain (Table 4 OFF)",ok,3,1066.000,27,False,22.736,21.769,0.433,44.938,po2/G4_ours_off_radix27_rec.log
+po2,G5,"ours, OFF, A = 256, recommended 1066-bit chain",ok,3,1066.000,256,False,22.337,18.914,0.424,41.676,po2/G5_ours_off_radix256_rec.log
+po2,G6,"ours, ON, A = 256, recommended 1066-bit chain (Table 4 ON)",ok,3,1066.000,256,True,22.354,11.197,0.428,33.979,po2/G6_ours_on_radix256_rec.log

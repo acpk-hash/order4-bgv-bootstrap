@@ -195,10 +195,10 @@ of three trials, decrypting and checking every slot.
 
 | group | executable | chain | radix A | evaluator | role |
 |---|---|---|---|---|---|
-| G0 | `baseline_ma_ntt` (original code) | baseline's own, 1332 bits | 27 | – | baseline |
-| G1 | `fatboot_po2` | 1332 | 27 | OFF | **equivalence control** |
-| G2 | `fatboot_po2` | 1332 | 256 | OFF | **radix control** |
-| G3 | `fatboot_po2` | 1332 | 256 | ON | treatment (Table 4, last column) |
+| G0 | `baseline_ma_ntt` (original code) | baseline's own, 1314 bits built | 27 | – | baseline |
+| G1 | `fatboot_po2` | 1314 | 27 | OFF | **equivalence control** |
+| G2 | `fatboot_po2` | 1314 | 256 | OFF | **radix control** |
+| G3 | `fatboot_po2` | 1314 | 256 | ON | treatment (Table 4, last column) |
 | G4 | `fatboot_po2` | recommended, 1066 | 27 | OFF | Table 4 OFF as measured |
 | G5 | `fatboot_po2` | 1066 | 256 | OFF | radix control at the recommended chain |
 | G6 | `fatboot_po2` | 1066 | 256 | ON | Table 4 ON |
@@ -374,8 +374,29 @@ per run, two for "combined", three trials, idle host). Logs:
 | Sec. 5 butterfly | 41 rotations, 0 mismatches | 41 rotations, 0 mismatches |
 | Table 3 [4] λ*, App. D [Table 10] | nine sets | all 51 values within 0.01 bit |
 
-The baseline comparison of Sec. 6 on the same host is in
-`5_results/baseline_comparison/report.md`. `5_results/reruns/m50731/under_load/`
+**Baseline comparison (Sec. 6) on the same host**, Docker image, two
+dedicated cores, three trials per group; full report in
+`5_results/baseline_comparison/report.md`, per-group logs and `summary.csv`
+beside it. All 9 checked ratios pass:
+
+| experiment | ratio | question | measured | paper |
+|---|---|---|---|---|
+| m50731 | G0/G1, total | original code vs our build with the evaluator OFF | 212.7 / 214.3 s = 0.99x | – |
+| m50731 | G1/G2, extract | radix alone (35 → 256) | 1.10x | – |
+| m50731 | G2/G3, extract | evaluator alone | 1.76x | – |
+| m50731 | G0/G3, total | ours vs original Ma et al. | 1.57x | 1.62x |
+| m50731 | G0/G4, total | combined vs original Ma et al. | 1.87x | 1.80x |
+| po2 | G0/G1, total | original code vs our build with the evaluator OFF | 54.1 / 53.6 s = 1.01x | – |
+| po2 | G1/G2, extract | radix alone (27 → 256), baseline chain | 1.14x | – |
+| po2 | G2/G3, extract | evaluator alone, baseline chain | 1.66x | 1.59x (first trial) |
+| po2 | G4/G6, extract | Table 4 as measured, 1066-bit chain | 1.94x | 1.85x |
+| po2 | G5/G6, extract | evaluator alone, 1066-bit chain | 1.69x | – |
+| po2 | G4/G6, total | whole recryption, 1066-bit chain | 1.32x | 1.27x |
+
+The equivalence controls (G0/G1 = 0.99x and 1.01x) show that our executables
+with the evaluator OFF behave as the original code. The radix controls
+separate the two parts of the gain: the order-four radix alone speeds digit
+extraction up by 1.10–1.14x, the evaluator alone by 1.66–1.76x. `5_results/reruns/m50731/under_load/`
 keeps two attempts made while another user loaded the host (load average ≈ 56):
 single trials of the order-four row ranged from 81.6 s to 132.0 s, and
 `linear2`, which the method does not touch, slowed by the same factor.

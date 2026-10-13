@@ -64,7 +64,7 @@ m50731() {
 }
 
 po2() {
-  # upstream parameter set i=0: p = 65537, m = 2^16, the baseline's own 1332-bit chain
+  # upstream parameter set i=0: p = 65537, m = 2^16, the baseline's own chain (1314 bits built)
   local own=(i=0 h=26 t=-1 newbts=1 newks=1 thick=0 cache=1 repeat="$REPEAT")
   # the paper's recommended 80-bit chain (1066 bits built)
   local rec=(i=0 bits=782 mainhwt=120 h=26 t=-1 newbts=1 newks=1 thick=0 cache=1 repeat="$REPEAT")

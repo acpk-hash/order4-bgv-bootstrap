@@ -75,7 +75,7 @@ def fig_m50731(logs, out):
     pl.stacked_hbars(ax, [names[k] for k, _ in rows], parts,
                      ["linear transforms", "digit extraction", "other (key switching, mod-down)"])
     ax.set_xlabel("whole recryption (s)")
-    ax.set_title("Table 6: p = 65537, m = 50731, 2784 slots, by stage")
+    fig.suptitle("Table 6: p = 65537, m = 50731, 2784 slots, by stage", x=0.01, ha="left", fontsize=10)
     return pl.save(fig, out / "table6_m50731")
 
 

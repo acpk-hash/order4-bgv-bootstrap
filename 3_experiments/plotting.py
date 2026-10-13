@@ -66,7 +66,8 @@ def stacked_hbars(ax, labels, parts, names, total_fmt="{:.1f} s"):
     ax.set_yticklabels(labels)
     ax.grid(axis="x"); ax.grid(axis="y", visible=False)
     ax.set_xlim(0, max(left) * 1.18)
-    ax.legend(loc="lower right", fontsize=8)
+    # legend above the plot area, so it never covers a bar or its total
+    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=len(parts), fontsize=8)
 
 
 def save(fig, path):
